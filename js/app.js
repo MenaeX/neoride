@@ -24,6 +24,7 @@ const SPEC_LABELS = {
   speed: ['Макс. скорость', 'км/ч', 1], range: ['Запас хода', 'км', 1], load: ['Макс. нагрузка', 'кг', 1],
   weight: ['Вес', 'кг', -1], wheel: ['Колёса', '"', 0], charge: ['Зарядка', 'ч', -1],
   brakes: ['Тормоза', '', 0], drive: ['Привод', '', 0],
+  box: ['Размер коробки', '', 0], gross: ['Вес с упаковкой', 'кг', 0],
 };
 const fmt = n => n == null ? '—' : Number(n).toLocaleString('ru-RU');
 const rub = n => n == null ? '—' : fmt(n) + ' ₽';
