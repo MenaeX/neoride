@@ -70,7 +70,9 @@
       els.input.style.height = Math.min(els.input.scrollHeight, 90) + 'px';
     });
 
-    // восстановить открытое состояние после навигации/обновления
+    // восстановить переписку и открытое состояние после навигации/обновления
+    renderLog();
+    resumePending();
     try { if (localStorage.getItem(STORE + '_open') === '1') open(); } catch (e) {}
   }
 
@@ -104,10 +106,48 @@
     });
   }
 
+  // найти модель каталога по названию из маркера [[...]]
+  function findModel(name) {
+    if (typeof CATALOG === 'undefined' || !CATALOG) return null;
+    var q = name.replace(/^kugoo\s+/i, '').split('/')[0].trim().toLowerCase();
+    if (!q) return null;
+    var list = CATALOG;
+    return list.find(function (c) { return c.name.toLowerCase() === q; })
+      || list.find(function (c) { return ('kugoo ' + c.name).toLowerCase() === name.toLowerCase(); })
+      || list.find(function (c) { return c.name.toLowerCase().indexOf(q) === 0; })
+      || list.find(function (c) { return q.indexOf(c.name.toLowerCase()) === 0 && c.name.length > 2; })
+      || null;
+  }
+
+  function rub(n) { return n == null ? '' : Number(n).toLocaleString('ru-RU') + ' ₽'; }
+
+  // bot-сообщение: маркеры [[Модель]] -> кликабельные ссылки на карточку
+  function renderRich(el, text) {
+    text.split(/(\[\[[^\]]+\]\])/g).forEach(function (p) {
+      var mm = p.match(/^\[\[([^\]]+)\]\]$/);
+      if (mm) {
+        var model = findModel(mm[1]);
+        if (model && typeof window.neorideOpenModel === 'function') {
+          var a = document.createElement('a');
+          a.className = 'chat-model';
+          a.href = '#';
+          a.textContent = (model.brand || 'Kugoo') + ' ' + model.name + (model.price ? ' · ' + rub(model.price) : '');
+          a.onclick = function (e) { e.preventDefault(); window.neorideOpenModel(model.id); };
+          el.appendChild(a);
+        } else {
+          el.appendChild(document.createTextNode(mm[1]));
+        }
+      } else if (p) {
+        el.appendChild(document.createTextNode(p));
+      }
+    });
+  }
+
   function addMsg(role, text) {
     var d = document.createElement('div');
     d.className = 'chat-msg ' + (role === 'me' ? 'me' : 'bot');
-    d.textContent = text;
+    if (role === 'bot' && /\[\[[^\]]+\]\]/.test(text)) { renderRich(d, text); }
+    else { d.textContent = text; }
     els.log.appendChild(d);
     els.log.scrollTop = els.log.scrollHeight;
     return d;
@@ -131,19 +171,12 @@
     if (v) send(v);
   }
 
-  function send(text) {
-    if (busy) return;
+  // запрос ответа по текущей истории (используется и при отправке, и при авто-дозапросе)
+  function requestReply() {
     busy = true;
-    els.quick.innerHTML = '';
-    els.input.value = '';
-    els.input.style.height = 'auto';
     els.send.disabled = true;
-    addMsg('me', text);
-    history.push({ role: 'user', content: text });
-    save();
     typing(true);
-
-    fetch(API, {
+    return fetch(API, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ messages: history, page: location.pathname }),
@@ -166,8 +199,25 @@
       .finally(function () {
         busy = false;
         els.send.disabled = false;
-        els.input.focus();
       });
+  }
+
+  function send(text) {
+    if (busy) return;
+    els.quick.innerHTML = '';
+    els.input.value = '';
+    els.input.style.height = 'auto';
+    addMsg('me', text);
+    history.push({ role: 'user', content: text });
+    save();
+    requestReply().then(function () { els.input.focus(); });
+  }
+
+  // если страницу перелистнули, пока консультант думал — последний вопрос остался без ответа: дозапросим
+  function resumePending() {
+    if (busy) return;
+    if (!history.length || history[history.length - 1].role !== 'user') return;
+    requestReply();
   }
 
   if (document.readyState === 'loading') {

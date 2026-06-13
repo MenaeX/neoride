@@ -25,27 +25,44 @@ calcModel.innerHTML = CALC_GROUPS.map(([key, label]) => {
 // --- Калькулятор: несколько моделей + количество вручную ---
 const calcRows = document.getElementById('calcRows');
 let cart = [];
+// минимум заказа: дроп-склад от 3 шт, рыночные от 10 шт
 const defQty = c => (c.stock === 'in' ? 3 : 10);
 const totalProfit = () => cart.reduce((s, it) => { const c = byId[it.id]; return c ? s + (c.price - c.opt) * it.qty : s; }, 0);
+let calcMsgTimer = null;
+function showCalcMsg(t) {
+  const m = document.getElementById('calcMsg');
+  if (!m) return;
+  m.textContent = t; m.hidden = false;
+  clearTimeout(calcMsgTimer);
+  calcMsgTimer = setTimeout(() => { m.hidden = true; }, 3500);
+}
 
 function calcRender() {
   calcRows.innerHTML = cart.map(it => {
     const c = byId[it.id]; if (!c) return '';
     return `<div class="calc-item" data-id="${it.id}">
       <span class="ci-name">Kugoo ${c.name}<small>опт ${FMT_LABEL[c.stock] || ''} · ${fmt(c.opt)} ₽/шт</small></span>
-      <label class="ci-qty-box"><input class="ci-qty" type="number" inputmode="numeric" min="1" max="1000" value="${it.qty}" data-id="${it.id}" aria-label="Количество, шт"><span>шт</span></label>
+      <label class="ci-qty-box"><input class="ci-qty" type="number" inputmode="numeric" min="${defQty(c)}" max="1000" value="${it.qty}" data-id="${it.id}" aria-label="Количество, шт"><span>шт</span></label>
       <span class="ci-profit"><small>ваша прибыль</small>+${fmt((c.price - c.opt) * it.qty)} ₽</span>
       <button class="ci-del" type="button" data-id="${it.id}" aria-label="Убрать из расчёта">✕</button>
     </div>`;
   }).join('') || '<p class="calc-empty">Добавьте модели, чтобы посчитать прибыль.</p>';
   document.getElementById('calcTotal').textContent = cart.length ? rub(totalProfit()) : '—';
-  calcRows.querySelectorAll('.ci-qty').forEach(inp => inp.oninput = () => {
-    const v = Math.max(1, Math.min(1000, parseInt(inp.value, 10) || 1));
-    const it = cart.find(x => x.id === inp.dataset.id);
-    if (it) it.qty = v;
+  calcRows.querySelectorAll('.ci-qty').forEach(inp => {
     const c = byId[inp.dataset.id];
-    inp.closest('.calc-item').querySelector('.ci-profit').textContent = '+' + fmt((c.price - c.opt) * v) + ' ₽';
-    document.getElementById('calcTotal').textContent = rub(totalProfit());
+    const minQ = defQty(c);
+    const apply = (v) => {
+      const it = cart.find(x => x.id === inp.dataset.id);
+      if (it) it.qty = v;
+      inp.closest('.calc-item').querySelector('.ci-profit').textContent = '+' + fmt((c.price - c.opt) * v) + ' ₽';
+      document.getElementById('calcTotal').textContent = rub(totalProfit());
+    };
+    inp.oninput = () => apply(Math.max(1, Math.min(1000, parseInt(inp.value, 10) || 1)));
+    inp.onchange = () => {
+      let v = Math.max(1, Math.min(1000, parseInt(inp.value, 10) || minQ));
+      if (v < minQ) { v = minQ; showCalcMsg(`Минимальный оптовый заказ модели «${c.name}» — ${minQ} шт`); }
+      inp.value = v; apply(v);
+    };
   });
   calcRows.querySelectorAll('.ci-del').forEach(b => b.onclick = () => { cart = cart.filter(x => x.id !== b.dataset.id); calcRender(); });
 }
@@ -235,6 +252,7 @@ if (modelModal) {
   document.getElementById('mmClose').onclick = () => modelModal.hidden = true;
   modelModal.onclick = e => { if (e.target === modelModal) modelModal.hidden = true; };
 }
+window.neorideOpenModel = openOptModel;
 
 function renderOpt() {
   if (!optGrid) return;

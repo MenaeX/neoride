@@ -432,6 +432,8 @@ if (modelModal) {
   document.getElementById('mmClose').onclick = () => modelModal.hidden = true;
   modelModal.onclick = e => { if (e.target === modelModal) modelModal.hidden = true; };
 }
+// для чат-консультанта: открыть карточку модели по ссылке из ответа
+window.neorideOpenModel = openModel;
 
 const showAllBtn = document.getElementById('showAllBtn');
 if (showAllBtn) showAllBtn.onclick = toggleShowAll;

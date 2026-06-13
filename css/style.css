@@ -57,7 +57,7 @@ body::after{content:'';position:fixed;z-index:-1;width:820px;height:820px;border
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:13px;
   border:1px solid var(--line2);background:var(--glass);color:var(--txt);
   font:600 15px Inter;cursor:pointer;transition:.22s;backdrop-filter:blur(6px)}
-.btn:hover{transform:translateY(-2px);border-color:var(--line2);background:var(--glass2)}
+.btn:not(.btn-accent):hover{transform:translateY(-2px);border-color:rgba(46,230,255,.5);background:rgba(46,230,255,.07)}
 .btn-accent{background:var(--grad);border:none;color:#06130a;font-weight:700;
   box-shadow:0 6px 26px rgba(120,243,150,.22)}
 .btn-accent:hover{box-shadow:0 10px 38px rgba(120,243,150,.45),0 0 0 1px rgba(184,255,46,.5)}
@@ -611,3 +611,10 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .ci-profit{grid-column:1 / -1;flex-direction:row;justify-content:space-between;align-items:baseline}
   .ci-profit small{margin:0}
 }
+
+/* Ссылка на модель в ответе чат-консультанта */
+.chat-model{color:var(--lime);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(184,255,46,.45);cursor:pointer;transition:.15s}
+.chat-model:hover{border-bottom-color:var(--lime);text-shadow:0 0 9px rgba(184,255,46,.45)}
+/* Сообщение калькулятора (минимум заказа) */
+.calc-msg{color:#ffd24a;font:600 13px Inter;margin:-8px 0 14px;padding:8px 12px;border-radius:10px;
+  background:rgba(255,176,32,.1);border:1px solid rgba(255,176,32,.3)}
