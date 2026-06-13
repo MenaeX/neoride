@@ -41,7 +41,7 @@
           '<svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 20.5l18-8.5L3 3.5 3 10l12 2-12 2z"/></svg>' +
         '</button>' +
       '</div>' +
-      '<div class="chat-note">ИИ-консультант · наличие и заказ подтверждает менеджер</div>';
+      '<div class="chat-note">Начиная чат, вы принимаете <a href="/privacy.html" target="_blank" rel="noopener">Политику</a> и <a href="/consent.html" target="_blank" rel="noopener">Согласие</a> на обработку ПДн · наличие и заказ подтверждает менеджер</div>';
     document.body.appendChild(panel);
 
     els.fab = fab;

@@ -552,3 +552,5 @@ details p{padding:0 22px 18px;color:var(--mut)}
   background:#1a1530;color:#fff;border:1px solid rgba(160,120,255,.5);padding:12px 18px;border-radius:14px;
   font:600 13px/1.4 Inter;max-width:90vw;text-align:center;opacity:0;transition:.3s;box-shadow:0 12px 40px rgba(0,0,0,.5)}
 .max-toast.show{opacity:1;transform:translate(-50%,0)}
+
+.chat-note a{color:var(--cyan)}
