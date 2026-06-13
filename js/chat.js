@@ -2,6 +2,8 @@
 (function () {
   'use strict';
 
+  // Бэкенд чата — Cloudflare Worker (workers.dev доступен в РФ без VPN, в отличие от CF-страниц).
+  var API = 'https://neoride-bot.amenshikov007.workers.dev/api/chat';
   var GREETING = 'Привет! Я Олег, консультант NEORIDE 🛴\nПомогу выбрать электротранспорт под вашу задачу. Что ищете — самокат для города, подальше поездить или для подростка?';
   var QUICK = [
     'Посоветуй до 40 000 ₽',
@@ -123,7 +125,7 @@
     history.push({ role: 'user', content: text });
     typing(true);
 
-    fetch('/api/chat', {
+    fetch(API, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ messages: history, page: location.pathname }),
