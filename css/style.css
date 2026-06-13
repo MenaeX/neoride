@@ -568,3 +568,38 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .legal .req{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:18px 20px;margin:10px 0}
 
 .opt-retail{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}
+
+/* Кнопки: при наведении — неоновая подсветка, без затемнения */
+.btn:hover{transform:translateY(-2px);background:var(--glass);
+  border-color:rgba(46,230,255,.55);
+  box-shadow:0 8px 30px rgba(46,230,255,.22),0 0 0 1px rgba(46,230,255,.35),0 0 22px rgba(184,255,46,.18)}
+.btn-ghost:hover{background:rgba(46,230,255,.06)}
+.btn-accent:hover{transform:translateY(-2px);
+  box-shadow:0 12px 40px rgba(120,243,150,.5),0 0 26px rgba(46,230,255,.4),0 0 0 1px rgba(184,255,46,.55)}
+
+/* Неоновая подсветка под курсором (desktop) */
+.cursor-glow{position:fixed;top:0;left:0;width:360px;height:360px;margin:-180px 0 0 -180px;
+  border-radius:50%;pointer-events:none;z-index:4;opacity:0;transition:opacity .35s;will-change:transform;
+  background:radial-gradient(circle,rgba(46,230,255,.10),rgba(184,255,46,.05) 42%,transparent 70%);
+  mix-blend-mode:screen}
+
+/* Калькулятор опта: мультивыбор моделей */
+.calc-sub{color:var(--mut);font-size:13.5px;margin:-8px 0 16px}
+.calc-add{display:flex;gap:10px;margin-bottom:14px}
+.calc-add select{flex:1;min-width:0}
+.calc-add .btn{flex:none;padding:11px 18px}
+.calc-list{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.calc-empty{color:var(--mut);font-size:13px;padding:6px 2px}
+.calc-item{display:grid;grid-template-columns:1fr 78px auto auto;gap:12px;align-items:center;
+  background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:13px;padding:10px 14px}
+.ci-name{display:flex;flex-direction:column;line-height:1.2;min-width:0;font:600 14px Inter;color:var(--txt)}
+.ci-name small{font-weight:500;color:var(--mut);font-size:11px;margin-top:2px}
+.ci-qty{width:78px;text-align:center;padding:9px 8px!important}
+.ci-profit{font:700 15px Unbounded,Inter;color:var(--lime);white-space:nowrap}
+.ci-del{background:transparent;border:0;color:var(--mut);cursor:pointer;font-size:15px;line-height:1;padding:4px}
+.ci-del:hover{color:#ff6a6a}
+@media (max-width:560px){
+  .calc-item{grid-template-columns:1fr 64px auto}
+  .ci-qty{width:64px}
+  .ci-profit{grid-column:1 / -1;text-align:right;margin-top:-4px}
+}

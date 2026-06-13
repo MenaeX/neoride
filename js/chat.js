@@ -11,8 +11,16 @@
     'Самый мощный самокат',
   ];
 
-  // история для API (без приветствия — оно чисто визуальное)
+  // история для API (без приветствия — оно чисто визуальное); сохраняется между страницами
+  var STORE = 'neoride_chat_v1';
   var history = [];
+  try { history = JSON.parse(localStorage.getItem(STORE) || '[]') || []; } catch (e) { history = []; }
+  function save() {
+    try {
+      history = history.slice(-20);
+      localStorage.setItem(STORE, JSON.stringify(history));
+    } catch (e) {}
+  }
   var busy = false;
   var els = {};
 
@@ -61,19 +69,28 @@
       els.input.style.height = 'auto';
       els.input.style.height = Math.min(els.input.scrollHeight, 90) + 'px';
     });
+
+    // восстановить открытое состояние после навигации/обновления
+    try { if (localStorage.getItem(STORE + '_open') === '1') open(); } catch (e) {}
+  }
+
+  function renderLog() {
+    if (els.log.children.length) return;
+    addMsg('bot', GREETING);
+    history.forEach(function (m) { addMsg(m.role === 'user' ? 'me' : 'bot', m.content); });
+    if (!history.length) renderQuick();
   }
 
   function open() {
     els.panel.classList.add('open');
     els.fab.style.display = 'none';
-    if (!els.log.children.length) {
-      addMsg('bot', GREETING);
-      renderQuick();
-    }
+    renderLog();
+    try { localStorage.setItem(STORE + '_open', '1'); } catch (e) {}
     setTimeout(function () { els.input.focus(); }, 150);
   }
   function close() {
     els.panel.classList.remove('open');
+    try { localStorage.setItem(STORE + '_open', '0'); } catch (e) {}
     els.fab.style.display = '';
   }
 
@@ -123,6 +140,7 @@
     els.send.disabled = true;
     addMsg('me', text);
     history.push({ role: 'user', content: text });
+    save();
     typing(true);
 
     fetch(API, {
@@ -135,6 +153,7 @@
         typing(false);
         if (d && d.ok && d.reply) {
           history.push({ role: 'assistant', content: d.reply });
+          save();
           addMsg('bot', d.reply);
         } else {
           addMsg('bot', 'Связь с консультантом прервалась 🙏 Напишите нам — ответим: MAX +7 910 402-88-58 или Telegram @neoride_shop_bot');

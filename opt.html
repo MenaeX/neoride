@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=130626t">
+<link rel="stylesheet" href="css/style.css?v=130626u">
 <script>window.NEORIDE_TG_ONLY=true</script>
 </head>
 <body>
@@ -89,6 +89,9 @@
     <div class="cat-tabs" id="optFormat"></div>
     <div class="cat-tabs" id="optTabs"></div>
     <div class="grid" id="optGrid"></div>
+    <div class="show-all" id="optShowAllWrap" hidden>
+      <button class="btn btn-accent btn-lg" id="optShowAll">Показать все модели ↓</button>
+    </div>
   </div>
 </section>
 
@@ -96,18 +99,13 @@
   <div class="container">
     <div class="calc" data-rev>
       <h3>Калькулятор <span class="g">прибыли</span></h3>
-      <div class="calc-row">
-        <label>Модель
-          <select id="calcModel"></select>
-        </label>
-        <label>Количество, шт
-          <input type="number" id="calcQty" value="10" min="10" max="100">
-        </label>
+      <p class="calc-sub">Добавьте модели и укажите количество — посчитаем вашу прибыль при перепродаже по рознице.</p>
+      <div class="calc-add">
+        <select id="calcModel" aria-label="Модель"></select>
+        <button class="btn" type="button" id="calcAdd">+ Добавить</button>
       </div>
+      <div class="calc-list" id="calcRows"></div>
       <div class="calc-out">
-        <div><span>Ваша цена за единицу</span><b id="calcOpt">—</b></div>
-        <div><span>Рекомендованная розница</span><b id="calcRetail">—</b></div>
-        <div><span>Прибыль с единицы</span><b id="calcUnit">—</b></div>
         <div class="calc-total"><span>Прибыль с партии</span><b id="calcTotal">—</b></div>
       </div>
       <p class="calc-note">Расчёт ориентировочный и не является публичной офертой. Итоговые условия — в счёте:
@@ -181,9 +179,9 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="data/catalog-opt.js?v=130626t"></script>
-<script data-cfasync="false" src="js/opt.js?v=130626t"></script>
-<script data-cfasync="false" src="js/fx.js?v=130626t"></script>
-<script data-cfasync="false" src="js/chat.js?v=130626t"></script>
+<script data-cfasync="false" src="data/catalog-opt.js?v=130626u"></script>
+<script data-cfasync="false" src="js/opt.js?v=130626u"></script>
+<script data-cfasync="false" src="js/fx.js?v=130626u"></script>
+<script data-cfasync="false" src="js/chat.js?v=130626u"></script>
 </body>
 </html>

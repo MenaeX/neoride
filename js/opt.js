@@ -6,40 +6,68 @@ const rub = n => n == null ? '—' : fmt(n) + ' ₽';
 const byId = Object.fromEntries(CATALOG.map(c => [c.id, c]));
 const LEAD_API = 'https://neoride-bot.amenshikov007.workers.dev/api/lead';
 
-const calcModel = document.getElementById('calcModel');
 const STOCK_MARK = { in: '✅', opt: '🟣 уточнить наличие', wait: '⏳' };
+const FMT_LABEL = { in: 'от 3 шт', opt: 'от 10 шт' };
 const optList = CATALOG.filter(c => c.opt && c.price && (c.stock === 'in' || c.stock === 'opt'))
   .sort((a, b) => a.price - b.price);
 
-const groups = [['самокат', 'Самокаты'], ['скутер', 'Скутеры'], ['трицикл', 'Трициклы'],
-  ['велосипед', 'Велосипеды'], ['питбайк', 'Питбайки'], ['бензо', 'Бензо']];
-calcModel.innerHTML = groups.map(([key, label]) => {
+// --- Выпадающий список (без розницы; подписан форматом + наличие) ---
+const calcModel = document.getElementById('calcModel');
+const CALC_GROUPS = [['самокат', 'Самокаты'], ['велосипед', 'Велосипеды'], ['скутер', 'Скутеры'],
+  ['трицикл', 'Трициклы'], ['питбайк', 'Питбайки'], ['бензо', 'Бензо']];
+calcModel.innerHTML = CALC_GROUPS.map(([key, label]) => {
   const items = optList.filter(c => c.cat === key);
   if (!items.length) return '';
   return `<optgroup label="${label}">` + items.map(c =>
-    `<option value="${c.id}">Kugoo ${c.name} — розница ${fmt(c.price)} ₽ ${STOCK_MARK[c.stock] || ''}</option>`).join('') + '</optgroup>';
+    `<option value="${c.id}">Kugoo ${c.name} — ${FMT_LABEL[c.stock] || ''} ${STOCK_MARK[c.stock] || ''}</option>`).join('') + '</optgroup>';
 }).join('');
 
-const def = optList.find(c => /M4 Pro/i.test(c.name)) || optList[0];
-if (def) calcModel.value = def.id;
+// --- Калькулятор: несколько моделей + количество вручную ---
+const calcRows = document.getElementById('calcRows');
+let cart = [];
+const defQty = c => (c.stock === 'in' ? 3 : 10);
+const totalProfit = () => cart.reduce((s, it) => { const c = byId[it.id]; return c ? s + (c.price - c.opt) * it.qty : s; }, 0);
 
-function calc() {
-  const c = byId[calcModel.value];
-  if (!c) return;
-  const qty = Math.max(10, Math.min(100, +document.getElementById('calcQty').value || 10));
-  document.getElementById('calcQty').value = qty;
-  const unit = c.price - c.opt;
-  document.getElementById('calcOpt').textContent = rub(c.opt);
-  document.getElementById('calcRetail').textContent = rub(c.price);
-  document.getElementById('calcUnit').textContent = rub(unit);
-  document.getElementById('calcTotal').textContent = rub(unit * qty);
+function calcRender() {
+  calcRows.innerHTML = cart.map(it => {
+    const c = byId[it.id]; if (!c) return '';
+    return `<div class="calc-item" data-id="${it.id}">
+      <span class="ci-name">Kugoo ${c.name}<small>${FMT_LABEL[c.stock] || ''}</small></span>
+      <input class="ci-qty" type="number" inputmode="numeric" min="1" max="1000" value="${it.qty}" data-id="${it.id}" aria-label="Количество, шт">
+      <span class="ci-profit">+${fmt((c.price - c.opt) * it.qty)} ₽</span>
+      <button class="ci-del" type="button" data-id="${it.id}" aria-label="Убрать">✕</button>
+    </div>`;
+  }).join('') || '<p class="calc-empty">Добавьте модели, чтобы посчитать прибыль.</p>';
+  document.getElementById('calcTotal').textContent = cart.length ? rub(totalProfit()) : '—';
+  calcRows.querySelectorAll('.ci-qty').forEach(inp => inp.oninput = () => {
+    const v = Math.max(1, Math.min(1000, parseInt(inp.value, 10) || 1));
+    const it = cart.find(x => x.id === inp.dataset.id);
+    if (it) it.qty = v;
+    const c = byId[inp.dataset.id];
+    inp.closest('.calc-item').querySelector('.ci-profit').textContent = '+' + fmt((c.price - c.opt) * v) + ' ₽';
+    document.getElementById('calcTotal').textContent = rub(totalProfit());
+  });
+  calcRows.querySelectorAll('.ci-del').forEach(b => b.onclick = () => { cart = cart.filter(x => x.id !== b.dataset.id); calcRender(); });
 }
-calcModel.onchange = calc;
-document.getElementById('calcQty').oninput = calc;
-calc();
+
+document.getElementById('calcAdd').onclick = () => {
+  const id = calcModel.value;
+  if (!id || cart.some(x => x.id === id)) return;
+  cart.push({ id, qty: defQty(byId[id]) });
+  calcRender();
+};
+
+const calcDef = optList.find(c => /M4 Pro/i.test(c.name)) || optList[0];
+if (calcDef) { cart.push({ id: calcDef.id, qty: defQty(calcDef) }); calcModel.value = calcDef.id; }
+calcRender();
 
 const leadModal = document.getElementById('leadModal');
-document.getElementById('optRequest').onclick = e => { e.preventDefault(); leadModal.hidden = false; };
+document.getElementById('optRequest').onclick = e => {
+  e.preventDefault();
+  const txt = cart.map(it => { const c = byId[it.id]; return c ? `Kugoo ${c.name} x${it.qty}` : ''; }).filter(Boolean).join(', ');
+  document.getElementById('leadModel').value = txt || 'Оптовая заявка';
+  leadModal.hidden = false;
+};
 document.getElementById('closeLead').onclick = () => leadModal.hidden = true;
 leadModal.onclick = e => { if (e.target === leadModal) leadModal.hidden = true; };
 
@@ -117,7 +145,8 @@ const OPT_FMT = [['all', 'Все форматы'], ['in', 'Гарантия · �
 const optGrid = document.getElementById('optGrid');
 const optTabs = document.getElementById('optTabs');
 const optFormat = document.getElementById('optFormat');
-let optCat = 'all', optFmt = 'all';
+let optCat = 'all', optFmt = 'all', showAllOpt = false;
+const OPT_VISIBLE = 8;
 
 function optCardHTML(c) {
   const s = c.specs || {};
@@ -210,7 +239,8 @@ if (modelModal) {
 function renderOpt() {
   if (!optGrid) return;
   const list = optList.filter(c => (optCat === 'all' || c.cat === optCat) && (optFmt === 'all' || c.stock === optFmt));
-  optGrid.innerHTML = list.map(optCardHTML).join('') || '<p class="sec-sub">В этой категории пока нет позиций.</p>';
+  const shown = showAllOpt ? list : list.slice(0, OPT_VISIBLE);
+  optGrid.innerHTML = shown.map(optCardHTML).join('') || '<p class="sec-sub">В этой категории пока нет позиций.</p>';
   optGrid.querySelectorAll('[data-opt]').forEach(b => b.onclick = () => {
     document.getElementById('leadModel').value = b.dataset.name;
     leadModal.hidden = false;
@@ -219,12 +249,23 @@ function renderOpt() {
     el.onclick = () => openOptModel(el.dataset.open);
     el.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOptModel(el.dataset.open); } };
   });
+  const wrap = document.getElementById('optShowAllWrap'), btn = document.getElementById('optShowAll');
+  if (wrap && btn) {
+    if (list.length > OPT_VISIBLE) {
+      wrap.hidden = false;
+      btn.textContent = showAllOpt ? 'Свернуть ↑' : `Показать все (ещё ${list.length - OPT_VISIBLE}) ↓`;
+    } else { wrap.hidden = true; }
+  }
+}
+{
+  const sb = document.getElementById('optShowAll');
+  if (sb) sb.onclick = () => { showAllOpt = !showAllOpt; renderOpt(); };
 }
 
 if (optFormat) {
   optFormat.innerHTML = OPT_FMT.map(([k, l]) => `<button class="cat-tab${k === 'all' ? ' active' : ''}" data-optfmt="${k}">${l}</button>`).join('');
   optFormat.querySelectorAll('[data-optfmt]').forEach(b => b.onclick = () => {
-    optFmt = b.dataset.optfmt;
+    optFmt = b.dataset.optfmt; showAllOpt = false;
     optFormat.querySelectorAll('.cat-tab').forEach(x => x.classList.toggle('active', x.dataset.optfmt === optFmt));
     renderOpt();
   });
@@ -233,7 +274,7 @@ if (optTabs) {
   optTabs.innerHTML = OPT_CATS.filter(([k]) => k === 'all' || optList.some(c => c.cat === k))
     .map(([k, l]) => `<button class="cat-tab${k === 'all' ? ' active' : ''}" data-optcat="${k}">${l}</button>`).join('');
   optTabs.querySelectorAll('[data-optcat]').forEach(b => b.onclick = () => {
-    optCat = b.dataset.optcat;
+    optCat = b.dataset.optcat; showAllOpt = false;
     optTabs.querySelectorAll('.cat-tab').forEach(x => x.classList.toggle('active', x.dataset.optcat === optCat));
     renderOpt();
   });

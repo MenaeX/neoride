@@ -128,3 +128,23 @@
     } else { toast(no); }
   });
 })();
+
+/* Неоновая подсветка под курсором (только desktop / точный указатель) */
+(function () {
+  if (window.matchMedia && window.matchMedia('(pointer:coarse)').matches) return;
+  var g = document.createElement('div');
+  g.className = 'cursor-glow';
+  document.body.appendChild(g);
+  var x = 0, y = 0, tx = 0, ty = 0, raf = null;
+  function loop() {
+    x += (tx - x) * 0.18; y += (ty - y) * 0.18;
+    g.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+    if (Math.abs(tx - x) > 0.5 || Math.abs(ty - y) > 0.5) { raf = requestAnimationFrame(loop); }
+    else { raf = null; }
+  }
+  window.addEventListener('mousemove', function (e) {
+    tx = e.clientX; ty = e.clientY; g.style.opacity = '1';
+    if (!raf) raf = requestAnimationFrame(loop);
+  }, { passive: true });
+  window.addEventListener('mouseout', function (e) { if (!e.relatedTarget) g.style.opacity = '0'; });
+})();
