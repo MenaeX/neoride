@@ -273,6 +273,8 @@ function drawCompare() {
 
 /* ---------- модал заявки ---------- */
 const leadModal = document.getElementById('leadModal');
+// Бэкенд заявок — воркер neoride-bot (workers.dev доступен в РФ; форма работает и с GitHub Pages).
+const LEAD_API = 'https://neoride-bot.amenshikov007.workers.dev/api/lead';
 let orderCtx = {};
 function openLead(d) {
   d = d || {};
@@ -302,18 +304,17 @@ if (leadModal) {
     const st = document.getElementById('leadStatus');
     const contact = document.getElementById('leadContact').value.trim();
     if (!contact) return;
-    // статик-хостинг без бэкенда (GitHub Pages): ведём в Telegram
-    if (window.NEORIDE_TG_ONLY) {
-      form.hidden = true;
-      st.textContent = '✅ Открываем Telegram — напишите нам там, ответим в течение 15 минут в рабочее время.';
-      st.className = 'lead-status ok'; st.hidden = false;
-      window.open('https://t.me/neoride_shop_bot', '_blank', 'noopener');
+    const consentEl = document.getElementById('leadConsent');
+    if (consentEl && !consentEl.checked) {
+      st.textContent = 'Отметьте согласие на обработку персональных данных, чтобы отправить заявку.';
+      st.className = 'lead-status err'; st.hidden = false;
       return;
     }
     btn.disabled = true; btn.textContent = 'Отправляем…';
     const payload = {
       name: document.getElementById('leadName').value,
       contact,
+      consent: true,
       model: orderCtx.model || document.getElementById('leadModel').value,
       modelId: orderCtx.modelId,
       stock: orderCtx.stock,
@@ -323,7 +324,7 @@ if (leadModal) {
       website: form.website.value,
     };
     try {
-      const r = await fetch('/api/lead', {
+      const r = await fetch(LEAD_API, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(payload),
