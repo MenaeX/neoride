@@ -4,6 +4,7 @@
 const fmt = n => n == null ? '—' : Number(n).toLocaleString('ru-RU');
 const rub = n => n == null ? '—' : fmt(n) + ' ₽';
 const byId = Object.fromEntries(CATALOG.map(c => [c.id, c]));
+const LEAD_API = 'https://neoride-bot.amenshikov007.workers.dev/api/lead';
 
 const calcModel = document.getElementById('calcModel');
 const STOCK_MARK = { in: '✅', opt: '🟣 уточнить наличие', wait: '⏳' };
@@ -49,23 +50,23 @@ leadForm.addEventListener('submit', async e => {
   const st = document.getElementById('leadStatus');
   const contact = document.getElementById('leadContact').value.trim();
   if (!contact) return;
-  if (window.NEORIDE_TG_ONLY) {
-    leadForm.hidden = true;
-    st.textContent = '✅ Открываем Telegram — напишите нам там, подтвердим наличие и пришлём счёт.';
-    st.className = 'lead-status ok'; st.hidden = false;
-    window.open('https://t.me/neoride_shop_bot', '_blank', 'noopener');
+  const consentEl = document.getElementById('leadConsent');
+  if (consentEl && !consentEl.checked) {
+    st.textContent = 'Отметьте согласие на обработку персональных данных, чтобы отправить заявку.';
+    st.className = 'lead-status err'; st.hidden = false;
     return;
   }
   btn.disabled = true; btn.textContent = 'Отправляем…';
   const payload = {
     name: document.getElementById('leadName').value,
     contact,
+    consent: true,
     model: document.getElementById('leadModel').value,
     page: 'opt',
     website: leadForm.website.value,
   };
   try {
-    const r = await fetch('/api/lead', {
+    const r = await fetch(LEAD_API, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(payload),
@@ -82,6 +83,60 @@ leadForm.addEventListener('submit', async e => {
     st.className = 'lead-status err'; st.hidden = false;
   }
 });
+
+// --- Оптовый каталог карточками ---
+const OPT_CATS = [['all', 'Все'], ['самокат', 'Самокаты'], ['велосипед', 'Велосипеды'],
+  ['скутер', 'Скутеры'], ['трицикл', 'Трициклы'], ['питбайк', 'Питбайки'],
+  ['квадроцикл', 'Квадроциклы'], ['бензо', 'Бензо']];
+const optGrid = document.getElementById('optGrid');
+const optTabs = document.getElementById('optTabs');
+let optCat = 'all';
+
+function optCardHTML(c) {
+  const s = c.specs || {};
+  const chips = [
+    s.speed ? `⚡ ${s.speed} км/ч` : null,
+    s.range ? `🛣 ${s.range} км` : null,
+    s.power ? `🔋 ${fmt(s.power)} Вт` : null,
+    s.weight ? `⚖ ${s.weight} кг` : null,
+  ].filter(Boolean).map(t => `<span class="spec-chip">${t}</span>`).join('');
+  const img = c.img ? `<img loading="lazy" src="${c.img}" alt="Kugoo ${c.name}">` : '<span class="noimg">фото скоро</span>';
+  const badges = (c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : '') +
+    (c.stock === 'in' ? '<span class="badge">склад · гарантия</span>' : '');
+  return `<article class="card">
+    <div class="card-img"><div class="badges">${badges}</div>${img}</div>
+    <div class="card-body">
+      <div class="card-name">Kugoo ${c.name}</div>
+      <div class="card-specs">${chips}</div>
+      <div class="card-foot">
+        <div class="price">${rub(c.opt)}<small>опт за шт</small></div>
+        <div class="opt-retail">розница ${rub(c.price)}</div>
+      </div>
+      <button class="btn btn-accent" data-opt="${c.id}" data-name="Kugoo ${c.name}">Запросить счёт</button>
+    </div>
+  </article>`;
+}
+
+function renderOpt() {
+  if (!optGrid) return;
+  const list = optList.filter(c => optCat === 'all' || c.cat === optCat);
+  optGrid.innerHTML = list.map(optCardHTML).join('') || '<p class="sec-sub">В этой категории пока нет позиций.</p>';
+  optGrid.querySelectorAll('[data-opt]').forEach(b => b.onclick = () => {
+    document.getElementById('leadModel').value = b.dataset.name;
+    leadModal.hidden = false;
+  });
+}
+
+if (optTabs) {
+  optTabs.innerHTML = OPT_CATS.filter(([k]) => k === 'all' || optList.some(c => c.cat === k))
+    .map(([k, l]) => `<button class="cat-tab${k === 'all' ? ' active' : ''}" data-optcat="${k}">${l}</button>`).join('');
+  optTabs.querySelectorAll('[data-optcat]').forEach(b => b.onclick = () => {
+    optCat = b.dataset.optcat;
+    optTabs.querySelectorAll('.cat-tab').forEach(x => x.classList.toggle('active', x.dataset.optcat === optCat));
+    renderOpt();
+  });
+}
+renderOpt();
 
 const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('vis')), { threshold: .12 });
 document.querySelectorAll('[data-rev]').forEach(el => io.observe(el));

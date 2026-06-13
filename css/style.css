@@ -566,3 +566,5 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .legal a{color:var(--cyan)}
 .legal .back{display:inline-block;margin-bottom:28px;color:var(--lime);text-decoration:none;font-weight:600}
 .legal .req{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:18px 20px;margin:10px 0}
+
+.opt-retail{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}

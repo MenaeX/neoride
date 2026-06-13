@@ -79,7 +79,6 @@ chipRow(document.getElementById('ageChips'), AGE_BANDS, 'age');
 chipRow(document.getElementById('priceChips'), PRICE_BANDS, 'price');
 chipRow(document.getElementById('speedChips'), SPEED_BANDS, 'speed');
 document.getElementById('onlyStock').onchange = e => { state.stock = e.target.checked; render(); };
-document.getElementById('onlyOpt').onchange = e => { state.opt = e.target.checked; render(); };
 document.getElementById('onlyHit').onchange = e => { state.hit = e.target.checked; render(); };
 document.getElementById('sortSel').onchange = e => { state.sort = e.target.value; render(); };
 
@@ -109,7 +108,6 @@ function filtered() {
   if (state.cat !== 'all') list = list.filter(c => c.cat === state.cat);
   if (state.series !== 'all') list = list.filter(c => seriesOf(c) === state.series);
   if (state.stock) list = list.filter(c => c.stock === 'in');
-  if (state.opt) list = list.filter(c => c.stock === 'opt');
   if (state.hit) list = list.filter(c => c.hit);
   if (state.age !== 'all') list = list.filter(AGE_PRED[state.age]);
   list = list.filter(c => inBand(c.price / 1000, state.price));
