@@ -393,11 +393,18 @@ function openModel(id) {
       `<button class="mm-nav mm-next" id="mmNext" aria-label="Вперёд">›</button>` +
       `<div class="mm-counter" id="mmCounter">1 / ${gal.length}</div>` : '') + `</div>` : '';
   const warr = c.warranty ? '<div class="warr">✓ Гарантия 12 мес · документы</div>' : '';
+  // Гарантию и «товарный чек / гарантийный талон» показываем ТОЛЬКО для гарантийных моделей (склад).
+  // Для остальных — без гарантии производителя и без гарантийного талона (учтено в цене).
+  const kitRows = c.warranty
+    ? '<tr><td>Гарантия</td><td>12 мес (АКБ и контроллер — 3 мес)</td></tr>' +
+      '<tr><td>Комплектация</td><td>Товарный чек, гарантийный талон, зарядное устройство</td></tr>'
+    : '<tr><td>Гарантия</td><td>Без гарантии производителя (учтено в цене)</td></tr>' +
+      '<tr><td>Комплектация</td><td>Зарядное устройство</td></tr>';
   const desc = cleanDesc(c.desc);
   document.getElementById('mmBody').innerHTML =
     galHTML +
     `<div class="mm-price">${rub(c.price)}<small>розница</small></div>` + warr +
-    (rows ? `<table class="mm-specs">${rows}</table>` : '') +
+    `<table class="mm-specs">${rows}${kitRows}</table>` +
     (desc ? `<p class="mm-desc">${desc}</p>` : '') +
     `<div class="mm-actions">
        <button class="btn btn-accent" id="mmOrder">Заказать</button>
