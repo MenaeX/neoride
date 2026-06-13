@@ -84,13 +84,40 @@ leadForm.addEventListener('submit', async e => {
   }
 });
 
+// --- Хелперы карточки/модалки (порт из app.js) ---
+const SPEC_LABELS = {
+  power: ['Мощность', 'Вт'], volt: ['Напряжение', 'В'], battery_ah: ['Батарея', 'А·ч'],
+  speed: ['Макс. скорость', 'км/ч'], range: ['Запас хода', 'км'], load: ['Макс. нагрузка', 'кг'],
+  weight: ['Вес', 'кг'], wheel: ['Колёса', '"'], charge: ['Зарядка', 'ч'],
+  brakes: ['Тормоза', ''], drive: ['Привод', ''],
+  box: ['Размер коробки', ''], gross: ['Вес с упаковкой', 'кг'],
+};
+function driveTxt(d) {
+  if (!d) return null; d = String(d).toLowerCase();
+  if (d.includes('полн')) return 'полный привод';
+  if (d.includes('перед')) return 'передний привод';
+  if (d.includes('задн')) return 'задний привод';
+  if (d.includes('центр')) return 'центральный мотор';
+  return null;
+}
+function cleanDesc(s) {
+  if (!s) return '';
+  s = s.split(/Купить/i)[0]
+    .replace(/kugoo[\s-]?russia/gi, '').replace(/официальн\w*\s+(магазин\w*|дилер\w*)/gi, '')
+    .replace(/Честная гарантия[^.!?]*/gi, '').replace(/[☎️📞⭐️✔️✅♨️🔥»«]/g, '')
+    .replace(/\+?\d[\d\s\-()]{8,}\d/g, '').replace(/\s{2,}/g, ' ').trim();
+  return s.length < 40 ? '' : s;
+}
+
 // --- Оптовый каталог карточками ---
 const OPT_CATS = [['all', 'Все'], ['самокат', 'Самокаты'], ['велосипед', 'Велосипеды'],
   ['скутер', 'Скутеры'], ['трицикл', 'Трициклы'], ['питбайк', 'Питбайки'],
   ['квадроцикл', 'Квадроциклы'], ['бензо', 'Бензо']];
+const OPT_FMT = [['all', 'Все форматы'], ['in', 'Гарантия · от 3 шт'], ['opt', 'Мин. цена · от 10 шт']];
 const optGrid = document.getElementById('optGrid');
 const optTabs = document.getElementById('optTabs');
-let optCat = 'all';
+const optFormat = document.getElementById('optFormat');
+let optCat = 'all', optFmt = 'all';
 
 function optCardHTML(c) {
   const s = c.specs || {};
@@ -102,11 +129,13 @@ function optCardHTML(c) {
   ].filter(Boolean).map(t => `<span class="spec-chip">${t}</span>`).join('');
   const img = c.img ? `<img loading="lazy" src="${c.img}" alt="Kugoo ${c.name}">` : '<span class="noimg">фото скоро</span>';
   const badges = (c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : '') +
-    (c.stock === 'in' ? '<span class="badge">склад · гарантия</span>' : '');
+    (c.stock === 'in'
+      ? '<span class="badge in">от 3 шт · гарантия</span>'
+      : '<span class="badge opt">от 10 шт · мин. цена</span>');
   return `<article class="card">
-    <div class="card-img"><div class="badges">${badges}</div>${img}</div>
+    <div class="card-img" data-open="${c.id}" role="button" tabindex="0" title="Подробнее"><div class="badges">${badges}</div>${img}</div>
     <div class="card-body">
-      <div class="card-name">Kugoo ${c.name}</div>
+      <div class="card-name" data-open="${c.id}">Kugoo ${c.name}</div>
       <div class="card-specs">${chips}</div>
       <div class="card-foot">
         <div class="price">${rub(c.opt)}<small>опт за шт</small></div>
@@ -117,16 +146,89 @@ function optCardHTML(c) {
   </article>`;
 }
 
+// --- Модалка модели с галереей ---
+const modelModal = document.getElementById('modelModal');
+function openOptModel(id) {
+  const c = byId[id];
+  if (!c || !modelModal) return;
+  document.getElementById('mmTitle').textContent = 'Kugoo ' + c.name;
+  const s = c.specs || {};
+  const rows = Object.keys(SPEC_LABELS).filter(k => {
+    if (s[k] == null || s[k] === '') return false;
+    if (k === 'drive' && !driveTxt(s[k])) return false;
+    return true;
+  }).map(k => {
+    const [label, unit] = SPEC_LABELS[k];
+    const v = k === 'drive' ? driveTxt(s[k]) : s[k];
+    return `<tr><td>${label}</td><td>${v}${unit ? ' ' + unit : ''}</td></tr>`;
+  }).join('');
+  const gal = (c.gallery && c.gallery.length) ? c.gallery : (c.img ? [c.img] : []);
+  const alt = 'Kugoo ' + c.name;
+  const galHTML = gal.length ? `<div class="mm-img">${c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : ''}` +
+    `<img id="mmGalImg" src="${gal[0]}" alt="${alt}">` +
+    (gal.length > 1 ? `<button class="mm-nav mm-prev" id="mmPrev" aria-label="Назад">‹</button>` +
+      `<button class="mm-nav mm-next" id="mmNext" aria-label="Вперёд">›</button>` +
+      `<div class="mm-counter" id="mmCounter">1 / ${gal.length}</div>` : '') + `</div>` : '';
+  const fmtRow = c.stock === 'in'
+    ? '<tr><td>Опт-формат</td><td>от 3 шт · гарантия 12 мес + документы</td></tr>'
+    : '<tr><td>Опт-формат</td><td>от 10 шт одной модели · минимальная цена · без гарантии</td></tr>';
+  const desc = cleanDesc(c.desc);
+  document.getElementById('mmBody').innerHTML =
+    galHTML +
+    `<div class="mm-price">${rub(c.opt)}<small>опт за шт · розница ${rub(c.price)}</small></div>` +
+    `<table class="mm-specs">${rows}${fmtRow}</table>` +
+    (desc ? `<p class="mm-desc">${desc}</p>` : '') +
+    `<div class="mm-actions">
+       <button class="btn btn-accent" id="mmOrder">Запросить счёт</button>
+       <a class="btn lead-tg" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener">Написать в Telegram</a>
+     </div>`;
+  if (gal.length > 1) {
+    let gi = 0;
+    const gimg = document.getElementById('mmGalImg');
+    const show = () => { gimg.src = gal[gi]; document.getElementById('mmCounter').textContent = (gi + 1) + ' / ' + gal.length; };
+    document.getElementById('mmPrev').onclick = () => { gi = (gi - 1 + gal.length) % gal.length; show(); };
+    document.getElementById('mmNext').onclick = () => { gi = (gi + 1) % gal.length; show(); };
+    let sx = 0;
+    gimg.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
+    gimg.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 40) { gi = (gi + (dx < 0 ? 1 : -1) + gal.length) % gal.length; show(); }
+    }, { passive: true });
+  }
+  document.getElementById('mmOrder').onclick = () => {
+    modelModal.hidden = true;
+    document.getElementById('leadModel').value = 'Kugoo ' + c.name;
+    leadModal.hidden = false;
+  };
+  modelModal.hidden = false;
+}
+if (modelModal) {
+  document.getElementById('mmClose').onclick = () => modelModal.hidden = true;
+  modelModal.onclick = e => { if (e.target === modelModal) modelModal.hidden = true; };
+}
+
 function renderOpt() {
   if (!optGrid) return;
-  const list = optList.filter(c => optCat === 'all' || c.cat === optCat);
+  const list = optList.filter(c => (optCat === 'all' || c.cat === optCat) && (optFmt === 'all' || c.stock === optFmt));
   optGrid.innerHTML = list.map(optCardHTML).join('') || '<p class="sec-sub">В этой категории пока нет позиций.</p>';
   optGrid.querySelectorAll('[data-opt]').forEach(b => b.onclick = () => {
     document.getElementById('leadModel').value = b.dataset.name;
     leadModal.hidden = false;
   });
+  optGrid.querySelectorAll('[data-open]').forEach(el => {
+    el.onclick = () => openOptModel(el.dataset.open);
+    el.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOptModel(el.dataset.open); } };
+  });
 }
 
+if (optFormat) {
+  optFormat.innerHTML = OPT_FMT.map(([k, l]) => `<button class="cat-tab${k === 'all' ? ' active' : ''}" data-optfmt="${k}">${l}</button>`).join('');
+  optFormat.querySelectorAll('[data-optfmt]').forEach(b => b.onclick = () => {
+    optFmt = b.dataset.optfmt;
+    optFormat.querySelectorAll('.cat-tab').forEach(x => x.classList.toggle('active', x.dataset.optfmt === optFmt));
+    renderOpt();
+  });
+}
 if (optTabs) {
   optTabs.innerHTML = OPT_CATS.filter(([k]) => k === 'all' || optList.some(c => c.cat === k))
     .map(([k, l]) => `<button class="cat-tab${k === 'all' ? ' active' : ''}" data-optcat="${k}">${l}</button>`).join('');
