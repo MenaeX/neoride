@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEORIDE — оптовые поставки электротранспорта Kugoo от 10 единиц</title>
+<meta name="description" content="Оптовые поставки электротранспорта Kugoo от 10 единиц: отгрузка с московского склада напрямую вам или вашему клиенту, гарантия и брак — на нас. Калькулятор прибыли.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=130626j">
+<script>window.NEORIDE_TG_ONLY=true</script>
+</head>
+<body>
+
+<div class="scroll-led" id="scrollLed" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="container topbar-in">
+    <a class="logo" href="index.html">NEO<b>RIDE</b></a>
+    <nav class="nav">
+      <a href="index.html#catalog">Каталог</a>
+      <a href="#calc">Калькулятор</a>
+      <a href="#optfaq">Условия</a>
+      <a class="nav-opt" href="index.html">← Розница</a>
+    </nav>
+  </div>
+</header>
+
+<section class="opt-hero">
+  <div class="glow-lime"></div>
+  <div class="container">
+    <div class="kicker">Оптовый отдел NEORIDE</div>
+    <div class="hero-badge"><i></i>Партии от 3 единиц — со склада в Москве</div>
+    <h1>Зарабатывайте на электротранспорте <span class="g">без склада</span></h1>
+    <p class="hero-sub">Два формата: от 3 единиц с официальной гарантией со склада производителя — или
+    от 10 единиц одной модели по минимальной цене. Отгружаем с московского склада напрямую вам или вашему клиенту.</p>
+    <div class="hero-cta">
+      <a class="btn btn-accent" href="#calc">Посчитать прибыль</a>
+      <a class="btn" href="#optfaq">Условия работы</a>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="opt-formats">
+    <div class="fmt-card fmt-a" data-rev>
+      <div class="fmt-head"><span class="fmt-badge">с гарантией</span><h3>От 3 единиц</h3></div>
+      <ul>
+        <li>Только модели со склада в Москве — в <a href="index.html#catalog" style="color:var(--lime)">каталоге</a> они с пометкой «Гарантия 12 мес»; комбинировать можно</li>
+        <li>Официальная гарантия: 12 мес на технику, 3 мес на АКБ и контроллер</li>
+        <li>Отгрузка со склада в Москве, передача в ТК бесплатно (СДЭК, ПЭК, КИТ и др.)</li>
+        <li>Полный пакет документов от склада</li>
+        <li>Оплата: безнал для юрлиц, наличные для физлиц</li>
+      </ul>
+      <p class="fmt-price">Цена — по запросу счёта</p>
+    </div>
+    <div class="fmt-card fmt-b" data-rev>
+      <div class="fmt-head"><span class="fmt-badge b">минимальная цена</span><h3>От 10 единиц</h3></div>
+      <ul>
+        <li>От 10 штук одной модели</li>
+        <li>Без гарантии производителя — учтено в цене</li>
+        <li>Отгрузка в день оплаты в любую ТК</li>
+        <li>Цены и прибыль — в калькуляторе ниже</li>
+      </ul>
+      <p class="fmt-price"><a href="#calc">Посчитать прибыль ↓</a></p>
+    </div>
+  </div>
+  <div class="opt-steps">
+    <div class="step" data-rev><b>1</b><h4>Заявка</h4><p>Выбираете модели и количество — присылаем счёт и подтверждаем наличие</p></div>
+    <div class="step" data-rev><b>2</b><h4>Оплата</h4><p>Оплачиваете по счёту. Цена зависит от способа оплаты: перевод или безналичный расчёт с НДС</p></div>
+    <div class="step" data-rev><b>3</b><h4>Отгрузка</h4><p>В день оплаты передаём партию в транспортную компанию — вам или сразу вашему покупателю</p></div>
+    <div class="step" data-rev><b>4</b><h4>Ваша прибыль</h4><p>Продаёте по рознице — разница ваша. Рекомендованные розничные цены — в калькуляторе</p></div>
+  </div>
+
+  <div class="opt-warn" data-rev>
+    <span style="font-size:20px">⚠️</span>
+    <span><b>Наличие по оптовым позициям уточняйте перед заказом.</b> Складские остатки поставщиков
+    обновляются ежедневно — перед выставлением счёта мы подтверждаем фактическое наличие каждой модели в партии.</span>
+  </div>
+</section>
+
+<section class="opt-grid" id="calc">
+  <div class="container">
+    <div class="calc" data-rev>
+      <h3>Калькулятор <span class="g">прибыли</span></h3>
+      <div class="calc-row">
+        <label>Модель
+          <select id="calcModel"></select>
+        </label>
+        <label>Количество, шт
+          <input type="number" id="calcQty" value="10" min="10" max="100">
+        </label>
+      </div>
+      <div class="calc-out">
+        <div><span>Ваша цена за единицу</span><b id="calcOpt">—</b></div>
+        <div><span>Рекомендованная розница</span><b id="calcRetail">—</b></div>
+        <div><span>Прибыль с единицы</span><b id="calcUnit">—</b></div>
+        <div class="calc-total"><span>Прибыль с партии</span><b id="calcTotal">—</b></div>
+      </div>
+      <p class="calc-note">Расчёт ориентировочный и не является публичной офертой. Итоговые условия — в счёте:
+      цена зависит от способа оплаты (перевод / безналичный расчёт с НДС), объёма партии и фактического наличия.</p>
+      <a class="btn btn-accent" href="#" id="optRequest">Запросить оптовый счёт</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="optfaq">
+  <div class="container">
+    <h2 data-rev>Условия опта</h2>
+    <details><summary>Какой минимальный заказ?</summary><p>Два формата. С гарантией — от 3 единиц: только модели складского ассортимента (в каталоге они с пометкой «Гарантия 12 мес»), комбинация любая. По минимальной цене — от 10 единиц одной модели (сборные партии в этом формате — по согласованию).</p></details>
+    <details><summary>Как подтверждается наличие?</summary><p>Складские остатки обновляются ежедневно, поэтому перед выставлением счёта мы вручную подтверждаем фактическое наличие модели в нужном количестве. Не вносите оплату до подтверждения наличия.</p></details>
+    <details><summary>Есть ли гарантия на оптовые партии?</summary><p>В формате «от 3 единиц» — официальная гарантия производителя: 12 месяцев на технику и 3 месяца на аккумулятор и контроллер (отсчёт с даты продажи конечному покупателю). В формате «от 10 единиц» гарантии производителя нет — это учтено в цене; брак при приёмке у ТК фиксируйте актом перевозчика, такие случаи разбираем индивидуально.</p></details>
+    <details><summary>Какие документы я получу?</summary><p>В формате с гарантией («от 3 единиц») — полный пакет документов от московского склада и официальная гарантия производителя 12 месяцев.</p></details>
+    <details><summary>Можно отправить партию напрямую моему клиенту?</summary><p>Да — отгружаем в день оплаты в любую транспортную компанию на ваш адрес или адрес вашего покупателя. Передача в ТК бесплатная.</p></details>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-in">
+    <div class="logo">NEO<b>RIDE</b></div>
+    <p><a href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener" style="color:var(--cyan)">Написать в Telegram</a> · Москва, склад у МКАД · ежедневно 09:00–21:00 МСК</p>
+    <p class="fine">Kugoo® — товарный знак правообладателя; NEORIDE — независимый продавец. Оптовые цены не являются публичной офертой.</p>
+  </div>
+</footer>
+
+<a class="tg-fab" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+  <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+  <span>Написать</span>
+</a>
+
+<div class="modal" id="leadModal" hidden>
+  <div class="modal-box modal-box-sm">
+    <div class="modal-head">
+      <h3>Заявка на оптовый счёт</h3>
+      <button class="modal-close" id="closeLead">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>Оставьте контакт — подтвердим наличие и пришлём счёт в течение рабочего дня.</p>
+      <form class="lead-form" id="leadForm">
+        <input type="hidden" name="model" id="leadModel" value="Оптовая заявка">
+        <input type="text" name="website" class="lead-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>Имя или компания<input type="text" name="name" id="leadName" placeholder="Как к вам обращаться" autocomplete="name"></label>
+        <label>Телефон или Telegram<input type="text" name="contact" id="leadContact" placeholder="+7 999 123-45-67 или @username" autocomplete="tel" required></label>
+        <button type="submit" class="btn btn-accent" id="leadSubmit">Запросить счёт</button>
+        <p class="lead-status" id="leadStatus" hidden></p>
+      </form>
+      <a class="btn lead-tg" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+  </div>
+</div>
+
+<script data-cfasync="false" src="data/catalog.js?v=130626j"></script>
+<script data-cfasync="false" src="js/opt.js?v=130626j"></script>
+<script data-cfasync="false" src="js/fx.js?v=130626j"></script>
+</body>
+</html>

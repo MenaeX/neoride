@@ -1,0 +1,157 @@
+/* AI-чат-консультант NEORIDE — общается с /api/chat (Claude). Самовнедряемый виджет. */
+(function () {
+  'use strict';
+
+  var GREETING = 'Привет! Я Олег, консультант NEORIDE 🛴\nПомогу выбрать электротранспорт под вашу задачу. Что ищете — самокат для города, подальше поездить или для подростка?';
+  var QUICK = [
+    'Посоветуй до 40 000 ₽',
+    'Что для дальних поездок?',
+    'Самый мощный самокат',
+  ];
+
+  // история для API (без приветствия — оно чисто визуальное)
+  var history = [];
+  var busy = false;
+  var els = {};
+
+  function build() {
+    var fab = document.createElement('button');
+    fab.className = 'chat-fab';
+    fab.setAttribute('aria-label', 'Открыть чат с консультантом');
+    fab.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.8 2 11.5c0 2.4 1.2 4.6 3.1 6.1-.1 1.1-.6 2.6-1.6 3.9 1.9-.3 3.6-1 4.9-1.9 1.1.3 2.3.5 3.6.5 5.5 0 10-3.8 10-8.6S17.5 3 12 3z"/></svg><span>Спросить ИИ</span>';
+    document.body.appendChild(fab);
+
+    var panel = document.createElement('div');
+    panel.className = 'chat-panel';
+    panel.setAttribute('role', 'dialog');
+    panel.setAttribute('aria-label', 'Чат с консультантом NEORIDE');
+    panel.innerHTML =
+      '<div class="chat-head">' +
+        '<div class="chat-ava">N</div>' +
+        '<div><b>Олег · NEORIDE</b><span>● онлайн-консультант</span></div>' +
+        '<button class="chat-x" aria-label="Закрыть">✕</button>' +
+      '</div>' +
+      '<div class="chat-log" id="chatLog"></div>' +
+      '<div class="chat-quick" id="chatQuick"></div>' +
+      '<div class="chat-input-row">' +
+        '<textarea id="chatInput" rows="1" placeholder="Напишите вопрос…" autocomplete="off"></textarea>' +
+        '<button class="chat-send" id="chatSend" aria-label="Отправить">' +
+          '<svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 20.5l18-8.5L3 3.5 3 10l12 2-12 2z"/></svg>' +
+        '</button>' +
+      '</div>' +
+      '<div class="chat-note">ИИ-консультант · наличие и заказ подтверждает менеджер</div>';
+    document.body.appendChild(panel);
+
+    els.fab = fab;
+    els.panel = panel;
+    els.log = panel.querySelector('#chatLog');
+    els.quick = panel.querySelector('#chatQuick');
+    els.input = panel.querySelector('#chatInput');
+    els.send = panel.querySelector('#chatSend');
+
+    fab.onclick = open;
+    panel.querySelector('.chat-x').onclick = close;
+    els.send.onclick = function () { submit(); };
+    els.input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); submit(); }
+    });
+    els.input.addEventListener('input', function () {
+      els.input.style.height = 'auto';
+      els.input.style.height = Math.min(els.input.scrollHeight, 90) + 'px';
+    });
+  }
+
+  function open() {
+    els.panel.classList.add('open');
+    els.fab.style.display = 'none';
+    if (!els.log.children.length) {
+      addMsg('bot', GREETING);
+      renderQuick();
+    }
+    setTimeout(function () { els.input.focus(); }, 150);
+  }
+  function close() {
+    els.panel.classList.remove('open');
+    els.fab.style.display = '';
+  }
+
+  function renderQuick() {
+    els.quick.innerHTML = '';
+    QUICK.forEach(function (q) {
+      var b = document.createElement('button');
+      b.textContent = q;
+      b.onclick = function () { send(q); };
+      els.quick.appendChild(b);
+    });
+  }
+
+  function addMsg(role, text) {
+    var d = document.createElement('div');
+    d.className = 'chat-msg ' + (role === 'me' ? 'me' : 'bot');
+    d.textContent = text;
+    els.log.appendChild(d);
+    els.log.scrollTop = els.log.scrollHeight;
+    return d;
+  }
+
+  function typing(on) {
+    var t = els.log.querySelector('.chat-typing');
+    if (on && !t) {
+      t = document.createElement('div');
+      t.className = 'chat-typing';
+      t.innerHTML = '<i></i><i></i><i></i>';
+      els.log.appendChild(t);
+      els.log.scrollTop = els.log.scrollHeight;
+    } else if (!on && t) {
+      t.remove();
+    }
+  }
+
+  function submit() {
+    var v = els.input.value.trim();
+    if (v) send(v);
+  }
+
+  function send(text) {
+    if (busy) return;
+    busy = true;
+    els.quick.innerHTML = '';
+    els.input.value = '';
+    els.input.style.height = 'auto';
+    els.send.disabled = true;
+    addMsg('me', text);
+    history.push({ role: 'user', content: text });
+    typing(true);
+
+    fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ messages: history, page: location.pathname }),
+    })
+      .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+      .then(function (d) {
+        typing(false);
+        if (d && d.ok && d.reply) {
+          history.push({ role: 'assistant', content: d.reply });
+          addMsg('bot', d.reply);
+        } else {
+          addMsg('bot', 'Связь с консультантом прервалась. Напишите нам в Telegram @neoride_shop_bot — ответим там 🙏');
+        }
+      })
+      .catch(function () {
+        typing(false);
+        addMsg('bot', 'Что-то пошло не так с подключением. Telegram: @neoride_shop_bot');
+      })
+      .finally(function () {
+        busy = false;
+        els.send.disabled = false;
+        els.input.focus();
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', build);
+  } else {
+    build();
+  }
+})();
