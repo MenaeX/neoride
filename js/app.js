@@ -164,7 +164,9 @@ function cardHTML(c) {
         <div class="price">${rub(c.price)}<small>розница</small></div>
         <button class="cmp-toggle${on}" data-cmp="${c.id}" title="Добавить к сравнению">⚖ Сравнить</button>
       </div>
-      <button class="btn btn-accent card-cart" data-addcart="${c.id}">🛒 В корзину</button>
+      ${c.stock === 'in'
+        ? `<button class="btn btn-accent card-cart" data-addcart="${c.id}">🛒 В корзину</button>`
+        : `<button class="btn card-notify" data-notify="${c.id}">🔔 Сообщить о наличии</button>`}
     </div>
   </article>`;
 }
@@ -179,7 +181,7 @@ function render() {
   document.getElementById('grid').innerHTML = shown.map(cardHTML).join('') ||
     '<p style="color:var(--mut)">Под выбранные фильтры моделей нет — попробуйте смягчить условия.</p>';
   document.querySelectorAll('[data-cmp]').forEach(b => b.onclick = () => toggleCompare(b.dataset.cmp));
-  document.querySelectorAll('[data-order]').forEach(b => b.onclick = () => openLead(b.dataset));
+  document.querySelectorAll('[data-notify]').forEach(b => b.onclick = () => openNotify(b.dataset.notify));
   document.querySelectorAll('[data-open]').forEach(el => {
     el.onclick = () => openModel(el.dataset.open);
     el.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModel(el.dataset.open); } };
@@ -282,10 +284,19 @@ function pluralRu(n, a, b, c) {
   if (d === 1) return a;
   return c;
 }
-function resetLeadSubmit() {
+const TG_BOT = 'https://t.me/neoride_shop_bot';
+// Настройка «обвязки» лид-модалки под режим (заявка / уведомление о наличии).
+function setLeadChrome(o) {
+  o = o || {};
+  const title = document.getElementById('leadTitle');
+  const intro = document.getElementById('leadIntro');
+  const tg = document.getElementById('leadTg');
   const btn = document.getElementById('leadSubmit');
-  if (btn) { btn.disabled = false; btn.textContent = 'Отправить заявку'; }
   const st = document.getElementById('leadStatus');
+  if (title) title.textContent = o.title || 'Оставить заявку';
+  if (intro) intro.textContent = o.intro || 'Оставьте контакт — ответим в течение 15 минут в рабочее время (09:00–21:00 МСК).';
+  if (tg) { tg.textContent = o.tgText || 'Написать в Telegram'; tg.href = o.tgHref || TG_BOT; }
+  if (btn) { btn.disabled = false; btn.textContent = o.submit || 'Отправить заявку'; }
   if (st) st.hidden = true;
 }
 function openLead(d) {
@@ -302,7 +313,7 @@ function openLead(d) {
   document.getElementById('leadModel').value = orderCtx.model;
   if (orderCtx.model) { line.innerHTML = '🛒 ' + orderCtx.model; line.hidden = false; }
   else line.hidden = true;
-  resetLeadSubmit();
+  setLeadChrome();
   document.getElementById('leadForm').hidden = false;
   leadModal.hidden = false;
 }
@@ -319,11 +330,31 @@ function openLeadCart() {
     '<span class="lead-items">' + items.map(i => '• ' + i.name + ' ×' + i.qty).join('<br>') + '</span>';
   line.hidden = false;
   document.getElementById('leadModel').value = items.map(i => i.name + ' ×' + i.qty).join('; ');
-  resetLeadSubmit();
+  setLeadChrome();
   document.getElementById('leadForm').hidden = false;
   leadModal.hidden = false;
 }
 window.neorideOpenLeadCart = openLeadCart;
+// «Сообщить о наличии» для моделей вне склада: подписка в Telegram-боте (бот сам напишет,
+// как только модель перейдёт в наличие) либо контакт для ручного уведомления менеджером.
+function openNotify(id) {
+  const c = byId[id];
+  orderCtx = { notify: true, modelId: id, model: c ? (c.brand || 'Kugoo') + ' ' + c.name : '' };
+  const line = document.getElementById('leadModelLine');
+  line.innerHTML = '🔔 Сообщить, когда появится: ' + orderCtx.model;
+  line.hidden = false;
+  document.getElementById('leadModel').value = orderCtx.model;
+  setLeadChrome({
+    title: 'Сообщить о наличии',
+    intro: 'Подпишитесь — как только модель появится в наличии, бот сообщит первым. Или оставьте контакт, и менеджер уведомит вручную.',
+    tgText: '🔔 Подписаться в Telegram',
+    tgHref: TG_BOT + '?start=notify_' + id,
+    submit: 'Уведомить меня',
+  });
+  document.getElementById('leadForm').hidden = false;
+  leadModal.hidden = false;
+}
+window.neorideOpenNotify = openNotify;
 if (leadModal) {
   document.getElementById('closeLead').onclick = () => leadModal.hidden = true;
   leadModal.onclick = e => { if (e.target === leadModal) leadModal.hidden = true; };
@@ -341,18 +372,31 @@ if (leadModal) {
       return;
     }
     btn.disabled = true; btn.textContent = 'Отправляем…';
-    const payload = {
+    const base = {
       name: document.getElementById('leadName').value,
       contact,
       consent: true,
-      model: orderCtx.model || document.getElementById('leadModel').value,
-      modelId: orderCtx.modelId,
-      stock: orderCtx.stock,
-      warranty: orderCtx.warranty,
-      src: orderCtx.src,
       page: location.pathname,
       website: form.website.value,
     };
+    const payload = orderCtx.notify
+      ? { ...base, notify: true, model: orderCtx.model, modelId: orderCtx.modelId }
+      : orderCtx.cart && orderCtx.items && orderCtx.items.length
+      ? {
+          ...base,
+          items: orderCtx.items.map(i => ({
+            id: i.id, name: i.name, qty: i.qty, price: i.price,
+            stock: i.stock, warranty: i.warranty, src: i.src,
+          })),
+        }
+      : {
+          ...base,
+          model: orderCtx.model || document.getElementById('leadModel').value,
+          modelId: orderCtx.modelId,
+          stock: orderCtx.stock,
+          warranty: orderCtx.warranty,
+          src: orderCtx.src,
+        };
     try {
       const r = await fetch(LEAD_API, {
         method: 'POST',
@@ -361,8 +405,11 @@ if (leadModal) {
       });
       const j = await r.json().catch(() => ({}));
       if (r.ok && j.ok) {
+        if (orderCtx.cart && window.neorideCart) window.neorideCart.clear();
         form.hidden = true;
-        st.textContent = '✅ Заявка отправлена! Свяжемся в течение 15 минут в рабочее время.';
+        st.textContent = orderCtx.notify
+          ? '✅ Готово! Сообщим, как только модель появится в наличии. Для мгновенного уведомления подпишитесь в Telegram кнопкой ниже.'
+          : '✅ Заявка отправлена! Менеджер подтвердит наличие и итоговую цену и пришлёт ссылку на оплату — в течение 15 минут в рабочее время (09:00–21:00 МСК).';
         st.className = 'lead-status ok'; st.hidden = false;
       } else throw new Error();
     } catch (_) {
@@ -437,7 +484,8 @@ function openModel(id) {
     `<table class="mm-specs">${rows}${kitRows}</table>` +
     (desc ? `<p class="mm-desc">${desc}</p>` : '') +
     `<div class="mm-actions">
-       <button class="btn btn-accent" id="mmOrder">Заказать</button>
+       <button class="btn btn-accent" data-addcart="${c.id}">🛒 В корзину</button>
+       <button class="btn" id="mmOrder">Купить в один клик</button>
        <a class="btn lead-tg" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener">Написать в Telegram</a>
      </div>`;
   if (gal.length > 1) {

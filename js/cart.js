@@ -105,7 +105,7 @@
         '<span>' + r.qty + '</span>' +
         '<button type="button" data-inc="' + r.id + '" aria-label="Больше">+</button></div>' +
         '<div class="cart-sum">' + rub(r.price * r.qty) + '</div>' +
-        '<button type="button" class="cart-rm" data-rm="' + r.id + '" aria-label="Убрать">✕</button>' +
+        '<button type="button" class="cart-rm" data-cartrm="' + r.id + '" aria-label="Убрать">✕</button>' +
         '</div>';
     }).join('');
     body.innerHTML =
@@ -144,8 +144,8 @@
       if (dec) { var it = find(dec.getAttribute('data-dec')); if (it) setQty(it.id, it.qty - 1); return; }
       var inc = e.target.closest('[data-inc]');
       if (inc) { var it2 = find(inc.getAttribute('data-inc')); if (it2) setQty(it2.id, it2.qty + 1); return; }
-      var rm = e.target.closest('[data-rm].cart-rm');
-      if (rm) { remove(rm.getAttribute('data-rm')); return; }
+      var rm = e.target.closest('[data-cartrm]');
+      if (rm) { remove(rm.getAttribute('data-cartrm')); return; }
     });
     syncBadge();
   }

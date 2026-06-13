@@ -399,7 +399,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .modal-close:hover{color:var(--txt)}
 .modal-body{padding:20px 24px;overflow:auto}
 .lead-stub{margin-top:14px;padding:14px;border:1px dashed var(--line2);border-radius:12px;color:var(--mut);font-size:14px}
-.card-order{width:100%;margin-top:12px;justify-content:center;padding:12px 18px;font-size:14px}
+.card-cart{width:100%;margin-top:12px;justify-content:center;padding:12px 18px;font-size:14px}
 .lead-model{margin-bottom:10px;padding:8px 12px;border-radius:10px;background:rgba(184,255,46,.1);
   border:1px solid rgba(184,255,46,.35);font:600 14px Inter;color:var(--lime)}
 .lead-form{display:flex;flex-direction:column;gap:14px;margin-top:16px}
@@ -505,7 +505,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .price{font-size:14px}.price small{font-size:9px}
   .cmp-toggle{font-size:0;padding:7px 9px;border-radius:9px}
   .cmp-toggle::before{content:'⚖';font-size:13px}
-  .card-order{padding:9px;font-size:12.5px;margin-top:8px}
+  .card-cart{padding:9px;font-size:12.5px;margin-top:8px}
   .badge{font-size:9.5px;padding:4px 7px}
   .card-img[data-open]::before{font-size:10px;padding:5px 9px}
 }
@@ -621,3 +621,62 @@ details p{padding:0 22px 18px;color:var(--mut)}
 /* Сообщение калькулятора (минимум заказа) */
 .calc-msg{color:#ffd24a;font:600 13px Inter;margin:-8px 0 14px;padding:8px 12px;border-radius:10px;
   background:rgba(255,176,32,.1);border:1px solid rgba(255,176,32,.3)}
+
+/* ====== Корзина ====== */
+.nav-cart{position:relative;background:transparent;border:1px solid var(--line2);border-radius:99px;
+  color:var(--txt);font-size:17px;line-height:1;padding:8px 13px;cursor:pointer;transition:.2s}
+.nav-cart:hover{border-color:var(--lime);box-shadow:0 0 16px rgba(184,255,46,.22)}
+.nav-cart .cart-cnt{position:absolute;top:-7px;right:-7px;min-width:19px;height:19px;padding:0 5px;
+  display:inline-flex;align-items:center;justify-content:center;background:var(--lime);color:#06130a;
+  font:800 11px/1 Inter;border-radius:99px;box-shadow:0 3px 10px rgba(184,255,46,.45)}
+@keyframes cartpulse{0%{transform:scale(1)}40%{transform:scale(1.16)}100%{transform:scale(1)}}
+.nav-cart.pulse{animation:cartpulse .4s ease}
+
+.cart-lines{display:flex;flex-direction:column;gap:12px}
+.cart-line{display:grid;grid-template-columns:54px 1fr auto auto auto;align-items:center;gap:12px;
+  padding-bottom:12px;border-bottom:1px solid var(--line)}
+.cart-line:last-child{border-bottom:0;padding-bottom:0}
+.cart-thumb{width:54px;height:54px;border-radius:10px;overflow:hidden;background:var(--glass);
+  display:flex;align-items:center;justify-content:center;flex:none}
+.cart-thumb img{width:100%;height:100%;object-fit:cover}
+.cart-noimg{font:500 10px var(--mono);color:var(--mut)}
+.cart-info{min-width:0}
+.cart-name{font:600 14px Inter;color:var(--txt);line-height:1.25}
+.cart-sub{font:500 12px var(--mono);color:var(--mut);margin-top:3px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.cart-warr{color:var(--lime)}
+.cart-qty{display:inline-flex;align-items:center;gap:4px}
+.cart-qty button{width:28px;height:28px;border:1px solid var(--line2);background:var(--glass);color:var(--txt);
+  border-radius:8px;cursor:pointer;font-size:16px;line-height:1;transition:.15s}
+.cart-qty button:hover{border-color:var(--cyan);color:var(--cyan)}
+.cart-qty span{min-width:22px;text-align:center;font:700 14px Inter}
+.cart-sum{font:800 14px Unbounded,Inter;color:var(--txt);white-space:nowrap}
+.cart-rm{background:transparent;border:0;color:var(--mut);cursor:pointer;font-size:15px;line-height:1;padding:4px}
+.cart-rm:hover{color:#ff6a6a}
+.cart-foot{margin-top:18px;display:flex;flex-direction:column;gap:12px}
+.cart-total{display:flex;align-items:baseline;justify-content:space-between}
+.cart-total span{color:var(--mut);font:600 13px Inter}
+.cart-total b{font:800 22px Unbounded,Inter;color:var(--lime);text-shadow:0 0 22px rgba(184,255,46,.3)}
+.cart-note{font-size:12.5px;line-height:1.5;color:var(--mut);margin:0;padding:11px 13px;border-radius:11px;
+  background:rgba(46,230,255,.06);border:1px solid rgba(46,230,255,.22)}
+.cart-checkout{width:100%;justify-content:center;padding:14px;font-size:15px}
+.cart-clear{width:100%;justify-content:center;font-size:13px;padding:11px}
+.cart-empty{text-align:center;color:var(--txt);font-weight:600;padding:14px 0 20px}
+.cart-empty span{display:block;color:var(--mut);font-weight:400;font-size:14px;margin-top:8px}
+.cart-go{width:100%;justify-content:center;padding:13px}
+
+/* Список позиций в лид-модалке при оформлении корзины */
+.lead-items{display:block;margin-top:7px;font:500 12.5px var(--mono);color:var(--mut);line-height:1.6}
+@media (max-width:560px){
+  .cart-line{grid-template-columns:46px 1fr auto;gap:7px 10px}
+  .cart-thumb{width:46px;height:46px;grid-row:1 / span 2}
+  .cart-info{grid-column:2;grid-row:1}
+  .cart-rm{grid-column:3;grid-row:1;justify-self:end}
+  .cart-qty{grid-column:2;grid-row:2;justify-self:start}
+  .cart-sum{grid-column:3;grid-row:2;justify-self:end;font-size:13px}
+}
+
+/* Кнопка «Сообщить о наличии» (товары вне склада) */
+.card-notify{width:100%;margin-top:12px;justify-content:center;padding:12px 18px;font-size:14px;
+  border-color:rgba(46,230,255,.4);color:var(--cyan)}
+.card-notify:hover{border-color:var(--cyan);background:rgba(46,230,255,.08);box-shadow:0 0 14px rgba(46,230,255,.2)}
+@media (max-width:600px){.card-notify{padding:9px;font-size:12.5px;margin-top:8px}}
