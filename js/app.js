@@ -164,7 +164,7 @@ function cardHTML(c) {
         <div class="price">${rub(c.price)}<small>розница</small></div>
         <button class="cmp-toggle${on}" data-cmp="${c.id}" title="Добавить к сравнению">⚖ Сравнить</button>
       </div>
-      <button class="btn btn-accent card-order" data-order="${c.id}" data-name="${c.brand || 'Kugoo'} ${c.name}" data-stock="${c.stock}" data-warr="${c.warranty ? 1 : 0}" data-src="${(c.src || []).join(',')}">Заказать</button>
+      <button class="btn btn-accent card-cart" data-addcart="${c.id}">🛒 В корзину</button>
     </div>
   </article>`;
 }
@@ -275,9 +275,23 @@ const leadModal = document.getElementById('leadModal');
 // Бэкенд заявок — воркер neoride-bot (workers.dev доступен в РФ; форма работает и с GitHub Pages).
 const LEAD_API = 'https://neoride-bot.amenshikov007.workers.dev/api/lead';
 let orderCtx = {};
+function pluralRu(n, a, b, c) {
+  n = Math.abs(n) % 100; const d = n % 10;
+  if (n > 10 && n < 20) return c;
+  if (d > 1 && d < 5) return b;
+  if (d === 1) return a;
+  return c;
+}
+function resetLeadSubmit() {
+  const btn = document.getElementById('leadSubmit');
+  if (btn) { btn.disabled = false; btn.textContent = 'Отправить заявку'; }
+  const st = document.getElementById('leadStatus');
+  if (st) st.hidden = true;
+}
 function openLead(d) {
   d = d || {};
   orderCtx = {
+    cart: false,
     modelId: d.order || '',
     model: d.name || '',
     stock: d.stock || '',
@@ -286,13 +300,30 @@ function openLead(d) {
   };
   const line = document.getElementById('leadModelLine');
   document.getElementById('leadModel').value = orderCtx.model;
-  if (orderCtx.model) { line.textContent = '🛒 ' + orderCtx.model; line.hidden = false; }
+  if (orderCtx.model) { line.innerHTML = '🛒 ' + orderCtx.model; line.hidden = false; }
   else line.hidden = true;
-  const st = document.getElementById('leadStatus');
-  if (st) { st.hidden = true; }
+  resetLeadSubmit();
   document.getElementById('leadForm').hidden = false;
   leadModal.hidden = false;
 }
+// Оформление корзины: тот же лид-модал, но со списком позиций. Заявка → менеджер
+// подтверждает наличие/цену → присылает ссылку на оплату.
+function openLeadCart() {
+  const items = (window.neorideCart && window.neorideCart.get()) || [];
+  if (!items.length) return;
+  orderCtx = { cart: true, items };
+  const n = items.reduce((s, i) => s + i.qty, 0);
+  const tot = items.reduce((s, i) => s + i.price * i.qty, 0);
+  const line = document.getElementById('leadModelLine');
+  line.innerHTML = '🛒 Заказ: ' + n + ' ' + pluralRu(n, 'позиция', 'позиции', 'позиций') + ' · ориентир ' + rub(tot) +
+    '<span class="lead-items">' + items.map(i => '• ' + i.name + ' ×' + i.qty).join('<br>') + '</span>';
+  line.hidden = false;
+  document.getElementById('leadModel').value = items.map(i => i.name + ' ×' + i.qty).join('; ');
+  resetLeadSubmit();
+  document.getElementById('leadForm').hidden = false;
+  leadModal.hidden = false;
+}
+window.neorideOpenLeadCart = openLeadCart;
 if (leadModal) {
   document.getElementById('closeLead').onclick = () => leadModal.hidden = true;
   leadModal.onclick = e => { if (e.target === leadModal) leadModal.hidden = true; };

@@ -13,6 +13,12 @@
 
   // история для API (без приветствия — оно чисто визуальное); сохраняется между страницами
   var STORE = 'neoride_chat_v1';
+  // стабильный короткий id гостя — чтобы владелец различал диалоги разных посетителей
+  var sid;
+  try {
+    sid = localStorage.getItem('neoride_chat_sid');
+    if (!sid) { sid = Math.random().toString(36).slice(2, 6); localStorage.setItem('neoride_chat_sid', sid); }
+  } catch (e) { sid = '----'; }
   var history = [];
   try { history = JSON.parse(localStorage.getItem(STORE) || '[]') || []; } catch (e) { history = []; }
   function save() {
@@ -179,7 +185,7 @@
     return fetch(API, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ messages: history, page: location.pathname }),
+      body: JSON.stringify({ messages: history, page: location.pathname, sid: sid }),
     })
       .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
       .then(function (d) {
