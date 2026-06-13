@@ -569,18 +569,23 @@ details p{padding:0 22px 18px;color:var(--mut)}
 
 .opt-retail{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}
 
-/* Кнопки: при наведении — неоновая подсветка, без затемнения */
-.btn:hover{transform:translateY(-2px);background:var(--glass);
+/* Кнопки: hover/active — неон, без затемнения. ВАЖНО: фон трогаем только у НЕ-акцентных
+   (иначе у .btn-accent пропадает градиент и кнопка чернеет). */
+.btn:not(.btn-accent):hover{transform:translateY(-2px);background:rgba(46,230,255,.07);
   border-color:rgba(46,230,255,.55);
-  box-shadow:0 8px 30px rgba(46,230,255,.22),0 0 0 1px rgba(46,230,255,.35),0 0 22px rgba(184,255,46,.18)}
-.btn-ghost:hover{background:rgba(46,230,255,.06)}
-.btn-accent:hover{transform:translateY(-2px);
+  box-shadow:0 8px 26px rgba(46,230,255,.18),0 0 0 1px rgba(46,230,255,.3)}
+.btn-accent:hover{transform:translateY(-2px);filter:brightness(1.06) saturate(1.05);
   box-shadow:0 12px 40px rgba(120,243,150,.5),0 0 26px rgba(46,230,255,.4),0 0 0 1px rgba(184,255,46,.55)}
+/* нажатие: лёгкое вдавливание, цвет НЕ темнеет */
+.btn:active{transform:translateY(0) scale(.985)}
+.btn-accent:active{transform:translateY(0) scale(.985);filter:brightness(1.04);
+  box-shadow:0 4px 18px rgba(120,243,150,.4)}
+.btn:not(.btn-accent):active{background:rgba(46,230,255,.10);border-color:rgba(46,230,255,.5)}
 
-/* Неоновая подсветка под курсором (desktop) */
-.cursor-glow{position:fixed;top:0;left:0;width:360px;height:360px;margin:-180px 0 0 -180px;
+/* Неоновая подсветка под курсором (desktop) — вдвое меньше */
+.cursor-glow{position:fixed;top:0;left:0;width:180px;height:180px;margin:-90px 0 0 -90px;
   border-radius:50%;pointer-events:none;z-index:4;opacity:0;transition:opacity .35s;will-change:transform;
-  background:radial-gradient(circle,rgba(46,230,255,.10),rgba(184,255,46,.05) 42%,transparent 70%);
+  background:radial-gradient(circle,rgba(46,230,255,.12),rgba(184,255,46,.06) 42%,transparent 70%);
   mix-blend-mode:screen}
 
 /* Калькулятор опта: мультивыбор моделей */
@@ -590,16 +595,19 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .calc-add .btn{flex:none;padding:11px 18px}
 .calc-list{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
 .calc-empty{color:var(--mut);font-size:13px;padding:6px 2px}
-.calc-item{display:grid;grid-template-columns:1fr 78px auto auto;gap:12px;align-items:center;
-  background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:13px;padding:10px 14px}
-.ci-name{display:flex;flex-direction:column;line-height:1.2;min-width:0;font:600 14px Inter;color:var(--txt)}
-.ci-name small{font-weight:500;color:var(--mut);font-size:11px;margin-top:2px}
-.ci-qty{width:78px;text-align:center;padding:9px 8px!important}
-.ci-profit{font:700 15px Unbounded,Inter;color:var(--lime);white-space:nowrap}
+.calc-item{display:grid;grid-template-columns:1fr auto auto auto;gap:14px;align-items:center;
+  background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:13px;padding:12px 14px}
+.ci-name{display:flex;flex-direction:column;line-height:1.25;min-width:0;font:600 14.5px Inter;color:var(--txt)}
+.ci-name small{font-weight:500;color:var(--mut);font-size:11.5px;margin-top:3px}
+.ci-qty-box{display:inline-flex;align-items:center;gap:6px;color:var(--mut);font:600 12px Inter}
+.ci-qty{width:72px;text-align:center;padding:9px 8px!important}
+.ci-profit{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;
+  font:800 17px Unbounded,Inter;color:var(--lime);white-space:nowrap}
+.ci-profit small{font:600 10.5px Inter;color:var(--mut);letter-spacing:.02em;margin-bottom:2px}
 .ci-del{background:transparent;border:0;color:var(--mut);cursor:pointer;font-size:15px;line-height:1;padding:4px}
 .ci-del:hover{color:#ff6a6a}
 @media (max-width:560px){
-  .calc-item{grid-template-columns:1fr 64px auto}
-  .ci-qty{width:64px}
-  .ci-profit{grid-column:1 / -1;text-align:right;margin-top:-4px}
+  .calc-item{grid-template-columns:1fr auto auto;row-gap:8px}
+  .ci-profit{grid-column:1 / -1;flex-direction:row;justify-content:space-between;align-items:baseline}
+  .ci-profit small{margin:0}
 }

@@ -19,7 +19,7 @@ calcModel.innerHTML = CALC_GROUPS.map(([key, label]) => {
   const items = optList.filter(c => c.cat === key);
   if (!items.length) return '';
   return `<optgroup label="${label}">` + items.map(c =>
-    `<option value="${c.id}">Kugoo ${c.name} — ${FMT_LABEL[c.stock] || ''} ${STOCK_MARK[c.stock] || ''}</option>`).join('') + '</optgroup>';
+    `<option value="${c.id}">Kugoo ${c.name} — ${FMT_LABEL[c.stock] || ''} · ${fmt(c.opt)} ₽/шт ${STOCK_MARK[c.stock] || ''}</option>`).join('') + '</optgroup>';
 }).join('');
 
 // --- Калькулятор: несколько моделей + количество вручную ---
@@ -32,10 +32,10 @@ function calcRender() {
   calcRows.innerHTML = cart.map(it => {
     const c = byId[it.id]; if (!c) return '';
     return `<div class="calc-item" data-id="${it.id}">
-      <span class="ci-name">Kugoo ${c.name}<small>${FMT_LABEL[c.stock] || ''}</small></span>
-      <input class="ci-qty" type="number" inputmode="numeric" min="1" max="1000" value="${it.qty}" data-id="${it.id}" aria-label="Количество, шт">
-      <span class="ci-profit">+${fmt((c.price - c.opt) * it.qty)} ₽</span>
-      <button class="ci-del" type="button" data-id="${it.id}" aria-label="Убрать">✕</button>
+      <span class="ci-name">Kugoo ${c.name}<small>опт ${FMT_LABEL[c.stock] || ''} · ${fmt(c.opt)} ₽/шт</small></span>
+      <label class="ci-qty-box"><input class="ci-qty" type="number" inputmode="numeric" min="1" max="1000" value="${it.qty}" data-id="${it.id}" aria-label="Количество, шт"><span>шт</span></label>
+      <span class="ci-profit"><small>ваша прибыль</small>+${fmt((c.price - c.opt) * it.qty)} ₽</span>
+      <button class="ci-del" type="button" data-id="${it.id}" aria-label="Убрать из расчёта">✕</button>
     </div>`;
   }).join('') || '<p class="calc-empty">Добавьте модели, чтобы посчитать прибыль.</p>';
   document.getElementById('calcTotal').textContent = cart.length ? rub(totalProfit()) : '—';
