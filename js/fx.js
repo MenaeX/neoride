@@ -103,3 +103,28 @@
     });
   }
 })();
+
+/* Кнопка MAX: у MAX нет ссылки-на-чат по номеру, поэтому по клику копируем номер
+   и подсказываем найти нас в приложении. Делегирование — работает и для модалки. */
+(function () {
+  var MAX_PHONE = '+7 910 402-88-58';
+  function toast(msg) {
+    var t = document.createElement('div');
+    t.className = 'max-toast';
+    t.textContent = msg;
+    document.body.appendChild(t);
+    requestAnimationFrame(function () { t.classList.add('show'); });
+    setTimeout(function () { t.classList.remove('show'); setTimeout(function () { t.remove(); }, 300); }, 2800);
+  }
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-max]');
+    if (!el) return;
+    e.preventDefault();
+    var num = MAX_PHONE.replace(/[^\d+]/g, '');
+    var ok = 'Номер ' + MAX_PHONE + ' скопирован — откройте MAX и найдите нас по номеру';
+    var no = 'Напишите нам в MAX по номеру ' + MAX_PHONE;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(num).then(function () { toast(ok); }, function () { toast(no); });
+    } else { toast(no); }
+  });
+})();

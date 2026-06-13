@@ -137,12 +137,12 @@
           history.push({ role: 'assistant', content: d.reply });
           addMsg('bot', d.reply);
         } else {
-          addMsg('bot', 'Связь с консультантом прервалась. Напишите нам в Telegram @neoride_shop_bot — ответим там 🙏');
+          addMsg('bot', 'Связь с консультантом прервалась 🙏 Напишите нам — ответим: MAX +7 910 402-88-58 или Telegram @neoride_shop_bot');
         }
       })
       .catch(function () {
         typing(false);
-        addMsg('bot', 'Что-то пошло не так с подключением. Telegram: @neoride_shop_bot');
+        addMsg('bot', 'Связь с консультантом сейчас недоступна. Напишите нам: MAX +7 910 402-88-58 или Telegram @neoride_shop_bot');
       })
       .finally(function () {
         busy = false;
