@@ -118,6 +118,7 @@ leadForm.addEventListener('submit', async e => {
     });
     const j = await r.json().catch(() => ({}));
     if (r.ok && j.ok) {
+      if (window.ymGoal) window.ymGoal('opt_lead');
       leadForm.hidden = true;
       st.textContent = '✅ Заявка отправлена! Подтвердим наличие и пришлём счёт в рабочее время.';
       st.className = 'lead-status ok'; st.hidden = false;

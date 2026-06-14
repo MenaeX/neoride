@@ -405,6 +405,7 @@ if (leadModal) {
       });
       const j = await r.json().catch(() => ({}));
       if (r.ok && j.ok) {
+        if (window.ymGoal) window.ymGoal(orderCtx.notify ? 'restock_sub' : orderCtx.cart ? 'cart_order' : 'lead');
         if (orderCtx.cart && window.neorideCart) window.neorideCart.clear();
         form.hidden = true;
         st.textContent = orderCtx.notify

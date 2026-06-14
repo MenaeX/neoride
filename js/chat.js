@@ -65,7 +65,7 @@
     els.input = panel.querySelector('#chatInput');
     els.send = panel.querySelector('#chatSend');
 
-    fab.onclick = open;
+    fab.onclick = function () { if (window.ymGoal) window.ymGoal('chat_open'); open(); };
     panel.querySelector('.chat-x').onclick = close;
     els.send.onclick = function () { submit(); };
     els.input.addEventListener('keydown', function (e) {
