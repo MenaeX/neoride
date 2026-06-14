@@ -166,10 +166,10 @@ const CATALOG = [
   "cat": "самокат",
   "price": 33900,
   "mrc": 33900,
-  "opt": 27500,
+  "opt": 30400,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 2650,
   "hit": true,
@@ -244,10 +244,11 @@ const CATALOG = [
   "cat": "самокат",
   "price": 57900,
   "mrc": 55900,
-  "opt": 45100,
+  "opt": 47300,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop",
+   "koptom"
   ],
   "pop": 300,
   "hit": false,
@@ -286,7 +287,7 @@ const CATALOG = [
   "cat": "самокат",
   "price": 38900,
   "mrc": 38900,
-  "opt": 31700,
+  "opt": 33000,
   "stock": "opt",
   "src": [
    "k2025"
@@ -329,10 +330,10 @@ const CATALOG = [
   "cat": "самокат",
   "price": 40900,
   "mrc": 40900,
-  "opt": 34100,
+  "opt": 37400,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 3673,
   "hit": true,
@@ -586,7 +587,7 @@ const CATALOG = [
   "cat": "самокат",
   "price": 79900,
   "mrc": 79900,
-  "opt": 66000,
+  "opt": 30800,
   "stock": "opt",
   "src": [
    "k2025"
@@ -891,7 +892,6 @@ const CATALOG = [
   "opt": 29200,
   "stock": "opt",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -958,10 +958,10 @@ const CATALOG = [
   "cat": "самокат",
   "price": 47900,
   "mrc": 47900,
-  "opt": 38500,
+  "opt": 40700,
   "stock": "opt",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 711,
   "hit": false,
@@ -1031,7 +1031,6 @@ const CATALOG = [
   "stock": "in",
   "src": [
    "drop",
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1102,8 +1101,7 @@ const CATALOG = [
   "opt": 71500,
   "stock": "in",
   "src": [
-   "drop",
-   "k2025"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -1933,7 +1931,6 @@ const CATALOG = [
   "stock": "in",
   "src": [
    "drop",
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2049,7 +2046,6 @@ const CATALOG = [
   "opt": 84700,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,

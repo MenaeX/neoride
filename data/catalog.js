@@ -41,7 +41,7 @@ const CATALOG = [
   "price": 33900,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 2650,
   "hit": true,
@@ -82,7 +82,8 @@ const CATALOG = [
   "price": 57900,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop",
+   "koptom"
   ],
   "pop": 300,
   "hit": false,
@@ -122,7 +123,7 @@ const CATALOG = [
   "price": 40900,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 3673,
   "hit": true,
@@ -691,7 +692,6 @@ const CATALOG = [
   "stock": "in",
   "src": [
    "drop",
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -758,8 +758,7 @@ const CATALOG = [
   "price": 85900,
   "stock": "in",
   "src": [
-   "drop",
-   "k2025"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -1467,7 +1466,6 @@ const CATALOG = [
   "stock": "in",
   "src": [
    "drop",
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1496,7 +1494,6 @@ const CATALOG = [
   "price": 99900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
