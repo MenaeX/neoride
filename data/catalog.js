@@ -41,8 +41,7 @@ const CATALOG = [
   "price": 33900,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 2650,
   "hit": true,
@@ -488,6 +487,47 @@ const CATALOG = [
   }
  },
  {
+  "id": "f3-pro",
+  "name": "F3 Pro",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 64900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 403,
+  "hit": false,
+  "warranty": false,
+  "img": "img/kugoo-f3-pro.jpg",
+  "gallery": [
+   "img/kugoo-f3-pro.jpg",
+   "img/gallery/f3-pro/1.jpg",
+   "img/gallery/f3-pro/2.jpg",
+   "img/gallery/f3-pro/3.jpg",
+   "img/gallery/f3-pro/4.jpg",
+   "img/gallery/f3-pro/5.jpg",
+   "img/gallery/f3-pro/6.jpg"
+  ],
+  "desc": "Kugoo F3 Pro — это надёжный самокат для городских поездок на дальние дистанции. Мощный мотор в 500 Вт разгонит вас до 55 км/ч, а батарея ёмкостью 21 А·ч обеспечит запас хода до 55 км. Крепкая конструкция выдерживает нагрузку до 150 кг, а 16-дюймовые колёса справляются с неровностями дорог.\n\nУправлять легко благодаря дисковым тормозам с точной остановкой. За семь часов полной зарядки вы получите полный день свободы на дороге. Компактный и удобный в обращении — идеальный выбор для тех, кто ценит скорость и дальность.",
+  "specs": {
+   "power": 500,
+   "battery_ah": 21.0,
+   "speed": 55,
+   "range": 55,
+   "load": 150,
+   "wheel": 16.0,
+   "charge": 7.0,
+   "gross": 65.0,
+   "box": "148×31×72 см",
+   "weight": 34.7,
+   "volt": 48,
+   "brakes": "дисковый",
+   "drive": "задний",
+   "seat": false
+  }
+ },
+ {
   "id": "f4-pro",
   "name": "F4 Pro",
   "brand": "Kugoo",
@@ -577,7 +617,7 @@ const CATALOG = [
   "price": 37500,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -678,7 +718,8 @@ const CATALOG = [
   "price": 64900,
   "stock": "in",
   "src": [
-   "koptom"
+   "drop",
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1171,6 +1212,45 @@ const CATALOG = [
   }
  },
  {
+  "id": "21ah-plus-pro-v3",
+  "name": "V3 Pro+ 21Ah",
+  "brand": "Kugoo",
+  "cat": "велосипед",
+  "price": 69900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 0,
+  "hit": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-v3-pro-plus-21ah-v-2025.png",
+  "gallery": [
+   "img/kugoo-kirin-v3-pro-plus-21ah-v-2025.png",
+   "img/gallery/21ah-plus-pro-v3/1.jpg",
+   "img/gallery/21ah-plus-pro-v3/2.jpg",
+   "img/gallery/21ah-plus-pro-v3/3.jpg",
+   "img/gallery/21ah-plus-pro-v3/4.jpg",
+   "img/gallery/21ah-plus-pro-v3/5.jpg",
+   "img/gallery/21ah-plus-pro-v3/6.jpg"
+  ],
+  "desc": "Kugoo V3 Pro+ — это мощный электровелосипед для тех, кто не хочет экономить на скорости и дальности. 800-ваттный мотор разгоняет его до 55 км/ч, а батареи 21 А·ч хватает на 50 км пути. Гидравлические тормоза обеспечивают надёжную остановку даже на высокой скорости.\n\nКомпактные 16-дюймовые колёса делают велосипед манёвренным в городе, а грузоподъёмность до 150 кг позволит брать с собой рюкзак или даже пассажира полегче. Полная зарядка займёт 7 часов — отличный вариант для ежедневного коммьюта.",
+  "specs": {
+   "power": 800,
+   "battery_ah": 21.0,
+   "speed": 55,
+   "range": 50,
+   "load": 150,
+   "wheel": 16.0,
+   "charge": 7.0,
+   "weight": 65.0,
+   "volt": 60,
+   "brakes": "гидравлический",
+   "drive": "задний привод",
+   "seat": true
+  }
+ },
+ {
   "id": "286ah-plus-pro-v3",
   "name": "V3 Pro+ 28.6Ah",
   "brand": "Kugoo",
@@ -1178,7 +1258,7 @@ const CATALOG = [
   "price": 73900,
   "stock": "in",
   "src": [
-   "k2025"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1447,8 +1527,7 @@ const CATALOG = [
   "price": 99900,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1604,10 +1683,10 @@ const CATALOG = [
   "name": "Wish 04 Pro",
   "brand": "Kugoo",
   "cat": "питбайк",
-  "price": 194900,
+  "price": 209900,
   "stock": "in",
   "src": [
-   "k2025"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1677,10 +1756,11 @@ const CATALOG = [
   "name": "NB-300 эндуро",
   "brand": "Kugoo",
   "cat": "бензо",
-  "price": 239900,
+  "price": 249900,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,

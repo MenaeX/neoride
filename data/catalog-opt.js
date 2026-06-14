@@ -169,8 +169,7 @@ const CATALOG = [
   "opt": 27500,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 2650,
   "hit": true,
@@ -372,7 +371,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 51900,
-  "mrc": 45990,
+  "mrc": 47900,
   "opt": 38500,
   "stock": "opt",
   "src": [
@@ -586,8 +585,8 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 79900,
-  "mrc": 37900,
-  "opt": 30800,
+  "mrc": 79900,
+  "opt": 66000,
   "stock": "opt",
   "src": [
    "k2025"
@@ -760,7 +759,8 @@ const CATALOG = [
   "opt": 59400,
   "stock": "opt",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -790,49 +790,6 @@ const CATALOG = [
    "volt": 48,
    "brakes": "дисковый",
    "drive": "задний привод",
-   "seat": false
-  }
- },
- {
-  "id": "f3-pro",
-  "name": "F3 Pro",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 64900,
-  "mrc": 59900,
-  "opt": 54500,
-  "stock": "opt",
-  "src": [
-   "k2025"
-  ],
-  "pop": 403,
-  "hit": false,
-  "warranty": false,
-  "img": "img/kugoo-f3-pro.jpg",
-  "gallery": [
-   "img/kugoo-f3-pro.jpg",
-   "img/gallery/f3-pro/1.jpg",
-   "img/gallery/f3-pro/2.jpg",
-   "img/gallery/f3-pro/3.jpg",
-   "img/gallery/f3-pro/4.jpg",
-   "img/gallery/f3-pro/5.jpg",
-   "img/gallery/f3-pro/6.jpg"
-  ],
-  "desc": "Kugoo F3 Pro — это надёжный самокат для городских поездок на дальние дистанции. Мощный мотор в 500 Вт разгонит вас до 55 км/ч, а батарея ёмкостью 21 А·ч обеспечит запас хода до 55 км. Крепкая конструкция выдерживает нагрузку до 150 кг, а 16-дюймовые колёса справляются с неровностями дорог.\n\nУправлять легко благодаря дисковым тормозам с точной остановкой. За семь часов полной зарядки вы получите полный день свободы на дороге. Компактный и удобный в обращении — идеальный выбор для тех, кто ценит скорость и дальность.",
-  "specs": {
-   "power": 500,
-   "battery_ah": 21.0,
-   "speed": 55,
-   "range": 55,
-   "load": 150,
-   "wheel": 16.0,
-   "charge": 7.0,
-   "gross": 65.0,
-   "box": "148×31×72 см",
-   "weight": 34.7,
-   "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний",
    "seat": false
   }
  },
@@ -966,10 +923,10 @@ const CATALOG = [
   "cat": "самокат",
   "price": 37500,
   "mrc": 37500,
-  "opt": 30800,
+  "opt": 33600,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -1100,10 +1057,11 @@ const CATALOG = [
   "cat": "скутер",
   "price": 64900,
   "mrc": 64900,
-  "opt": 59000,
+  "opt": 60500,
   "stock": "in",
   "src": [
-   "koptom"
+   "drop",
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1712,57 +1670,16 @@ const CATALOG = [
   }
  },
  {
-  "id": "21ah-plus-pro-v3",
-  "name": "V3 Pro+ 21Ah",
-  "brand": "Kugoo",
-  "cat": "велосипед",
-  "price": 69900,
-  "mrc": 66900,
-  "opt": 56100,
-  "stock": "opt",
-  "src": [
-   "k2025"
-  ],
-  "pop": 0,
-  "hit": false,
-  "warranty": false,
-  "img": "img/kugoo-kirin-v3-pro-plus-21ah-v-2025.png",
-  "gallery": [
-   "img/kugoo-kirin-v3-pro-plus-21ah-v-2025.png",
-   "img/gallery/21ah-plus-pro-v3/1.jpg",
-   "img/gallery/21ah-plus-pro-v3/2.jpg",
-   "img/gallery/21ah-plus-pro-v3/3.jpg",
-   "img/gallery/21ah-plus-pro-v3/4.jpg",
-   "img/gallery/21ah-plus-pro-v3/5.jpg",
-   "img/gallery/21ah-plus-pro-v3/6.jpg"
-  ],
-  "desc": "Kugoo V3 Pro+ — это мощный электровелосипед для тех, кто не хочет экономить на скорости и дальности. 800-ваттный мотор разгоняет его до 55 км/ч, а батареи 21 А·ч хватает на 50 км пути. Гидравлические тормоза обеспечивают надёжную остановку даже на высокой скорости.\n\nКомпактные 16-дюймовые колёса делают велосипед манёвренным в городе, а грузоподъёмность до 150 кг позволит брать с собой рюкзак или даже пассажира полегче. Полная зарядка займёт 7 часов — отличный вариант для ежедневного коммьюта.",
-  "specs": {
-   "power": 800,
-   "battery_ah": 21.0,
-   "speed": 55,
-   "range": 50,
-   "load": 150,
-   "wheel": 16.0,
-   "charge": 7.0,
-   "weight": 65.0,
-   "volt": 60,
-   "brakes": "гидравлический",
-   "drive": "задний привод",
-   "seat": true
-  }
- },
- {
   "id": "286ah-plus-pro-v3",
   "name": "V3 Pro+ 28.6Ah",
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 73900,
-  "mrc": 66900,
-  "opt": 56100,
+  "mrc": 68900,
+  "opt": 58900,
   "stock": "in",
   "src": [
-   "k2025"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1891,7 +1808,8 @@ const CATALOG = [
   "opt": 60500,
   "stock": "opt",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2164,8 +2082,7 @@ const CATALOG = [
   "opt": 84700,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -2327,12 +2244,12 @@ const CATALOG = [
   "name": "Wish 04 Pro",
   "brand": "Kugoo",
   "cat": "питбайк",
-  "price": 194900,
-  "mrc": 194900,
-  "opt": 165000,
+  "price": 209900,
+  "mrc": 209900,
+  "opt": 176000,
   "stock": "in",
   "src": [
-   "k2025"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2424,12 +2341,13 @@ const CATALOG = [
   "name": "NB-300 эндуро",
   "brand": "Kugoo",
   "cat": "бензо",
-  "price": 239900,
-  "mrc": 149900,
-  "opt": 121000,
+  "price": 249900,
+  "mrc": 249900,
+  "opt": 198000,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
