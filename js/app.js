@@ -537,5 +537,22 @@ window.neorideOpenModel = openModel;
 const showAllBtn = document.getElementById('showAllBtn');
 if (showAllBtn) showAllBtn.onclick = toggleShowAll;
 
+// бренд-навигация по ссылке: #brand-kugoo / #brand-aovo (из шапки и других страниц)
+function applyBrandFromHash(rerender) {
+  const m = (location.hash || '').match(/^#brand-(.+)$/);
+  if (!m) return;
+  const want = decodeURIComponent(m[1]).toLowerCase();
+  const match = CATALOG.map(c => c.brand || 'Kugoo').find(b => b.toLowerCase() === want);
+  if (!match) return;
+  state.brand = match; showAll = false;
+  const be = document.getElementById('brandTabs');
+  if (be) be.querySelectorAll('.series-tab').forEach(x => x.classList.toggle('active', x.textContent === match));
+  if (rerender) render();
+  const el = document.getElementById('catalog');
+  if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 60);
+}
+applyBrandFromHash(false);
+window.addEventListener('hashchange', () => applyBrandFromHash(true));
+
 render();
 syncCompareUI();
