@@ -28,6 +28,7 @@
 .mp-crumb a{color:var(--cyan,#2ee6ff);text-decoration:none}
 .mp-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
 .mp-photo img{width:100%;border-radius:16px;background:#11131c}
+.mp-noimg{width:100%;aspect-ratio:4/3;border-radius:16px;background:#11131c;display:flex;align-items:center;justify-content:center;color:#5a5a72;font:14px 'Space Mono',monospace;border:1px dashed rgba(255,255,255,.12)}
 .mp h1{font:700 30px/1.15 Unbounded,sans-serif;margin:6px 0 4px}
 .mp .mp-type{color:#8a8aa0;font:14px Inter,sans-serif}
 .mp-price{font:800 32px/1 Unbounded,sans-serif;color:var(--lime,#b8ff2e);margin:18px 0 6px}
@@ -58,7 +59,7 @@
   <div class="mp-crumb"><a href="/">Главная</a> → <a href="/#catalog">Каталог</a> → Kugoo Квадроцикл K6</div>
   <div class="mp-grid">
     <div class="mp-photo">
-      <img src="../img/hero-poster.jpg" alt="Мототехника Kugoo Квадроцикл K6 — фото" loading="eager">
+      <div class="mp-noimg">Фото готовим</div>
     </div>
     <div class="mp-info">
       <div class="mp-type">Мототехника · Kugoo</div>

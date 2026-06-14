@@ -29,7 +29,7 @@ const SPEC_LABELS = {
 const fmt = n => n == null ? '—' : Number(n).toLocaleString('ru-RU');
 const rub = n => n == null ? '—' : fmt(n) + ' ₽';
 
-let state = { cat: 'all', series: 'all', stock: false, opt: false, hit: false, price: 'all', speed: 'all', age: 'all', scen: null, sort: 'pop' };
+let state = { cat: 'all', series: 'all', brand: 'all', stock: false, opt: false, hit: false, price: 'all', speed: 'all', age: 'all', scen: null, sort: 'pop' };
 
 // Серия модели (семейство): A / S / M / G / F / V / LX / HX / EC / Wish … (не-Kugoo → бренд)
 function seriesOf(c) {
@@ -60,6 +60,24 @@ CATS.forEach(([key, label]) => {
   b.onclick = () => { state.cat = key; document.querySelectorAll('.cat-tab').forEach(x => x.classList.remove('active')); b.classList.add('active'); render(); };
   tabsEl.appendChild(b);
 });
+// чипы брендов (мультибренд) — показываем ряд только если в наличии 2+ бренда
+const brandEl = document.getElementById('brandTabs');
+if (brandEl) {
+  const bc = {};
+  CATALOG.filter(c => c.price && c.img).forEach(c => { const b = c.brand || 'Kugoo'; bc[b] = (bc[b] || 0) + 1; });
+  const brands = Object.keys(bc).sort((a, b) => bc[b] - bc[a] || a.localeCompare(b));
+  if (brands.length > 1) {
+    brandEl.hidden = false;
+    [['all', 'Все бренды']].concat(brands.map(b => [b, b])).forEach(([key, label]) => {
+      const btn = document.createElement('button');
+      btn.className = 'series-tab' + (key === state.brand ? ' active' : '');
+      btn.textContent = label;
+      if (key !== 'all') btn.title = `Бренд ${label} · моделей: ${bc[key]}`;
+      btn.onclick = () => { state.brand = key; brandEl.querySelectorAll('.series-tab').forEach(x => x.classList.remove('active')); btn.classList.add('active'); showAll = false; render(); };
+      brandEl.appendChild(btn);
+    });
+  }
+}
 // чипы серий — все семейства, по убыванию числа моделей
 const seriesEl = document.getElementById('seriesTabs');
 if (seriesEl) {
@@ -106,6 +124,7 @@ function inBand(v, band) {
 function filtered() {
   let list = CATALOG.filter(c => c.price && c.img);
   if (state.cat !== 'all') list = list.filter(c => c.cat === state.cat);
+  if (state.brand !== 'all') list = list.filter(c => (c.brand || 'Kugoo') === state.brand);
   if (state.series !== 'all') list = list.filter(c => seriesOf(c) === state.series);
   if (state.stock) list = list.filter(c => c.stock === 'in');
   if (state.hit) list = list.filter(c => c.hit);
