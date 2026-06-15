@@ -86,7 +86,22 @@
 .am-priceline small{font:400 13px Inter,sans-serif;color:#9a9bb0}
 .am-cta{display:flex;gap:12px;flex-wrap:wrap}
 @media(max-width:560px){.am-specs{grid-template-columns:1fr}}
-@media(max-width:760px){.nav{gap:16px}.nav a.nav-m{display:inline-flex!important;font-size:13px}.nav a.aovo-accent{display:inline-flex!important;font-size:13px;font-weight:600}.nav .nav-opt{padding:6px 12px;font-size:13px}}
+@media(max-width:760px){.nav{gap:16px}.nav a.nav-m{display:inline-flex!important;font-size:13px}.nav a.aovo-accent{display:inline-flex!important;font-size:13px;font-weight:600}.nav .nav-opt{padding:6px 12px;font-size:13px}
+  /* герой: показать весь кадр (семью) без боковой обрезки */
+  .aovo-hero{min-height:auto;display:block}
+  .aovo-hero-bg{position:relative;inset:auto;width:100%;aspect-ratio:16/9}
+  .aovo-hero-in{padding:22px 0 36px}}
+@media(max-width:600px){
+  /* карточки самокатов по 2 в ряд */
+  .amodels{grid-template-columns:repeat(2,1fr);gap:12px}
+  .amodel-body{padding:14px 14px 16px}
+  .amodel-body h3{font-size:16px}
+  .amodel-tags{gap:5px;margin:8px 0 10px}
+  .amodel-tags span{font-size:10px;padding:3px 7px}
+  .amodel-specs{grid-template-columns:1fr 1fr;gap:5px 10px;margin-bottom:12px}
+  .amodel-specs div{font-size:11px}
+  .amodel-foot{flex-direction:column;align-items:stretch;gap:8px}
+  .amodel-foot .btn{padding:9px 10px;font-size:12px;text-align:center}}
 </style>
 </head>
 <body>
