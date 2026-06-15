@@ -684,3 +684,11 @@ details p{padding:0 22px 18px;color:var(--mut)}
   border-color:rgba(46,230,255,.4);color:var(--cyan)}
 .card-notify:hover{border-color:var(--cyan);background:rgba(46,230,255,.08);box-shadow:0 0 14px rgba(46,230,255,.2)}
 @media (max-width:600px){.card-notify{padding:9px;font-size:12.5px;margin-top:8px}}
+
+/* Призыв подписаться на Telegram-канал */
+.tg-cta{padding:34px 0}
+.tg-cta-card{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border:1px solid rgba(46,230,255,.28);border-radius:22px;padding:30px 36px;background:linear-gradient(120deg,rgba(46,230,255,.07),rgba(184,255,46,.05))}
+.tg-cta-card h2{margin:6px 0 8px;font:800 27px Unbounded,sans-serif}
+.tg-cta-card p{color:var(--mut);max-width:540px;margin:0;line-height:1.6}
+.tg-cta-btn{white-space:nowrap}
+@media(max-width:600px){.tg-cta-card{padding:22px 20px}.tg-cta-card h2{font-size:21px}}
