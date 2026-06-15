@@ -731,14 +731,14 @@ const CATALOG = [
   "price": 59900,
   "mrc": 59900,
   "opt": 44000,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 635,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/new-kugoo-kirin-f1-pro.png",
   "gallery": [
    "img/new-kugoo-kirin-f1-pro.png",
@@ -2488,12 +2488,13 @@ const CATALOG = [
   "name": "F1 Pro Max",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 69900,
-  "mrc": 69900,
-  "opt": 58300,
+  "price": 59900,
+  "mrc": 59900,
+  "opt": 55800,
   "stock": "in",
   "src": [
-   "drop"
+   "drop",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2511,60 +2512,19 @@ const CATALOG = [
   ],
   "desc": "Kugoo F1 Pro Max — это мощный самокат для тех, кто не боится скорости. Два мотора (1600 Вт) дарят истинное ощущение полета, разгоняя до 55 км/ч. Крепкие дисковые тормоза держат ситуацию под контролем в любой момент.\n\nНа одной зарядке проедешь до 50 км — хватит для работы, учебы и забега по городу. Колеса диаметром 10 дюймов уверенно берут асфальт и неровности. Выдерживает до 120 кг и работает 12 месяцев на гарантии.",
   "specs": {
-   "power": 1600,
+   "power": 800,
+   "battery_ah": 18.0,
    "volt": 48,
-   "battery_ah": 22.5,
-   "speed": 55,
-   "range": 50,
+   "speed": 50,
+   "range": 48,
    "load": 120,
-   "weight": 30,
-   "wheel": 10,
-   "charge": 10,
-   "brakes": "дисковые (перед+зад)",
-   "drive": "полный (2 мотора)",
-   "box": "128.5×24×62.5 см",
-   "gross": 34.3,
-   "seat": false
-  }
- },
- {
-  "id": "wish03",
-  "name": "Wish 03",
-  "brand": "Kugoo",
-  "cat": "питбайк",
-  "price": 127900,
-  "mrc": 127900,
-  "opt": 104500,
-  "stock": "in",
-  "src": [
-   "drop"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": true,
-  "warranty": true,
-  "img": "img/wish03.jpg",
-  "gallery": [
-   "img/wish03.jpg",
-   "img/gallery/wish03/1.jpg",
-   "img/gallery/wish03/2.jpg",
-   "img/gallery/wish03/3.jpg",
-   "img/gallery/wish03/4.jpg",
-   "img/gallery/wish03/5.jpg",
-   "img/gallery/wish03/6.jpg"
-  ],
-  "desc": "Питбайк Kugoo Wish 03 — это серьёзный аппарат для тех, кто ценит скорость и мощность. Двухкиловаттный мотор разгонит тебя до 95 км/ч, а батарея на 27 ампер-часов обеспечит запас хода до 70 км. Гидравлические тормоза дарят уверенность даже на высоких скоростях.\n\nЛегко справляется с нагрузкой до 200 кг и хорошо держит большие колёса 19 дюймов. Полная зарядка занимает 6 часов, и года гарантии прилагаются. Идеален для активных райдеров, которым не хватает обычного катания.",
-  "specs": {
-   "power": 2000,
-   "volt": 60,
-   "battery_ah": 27.0,
+   "weight": 75.0,
+   "wheel": 10.0,
+   "charge": 9.0,
+   "box": "127.5×23×59 см",
+   "brakes": "дисковый",
    "drive": "задний",
-   "speed": 95.0,
-   "load": 200.0,
-   "range": 70.0,
-   "charge": 6.0,
-   "wheel": 19.0,
-   "brakes": "гидравлический"
+   "seat": false
   }
  }
 ];
