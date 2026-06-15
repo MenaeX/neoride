@@ -12,6 +12,7 @@ const CATALOG = [
   ],
   "pop": 1990,
   "hit": true,
+  "new": false,
   "warranty": false,
   "img": "img/kugoo-s3-pro-jilong.jpg",
   "gallery": [],
@@ -45,6 +46,7 @@ const CATALOG = [
   ],
   "pop": 2650,
   "hit": true,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-m2-new-2025.jpg",
   "gallery": [
@@ -87,6 +89,7 @@ const CATALOG = [
   ],
   "pop": 300,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-m3-pro-2025-600w-48v-13ah.jpg",
   "gallery": [
@@ -126,6 +129,7 @@ const CATALOG = [
   ],
   "pop": 3673,
   "hit": true,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-max-speed-600w-new-2025.jpg",
   "gallery": [
@@ -167,6 +171,7 @@ const CATALOG = [
   ],
   "pop": 7618,
   "hit": true,
+  "new": false,
   "warranty": false,
   "img": "img/kugoo-m4-pro-13ah-jilong.jpg",
   "gallery": [
@@ -208,6 +213,7 @@ const CATALOG = [
   ],
   "pop": 1100,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
   "gallery": [
@@ -249,6 +255,7 @@ const CATALOG = [
   ],
   "pop": 881,
   "hit": false,
+  "new": false,
   "warranty": false,
   "img": "img/kugoo-kirin-m5-new-2025.png",
   "gallery": [
@@ -291,6 +298,7 @@ const CATALOG = [
   ],
   "pop": 1941,
   "hit": true,
+  "new": false,
   "warranty": false,
   "img": "img/kugoo-kirin-g2-max.png",
   "gallery": [
@@ -332,6 +340,7 @@ const CATALOG = [
   ],
   "pop": 870,
   "hit": false,
+  "new": false,
   "warranty": false,
   "img": "img/kugoo-kirin-g2-pro-max-2025.png",
   "gallery": [
@@ -374,6 +383,7 @@ const CATALOG = [
   ],
   "pop": 2355,
   "hit": true,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-g4-max-60v-26аh-2000w-2.jpg",
   "gallery": [
@@ -416,6 +426,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-l2-pro-plus-2025.jpg",
   "gallery": [
@@ -457,6 +468,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-lx-11-2-1500-3000w-60v-31-2ah.png",
   "gallery": [
@@ -498,6 +510,7 @@ const CATALOG = [
   ],
   "pop": 403,
   "hit": false,
+  "new": false,
   "warranty": false,
   "img": "img/kugoo-f3-pro.jpg",
   "gallery": [
@@ -541,6 +554,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-f4-pro.png",
   "gallery": [
@@ -582,6 +596,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": false,
   "img": "img/kugoo-hx.jpg",
   "gallery": [
@@ -621,6 +636,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-hx-plus-250w-36v-15ah.jpg",
   "gallery": [],
@@ -654,6 +670,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": false,
   "img": "img/kugoo-kirin-c1-с-корзинкой.jpg",
   "gallery": [
@@ -695,6 +712,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-с2-1000w-48v-15ah.jpg",
   "gallery": [],
@@ -722,6 +740,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-c2-pro-1000w-18-2ah.png",
   "gallery": [
@@ -761,6 +780,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-c4-1200w-48v-20-8ah-трехколесный.jpg",
   "gallery": [],
@@ -779,6 +799,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-ec02.jpg",
   "gallery": [
@@ -822,6 +843,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электрокутер-kugoo-r2.jpg",
   "gallery": [
@@ -862,6 +884,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электроскутер-kugoo-t3.jpg",
   "gallery": [
@@ -903,6 +926,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v1.png",
   "gallery": [
@@ -945,6 +969,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v1-plus.jpg",
   "gallery": [],
@@ -979,6 +1004,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v1-pro.png",
   "gallery": [
@@ -1020,6 +1046,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": false,
   "img": "img/электровелосипед-kugoo-kirin-v1-max-20-13ah-350w.png",
   "gallery": [
@@ -1060,6 +1087,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v2.png",
   "gallery": [
@@ -1099,6 +1127,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электровелосипед-kugoo-v3.png",
   "gallery": [
@@ -1140,6 +1169,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": false,
   "img": "img/электровелосипед-kugoo-kirin-v3-max.png",
   "gallery": [
@@ -1180,6 +1210,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro.png",
   "gallery": [
@@ -1221,6 +1252,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": false,
   "img": "img/kugoo-kirin-v3-pro-plus-21ah-v-2025.png",
   "gallery": [
@@ -1260,6 +1292,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.png",
   "gallery": [
@@ -1301,6 +1334,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-max-60v-28-6ah.png",
   "gallery": [
@@ -1343,6 +1377,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-v4-pro-48v-15-6-ah-750w.jpg",
   "gallery": [
@@ -1385,6 +1420,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-kirin-v5-750w-48v-20ah.png",
   "gallery": [
@@ -1428,6 +1464,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
   "gallery": [
@@ -1469,6 +1506,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электрофетбайк-kugoo-trike-750w-48v-15-6ah.png",
   "gallery": [],
@@ -1497,6 +1535,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электропитбайк-kugoo-wish-01-48v-21ah-1500w.png",
   "gallery": [],
@@ -1527,6 +1566,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электропитбайк-kugoo-wish-01-se-48v-20-8ah-1500w.jpg",
   "gallery": [
@@ -1566,6 +1606,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электропитбайк-kugoo-wish-01-pro-60v-21ah-1500w.jpg",
   "gallery": [
@@ -1606,6 +1647,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электропитбайк-kugoo-wish-02-pro-2500w-60v-27ah.jpg",
   "gallery": [
@@ -1645,6 +1687,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электропитбайк-kugoo-wish-04-60v-36ah-3700w.png",
   "gallery": [
@@ -1682,6 +1725,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
   "gallery": [
@@ -1721,6 +1765,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/акция-питбайк-эндуро-kugoo-jl-300-300см.jpg",
   "gallery": [
@@ -1753,6 +1798,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-nb-300-водяное-охлаждение.jpg",
   "gallery": [
@@ -1786,6 +1832,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-tank.jpg",
   "gallery": [
@@ -1816,6 +1863,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-xb-125.jpg",
   "gallery": [
@@ -1848,6 +1896,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": false,
   "img": "img/квадроцикл-kugoo-k5-300см.jpg",
   "gallery": [
@@ -1882,6 +1931,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
+  "new": false,
   "warranty": false,
   "img": "",
   "gallery": [
@@ -1897,6 +1947,48 @@ const CATALOG = [
    "speed": 90.0,
    "load": 500.0,
    "weight": 417.0
+  }
+ },
+ {
+  "id": "f1-max-pro",
+  "name": "F1 Pro Max",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 66900,
+  "stock": "in",
+  "src": [
+   "drop"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": true,
+  "warranty": true,
+  "img": "img/kugoo-f1-pro-max.jpg",
+  "gallery": [
+   "img/kugoo-f1-pro-max.jpg",
+   "img/gallery/f1-max-pro/1.jpg",
+   "img/gallery/f1-max-pro/2.jpg",
+   "img/gallery/f1-max-pro/3.jpg",
+   "img/gallery/f1-max-pro/4.jpg",
+   "img/gallery/f1-max-pro/5.jpg",
+   "img/gallery/f1-max-pro/6.jpg"
+  ],
+  "desc": "Kugoo F1 Pro Max — это мощный самокат для тех, кто не боится скорости. Два мотора (1600 Вт) дарят истинное ощущение полета, разгоняя до 55 км/ч. Крепкие дисковые тормоза держат ситуацию под контролем в любой момент.\n\nНа одной зарядке проедешь до 50 км — хватит для работы, учебы и забега по городу. Колеса диаметром 10 дюймов уверенно берут асфальт и неровности. Выдерживает до 120 кг и работает 12 месяцев на гарантии.",
+  "specs": {
+   "power": 1600,
+   "volt": 48,
+   "battery_ah": 22.5,
+   "speed": 55,
+   "range": 50,
+   "load": 120,
+   "weight": 30,
+   "wheel": 10,
+   "charge": 10,
+   "brakes": "дисковые (перед+зад)",
+   "drive": "полный (2 мотора)",
+   "box": "128.5×24×62.5 см",
+   "gross": 34.3,
+   "seat": false
   }
  },
  {

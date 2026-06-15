@@ -29,7 +29,7 @@ const SPEC_LABELS = {
 const fmt = n => n == null ? '—' : Number(n).toLocaleString('ru-RU');
 const rub = n => n == null ? '—' : fmt(n) + ' ₽';
 
-let state = { cat: 'all', series: 'all', brand: 'all', stock: false, opt: false, hit: false, price: 'all', speed: 'all', age: 'all', scen: null, sort: 'pop' };
+let state = { cat: 'all', series: 'all', brand: 'all', stock: false, opt: false, hit: false, new: false, price: 'all', speed: 'all', age: 'all', scen: null, sort: 'pop' };
 
 // Серия модели (семейство): A / S / M / G / F / V / LX / HX / EC / Wish … (не-Kugoo → бренд)
 function seriesOf(c) {
@@ -98,6 +98,7 @@ chipRow(document.getElementById('priceChips'), PRICE_BANDS, 'price');
 chipRow(document.getElementById('speedChips'), SPEED_BANDS, 'speed');
 document.getElementById('onlyStock').onchange = e => { state.stock = e.target.checked; render(); };
 document.getElementById('onlyHit').onchange = e => { state.hit = e.target.checked; render(); };
+{ const n = document.getElementById('onlyNew'); if (n) n.onchange = e => { state.new = e.target.checked; render(); }; }
 document.getElementById('sortSel').onchange = e => { state.sort = e.target.value; render(); };
 
 const scenRow = document.getElementById('scenRow');
@@ -128,6 +129,7 @@ function filtered() {
   if (state.series !== 'all') list = list.filter(c => seriesOf(c) === state.series);
   if (state.stock) list = list.filter(c => c.stock === 'in');
   if (state.hit) list = list.filter(c => c.hit);
+  if (state.new) list = list.filter(c => c.new);
   if (state.age !== 'all') list = list.filter(AGE_PRED[state.age]);
   list = list.filter(c => inBand(c.price / 1000, state.price));
   list = list.filter(c => state.speed === 'all' || inBand(c.specs.speed, state.speed));
@@ -172,7 +174,7 @@ function cardHTML(c) {
   const on = compare.has(c.id) ? ' on' : '';
   const optNote = c.stock === 'opt' ? '<div class="opt-note">Оптовая позиция (от 10 шт) — наличие уточняйте; без гарантии производителя</div>' : '';
   const warr = c.warranty ? '<div class="warr">✓ Гарантия 12 мес · документы</div>' : '';
-  const badges = (c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : '') + BADGE[c.stock];
+  const badges = (c.new ? '<span class="badge new">🆕 Новинка</span>' : '') + (c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : '') + BADGE[c.stock];
   return `<article class="card" data-id="${c.id}">
     <div class="card-img" data-open="${c.id}" role="button" tabindex="0" title="Подробнее"><div class="badges">${badges}</div>${img}</div>
     <div class="card-body">
@@ -484,7 +486,7 @@ function openModel(id) {
   }).join('');
   const gal = (c.gallery && c.gallery.length) ? c.gallery : (c.img ? [c.img] : []);
   const alt = (c.brand || 'Kugoo') + ' ' + c.name;
-  const galHTML = gal.length ? `<div class="mm-img">${c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : ''}` +
+  const galHTML = gal.length ? `<div class="mm-img">${c.new ? '<span class="badge new">🆕 Новинка</span>' : ''}${c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : ''}` +
     `<img id="mmGalImg" src="${gal[0]}" alt="${alt}">` +
     (gal.length > 1 ? `<button class="mm-nav mm-prev" id="mmPrev" aria-label="Назад">‹</button>` +
       `<button class="mm-nav mm-next" id="mmNext" aria-label="Вперёд">›</button>` +
