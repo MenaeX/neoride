@@ -2488,8 +2488,8 @@ const CATALOG = [
   "name": "F1 Pro Max",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 66900,
-  "mrc": 66900,
+  "price": 69900,
+  "mrc": 69900,
   "opt": 58300,
   "stock": "in",
   "src": [
