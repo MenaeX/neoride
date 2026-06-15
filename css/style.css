@@ -692,3 +692,12 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .tg-cta-card p{color:var(--mut);max-width:540px;margin:0;line-height:1.6}
 .tg-cta-btn{white-space:nowrap}
 @media(max-width:600px){.tg-cta-card{padding:22px 20px}.tg-cta-card h2{font-size:21px}}
+
+/* Плавающая кнопка Telegram-канала новинок (над MAX) */
+.channel-fab{position:fixed;right:20px;bottom:200px;z-index:70;display:inline-flex;align-items:center;gap:9px;
+  padding:12px 18px 12px 15px;border-radius:99px;border:1px solid var(--lime);
+  background:rgba(8,14,20,.92);color:var(--lime);font:700 14px Inter;cursor:pointer;
+  box-shadow:0 10px 30px rgba(0,0,0,.45);transition:.22s;backdrop-filter:blur(8px)}
+.channel-fab:hover{transform:translateY(-3px);background:rgba(184,255,46,.12)}
+.channel-fab svg{flex:none}
+@media (max-width:600px){.channel-fab span{display:none}.channel-fab{padding:13px;right:16px;bottom:190px}}
