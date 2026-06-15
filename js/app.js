@@ -135,7 +135,7 @@ function filtered() {
   list = list.filter(c => state.speed === 'all' || inBand(c.specs.speed, state.speed));
   if (state.scen != null) list = list.filter(SCENARIOS[state.scen][2]);
   const s = state.sort;
-  if (s === 'pop') list.sort((a, b) => (b.pop - a.pop) || (b.stock === 'in') - (a.stock === 'in'));
+  if (s === 'pop') list.sort((a, b) => ((b.new ? 1 : 0) - (a.new ? 1 : 0)) || (b.pop - a.pop) || (b.stock === 'in') - (a.stock === 'in'));
   if (s === 'price-asc') list.sort((a, b) => a.price - b.price);
   if (s === 'price-desc') list.sort((a, b) => b.price - a.price);
   if (s === 'speed') list.sort((a, b) => (b.specs.speed || 0) - (a.specs.speed || 0));
