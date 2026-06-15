@@ -10,16 +10,18 @@
   /* LED-прогресс скролла */
   var led = document.getElementById('scrollLed');
 
-  /* видеофон hero: грузим только на десктопе */
-  var hv = document.querySelector('.hero-video');
-  if (hv && innerWidth > 760) {
+  /* видеофон hero: грузим на всех устройствах (mobile autoplay требует muted+playsinline) */
+  [].slice.call(document.querySelectorAll('.hero-video')).forEach(function (hv) {
+    if (!hv.dataset.src) return;
+    hv.muted = true;
+    hv.setAttribute('playsinline', '');
     hv.src = hv.dataset.src;
     hv.addEventListener('canplay', function () {
       hv.classList.add('live');
       hv.play().catch(function () {});
     }, { once: true });
     hv.load();
-  }
+  });
 
   /* параллакс [data-prlx] — только десктоп (на мобиле iOS Safari чернит при перерисовке) */
   var prlx = innerWidth > 760 ? [].slice.call(document.querySelectorAll('[data-prlx]')) : [];
