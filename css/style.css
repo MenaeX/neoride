@@ -321,7 +321,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
   box-shadow:0 10px 30px rgba(46,230,255,.35),0 4px 14px rgba(0,0,0,.4);transition:.22s}
 .tg-fab:hover{transform:translateY(-3px);box-shadow:0 14px 38px rgba(46,230,255,.5)}
 .tg-fab svg{flex:none}
-@media (max-width:600px){.tg-fab span{display:none}.tg-fab{padding:14px;right:16px;bottom:16px}}
+@media (max-width:600px){.tg-fab{padding:9px 14px;right:14px;bottom:14px;font-size:12px}.tg-fab span{display:inline}}
 
 /* AI-чат-виджет */
 .chat-fab{position:fixed;right:20px;bottom:80px;z-index:70;display:inline-flex;align-items:center;gap:9px;
@@ -330,7 +330,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
   box-shadow:0 10px 30px rgba(0,0,0,.45);transition:.22s;backdrop-filter:blur(8px)}
 .chat-fab:hover{transform:translateY(-3px);background:rgba(46,230,255,.12)}
 .chat-fab svg{flex:none}
-@media (max-width:600px){.chat-fab span{display:none}.chat-fab{padding:13px;right:16px;bottom:76px}}
+@media (max-width:600px){.chat-fab{padding:9px 14px;right:14px;bottom:62px;font-size:12px}.chat-fab span{display:inline}}
 
 .chat-panel{position:fixed;right:20px;bottom:20px;z-index:90;width:370px;max-width:calc(100vw - 32px);
   height:min(560px,78vh);display:flex;flex-direction:column;border-radius:18px;overflow:hidden;
@@ -551,7 +551,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
   box-shadow:0 10px 30px rgba(120,90,255,.4),0 4px 14px rgba(0,0,0,.4);transition:.22s}
 .max-fab:hover{transform:translateY(-3px);box-shadow:0 14px 38px rgba(120,90,255,.55)}
 .max-fab svg{flex:none}
-@media (max-width:600px){.max-fab span{display:none}.max-fab{padding:14px;right:16px;bottom:130px}}
+@media (max-width:600px){.max-fab{padding:9px 14px;right:14px;bottom:110px;font-size:12px}.max-fab span{display:inline}}
 .lead-max{width:100%;justify-content:center;padding:14px;background:linear-gradient(135deg,#6d5efc,#a05bff);color:#fff;border:0}
 .btn.lead-max:hover{background:linear-gradient(135deg,#6d5efc,#a05bff);transform:translateY(-2px);
   filter:brightness(1.08);box-shadow:0 10px 30px rgba(120,90,255,.45);border:0}
@@ -700,4 +700,4 @@ details p{padding:0 22px 18px;color:var(--mut)}
   box-shadow:0 10px 30px rgba(0,0,0,.45);transition:.22s;backdrop-filter:blur(8px)}
 .channel-fab:hover{transform:translateY(-3px);background:rgba(184,255,46,.12)}
 .channel-fab svg{flex:none}
-@media (max-width:600px){.channel-fab span{display:none}.channel-fab{padding:13px;right:16px;bottom:190px}}
+@media (max-width:600px){.channel-fab{padding:9px 14px;right:14px;bottom:158px;font-size:12px}.channel-fab span{display:inline}}

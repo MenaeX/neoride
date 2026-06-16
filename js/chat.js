@@ -133,12 +133,20 @@
       var mm = p.match(/^\[\[([^\]]+)\]\]$/);
       if (mm) {
         var model = findModel(mm[1]);
-        if (model && typeof window.neorideOpenModel === 'function') {
+        if (model) {
           var a = document.createElement('a');
           a.className = 'chat-model';
-          a.href = '#';
+          // всегда настоящая ссылка на страницу модели — кликабельна даже без модалки
+          a.href = 'model/' + model.id + '.html';
           a.textContent = (model.brand || 'Kugoo') + ' ' + model.name + (model.price ? ' · ' + rub(model.price) : '');
-          a.onclick = function (e) { e.preventDefault(); window.neorideOpenModel(model.id); };
+          a.onclick = function (e) {
+            if (typeof window.neorideOpenModel === 'function') {
+              e.preventDefault();
+              // на мобиле закрываем панель чата, иначе модалка откроется под ней
+              if (window.matchMedia && window.matchMedia('(max-width:760px)').matches) { try { close(); } catch (x) {} }
+              window.neorideOpenModel(model.id);
+            }
+          };
           el.appendChild(a);
         } else {
           el.appendChild(document.createTextNode(mm[1]));
