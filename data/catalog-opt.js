@@ -296,7 +296,8 @@ const CATALOG = [
   "opt": 33000,
   "stock": "opt",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 5175,
   "hit": true,
@@ -2166,7 +2167,8 @@ const CATALOG = [
   "opt": 80300,
   "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2488,13 +2490,12 @@ const CATALOG = [
   "name": "F1 Pro Max",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 59900,
-  "mrc": 59900,
-  "opt": 55800,
+  "price": 69900,
+  "mrc": 69900,
+  "opt": 58300,
   "stock": "in",
   "src": [
-   "drop",
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
