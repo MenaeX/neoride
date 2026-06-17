@@ -259,6 +259,25 @@
             <div>Тормоза <b>барабан.</b></div>
           </div>
           <div class="amodel-foot">
+            <span class="amodel-price">26 100 ₽</span>
+            <a class="btn btn-accent" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener" style="padding:10px 18px">Заказать</a>
+          </div>
+        </div>
+      </article>
+      <article class="amodel">
+        <div class="amodel-img"><img src="img/aovo/lux-pro.png" alt="Электросамокат AOVO Lux Pro 10.5Ah"></div>
+        <div class="amodel-body">
+          <h3>AOVO Lux Pro 10.5Ah</h3>
+          <div class="amodel-tags"><span>IP65</span><span>Приложение</span><span>В наличии</span></div>
+          <div class="amodel-specs">
+            <div>Мотор <b>250 Вт</b></div>
+            <div>Скорость <b>25 км/ч</b></div>
+            <div>Запас хода <b>25–30 км</b></div>
+            <div>Батарея <b>10.5 Ah</b></div>
+            <div>Колесо <b>10"</b></div>
+            <div>Нагрузка <b>120 кг</b></div>
+          </div>
+          <div class="amodel-foot">
             <span class="amodel-price">28 200 ₽</span>
             <a class="btn btn-accent" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener" style="padding:10px 18px">Заказать</a>
           </div>
@@ -345,14 +364,18 @@
       specs:[['Влагозащита','IP65'],['Мотор','250 Вт (36 В)'],['Батарея','7.8 Ah'],['Скорость','25 км/ч'],['Запас хода','30 км'],['Колесо','8.5"'],['Зарядка','4 ч'],['Вес','12.5 кг'],['Нагрузка','110 кг'],['Управление','приложение']]},
     lux:{name:'AOVO M365 Lux',tags:['IP65','Приложение','В наличии'],
       gal:['img/aovo/m365-pro-lux.png','img/aovo/m365-pro-lux/1.jpg','img/aovo/m365-pro-lux/2.jpg'],
-      price:'<p class="am-priceline">28 200 ₽ <small>· в наличии, склад в Москве</small></p>',cta:ctaOrder,
+      price:'<p class="am-priceline">26 100 ₽ <small>· в наличии, склад в Москве</small></p>',cta:ctaOrder,
       specs:[['Влагозащита','IP65'],['Мотор','350 Вт'],['Батарея','7.8 Ah'],['Скорость','31 км/ч'],['Запас хода','35 км'],['Привод','передний'],['Тормоза','барабанные'],['Вес','14.5 кг'],['Нагрузка','120 кг'],['Управление','приложение']]},
+    luxpro:{name:'AOVO Lux Pro 10.5Ah',tags:['IP65','Приложение','В наличии'],
+      gal:['img/aovo/lux-pro.png'],
+      price:'<p class="am-priceline">28 200 ₽ <small>· в наличии, склад в Москве</small></p>',cta:ctaOrder,
+      specs:[['Влагозащита','IP65'],['Мотор','250 Вт (36 В)'],['Батарея','10.5 Ah'],['Скорость','25 км/ч'],['Запас хода','25–30 км'],['Колесо','10"'],['Привод','передний'],['Тормоза','задний диск/барабан'],['Зарядка','4–5 ч'],['Вес','15 кг'],['Нагрузка','120 кг'],['Управление','приложение']]},
     promax:{name:'AOVO Pro Max',tags:['IP65','Приложение','Флагман','В наличии'],
       gal:['img/aovo/pro-max.png','img/aovo/pro-max/1.jpg','img/aovo/pro-max/2.jpg','img/aovo/pro-max/3.jpg'],
       price:'<p class="am-priceline">40 200 ₽ <small>· в наличии, склад в Москве</small></p>',cta:ctaOrder,
       specs:[['Влагозащита','IP65'],['Мотор','500 Вт (36 В)'],['Батарея','14.5 Ah'],['Скорость','35 км/ч'],['Запас хода','40 км'],['Колесо','10" пневмо'],['Привод','передний'],['Зарядка','4–5 ч'],['Вес','18.8 кг'],['Нагрузка','130 кг']]}
   };
-  var NAME2ID={'AOVO S1 NEW':'s1','AOVO S3 Pro':'s3pro','AOVO M365 Pro':'m365pro','AOVO M365 Pro Lux':'lux','AOVO Pro Max':'promax'};
+  var NAME2ID={'AOVO S1 NEW':'s1','AOVO S3 Pro':'s3pro','AOVO M365 Pro':'m365pro','AOVO M365 Lux':'lux','AOVO Lux Pro 10.5Ah':'luxpro','AOVO Pro Max':'promax'};
   var modal=document.getElementById('aovoModal'), body=document.getElementById('amBody'), titleEl=document.getElementById('amTitle');
   var gi=0, gal=[];
   function showImg(){ var img=document.getElementById('amImg'); if(img){img.src=gal[gi];} var c=document.getElementById('amCount'); if(c)c.textContent=(gi+1)+'/'+gal.length; }
