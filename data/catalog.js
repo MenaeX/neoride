@@ -2075,7 +2075,7 @@ const CATALOG = [
   "name": "M365 Pro",
   "brand": "AOVO",
   "cat": "самокат",
-  "price": 16000,
+  "price": 24100,
   "stock": "in",
   "src": [
    "aovo"
