@@ -701,3 +701,12 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .channel-fab:hover{transform:translateY(-3px);background:rgba(184,255,46,.12)}
 .channel-fab svg{flex:none}
 @media (max-width:600px){.channel-fab{padding:9px 14px;right:14px;bottom:158px;font-size:12px}.channel-fab span{display:inline}}
+
+/* Кнопка «Наверх» (слева снизу — правый угол занят FAB-кнопками) */
+.to-top{position:fixed;left:20px;bottom:20px;z-index:69;width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--cyan);background:rgba(8,14,20,.92);color:var(--cyan);font:700 20px/1 Inter,sans-serif;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(12px);
+  pointer-events:none;transition:.25s;backdrop-filter:blur(8px)}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{background:rgba(46,230,255,.14);transform:translateY(-3px)}
+@media (max-width:600px){.to-top{left:14px;bottom:14px;width:42px;height:42px}}

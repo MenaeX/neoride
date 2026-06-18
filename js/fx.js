@@ -150,3 +150,14 @@
   }, { passive: true });
   window.addEventListener('mouseout', function (e) { if (!e.relatedTarget) g.style.opacity = '0'; });
 })();
+
+/* Кнопка «Наверх» (появляется после прокрутки) */
+(function () {
+  var b = document.createElement('button');
+  b.className = 'to-top'; b.type = 'button';
+  b.setAttribute('aria-label', 'Наверх'); b.innerHTML = '↑';
+  document.body.appendChild(b);
+  function upd() { if (window.scrollY > 600) b.classList.add('show'); else b.classList.remove('show'); }
+  window.addEventListener('scroll', upd, { passive: true }); upd();
+  b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
