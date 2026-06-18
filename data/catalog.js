@@ -1,6 +1,82 @@
 // Автогенерация: scripts/build_catalog.py — РОЗНИЦА (без опт-цен)
 const CATALOG = [
  {
+  "id": "l2-pro",
+  "name": "L2 Pro",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 22900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 250,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-l2-pro-2025.jpg",
+  "gallery": [
+   "img/kugoo-kirin-l2-pro-2025.jpg",
+   "img/gallery/l2-pro/1.jpg",
+   "img/gallery/l2-pro/2.jpg",
+   "img/gallery/l2-pro/3.jpg",
+   "img/gallery/l2-pro/4.jpg",
+   "img/gallery/l2-pro/5.jpg",
+   "img/gallery/l2-pro/6.jpg"
+  ],
+  "desc": "Компактный и лёгкий самокат для города — идеален для коротких поездок и спешащих людей. Развивает до 30 км/ч, весит всего 14 кг и легко помещается в багажник или под руку. Дисковые тормоза обеспечивают надёжную остановку в любой ситуации.\n\nНа одной зарядке проедешь до 25 км — хватит на работу, учёбу и покупки. Мотор мощностью 350 Вт справляется с подъёмами, а колёса 8.5 дюйма уверенно держат дорогу. Заряжается за 4 часа, выдерживает вес до 120 кг.",
+  "specs": {
+   "power": 350,
+   "battery_ah": 7.8,
+   "speed": 30,
+   "range": 25,
+   "load": 120,
+   "weight": 14.0,
+   "wheel": 8.5,
+   "charge": 4.0,
+   "gross": 15.2,
+   "box": "111×16.5×53.5 см",
+   "volt": 36,
+   "brakes": "дисковый",
+   "drive": "Передний привод",
+   "seat": false
+  }
+ },
+ {
+  "id": "l2-plus-pro",
+  "name": "L2 Pro+",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 23900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 220,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-l2-pro-plus-2025.jpg",
+  "gallery": [],
+  "desc": "Kugoo L2 Pro+ — это надёжный помощник для городских поездок. Мощный мотор разгонит вас до 30 км/ч, а запаса хода в 25 км хватит на весь день. Лёгкий и компактный, он весит всего 14 кг и без проблем поднимается в квартиру.\n\nДисковые тормоза обеспечивают уверенную остановку, а восьмидюймовые колёса справляются с городскими дорогами. С максимальной нагрузкой до 120 кг подойдёт практически каждому. Полная зарядка за 4 часа — и вы готовы к новым приключениям.",
+  "specs": {
+   "power": 350,
+   "battery_ah": 7.8,
+   "speed": 30,
+   "range": 25,
+   "load": 120,
+   "weight": 14.0,
+   "wheel": 8.5,
+   "charge": 4.0,
+   "gross": 15.2,
+   "box": "111×16.5×53.5 см",
+   "volt": 36,
+   "brakes": "дисковый",
+   "drive": "Передний привод",
+   "seat": false
+  }
+ },
+ {
   "id": "pro-s3",
   "name": "S3 Pro",
   "brand": "Kugoo",
@@ -32,6 +108,44 @@ const CATALOG = [
    "brakes": "Электромагнитный",
    "drive": "Передний привод",
    "seat": false
+  }
+ },
+ {
+  "id": "s4",
+  "name": "Kirin S4",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 48900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 350,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-s4-500w-48v-10-4-ah-2025.png",
+  "gallery": [
+   "img/kugoo-kirin-s4-500w-48v-10-4-ah-2025.png",
+   "img/gallery/s4/1.jpg",
+   "img/gallery/s4/2.jpg",
+   "img/gallery/s4/3.jpg",
+   "img/gallery/s4/4.jpg",
+   "img/gallery/s4/5.jpg",
+   "img/gallery/s4/6.jpg"
+  ],
+  "desc": "Kugoo Kirin S4 — это надёжный помощник для городских поездок. Мощный мотор 500 Вт разгоняет самокат до 40 км/ч, а запас хода в 35 км хватит на несколько дней активного катания. Прочная конструкция выдерживает вес до 120 кг и рассчитана на суровые реалии городских дорог.\n\nКомпактный и лёгкий — весит всего 21,5 кг, поэтому легко носить в общественном транспорте. Большие 9,5-дюймовые колёса обеспечивают комфортную езду по неровностям. Одной зарядки хватает на целый день, а батарея ёмкостью 10,4 А·ч готова к регулярной эксплуатации.",
+  "specs": {
+   "power": 500,
+   "battery_ah": 10.4,
+   "speed": 40,
+   "range": 35,
+   "load": 120,
+   "weight": 21.5,
+   "wheel": 9.5,
+   "charge": 7.0,
+   "gross": 25.5,
+   "box": "116×22×53 см"
   }
  },
  {
@@ -113,7 +227,6 @@ const CATALOG = [
    "gross": 29.0,
    "box": "137×32×60 см",
    "wheel": 19.0,
-   "weight": 85.0,
    "brakes": "гидравличкский"
   }
  },
@@ -202,6 +315,48 @@ const CATALOG = [
   }
  },
  {
+  "id": "18ah-m4-pro",
+  "name": "M4 Pro 18Ah",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 51900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 7618,
+  "hit": true,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-m4-pro-18ah-2025.jpg",
+  "gallery": [
+   "img/kugoo-kirin-m4-pro-18ah-2025.jpg",
+   "img/gallery/18ah-m4-pro/1.jpg",
+   "img/gallery/18ah-m4-pro/2.jpg",
+   "img/gallery/18ah-m4-pro/3.jpg",
+   "img/gallery/18ah-m4-pro/4.jpg",
+   "img/gallery/18ah-m4-pro/5.jpg",
+   "img/gallery/18ah-m4-pro/6.jpg"
+  ],
+  "desc": "Kugoo M4 Pro — надёжный помощник для городских поездок. 600 ватт мощности разгонят тебя до 45 км/ч, а батарея на 18 ампер-часов обеспечит путь до 45 км на одной зарядке. Дисковые тормоза держат ситуацию под контролем, задний привод даёт стабильность и уверенность на дороге.\n\nМассивные 10-дюймовые колёса справляются с неровностями, конструкция выдерживает до 120 кг. Весит 27 кг — не тяжело таскать с собой. За 8 часов зарядки получаешь полную готовность к следующему приключению.",
+  "specs": {
+   "power": 600,
+   "battery_ah": 18.0,
+   "volt": 48,
+   "speed": 45,
+   "range": 45,
+   "load": 120,
+   "weight": 27.0,
+   "wheel": 10.0,
+   "gross": 30.0,
+   "box": "119.5×49.5×28 см",
+   "charge": 8.0,
+   "brakes": "Дисковый",
+   "drive": "задний привод",
+   "seat": true
+  }
+ },
+ {
   "id": "18ah-m4-plus-pro",
   "name": "M4 Pro+ 18Ah",
   "brand": "Kugoo",
@@ -244,6 +399,47 @@ const CATALOG = [
   }
  },
  {
+  "id": "1600w-m4-max-pro",
+  "name": "M4 Pro Max 1600W",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 59900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 1279,
+  "hit": true,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-m4-pro-max-48v-18ah-600w-2-2025.png",
+  "gallery": [
+   "img/kugoo-kirin-m4-pro-max-48v-18ah-600w-2-2025.png",
+   "img/gallery/1600w-m4-max-pro/1.jpg",
+   "img/gallery/1600w-m4-max-pro/2.jpg",
+   "img/gallery/1600w-m4-max-pro/3.jpg",
+   "img/gallery/1600w-m4-max-pro/4.jpg",
+   "img/gallery/1600w-m4-max-pro/5.jpg",
+   "img/gallery/1600w-m4-max-pro/6.jpg"
+  ],
+  "desc": "Мощный самокат для города и за его пределами. Разгоняется до 45 км/ч, проходит на одной зарядке до 45 км. Полный привод справится с любыми дорогами, а дисковые тормоза — с экстренным торможением. Держит нагрузку до 140 кг.\n\nБольшие 10-дюймовые колёса обеспечивают плавность хода. Батарея на 18 ампер-часов заряжается за 6 часов. Вес 35,7 кг делает самокат портативным, хотя и серьёзным.",
+  "specs": {
+   "power": 1600,
+   "battery_ah": 18.0,
+   "speed": 45,
+   "range": 45,
+   "load": 140,
+   "wheel": 10.0,
+   "gross": 35.5,
+   "box": "129.5×25.5×46.5 см",
+   "charge": 6.0,
+   "weight": 35.7,
+   "brakes": "дисковый",
+   "drive": "полный",
+   "seat": true
+  }
+ },
+ {
   "id": "m5",
   "name": "M5",
   "brand": "Kugoo",
@@ -282,6 +478,46 @@ const CATALOG = [
    "volt": 48,
    "brakes": "Дисковый",
    "drive": "задний привод",
+   "seat": true
+  }
+ },
+ {
+  "id": "m5-pro",
+  "name": "M5 Pro",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 73900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 1386,
+  "hit": true,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-m5-pro-2025.jpg",
+  "gallery": [
+   "img/kugoo-kirin-m5-pro-2025.jpg",
+   "img/gallery/m5-pro/1.jpg",
+   "img/gallery/m5-pro/2.jpg",
+   "img/gallery/m5-pro/3.jpg",
+   "img/gallery/m5-pro/4.jpg",
+   "img/gallery/m5-pro/5.jpg",
+   "img/gallery/m5-pro/6.jpg"
+  ],
+  "desc": "Kugoo M5 Pro — мощный помощник для города. Киловаттный мотор разгонит тебя до 55 км/ч, а батарея ёмкостью 21 А·ч обеспечит запас хода до 65 км на одном заряде. Держит нагрузку до 120 кг, так что справится с грузом или пассажиром посолиднее.\n\nКолёса 11 дюймов уверенно катят по любым дорогам, а дисковые тормоза дарят надёжную остановку. За 8 часов зарядки — и ты снова в деле. Всё это в корпусе весом 37,5 кг — не тяжело переносить, когда батарея садится.",
+  "specs": {
+   "power": 1000,
+   "battery_ah": 21.0,
+   "speed": 55,
+   "range": 65,
+   "load": 120,
+   "weight": 37.5,
+   "wheel": 11.0,
+   "charge": 8.0,
+   "gross": 43.0,
+   "box": "131×29.5×52.5 см",
+   "brakes": "дисковый",
    "seat": true
   }
  },
@@ -402,7 +638,6 @@ const CATALOG = [
    "volt": 60,
    "speed": 75,
    "range": 70,
-   "weight": 50.0,
    "wheel": 11.0,
    "gross": 55.0,
    "box": "143×33×65.5 см",
@@ -411,6 +646,46 @@ const CATALOG = [
    "brakes": "гидравлический",
    "drive": "полный",
    "seat": false
+  }
+ },
+ {
+  "id": "lx9-plus",
+  "name": "LX 9+",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 79900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-lx-9-2-650-1300w-48v-18-2ah.jpg",
+  "gallery": [
+   "img/kugoo-kirin-lx-9-2-650-1300w-48v-18-2ah.jpg",
+   "img/gallery/lx9-plus/1.jpg",
+   "img/gallery/lx9-plus/2.jpg",
+   "img/gallery/lx9-plus/3.jpg",
+   "img/gallery/lx9-plus/4.jpg",
+   "img/gallery/lx9-plus/5.jpg",
+   "img/gallery/lx9-plus/6.jpg"
+  ],
+  "desc": "Kugoo LX 9+ — мощный самокат, который легко разгонится до 50 км/ч и проедет на одной зарядке целых 70 км. Дисковые тормоза обеспечивают уверенное торможение даже на высокой скорости, а задний привод дарит стабильность.\n\nКомпактные 14-дюймовые колёса делают его манёвренным в городе, при этом он выдерживает нагрузку до 120 кг. Весит всего 29 кг, поэтому его легко носить. Полная зарядка займёт 8 часов — и вы готовы к новым приключениям.",
+  "specs": {
+   "battery_ah": 18.2,
+   "speed": 50,
+   "range": 70,
+   "load": 120,
+   "weight": 29.0,
+   "charge": 8.0,
+   "power": 400.0,
+   "wheel": 14.0,
+   "volt": 48,
+   "brakes": "дисковый",
+   "drive": "задний привод",
+   "seat": true
   }
  },
  {
@@ -445,7 +720,6 @@ const CATALOG = [
    "speed": 75,
    "range": 100,
    "load": 150,
-   "weight": 47.0,
    "wheel": 11.0,
    "charge": 10.0,
    "gross": 47.5,
@@ -486,7 +760,6 @@ const CATALOG = [
    "speed": 85,
    "range": 160,
    "load": 160,
-   "weight": 53.0,
    "gross": 68.0,
    "box": "138×39×71.5 см",
    "charge": 10.0,
@@ -530,7 +803,6 @@ const CATALOG = [
    "speed": 50,
    "range": 48,
    "load": 120,
-   "weight": 75.0,
    "wheel": 10.0,
    "charge": 9.0,
    "box": "127.5×23×59 см",
@@ -582,6 +854,48 @@ const CATALOG = [
   }
  },
  {
+  "id": "f3-max-pro",
+  "name": "F3 Pro Max",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 93900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 1353,
+  "hit": true,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-f3-pro-max.jpg",
+  "gallery": [
+   "img/kugoo-f3-pro-max.jpg",
+   "img/gallery/f3-max-pro/1.jpg",
+   "img/gallery/f3-max-pro/2.jpg",
+   "img/gallery/f3-max-pro/3.jpg",
+   "img/gallery/f3-max-pro/4.jpg",
+   "img/gallery/f3-max-pro/5.jpg",
+   "img/gallery/f3-max-pro/6.jpg"
+  ],
+  "desc": "Двухмоторный монстр с полным приводом, развивающий 70 км/ч. Мощность 1100 Вт и аккумулятор 52В позволяют преодолевать 85 км на одной зарядке. Колёса 10 дюймов справляются с любыми дорогами, а гидравлические тормоза дарят уверенность в управлении.\n\nЛегко берёт груз до 120 кг и держит вес в 33 кг — удобно носить и перевозить. Зарядится за 12 часов и готов к новым приключениям. Идеальный выбор для тех, кто ценит скорость и дальность без компромиссов.",
+  "specs": {
+   "power": 1100,
+   "battery_ah": 23.4,
+   "volt": 52,
+   "speed": 70,
+   "range": 85,
+   "load": 120,
+   "weight": 33.0,
+   "gross": 41.0,
+   "box": "134×28×63.5 см",
+   "charge": 12.0,
+   "wheel": 10.0,
+   "brakes": "гидравлический",
+   "drive": "полный привод",
+   "seat": false
+  }
+ },
+ {
   "id": "f4-pro",
   "name": "F4 Pro",
   "brand": "Kugoo",
@@ -619,7 +933,6 @@ const CATALOG = [
    "gross": 46.0,
    "box": "135×29×63.5 см",
    "wheel": 10.0,
-   "weight": 46.0,
    "brakes": "гидравлический",
    "drive": "полный привод",
    "seat": false
@@ -697,6 +1010,32 @@ const CATALOG = [
    "brakes": "дисковый",
    "drive": "задний привод",
    "seat": true
+  }
+ },
+ {
+  "id": "13ah-x1",
+  "name": "X1 13Ah",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 47900,
+  "stock": "wait",
+  "src": [
+   "drop"
+  ],
+  "pop": 711,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-x1-13ah.jpg",
+  "gallery": [],
+  "desc": "Kugoo X1 13Ah – мощный помощник для города. 600 ватт под ногами, батарея на 13 ампер-часов и скорость до 45 км/ч. Идеален для тех, кто ценит скорость и не боится острых ощущений.\n\nОдного заряда хватает на серьёзные расстояния. Самокат держит удар в любых условиях, простой в обслуживании и готов к приключениям. Цена уже учитывает отсутствие производственной гарантии – платишь только за технику.",
+  "specs": {
+   "power": 600,
+   "battery_ah": 13.0,
+   "speed": 45,
+   "charge": 45.0,
+   "gross": 22.4,
+   "box": "107×25×43 см"
   }
  },
  {
@@ -1275,7 +1614,6 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 65.0,
    "box": "148×31×72 см",
-   "weight": 65.0,
    "volt": 60,
    "brakes": "гидравлический",
    "drive": "задний привод",
@@ -1315,7 +1653,6 @@ const CATALOG = [
    "load": 150,
    "wheel": 16.0,
    "charge": 7.0,
-   "weight": 65.0,
    "volt": 60,
    "brakes": "гидравлический",
    "drive": "задний привод",
@@ -1356,7 +1693,6 @@ const CATALOG = [
    "wheel": 16.0,
    "charge": 7.0,
    "box": "152×30×77 см",
-   "weight": 65.0,
    "volt": 60,
    "brakes": "гидравлический",
    "drive": "задний привод",
@@ -1398,7 +1734,6 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 74.0,
    "box": "152×30.5×79 см",
-   "weight": 72.0,
    "battery_ah": 28.6,
    "volt": 60,
    "brakes": "гидравлический",
@@ -1482,7 +1817,6 @@ const CATALOG = [
    "speed": 50,
    "range": 50,
    "load": 120,
-   "weight": 49.0,
    "wheel": 20.0,
    "charge": 7.0,
    "gross": 49.0,
@@ -1528,7 +1862,6 @@ const CATALOG = [
    "gross": 59.0,
    "box": "156×97×30.2 см",
    "wheel": 22.8,
-   "weight": 59.0,
    "volt": 48,
    "brakes": "гидравлический",
    "drive": "задний привод",
@@ -1797,6 +2130,25 @@ const CATALOG = [
   }
  },
  {
+  "id": "note",
+  "name": "Kirin Note",
+  "brand": "Kugoo",
+  "cat": "питбайк",
+  "price": 87900,
+  "stock": "wait",
+  "src": [
+   "k2025"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-note-800w-25ah-2024.jpg",
+  "gallery": [],
+  "desc": "Kugoo Kirin Note — это настоящий питбайк для тех, кто ценит азарт и свободу. Компактный электротранспорт с агрессивным дизайном справляется с любыми препятствиями на пути.\n\nМодель отличается надёжностью и практичностью. Выбирайте Kirin Note, если вам нужен универсальный помощник для города и за его пределами.",
+  "specs": {}
+ },
+ {
   "id": "300-jl",
   "name": "JL-300 эндуро",
   "brand": "Kugoo",
@@ -2025,7 +2377,6 @@ const CATALOG = [
    "speed": 50,
    "range": 48,
    "load": 120,
-   "weight": 75.0,
    "wheel": 10.0,
    "charge": 9.0,
    "box": "127.5×23×59 см",
