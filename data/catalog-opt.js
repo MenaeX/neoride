@@ -170,10 +170,10 @@ const CATALOG = [
   "cat": "самокат",
   "price": 33900,
   "mrc": 33900,
-  "opt": 30400,
+  "opt": 27500,
   "stock": "in",
   "src": [
-   "drop"
+   "koptom"
   ],
   "pop": 2650,
   "hit": true,
@@ -2353,10 +2353,11 @@ const CATALOG = [
   "cat": "бензо",
   "price": 144900,
   "mrc": 144900,
-  "opt": 110000,
+  "opt": 121000,
   "stock": "in",
   "src": [
-   "drop"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
