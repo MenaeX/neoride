@@ -1868,5 +1868,48 @@ const CATALOG = [
    "load": 150,
    "box": "179×54×87 см"
   }
+ },
+ {
+  "id": "f1-max-pro",
+  "name": "F1 Pro Max",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 69900,
+  "mrc": 69900,
+  "opt": 58300,
+  "stock": "in",
+  "src": [
+   "drop",
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": true,
+  "warranty": true,
+  "img": "img/kugoo-f1-pro-max.jpg",
+  "gallery": [
+   "img/kugoo-f1-pro-max.jpg",
+   "img/gallery/f1-max-pro/1.jpg",
+   "img/gallery/f1-max-pro/2.jpg",
+   "img/gallery/f1-max-pro/3.jpg",
+   "img/gallery/f1-max-pro/4.jpg",
+   "img/gallery/f1-max-pro/5.jpg",
+   "img/gallery/f1-max-pro/6.jpg"
+  ],
+  "desc": "Kugoo F1 Pro Max — это мощный самокат для тех, кто не боится скорости. Два мотора (1600 Вт) дарят истинное ощущение полета, разгоняя до 55 км/ч. Крепкие дисковые тормоза держат ситуацию под контролем в любой момент.\n\nНа одной зарядке проедешь до 50 км — хватит для работы, учебы и забега по городу. Колеса диаметром 10 дюймов уверенно берут асфальт и неровности. Выдерживает до 120 кг и работает 12 месяцев на гарантии.",
+  "specs": {
+   "power": 800,
+   "battery_ah": 18.0,
+   "volt": 48,
+   "speed": 50,
+   "range": 48,
+   "load": 120,
+   "wheel": 10.0,
+   "charge": 9.0,
+   "box": "127.5×23×59 см",
+   "brakes": "дисковый",
+   "drive": "задний",
+   "seat": false
+  }
  }
 ];

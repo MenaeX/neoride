@@ -2353,7 +2353,8 @@ const CATALOG = [
   "price": 69900,
   "stock": "in",
   "src": [
-   "drop"
+   "drop",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
