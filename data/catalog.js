@@ -364,7 +364,8 @@ const CATALOG = [
   "price": 61500,
   "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 1100,
   "hit": false,
