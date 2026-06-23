@@ -64,7 +64,7 @@
   <div class="hero-scan" aria-hidden="true"></div>
   <div class="container hero-in">
     <div class="hero-content rw-trig">
-      <div class="kicker rw" style="--d:.05s"><i>Электротранспорт Kugoo · 2025—2026</i></div>
+      <div class="kicker rw" style="--d:.05s"><i>Электротранспорт Kugoo и AOVO · 2025—2026</i></div>
       <h1>
         <span class="rw" style="--d:.15s"><i>Ночь.</i></span>
         <span class="rw" style="--d:.3s"><i class="g">Город.</i></span><br>
@@ -335,6 +335,26 @@
 <script data-cfasync="false" src="data/catalog.js?v=180626a"></script>
 <script data-cfasync="false" src="js/app.js?v=180626a"></script>
 <script data-cfasync="false" src="js/cart.js?v=180626a"></script>
+<script data-cfasync="false">
+/* На мобиле прячем «Подбор», «Серии» и «Фильтры» за тап-кнопки — короче главная, акцент на товар */
+(function () {
+  if (!window.matchMedia || !matchMedia('(max-width:760px)').matches) return;
+  function collapsible(target, label) {
+    if (!target) return;
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'm-collapse-btn';
+    btn.innerHTML = '<span>' + label + '</span><i>▾</i>';
+    target.parentNode.insertBefore(btn, target);
+    var open = false;
+    function set(o) { open = o; target.style.display = o ? '' : 'none'; btn.classList.toggle('open', o); }
+    set(false);
+    btn.addEventListener('click', function () { set(!open); });
+  }
+  collapsible(document.getElementById('scenRow'), 'Подбор по сценарию');
+  collapsible(document.getElementById('seriesTabs'), 'Серии моделей');
+  collapsible(document.querySelector('#catalog .filters'), 'Фильтры');
+})();
+</script>
 <script data-cfasync="false" src="js/fx.js?v=180626a"></script>
 <script data-cfasync="false" src="js/chat.js?v=180626a"></script>
 </body>

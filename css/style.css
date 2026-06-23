@@ -722,3 +722,22 @@ details p{padding:0 22px 18px;color:var(--mut)}
   border:0;cursor:pointer;box-shadow:0 10px 30px rgba(46,230,255,.4),0 4px 14px rgba(0,0,0,.4);transition:.22s}
 .fab-toggle:hover{transform:translateY(-2px)}
 .fab-toggle.active{background:rgba(8,14,20,.95);color:var(--cyan);border:1px solid var(--cyan)}
+
+/* Сворачиваемые блоки на мобиле (подбор/серии/фильтры) — по просьбе: короче главная */
+@media (max-width:760px){
+  .m-collapse-btn{display:flex;align-items:center;gap:8px;width:100%;justify-content:space-between;
+    margin:10px 0;padding:12px 16px;border:1px solid var(--line2);border-radius:12px;background:var(--glass);
+    color:var(--txt);font:600 14px Inter,sans-serif;cursor:pointer}
+  .m-collapse-btn i{transition:.2s}
+  .m-collapse-btn.open i{transform:rotate(180deg)}
+}
+@media (min-width:761px){ .m-collapse-btn{display:none} }
+
+/* П.5 (мобайл): спокойнее, акцент на товар — гасим неон-шум, кнопки/бренд оставляем */
+@media (max-width:760px){
+  .hero h1 .neon{text-shadow:0 0 7px rgba(184,255,46,.4)}   /* было 3 ярких слоя glow */
+  .hero h1 .g{text-shadow:none}
+  .hero-bokeh,.hero-scan{display:none}                       /* декоративный цветной шум убираем */
+  .hero-mega{opacity:.45}                                    /* гигантская подложка-NEORIDE тише */
+  body::after{opacity:.5}                                    /* цветное пятно-фон спокойнее */
+}
