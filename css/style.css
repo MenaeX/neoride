@@ -837,8 +837,8 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .cat-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:6px}
 .cat-tile{display:flex;flex-direction:column;border:1px solid var(--line2);border-radius:18px;overflow:hidden;background:var(--glass);text-decoration:none;transition:.22s}
 .cat-tile:hover{transform:translateY(-4px);border-color:var(--cyan)}
-.cat-tile .ct-img{aspect-ratio:4/3;background:#fff;display:flex;align-items:center;justify-content:center;padding:14px}
-.cat-tile .ct-img img{max-width:100%;max-height:100%;object-fit:contain}
+.cat-tile .ct-img{aspect-ratio:4/3;background:#fff;display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden}
+.cat-tile .ct-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;object-position:center;display:block;margin:0 auto}
 .cat-tile .ct-info{padding:14px 16px 16px}
 .cat-tile .ct-name{font:700 17px Inter,sans-serif;color:var(--txt)}
 .cat-tile .ct-count{font:600 13px Inter,sans-serif;color:var(--mut);margin-top:3px}

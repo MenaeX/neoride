@@ -335,22 +335,28 @@ function renderCatTiles() {
     </a>`;
   }).join('');
 }
+function vsafe(fn) { try { fn(); } catch (e) { try { console.warn('[vitrina]', e); } catch (_) {} } }
 function buildVitrina() {
+  const inStock = CATALOG.filter(c => c.price && c.img && c.stock === 'in');
   const pool = CATALOG.filter(c => c.price && c.img);
-  // ТОП-продаж: хиты, добиваем по популярности до 8
-  let top = pool.filter(c => c.hit);
-  if (top.length < 6) {
-    const extra = pool.filter(c => !c.hit).sort((a, b) => (b.pop || 0) - (a.pop || 0));
-    top = top.concat(extra).slice(0, 10);
-  }
-  top.sort((a, b) => (b.pop || 0) - (a.pop || 0));
-  fillCarousel('topSalesTrack', top.slice(0, 12));
-  // Новинки
-  const fresh = pool.filter(c => c.new);
-  const okNew = fillCarousel('newModelsTrack', fresh);
-  const newSec = document.getElementById('newModelsSec');
-  if (newSec && !okNew) newSec.hidden = true;
-  renderCatTiles();
+  // ТОП-продаж: только В НАЛИЧИИ — хиты, добор по популярности
+  vsafe(() => {
+    let top = inStock.filter(c => c.hit);
+    if (top.length < 8) {
+      const extra = inStock.filter(c => !c.hit).sort((a, b) => (b.pop || 0) - (a.pop || 0));
+      top = top.concat(extra);
+    }
+    top.sort((a, b) => (b.pop || 0) - (a.pop || 0));
+    fillCarousel('topSalesTrack', top.slice(0, 12));
+  });
+  // Новинки (флаг new; источник — site-src/new-models.json)
+  vsafe(() => {
+    const fresh = pool.filter(c => c.new);
+    const okNew = fillCarousel('newModelsTrack', fresh);
+    const newSec = document.getElementById('newModelsSec');
+    if (newSec && !okNew) newSec.hidden = true;
+  });
+  vsafe(renderCatTiles);
 }
 
 /* ---------- сравнение ---------- */
@@ -694,24 +700,26 @@ applyBrandFromHash(false);
 window.addEventListener('hashchange', () => applyBrandFromHash(true));
 
 // Режим страницы: с замком (бренд/категория) — листинг с фильтрами; без замка — главная-витрина.
+function setHidden(id, h) { const e = document.getElementById(id); if (e) e.hidden = h; }
 if (LOCK) {
-  // листинг бренда/категории: прячем витрину и сторителлинг главной, оставляем каталог
-  ['vitrina', 'flagship', 'scen', 'cinema'].forEach(id => { const e = document.getElementById(id); if (e) e.hidden = true; });
+  // листинг бренда/категории: прячем витрину, hero и весь сторителлинг главной, оставляем каталог
+  ['vitrina', 'top', 'marquee', 'flagship', 'scen', 'cinema'].forEach(id => setHidden(id, true));
   if (CAT_LOCK) {
     const label = (CATS.find(x => x[0] === CAT_LOCK) || [, CAT_LOCK])[1];
     const h = document.getElementById('catTitle'); if (h) h.innerHTML = label + ' <span class="g">Kugoo и AOVO</span>';
   }
   render();
 } else {
-  // главная-витрина; при сбое — фолбэк на обычный каталог, чтобы магазин не остался пустым
-  try {
-    const cat = document.getElementById('catalog'); if (cat) cat.hidden = true;
-    // #scen на главной оставляем — это секция квиза «Подберём за 15 секунд»
-    buildVitrina();
-  } catch (e) {
-    const v = document.getElementById('vitrina'); if (v) v.hidden = true;
-    const cat = document.getElementById('catalog'); if (cat) cat.hidden = false;
-    const scen = document.getElementById('scen'); if (scen) scen.hidden = false;
+  // главная-витрина (каждый блок строится в своём try). #scen=квиз оставляем.
+  setHidden('catalog', true);
+  buildVitrina();
+  // фолбэк на каталог ТОЛЬКО если витрина совсем пустая (и ТОП, и окошки не отрисовались)
+  const t = document.getElementById('topSalesTrack');
+  const tiles = document.getElementById('catTiles');
+  const works = (t && t.children.length) || (tiles && tiles.children.length);
+  if (!works) {
+    setHidden('vitrina', true);
+    setHidden('catalog', false);
     render();
   }
 }
