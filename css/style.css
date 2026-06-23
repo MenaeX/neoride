@@ -805,3 +805,12 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .card-1click{font-size:13px;padding:9px 12px;color:var(--cyan);border-color:rgba(46,230,255,.35)}
 .card-1click:hover{background:rgba(46,230,255,.1);border-color:var(--cyan)}
 @media(max-width:600px){.card-1click{font-size:12px;padding:8px 10px}}
+
+/* брендовые пилюли в навигации — видимы на всех страницах, в т.ч. мобайл (было только инлайн на index/aovo) */
+.nav .nav-brand.active{color:var(--cyan)}
+.nav-opt-active{background:var(--grad)!important;color:#06130a!important;border-color:transparent!important}
+.nav-opt-active:hover{box-shadow:none!important}
+@media(max-width:760px){
+  .nav a.nav-brand{display:inline-flex!important;align-items:center;padding:6px 13px;border:1px solid var(--line2);border-radius:99px;color:var(--mut);font-weight:600;font-size:13px}
+  .nav a.nav-brand.active{border-color:var(--cyan);color:var(--cyan);background:rgba(46,230,255,.1)}
+}
