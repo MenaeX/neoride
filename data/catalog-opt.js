@@ -10,7 +10,8 @@ const CATALOG = [
   "opt": 12100,
   "stock": "opt",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 200,
   "hit": false,
@@ -51,14 +52,14 @@ const CATALOG = [
   "price": 33900,
   "mrc": 33900,
   "opt": 27500,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "koptom"
   ],
   "pop": 2650,
   "hit": true,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-m2-new-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-m2-new-2025.jpg",
@@ -173,14 +174,14 @@ const CATALOG = [
   "price": 38900,
   "mrc": 38900,
   "opt": 33000,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025"
   ],
   "pop": 5175,
   "hit": true,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-m4-11ah-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-m4-11ah-2025.jpg",
@@ -262,7 +263,7 @@ const CATALOG = [
   "price": 116900,
   "mrc": 116900,
   "opt": 99000,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "k2025",
    "koptom"
@@ -270,7 +271,7 @@ const CATALOG = [
   "pop": 2355,
   "hit": true,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-g4-max-60v-26аh-2000w-2.jpg",
   "gallery": [
    "img/kugoo-kirin-g4-max-60v-26аh-2000w-2.jpg",
@@ -481,7 +482,6 @@ const CATALOG = [
   "opt": 110000,
   "stock": "in",
   "src": [
-   "drop",
    "k2025",
    "koptom"
   ],
@@ -674,7 +674,7 @@ const CATALOG = [
   "price": 50900,
   "mrc": 49900,
   "opt": 40700,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "k2025",
    "koptom"
@@ -682,7 +682,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-ec02.jpg",
   "gallery": [
    "img/kugoo-ec02.jpg",
@@ -721,7 +721,8 @@ const CATALOG = [
   "opt": 41300,
   "stock": "opt",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1030,7 +1031,7 @@ const CATALOG = [
   "price": 39900,
   "mrc": 37900,
   "opt": 30800,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "k2025",
    "koptom"
@@ -1038,7 +1039,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-kirin-v1-plus.jpg",
   "gallery": [],
   "desc": "Kugoo V1+ — компактный электровелосипед для города, который разгонится до 40 км/ч и проедет на одной зарядке до 30 км. Мотор мощностью 400 Вт справляется с уклонами, а дисковые тормоза обеспечивают надёжное торможение в любых условиях.\n\nВесит всего 17 кг, поэтому легко носить в руках или в общественном транспорте. Батарея 48 В полностью заряжается за 5 часов. Выдерживает пассажиров весом до 120 кг. Плюс год гарантии на покупку.",
@@ -1155,8 +1156,7 @@ const CATALOG = [
   "opt": 48400,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -1372,7 +1372,7 @@ const CATALOG = [
   "price": 74900,
   "mrc": 74900,
   "opt": 60500,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -1380,7 +1380,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-v4-max-48v-15-6-ah-750w.png",
   "gallery": [],
   "desc": "Kugoo Kirin V4 Max — мощный фэт-байк для уверенной езды по любым дорогам. 750-ваттный мотор разгоняет его до 50 км/ч, а на одной зарядке проедешь до 50 км. Гидравлические тормоза гарантируют безопасность даже на высокой скорости.\n\nШирокие 20-дюймовые колёса справляются с грунтом и асфальтом одинаково легко. Выдержит нагрузку до 120 кг и прослужит тебе долгие годы активного катания.",
@@ -1614,14 +1614,14 @@ const CATALOG = [
   "price": 99900,
   "mrc": 99900,
   "opt": 84700,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электропитбайк-kugoo-wish-01-48v-21ah-1500w.png",
   "gallery": [],
   "desc": "Kugoo Wish 01 — питбайк для тех, кто хочет ездить быстро и далеко. Мощный мотор в 1500 Вт разгонит тебя до 50 км/ч, а батарея на 21 ампер-часа обеспечит запас хода до 65 км. Компактные 14-дюймовые колёса делают его манёвренным и весёлым в управлении.\n\nВесит всего 48 кг и выдерживает нагрузку до 120 кг. Зарядишься за 7 часов — и готов к новым приключениям. На байк распространяется гарантия на 12 месяцев, так что можешь ездить без забот.",
@@ -1924,7 +1924,6 @@ const CATALOG = [
   "opt": 58300,
   "stock": "in",
   "src": [
-   "drop",
    "koptom"
   ],
   "pop": 0,
