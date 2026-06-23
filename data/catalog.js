@@ -2034,7 +2034,7 @@ const CATALOG = [
   "id": "300-jl",
   "name": "JL-300 эндуро",
   "brand": "Kugoo",
-  "cat": "бензо",
+  "cat": "мотоцикл",
   "price": 144900,
   "stock": "in",
   "src": [
@@ -2067,7 +2067,7 @@ const CATALOG = [
   "id": "300-nb",
   "name": "NB-300 эндуро",
   "brand": "Kugoo",
-  "cat": "бензо",
+  "cat": "мотоцикл",
   "price": 249900,
   "stock": "in",
   "src": [
@@ -2102,7 +2102,7 @@ const CATALOG = [
   "id": "tank-",
   "name": "Tank скутер",
   "brand": "Kugoo",
-  "cat": "бензо",
+  "cat": "мотоцикл",
   "price": 178900,
   "stock": "in",
   "src": [
@@ -2133,7 +2133,7 @@ const CATALOG = [
   "id": "125-xb",
   "name": "XB-125 питбайк",
   "brand": "Kugoo",
-  "cat": "бензо",
+  "cat": "мотоцикл",
   "price": 119900,
   "stock": "in",
   "src": [
@@ -2166,7 +2166,7 @@ const CATALOG = [
   "id": "300-3-k5",
   "name": "Квадроцикл K5 300см3",
   "brand": "Kugoo",
-  "cat": "бензо",
+  "cat": "квадроцикл",
   "price": 399900,
   "stock": "wait",
   "src": [
@@ -2201,7 +2201,7 @@ const CATALOG = [
   "id": "k6",
   "name": "Квадроцикл K6",
   "brand": "Kugoo",
-  "cat": "бензо",
+  "cat": "квадроцикл",
   "price": 699900,
   "stock": "wait",
   "src": [
