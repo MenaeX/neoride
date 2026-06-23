@@ -884,7 +884,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
 @media(max-width:600px){.avito-trust{flex-wrap:wrap;gap:10px}.avito-trust .at-go{margin-left:0;width:100%}}
 
 /* блок сравнения: такси / кикшеринг / свой самокат */
-.cmp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.cmp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
 .cmp-col{border:1px solid var(--line2);border-radius:18px;padding:24px 22px;background:rgba(255,255,255,.02);display:flex;flex-direction:column;gap:12px}
 .cmp-col.win{border-color:rgba(184,255,46,.4);background:linear-gradient(160deg,rgba(184,255,46,.08),rgba(46,230,255,.04))}
 .cmp-col h3{font:700 19px Unbounded,sans-serif;color:#fff;margin:0}
@@ -896,7 +896,8 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .cmp-col li::before{content:"–";color:#ff6b6b;font-weight:700;flex:none}
 .cmp-col.win li::before{content:"✓";color:var(--lime,#b8ff2e)}
 .cmp-note{font:12px/1.5 Inter,sans-serif;color:var(--mut);margin-top:14px}
-@media(max-width:760px){.cmp-grid{grid-template-columns:1fr}}
+@media(max-width:1000px){.cmp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.cmp-grid{grid-template-columns:1fr}}
 
 /* #6 — заметность фильтров и сортировки (неон + hover) */
 .fchip:hover{border-color:var(--cyan);color:var(--txt);box-shadow:0 0 10px rgba(46,230,255,.22)}
