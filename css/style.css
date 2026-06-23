@@ -852,3 +852,10 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .cat-tile .ct-name{font-size:14px}
   .cat-tile .ct-count{font-size:11px}
 }
+
+/* секции-заглушки (зарезервированное место под будущие разделы) */
+.ph-card{display:flex;gap:16px;align-items:center;padding:26px 24px;border:1.5px dashed var(--line2);border-radius:18px;background:rgba(255,255,255,.02);margin-top:8px}
+.ph-card .ph-ic{font-size:30px;flex:none;opacity:.85}
+.ph-card b{color:#fff}
+.ph-card div{font:15px/1.6 Inter,sans-serif;color:var(--mut)}
+@media(max-width:600px){.ph-card{padding:16px 16px;gap:12px}.ph-card .ph-ic{font-size:24px}}
