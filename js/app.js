@@ -297,8 +297,15 @@ function wireCards(root) {
     let x0 = null;
     box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
     box.addEventListener('touchend', e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(dx < 0 ? i + 1 : i - 1); x0 = null; }, { passive: true });
+    // авто-перелистывание фото при наведении (только десктоп с курсором)
+    if (HOVER) {
+      let timer = null;
+      box.addEventListener('mouseenter', () => { timer = setInterval(() => show(i + 1), 900); });
+      box.addEventListener('mouseleave', () => { if (timer) clearInterval(timer); timer = null; show(0); });
+    }
   });
 }
+const HOVER = (typeof window !== 'undefined' && window.matchMedia) ? window.matchMedia('(hover: hover) and (pointer: fine)').matches : false;
 
 /* ---------- главная-витрина: ТОП-продаж, Новинки, окошки категорий ---------- */
 const CAT_SLUG = { 'самокат': 'samokaty', 'велосипед': 'velosipedy', 'скутер': 'skutery', 'питбайк': 'pitbayki', 'трицикл': 'tricikly', 'квадроцикл': 'kvadrocikly', 'мотоцикл': 'motocikly' };

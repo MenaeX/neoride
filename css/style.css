@@ -867,9 +867,11 @@ details p{padding:0 22px 18px;color:var(--mut)}
   background:rgba(6,8,13,.82);color:var(--cyan);border:1.5px solid var(--cyan);backdrop-filter:blur(4px);
   box-shadow:0 0 16px rgba(46,230,255,.5),0 6px 20px rgba(0,0,0,.5);transition:.2s}
 .vcar-arr:hover{background:var(--cyan);color:#04121a;box-shadow:0 0 26px rgba(46,230,255,.85)}
-.vcar-prev{left:-6px}
-.vcar-next{right:-6px}
-@media(max-width:600px){.vcar-arr{display:none}}
+.vcar-prev{left:0}
+.vcar-next{right:0}
+/* на десктопе раздвигаем трек, чтобы стрелки сели в боковой отступ, а не на карточки */
+@media(min-width:901px){.vcar-track{margin:0 60px}}
+@media(max-width:900px){.vcar-arr{display:none}}
 
 /* Авито-бейдж доверия */
 .avito-trust{display:flex;align-items:center;gap:16px;margin:18px 0 6px;padding:14px 20px;border-radius:16px;border:1px solid var(--line2);background:rgba(255,255,255,.03);text-decoration:none;transition:.2s;max-width:600px}
@@ -895,3 +897,10 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .cmp-col.win li::before{content:"✓";color:var(--lime,#b8ff2e)}
 .cmp-note{font:12px/1.5 Inter,sans-serif;color:var(--mut);margin-top:14px}
 @media(max-width:760px){.cmp-grid{grid-template-columns:1fr}}
+
+/* #6 — заметность фильтров и сортировки (неон + hover) */
+.fchip:hover{border-color:var(--cyan);color:var(--txt);box-shadow:0 0 10px rgba(46,230,255,.22)}
+.fchip.active{background:rgba(184,255,46,.15);box-shadow:0 0 18px rgba(184,255,46,.34);font-weight:700}
+.filters{border-color:var(--line2)}
+#sortSel,#sortSel:focus{border-color:rgba(46,230,255,.45);box-shadow:0 0 10px rgba(46,230,255,.14)}
+#sortSel:hover{border-color:var(--cyan);box-shadow:0 0 14px rgba(46,230,255,.32)}
