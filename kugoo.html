@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=230626h">
+<link rel="stylesheet" href="css/style.css?v=230626i">
 <script data-cfasync="false">document.documentElement.classList.add('js')</script>
-<script data-cfasync="false" src="js/metrika.js?v=230626h"></script>
+<script data-cfasync="false" src="js/metrika.js?v=230626i"></script>
 <!--SEO-HEAD-->
 <link rel="canonical" href="https://neoride.ru/kugoo.html">
 <meta property="og:type" content="website">
@@ -107,23 +107,25 @@
 <div id="vitrina">
 <section class="vsec" id="topSalesSec">
   <div class="container">
-    <div class="vsec-head">
-      <h2 data-rev>ТОП-<span class="g">продаж</span></h2>
-      <div class="vcar-nav"><button class="vcar-prev" type="button" aria-label="Назад">‹</button><button class="vcar-next" type="button" aria-label="Вперёд">›</button></div>
-    </div>
+    <div class="vsec-head"><h2 data-rev>ТОП-<span class="g">продаж</span></h2></div>
     <p class="sec-sub">Что покупают чаще всего — проверенные ходовые модели.</p>
-    <div class="vcar"><div class="vcar-track" id="topSalesTrack"></div></div>
+    <div class="vcar">
+      <button class="vcar-arr vcar-prev" type="button" aria-label="Назад">‹</button>
+      <div class="vcar-track" id="topSalesTrack"></div>
+      <button class="vcar-arr vcar-next" type="button" aria-label="Вперёд">›</button>
+    </div>
   </div>
 </section>
 
 <section class="vsec" id="newModelsSec">
   <div class="container">
-    <div class="vsec-head">
-      <h2 data-rev>Новинки <span class="g">🔥</span></h2>
-      <div class="vcar-nav"><button class="vcar-prev" type="button" aria-label="Назад">‹</button><button class="vcar-next" type="button" aria-label="Вперёд">›</button></div>
-    </div>
+    <div class="vsec-head"><h2 data-rev>Новинки <span class="g">🔥</span></h2></div>
     <p class="sec-sub">Свежие поступления модельного ряда.</p>
-    <div class="vcar"><div class="vcar-track" id="newModelsTrack"></div></div>
+    <div class="vcar">
+      <button class="vcar-arr vcar-prev" type="button" aria-label="Назад">‹</button>
+      <div class="vcar-track" id="newModelsTrack"></div>
+      <button class="vcar-arr vcar-next" type="button" aria-label="Вперёд">›</button>
+    </div>
   </div>
 </section>
 
@@ -157,12 +159,38 @@
 
 <section class="vsec" id="compareTaxiSec">
   <div class="container">
-    <h2 data-rev>Самокат против <span class="g">такси и каршеринга</span></h2>
-    <p class="sec-sub">Считаем, сколько вы экономите за сезон, пересев на свой электротранспорт.</p>
-    <div class="ph-card" data-rev>
-      <span class="ph-ic">📊</span>
-      <div><b>Раздел готовим.</b> Здесь будет сравнительная таблица расходов за сезон: такси · каршеринг · свой самокат — с расчётом окупаемости.</div>
+    <h2 data-rev>Свой самокат против <span class="g">такси и проката</span></h2>
+    <p class="sec-sub">Сколько уходит за сезон (апрель–октябрь, ~2 коротких поездки в день) и что остаётся у вас на руках.</p>
+    <div class="cmp-grid" data-rev>
+      <div class="cmp-col">
+        <h3>🚕 Такси</h3>
+        <div class="cmp-sum">~108 000 ₽<small>за сезон, и каждый сезон заново</small></div>
+        <ul>
+          <li>~300 ₽ за короткую поездку — цена растёт в час пик и дождь</li>
+          <li>Ждёте машину, стоите в пробках</li>
+          <li>В конце сезона на руках — ничего</li>
+        </ul>
+      </div>
+      <div class="cmp-col">
+        <h3>🛴 Прокатные (кикшеринг)</h3>
+        <div class="cmp-sum">~54 000 ₽<small>за сезон, тоже впустую</small></div>
+        <ul>
+          <li>~150 ₽ за поездку + плата за старт и поминутно</li>
+          <li>Самоката может не быть рядом или он разряжен</li>
+          <li>Лимит скорости и зоны, штрафы за парковку</li>
+        </ul>
+      </div>
+      <div class="cmp-col win">
+        <h3>⚡ Свой NEORIDE</h3>
+        <div class="cmp-sum">от 24 900 ₽<small>один раз — дальше только зарядка</small></div>
+        <ul>
+          <li>Окупается за первый сезон против такси и проката</li>
+          <li>Всегда заряжен и под рукой, едете когда хотите</li>
+          <li>Своя модель, гарантия, остаётся у вас на годы</li>
+        </ul>
+      </div>
     </div>
+    <p class="cmp-note">Расчёт ориентировочный, для наглядности: 2 поездки в день × 180 дней сезона. Реальные суммы зависят от города, тарифов и стиля поездок. Не является публичной офертой.</p>
   </div>
 </section>
 
@@ -231,25 +259,16 @@
   </div>
 </section>
 
-<section class="cinema rw-trig" id="cinema" aria-label="Покатушки вдвоём">
-  <div class="cinema-bg" data-prlx="0.3">
-    <img src="img/night-led.jpg" alt="Электросамокат Kugoo с зелёной LED-подсветкой на ночной неоновой улице" loading="lazy">
-  </div>
-  <div class="cinema-overlay" aria-hidden="true"></div>
-  <div class="container cinema-in">
-    <h2>
-      <span class="rw" style="--d:.1s"><i>Город после заката —</i></span><br>
-      <span class="rw" style="--d:.3s"><i class="g">твоя трасса.</i></span>
-    </h2>
-    <p class="rw" style="--d:.5s"><i>LED-подсветка, запас хода до 160 км — и вдвоём веселее.</i></p>
-  </div>
-</section>
-
 <section class="strip" id="why">
   <div class="container">
     <div class="kicker" data-rev>Почему мы</div>
-    <h2 data-rev>Не «коробка с Авито», а техника <span class="g">с поддержкой</span></h2>
-    <p class="sec-sub">Четыре причины покупать электротранспорт у NEORIDE, а не у перекупа.</p>
+    <h2 data-rev>Техника <span class="g">с поддержкой</span>, а не кот в мешке</h2>
+    <p class="sec-sub">Четыре причины покупать электротранспорт у NEORIDE.</p>
+    <a class="avito-trust" id="avitoTrust" href="https://www.avito.ru/" target="_blank" rel="noopener" data-rev>
+      <span class="at-logo">Avito</span>
+      <span class="at-txt"><b>Продаём и на Авито</b><span>150+ отзывов о нашей доставке и сервисе · рейтинг магазина</span></span>
+      <span class="at-go">Открыть магазин →</span>
+    </a>
     <div class="bento">
       <div class="bento-media" data-rev>
         <video src="img/rider.mp4" autoplay muted loop playsinline poster="img/rider-night.jpg"></video>
@@ -403,11 +422,11 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="data/catalog.js?v=230626h"></script>
+<script data-cfasync="false" src="data/catalog.js?v=230626i"></script>
 <script>window.BRAND_LOCK='Kugoo'</script>
-<script data-cfasync="false" src="js/app.js?v=230626h"></script>
-<script data-cfasync="false" src="js/cart.js?v=230626h"></script>
-<script data-cfasync="false" src="js/quiz.js?v=230626h"></script>
+<script data-cfasync="false" src="js/app.js?v=230626i"></script>
+<script data-cfasync="false" src="js/cart.js?v=230626i"></script>
+<script data-cfasync="false" src="js/quiz.js?v=230626i"></script>
 <script data-cfasync="false">
 /* На мобиле прячем «Подбор», «Серии» и «Фильтры» за тап-кнопки — короче главная, акцент на товар */
 (function () {
@@ -427,7 +446,7 @@
   collapsible(document.querySelector('#catalog .filters'), 'Фильтры');
 })();
 </script>
-<script data-cfasync="false" src="js/fx.js?v=230626h"></script>
-<script data-cfasync="false" src="js/chat.js?v=230626h"></script>
+<script data-cfasync="false" src="js/fx.js?v=230626i"></script>
+<script data-cfasync="false" src="js/chat.js?v=230626i"></script>
 </body>
 </html>

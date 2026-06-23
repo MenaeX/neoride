@@ -859,3 +859,39 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .ph-card b{color:#fff}
 .ph-card div{font:15px/1.6 Inter,sans-serif;color:var(--mut)}
 @media(max-width:600px){.ph-card{padding:16px 16px;gap:12px}.ph-card .ph-ic{font-size:24px}}
+
+/* стрелки каруселей — по краям, неоновые */
+.vcar{position:relative}
+.vcar-arr{position:absolute;top:50%;transform:translateY(-50%);z-index:6;width:50px;height:50px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:26px;line-height:1;cursor:pointer;
+  background:rgba(6,8,13,.82);color:var(--cyan);border:1.5px solid var(--cyan);backdrop-filter:blur(4px);
+  box-shadow:0 0 16px rgba(46,230,255,.5),0 6px 20px rgba(0,0,0,.5);transition:.2s}
+.vcar-arr:hover{background:var(--cyan);color:#04121a;box-shadow:0 0 26px rgba(46,230,255,.85)}
+.vcar-prev{left:-6px}
+.vcar-next{right:-6px}
+@media(max-width:600px){.vcar-arr{display:none}}
+
+/* Авито-бейдж доверия */
+.avito-trust{display:flex;align-items:center;gap:16px;margin:18px 0 6px;padding:14px 20px;border-radius:16px;border:1px solid var(--line2);background:rgba(255,255,255,.03);text-decoration:none;transition:.2s;max-width:600px}
+.avito-trust:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.avito-trust .at-logo{font:800 17px Inter,sans-serif;color:#fff;background:#0af;padding:7px 13px;border-radius:9px;flex:none}
+.avito-trust .at-txt{display:flex;flex-direction:column;line-height:1.35;min-width:0}
+.avito-trust .at-txt b{color:#fff;font:700 15px Inter,sans-serif}
+.avito-trust .at-txt span{color:var(--mut);font:13px Inter,sans-serif}
+.avito-trust .at-go{margin-left:auto;color:var(--cyan);font:700 13px Inter,sans-serif;white-space:nowrap;flex:none}
+@media(max-width:600px){.avito-trust{flex-wrap:wrap;gap:10px}.avito-trust .at-go{margin-left:0;width:100%}}
+
+/* блок сравнения: такси / кикшеринг / свой самокат */
+.cmp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.cmp-col{border:1px solid var(--line2);border-radius:18px;padding:24px 22px;background:rgba(255,255,255,.02);display:flex;flex-direction:column;gap:12px}
+.cmp-col.win{border-color:rgba(184,255,46,.4);background:linear-gradient(160deg,rgba(184,255,46,.08),rgba(46,230,255,.04))}
+.cmp-col h3{font:700 19px Unbounded,sans-serif;color:#fff;margin:0}
+.cmp-col .cmp-sum{font:900 26px Unbounded,sans-serif;color:#fff}
+.cmp-col .cmp-sum small{display:block;font:500 12px Inter,sans-serif;color:var(--mut);margin-top:2px}
+.cmp-col.win .cmp-sum{color:var(--lime,#b8ff2e)}
+.cmp-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.cmp-col li{font:14px/1.45 Inter,sans-serif;color:#cfd0e0;display:flex;gap:8px;align-items:flex-start}
+.cmp-col li::before{content:"–";color:#ff6b6b;font-weight:700;flex:none}
+.cmp-col.win li::before{content:"✓";color:var(--lime,#b8ff2e)}
+.cmp-note{font:12px/1.5 Inter,sans-serif;color:var(--mut);margin-top:14px}
+@media(max-width:760px){.cmp-grid{grid-template-columns:1fr}}
