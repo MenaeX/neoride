@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=230626b">
+<link rel="stylesheet" href="css/style.css?v=230626c">
 <script data-cfasync="false">document.documentElement.classList.add('js')</script>
-<script data-cfasync="false" src="js/metrika.js?v=230626b"></script>
+<script data-cfasync="false" src="js/metrika.js?v=230626c"></script>
 <link rel="canonical" href="https://neoride.ru/aovo.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AOVO — электросамокаты с влагозащитой IP65 | NEORIDE">
@@ -64,7 +64,8 @@
 .amodel-specs{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px}
 .amodel-specs div{font:12px Inter,sans-serif;color:#9a9bb0;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:5px 10px;border-radius:99px;white-space:nowrap}
 .amodel-specs b{color:#fff;font-weight:600}
-.amodel-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.amodel-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.amodel-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .amodel-price{font:900 22px Unbounded,sans-serif;color:#fff}
 .amodel-soon{border:1px dashed rgba(255,255,255,.18);border-radius:20px;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 24px;color:#7d7e92;font:500 15px/1.5 Inter,sans-serif}
 .aovo-final{text-align:center;background:linear-gradient(150deg,rgba(46,230,255,.12),rgba(184,255,46,.06));border:1px solid rgba(46,230,255,.2);border-radius:28px;padding:clamp(40px,7vw,72px) 24px}
@@ -85,7 +86,15 @@
 .am-priceline{font:700 18px Unbounded,sans-serif;color:#fff;margin:0 0 16px}
 .am-priceline small{font:400 13px Inter,sans-serif;color:#9a9bb0}
 .am-cta{display:flex;gap:12px;flex-wrap:wrap}
-@media(max-width:560px){.am-specs{grid-template-columns:1fr}}
+@media(max-width:560px){
+  .am-gal{aspect-ratio:auto;max-height:200px;margin-bottom:12px}
+  .am-tags{margin-bottom:10px}
+  .am-priceline{font-size:16px;margin-bottom:10px}
+  .am-specs{grid-template-columns:1fr 1fr;gap:6px 12px;margin-bottom:14px}
+  .am-specs div{font-size:12px;padding-bottom:5px}
+  .am-cta{flex-direction:column;gap:8px}
+  .am-cta .btn{width:100%;text-align:center}
+}
 @media(max-width:760px){.nav{gap:16px}.nav a.nav-m{display:inline-flex!important;font-size:13px}.nav a.aovo-accent{display:inline-flex!important;font-size:13px;font-weight:600}.nav .nav-opt{padding:6px 12px;font-size:13px}
   /* герой: показать весь кадр (семью) без боковой обрезки */
   .aovo-hero{min-height:auto;display:block}
@@ -101,7 +110,8 @@
   .amodel-specs{gap:6px;margin-bottom:12px}
   .amodel-specs div{font-size:11px;padding:4px 9px}
   .amodel-foot{flex-direction:column;align-items:stretch;gap:8px}
-  .amodel-foot .btn{padding:9px 10px;font-size:12px;text-align:center}}
+  .amodel-btns{flex-direction:column;gap:7px}
+  .amodel-foot .btn{padding:10px;font-size:13px;text-align:center;width:100%}}
 </style>
 <style>
 .nav .nav-brand.active{color:var(--cyan)}
@@ -125,7 +135,7 @@
       <a href="#faq">Вопросы</a>
       <a href="/blog/">Блог</a>
       <a href="#contacts">Контакты</a>
-      <a class="nav-cart" id="navCartLink" href="index.html#catalog" aria-label="Корзина">🛒<b class="cart-cnt" id="cartCnt" hidden>0</b></a>
+      <button class="nav-cart" id="navCart" type="button" aria-label="Корзина">🛒<b class="cart-cnt" id="cartCnt" hidden>0</b></button>
       <a class="nav-opt" href="opt.html">Оптовикам →</a>
     </nav>
   </div>
@@ -179,7 +189,10 @@
           </div>
           <div class="amodel-foot">
             <span class="amodel-price">24 100 ₽</span>
-            <a class="btn btn-accent" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener" style="padding:10px 18px">Заказать</a>
+            <div class="amodel-btns">
+              <button class="btn btn-accent" data-addcart="aovo-m365pro" style="padding:10px 16px">🛒 В корзину</button>
+              <button class="btn" data-order="aovo-m365pro" style="padding:10px 14px">В 1 клик</button>
+            </div>
           </div>
         </div>
       </article>
@@ -198,7 +211,10 @@
           </div>
           <div class="amodel-foot">
             <span class="amodel-price">26 100 ₽</span>
-            <a class="btn btn-accent" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener" style="padding:10px 18px">Заказать</a>
+            <div class="amodel-btns">
+              <button class="btn btn-accent" data-addcart="aovo-lux" style="padding:10px 16px">🛒 В корзину</button>
+              <button class="btn" data-order="aovo-lux" style="padding:10px 14px">В 1 клик</button>
+            </div>
           </div>
         </div>
       </article>
@@ -217,7 +233,10 @@
           </div>
           <div class="amodel-foot">
             <span class="amodel-price">28 200 ₽</span>
-            <a class="btn btn-accent" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener" style="padding:10px 18px">Заказать</a>
+            <div class="amodel-btns">
+              <button class="btn btn-accent" data-addcart="aovo-luxpro" style="padding:10px 16px">🛒 В корзину</button>
+              <button class="btn" data-order="aovo-luxpro" style="padding:10px 14px">В 1 клик</button>
+            </div>
           </div>
         </div>
       </article>
@@ -236,7 +255,10 @@
           </div>
           <div class="amodel-foot">
             <span class="amodel-price">40 200 ₽</span>
-            <a class="btn btn-accent" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener" style="padding:10px 18px">Заказать</a>
+            <div class="amodel-btns">
+              <button class="btn btn-accent" data-addcart="aovo-promax" style="padding:10px 16px">🛒 В корзину</button>
+              <button class="btn" data-order="aovo-promax" style="padding:10px 14px">В 1 клик</button>
+            </div>
           </div>
         </div>
       </article>
@@ -371,7 +393,7 @@
 </footer>
 
 <div class="modal" id="aovoModal" hidden>
-  <div class="modal-box">
+  <div class="modal-box modal-box-md">
     <div class="modal-head">
       <h3 id="amTitle"></h3>
       <button class="modal-close" id="amClose" aria-label="Закрыть">✕</button>
@@ -380,13 +402,15 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="js/fx.js?v=230626b"></script>
-<script data-cfasync="false" src="js/chat.js?v=230626b"></script>
+<script data-cfasync="false" src="js/fx.js?v=230626c"></script>
+<script data-cfasync="false" src="js/chat.js?v=230626c"></script>
 <script data-cfasync="false">
 (function(){
   var TG='https://t.me/neoride_shop_bot';
   var ctaOrder='<a class="btn btn-accent" href="'+TG+'" target="_blank" rel="noopener">Узнать цену</a>'
     +'<button type="button" class="btn lead-max" data-max>Написать в MAX</button>';
+  function cartCta(id){return '<button class="btn btn-accent" data-addcart="'+id+'">🛒 В корзину</button>'
+    +'<button class="btn" data-order="'+id+'">Купить в один клик</button>';}
   var M={
     s1:{name:'AOVO S1 NEW',tags:['Приложение','Лёгкий'],
       gal:['img/aovo/s1.png','img/aovo/s1/1.jpg','img/aovo/s1/2.jpg','img/aovo/s1/3.jpg'],
@@ -399,19 +423,19 @@
     m365pro:{name:'AOVO M365 Pro',tags:['IP65','Приложение','В наличии'],
       gal:['img/aovo-m365-pro.jpg'],
       price:'<p class="am-priceline">24 100 ₽ <small>· в наличии, склад в Москве</small></p>',
-      cta:ctaOrder,
+      cta:cartCta('aovo-m365pro'),
       specs:[['Влагозащита','IP65'],['Мотор','250 Вт (36 В)'],['Батарея','7.8 Ah'],['Скорость','25 км/ч'],['Запас хода','30 км'],['Колесо','8.5"'],['Зарядка','4 ч'],['Вес','12.5 кг'],['Нагрузка','110 кг'],['Управление','приложение']]},
     lux:{name:'AOVO M365 Lux',tags:['IP65','Приложение','В наличии'],
       gal:['img/aovo/m365-pro-lux.png','img/aovo/m365-pro-lux/1.jpg','img/aovo/m365-pro-lux/2.jpg'],
-      price:'<p class="am-priceline">26 100 ₽ <small>· в наличии, склад в Москве</small></p>',cta:ctaOrder,
+      price:'<p class="am-priceline">26 100 ₽ <small>· в наличии, склад в Москве</small></p>',cta:cartCta('aovo-lux'),
       specs:[['Влагозащита','IP65'],['Мотор','350 Вт'],['Батарея','7.8 Ah'],['Скорость','31 км/ч'],['Запас хода','35 км'],['Привод','передний'],['Тормоза','барабанные'],['Вес','14.5 кг'],['Нагрузка','120 кг'],['Управление','приложение']]},
     luxpro:{name:'AOVO Lux Pro 10.5Ah',tags:['IP65','Приложение','В наличии'],
       gal:['img/aovo/lux-pro.png','img/aovo/lux-pro/1.jpg','img/aovo/lux-pro/2.jpg'],
-      price:'<p class="am-priceline">28 200 ₽ <small>· в наличии, склад в Москве</small></p>',cta:ctaOrder,
+      price:'<p class="am-priceline">28 200 ₽ <small>· в наличии, склад в Москве</small></p>',cta:cartCta('aovo-luxpro'),
       specs:[['Влагозащита','IP65'],['Мотор','250 Вт (36 В)'],['Батарея','10.5 Ah'],['Скорость','25 км/ч'],['Запас хода','25–30 км'],['Колесо','10"'],['Привод','передний'],['Тормоза','задний диск/барабан'],['Зарядка','4–5 ч'],['Вес','15 кг'],['Нагрузка','120 кг'],['Управление','приложение']]},
     promax:{name:'AOVO Pro Max',tags:['IP65','Приложение','Флагман','В наличии'],
       gal:['img/aovo/pro-max.png','img/aovo/pro-max/1.jpg','img/aovo/pro-max/2.jpg','img/aovo/pro-max/3.jpg'],
-      price:'<p class="am-priceline">40 200 ₽ <small>· в наличии, склад в Москве</small></p>',cta:ctaOrder,
+      price:'<p class="am-priceline">40 200 ₽ <small>· в наличии, склад в Москве</small></p>',cta:cartCta('aovo-promax'),
       specs:[['Влагозащита','IP65'],['Мотор','500 Вт (36 В)'],['Батарея','14.5 Ah'],['Скорость','35 км/ч'],['Запас хода','40 км'],['Колесо','10" пневмо'],['Привод','передний'],['Зарядка','4–5 ч'],['Вес','18.8 кг'],['Нагрузка','130 кг']]}
   };
   var NAME2ID={'AOVO S1 NEW':'s1','AOVO S3 Pro':'s3pro','AOVO M365 Pro':'m365pro','AOVO M365 Lux':'lux','AOVO Lux Pro 10.5Ah':'luxpro','AOVO Pro Max':'promax'};
@@ -458,16 +482,52 @@
   <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
   <span>Telegram</span>
 </a>
+<!-- корзина и заявка (как в каталоге Kugoo) -->
+<div class="modal" id="cartModal" hidden>
+  <div class="modal-box modal-box-sm">
+    <div class="modal-head">
+      <h3>Корзина</h3>
+      <button class="modal-close" id="cartClose">✕</button>
+    </div>
+    <div class="modal-body" id="cartBody"></div>
+  </div>
+</div>
+<div class="modal" id="leadModal" hidden>
+  <div class="modal-box modal-box-sm">
+    <div class="modal-head">
+      <h3 id="leadTitle">Оставить заявку</h3>
+      <button class="modal-close" id="closeLead">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="lead-model" id="leadModelLine" hidden></p>
+      <p id="leadIntro">Оставьте контакт — ответим в течение 15 минут в рабочее время (09:00–21:00 МСК).</p>
+      <form class="lead-form" id="leadForm">
+        <input type="hidden" name="model" id="leadModel">
+        <input type="text" name="website" class="lead-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>Имя<input type="text" name="name" id="leadName" placeholder="Как к вам обращаться" autocomplete="name"></label>
+        <label>Телефон или Telegram<input type="text" name="contact" id="leadContact" placeholder="+7 999 123-45-67 или @username" autocomplete="tel" required></label>
+        <label class="lead-consent"><input type="checkbox" id="leadConsent" required><span>Я ознакомлен(а) с <a href="/privacy.html" target="_blank" rel="noopener">Политикой</a> и даю <a href="/consent.html" target="_blank" rel="noopener">Согласие на обработку ПДн</a></span></label>
+        <button type="submit" class="btn btn-accent" id="leadSubmit">Отправить заявку</button>
+        <p class="lead-status" id="leadStatus" hidden></p>
+      </form>
+      <div class="lead-alt">
+        <button type="button" class="btn lead-max" data-max>Написать в MAX · +7 910 402-88-58</button>
+        <a class="btn lead-tg" id="leadTg" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+    </div>
+  </div>
+</div>
 <script data-cfasync="false">
-/* счётчик корзины в шапке AOVO (корзина общая, полноценно открывается в каталоге index) */
-(function () {
-  try {
-    var cart = JSON.parse(localStorage.getItem('neoride_cart_v1') || '[]') || [];
-    var n = cart.reduce(function (s, it) { return s + (parseInt(it.qty, 10) || 1); }, 0);
-    var b = document.getElementById('cartCnt');
-    if (b && n > 0) { b.textContent = n; b.hidden = false; }
-  } catch (e) {}
-})();
+/* товары витрины AOVO для общей корзины (id, цена, фото) — резолвятся cart.js */
+window.CART_EXTRA = [
+  { id: 'aovo-m365pro', brand: 'AOVO', name: 'M365 Pro', price: 24100, img: 'img/aovo-m365-pro.jpg', stock: 'in', warranty: false },
+  { id: 'aovo-lux', brand: 'AOVO', name: 'M365 Lux', price: 26100, img: 'img/aovo/m365-pro-lux.png', stock: 'in', warranty: false },
+  { id: 'aovo-luxpro', brand: 'AOVO', name: 'Lux Pro 10.5Ah', price: 28200, img: 'img/aovo/lux-pro.png', stock: 'in', warranty: false },
+  { id: 'aovo-promax', brand: 'AOVO', name: 'Pro Max', price: 40200, img: 'img/aovo/pro-max.png', stock: 'in', warranty: false }
+];
 </script>
+<script data-cfasync="false" src="data/catalog.js?v=230626c"></script>
+<script data-cfasync="false" src="js/cart.js?v=230626c"></script>
+<script data-cfasync="false" src="js/order.js?v=230626c"></script>
 </body>
 </html>

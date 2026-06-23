@@ -8,6 +8,10 @@
 
   var MAP = {};
   if (typeof CATALOG !== 'undefined') CATALOG.forEach(function (c) { MAP[c.id] = c; });
+  // товары вне общего каталога (напр. статическая витрина AOVO) — страница задаёт window.CART_EXTRA
+  if (typeof window !== 'undefined' && Array.isArray(window.CART_EXTRA)) {
+    window.CART_EXTRA.forEach(function (c) { MAP[c.id] = c; });
+  }
 
   function load() {
     try {

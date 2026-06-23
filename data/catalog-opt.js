@@ -1493,7 +1493,7 @@ const CATALOG = [
   "id": "trike",
   "name": "Trike трёхколёсный",
   "brand": "Kugoo",
-  "cat": "велосипед",
+  "cat": "трицикл",
   "price": 103900,
   "mrc": 103900,
   "opt": 84200,

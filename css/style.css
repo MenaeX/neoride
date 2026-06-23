@@ -792,3 +792,16 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .brand-pick .bp-card{padding:18px 18px 16px}.brand-pick .bp-name{font-size:19px}}
 .brand-pick.brand-pick-2{grid-template-columns:repeat(2,1fr)}
 @media(max-width:760px){.brand-pick.brand-pick-2{grid-template-columns:1fr}}
+
+/* мобайл: убрать горизонтальный сдвиг (большие фикс-круги вылазят за вьюпорт на iOS) */
+@media(max-width:600px){
+  html{overflow-x:hidden}
+  body::after{display:none}
+  .glow-lime{display:none}
+}
+
+/* карточка Kugoo: «в корзину» + «купить в один клик» */
+.card-actions{display:grid;gap:8px;margin-top:2px}
+.card-1click{font-size:13px;padding:9px 12px;color:var(--cyan);border-color:rgba(46,230,255,.35)}
+.card-1click:hover{background:rgba(46,230,255,.1);border-color:var(--cyan)}
+@media(max-width:600px){.card-1click{font-size:12px;padding:8px 10px}}

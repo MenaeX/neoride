@@ -1110,7 +1110,7 @@ const CATALOG = [
   "id": "c4",
   "name": "C4 трёхколёсный",
   "brand": "Kugoo",
-  "cat": "скутер",
+  "cat": "трицикл",
   "price": 85900,
   "stock": "in",
   "src": [
@@ -1785,7 +1785,7 @@ const CATALOG = [
   "id": "trike",
   "name": "Trike трёхколёсный",
   "brand": "Kugoo",
-  "cat": "велосипед",
+  "cat": "трицикл",
   "price": 103900,
   "stock": "in",
   "src": [
@@ -2302,6 +2302,137 @@ const CATALOG = [
    "battery_ah": 28.6,
    "volt": 72,
    "brakes": "гидравлический"
+  }
+ },
+ {
+  "id": "aovo-m365pro",
+  "name": "M365 Pro",
+  "brand": "AOVO",
+  "cat": "самокат",
+  "price": 24100,
+  "stock": "in",
+  "src": [
+   "aovo"
+  ],
+  "pop": 230,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/aovo-m365-pro.jpg",
+  "gallery": [
+   "img/aovo-m365-pro.jpg"
+  ],
+  "desc": "Электросамокат AOVO M365 Pro с заводской влагозащитой IP65 — не боится дождя и луж. Управление со смартфона: противоугон, круиз-контроль, настройка. Склад в Москве.",
+  "specs": {
+   "power": 250,
+   "volt": 36,
+   "battery_ah": 7.8,
+   "speed": 25,
+   "range": 30,
+   "wheel": 8.5,
+   "charge": 4,
+   "weight": 12.5,
+   "load": 110
+  }
+ },
+ {
+  "id": "aovo-lux",
+  "name": "M365 Lux",
+  "brand": "AOVO",
+  "cat": "самокат",
+  "price": 26100,
+  "stock": "in",
+  "src": [
+   "aovo"
+  ],
+  "pop": 220,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/aovo/m365-pro-lux.png",
+  "gallery": [
+   "img/aovo/m365-pro-lux.png",
+   "img/aovo/m365-pro-lux/1.jpg",
+   "img/aovo/m365-pro-lux/2.jpg"
+  ],
+  "desc": "Электросамокат AOVO M365 Lux с влагозащитой IP65 и управлением со смартфона. Мотор 350 Вт, запас хода до 35 км. Склад в Москве.",
+  "specs": {
+   "power": 350,
+   "battery_ah": 7.8,
+   "speed": 31,
+   "range": 35,
+   "load": 120,
+   "drive": "передний",
+   "brakes": "барабанные",
+   "weight": 14.5
+  }
+ },
+ {
+  "id": "aovo-luxpro",
+  "name": "Lux Pro 10.5Ah",
+  "brand": "AOVO",
+  "cat": "самокат",
+  "price": 28200,
+  "stock": "in",
+  "src": [
+   "aovo"
+  ],
+  "pop": 215,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/aovo/lux-pro.png",
+  "gallery": [
+   "img/aovo/lux-pro.png",
+   "img/aovo/lux-pro/1.jpg",
+   "img/aovo/lux-pro/2.jpg"
+  ],
+  "desc": "Электросамокат AOVO Lux Pro с батареей 10.5 А·ч и колёсами 10\". Влагозащита IP65, управление со смартфона. Склад в Москве.",
+  "specs": {
+   "power": 250,
+   "volt": 36,
+   "battery_ah": 10.5,
+   "speed": 25,
+   "range": 30,
+   "wheel": 10,
+   "charge": 5,
+   "weight": 15,
+   "load": 120,
+   "drive": "передний"
+  }
+ },
+ {
+  "id": "aovo-promax",
+  "name": "Pro Max",
+  "brand": "AOVO",
+  "cat": "самокат",
+  "price": 40200,
+  "stock": "in",
+  "src": [
+   "aovo"
+  ],
+  "pop": 240,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/aovo/pro-max.png",
+  "gallery": [
+   "img/aovo/pro-max.png",
+   "img/aovo/pro-max/1.jpg",
+   "img/aovo/pro-max/2.jpg",
+   "img/aovo/pro-max/3.jpg"
+  ],
+  "desc": "Флагман AOVO Pro Max: мотор 500 Вт, пневмоколёса 10\", запас хода 40 км, нагрузка до 130 кг. Влагозащита IP65, управление со смартфона. Склад в Москве.",
+  "specs": {
+   "power": 500,
+   "volt": 36,
+   "battery_ah": 14.5,
+   "speed": 35,
+   "range": 40,
+   "wheel": 10,
+   "charge": 5,
+   "weight": 18.8,
+   "load": 130
   }
  }
 ];

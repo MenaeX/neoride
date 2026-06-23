@@ -139,8 +139,10 @@ if (ucRow) {
     b.onclick = () => {
       state.scen = b.dataset.uc === '' ? null : Number(b.dataset.uc);
       ucRow.querySelectorAll('.usecase-tile').forEach(x => x.classList.toggle('active', x === b));
+      showAll = false;
       render();
-      document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+      const g = document.getElementById('found');
+      if (g) g.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
   });
 }
@@ -224,7 +226,10 @@ function cardHTML(c) {
         <button class="cmp-toggle${on}" data-cmp="${c.id}" title="Добавить к сравнению">⚖ Сравнить</button>
       </div>
       ${c.stock === 'in'
-        ? `<button class="btn btn-accent card-cart" data-addcart="${c.id}">🛒 В корзину</button>`
+        ? `<div class="card-actions">
+             <button class="btn btn-accent card-cart" data-addcart="${c.id}">🛒 В корзину</button>
+             <button class="btn card-1click" data-order="${c.id}">⚡ Купить в один клик</button>
+           </div>`
         : `<button class="btn card-notify" data-notify="${c.id}">🔔 Сообщить о наличии</button>`}
     </div>
   </article>`;
@@ -436,6 +441,14 @@ function openNotify(id) {
   leadModal.hidden = false;
 }
 window.neorideOpenNotify = openNotify;
+// «купить в один клик» с карточки → лид-форма с этой моделью
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-order]');
+  if (!b) return;
+  e.preventDefault(); e.stopPropagation();
+  const c = byId[b.dataset.order];
+  if (c) openLead({ order: c.id, name: (c.brand || 'Kugoo') + ' ' + c.name, stock: c.stock, warr: c.warranty ? '1' : '0', src: (c.src || []).join(',') });
+});
 if (leadModal) {
   document.getElementById('closeLead').onclick = () => leadModal.hidden = true;
   leadModal.onclick = e => { if (e.target === leadModal) leadModal.hidden = true; };
