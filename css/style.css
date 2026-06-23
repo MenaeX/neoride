@@ -905,3 +905,17 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .filters{border-color:var(--line2)}
 #sortSel,#sortSel:focus{border-color:rgba(46,230,255,.45);box-shadow:0 0 10px rgba(46,230,255,.14)}
 #sortSel:hover{border-color:var(--cyan);box-shadow:0 0 14px rgba(46,230,255,.32)}
+
+/* отзывы покупателей */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.rev-card{border:1px solid var(--line2);border-radius:18px;padding:22px;background:rgba(255,255,255,.02);display:flex;flex-direction:column;gap:12px}
+.rev-card:hover{border-color:rgba(46,230,255,.3)}
+.rev-head{display:flex;align-items:center;gap:12px}
+.rev-ava{width:46px;height:46px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font:800 16px Inter,sans-serif;color:#06130a;background:linear-gradient(135deg,var(--a1,#b8ff2e),var(--a2,#2ee6ff))}
+.rev-who{display:flex;flex-direction:column;min-width:0}
+.rev-who b{color:#fff;font:700 15px Inter,sans-serif}
+.rev-who span{color:var(--mut);font:13px Inter,sans-serif}
+.rev-stars{margin-left:auto;color:#ffc24b;font-size:14px;letter-spacing:1px;flex:none}
+.rev-card p{color:#cfd0e0;font:14px/1.6 Inter,sans-serif;margin:0}
+@media(max-width:900px){.rev-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.rev-grid{grid-template-columns:1fr}}
