@@ -114,13 +114,13 @@
         '<div class="cart-total"><span>Ориентир по товару</span><b>' + rub(total()) + '</b></div>' +
         '<p class="cart-note">Это предварительная сумма по каталогу. Финальную цену, наличие и доставку подтвердит менеджер до оплаты — после этого пришлём ссылку на оплату.</p>' +
         '<button type="button" class="btn btn-accent cart-checkout" id="cartCheckout">Оформить заявку</button>' +
-        '<button type="button" class="btn cart-clear" id="cartClear">Очистить корзину</button>' +
+        '<button type="button" class="btn cart-clear" id="cartClear">← Продолжить покупки</button>' +
       '</div>';
     document.getElementById('cartCheckout').onclick = function () {
       close();
       if (typeof window.neorideOpenLeadCart === 'function') window.neorideOpenLeadCart();
     };
-    document.getElementById('cartClear').onclick = clear;
+    document.getElementById('cartClear').onclick = close;  // «продолжить покупки» = закрыть корзину (товары остаются; убрать позицию — крестик ✕)
   }
 
   function open() { renderBody(); if (modal) modal.hidden = false; }
