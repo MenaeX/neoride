@@ -80,7 +80,7 @@
       '.quiz-card .qp{font:800 15px Unbounded,sans-serif;color:var(--lime,#b8ff2e);margin-top:2px}' +
       '.quiz-cta{display:block;width:100%;text-align:center;margin-top:16px;padding:13px;border-radius:12px;background:var(--grad,linear-gradient(96deg,#b8ff2e,#2ee6ff));color:#06130a;font:700 15px Inter,sans-serif;text-decoration:none;border:0;cursor:pointer}' +
       /* триггер-кнопка в секции подбора */
-      '.quiz-launch{display:inline-flex;align-items:center;gap:10px;margin-top:8px;padding:16px 26px;border-radius:14px;background:var(--grad,linear-gradient(96deg,#b8ff2e,#2ee6ff));color:#06130a;font:800 16px Inter,sans-serif;border:0;cursor:pointer;box-shadow:0 10px 30px rgba(120,243,150,.25)}' +
+      '.quiz-launch{display:flex;width:100%;align-items:center;justify-content:center;gap:10px;margin-top:8px;padding:18px 26px;border-radius:14px;background:var(--grad,linear-gradient(96deg,#b8ff2e,#2ee6ff));color:#06130a;font:800 17px Inter,sans-serif;border:0;cursor:pointer;box-shadow:0 10px 30px rgba(120,243,150,.25)}' +
       '.quiz-launch:hover{transform:translateY(-2px)}';
     document.head.appendChild(st);
   }
