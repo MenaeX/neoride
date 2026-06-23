@@ -103,6 +103,14 @@
   .amodel-foot{flex-direction:column;align-items:stretch;gap:8px}
   .amodel-foot .btn{padding:9px 10px;font-size:12px;text-align:center}}
 </style>
+<style>
+.nav .nav-brand.active{color:var(--cyan)}
+@media(max-width:760px){.nav{gap:10px}
+  .nav a.nav-brand{display:inline-flex!important;align-items:center;padding:6px 13px;border:1px solid var(--line2);border-radius:99px;color:var(--mut);font-weight:600;font-size:13px}
+  .nav a.nav-brand.active{border-color:var(--cyan);color:var(--cyan);background:rgba(46,230,255,.1)}
+  .nav .nav-cart{display:inline-flex!important}
+  .nav .nav-opt{padding:6px 12px;font-size:13px}}
+</style>
 </head>
 <body>
 
@@ -112,11 +120,12 @@
   <div class="container topbar-in">
     <a class="logo" href="index.html">NEO<b>RIDE</b></a>
     <nav class="nav">
-      <a href="index.html#brand-kugoo" class="nav-m">Kugoo</a>
-      <a href="aovo.html" class="aovo-accent">AOVO</a>
+      <a href="index.html#brand-kugoo" class="nav-brand">Kugoo</a>
+      <a href="aovo.html" class="nav-brand active">AOVO</a>
       <a href="#faq">Вопросы</a>
       <a href="/blog/">Блог</a>
       <a href="#contacts">Контакты</a>
+      <a class="nav-cart" id="navCartLink" href="index.html#catalog" aria-label="Корзина">🛒<b class="cart-cnt" id="cartCnt" hidden>0</b></a>
       <a class="nav-opt" href="opt.html">Оптовикам →</a>
     </nav>
   </div>
@@ -447,5 +456,16 @@
   <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
   <span>Telegram</span>
 </a>
+<script data-cfasync="false">
+/* счётчик корзины в шапке AOVO (корзина общая, полноценно открывается в каталоге index) */
+(function () {
+  try {
+    var cart = JSON.parse(localStorage.getItem('neoride_cart_v1') || '[]') || [];
+    var n = cart.reduce(function (s, it) { return s + (parseInt(it.qty, 10) || 1); }, 0);
+    var b = document.getElementById('cartCnt');
+    if (b && n > 0) { b.textContent = n; b.hidden = false; }
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
