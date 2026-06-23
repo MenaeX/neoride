@@ -13,6 +13,18 @@ const SCENARIOS = [
   ['🪶', 'Лёгкие', c => (c.specs.weight || 99) <= 16],
   ['🏁', 'Максимум скорости', c => (c.specs.speed || 0) >= 60],
 ];
+// УТП-бейдж: один главный «для чего лучше» — из характеристик (приоритет сверху вниз)
+function utpOf(c) {
+  const s = c.specs || {}, d = String(s.drive || '').toLowerCase();
+  if (d.includes('полн') || (s.power || 0) >= 1500) return ['🏔', 'Для бездорожья', 'off'];
+  if ((s.speed || 0) >= 60) return ['🚀', 'Максимум скорости', 'spd'];
+  if ((s.range || 0) >= 80) return ['🔋', 'Дальнобой', 'rng'];
+  if (c.cat === 'велосипед' || c.cat === 'трицикл' || ((s.range || 0) >= 55 && (s.load || 0) >= 120)) return ['📦', 'Для курьера', 'cur'];
+  if ((s.power || 999) <= 350 && (s.speed || 99) <= 25) return ['🧒', 'Для подростка', 'kid'];
+  if (s.seat === true && c.cat === 'самокат') return ['🪑', 'С сиденьем · комфорт', 'seat'];
+  if (c.cat === 'самокат' && (s.weight || 99) <= 16) return ['🏙', 'Лучше для города', 'city'];
+  return ['🏙', 'Для города', 'city'];
+}
 const PRICE_BANDS = [['all', 'любая'], ['0-30', 'до 30 т.'], ['30-60', '30–60 т.'], ['60-999', '60 т. +']];
 const SPEED_BANDS = [['all', 'любая'], ['0-25', 'до 25'], ['25-45', '25–45'], ['45-999', '45+']];
 const isKids = c => (c.specs.power || 999) <= 300 && (c.specs.speed || 99) <= 25;
@@ -29,7 +41,7 @@ const SPEC_LABELS = {
 const fmt = n => n == null ? '—' : Number(n).toLocaleString('ru-RU');
 const rub = n => n == null ? '—' : fmt(n) + ' ₽';
 
-let state = { cat: 'all', series: 'all', brand: 'all', stock: false, opt: false, hit: false, new: false, price: 'all', speed: 'all', age: 'all', scen: null, sort: 'pop' };
+let state = { cat: 'all', series: 'all', brand: 'all', stock: true, opt: false, hit: false, new: false, price: 'all', speed: 'all', age: 'all', scen: null, sort: 'pop' };
 
 // Серия модели (семейство): A / S / M / G / F / V / LX / HX / EC / Wish … (не-Kugoo → бренд)
 function seriesOf(c) {
@@ -101,19 +113,21 @@ document.getElementById('onlyHit').onchange = e => { state.hit = e.target.checke
 { const n = document.getElementById('onlyNew'); if (n) n.onchange = e => { state.new = e.target.checked; render(); }; }
 document.getElementById('sortSel').onchange = e => { state.sort = e.target.value; render(); };
 
-const scenRow = document.getElementById('scenRow');
-SCENARIOS.forEach(([icon, label, pred], i) => {
-  const b = document.createElement('button');
-  b.className = 'scen-chip';
-  b.innerHTML = `${icon} ${label}`;
-  b.onclick = () => {
-    state.scen = state.scen === i ? null : i;
-    scenRow.querySelectorAll('.scen-chip').forEach((x, j) => x.classList.toggle('active', state.scen === j));
-    render();
-    document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
-  };
-  scenRow.appendChild(b);
-});
+// Плитки «по задаче» — главный, понятный новичку вход в каталог (вместо букв-серий)
+const ucRow = document.getElementById('useCaseTiles');
+if (ucRow) {
+  const tiles = [['✨', 'Все модели', null]].concat(SCENARIOS.map((s, i) => [s[0], s[1], i]));
+  ucRow.innerHTML = tiles.map(([icon, label, i]) =>
+    `<button class="usecase-tile${i === null ? ' active' : ''}" data-uc="${i === null ? '' : i}"><span class="uc-ic">${icon}</span>${label}</button>`).join('');
+  ucRow.querySelectorAll('[data-uc]').forEach(b => {
+    b.onclick = () => {
+      state.scen = b.dataset.uc === '' ? null : Number(b.dataset.uc);
+      ucRow.querySelectorAll('.usecase-tile').forEach(x => x.classList.toggle('active', x === b));
+      render();
+      document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+    };
+  });
+}
 
 function inBand(v, band) {
   if (band === 'all') return true;
@@ -170,14 +184,22 @@ function cardHTML(c) {
     s.wheel ? `◯ ${s.wheel}″` : null,
     driveTxt(s.drive) ? `⚙ ${driveTxt(s.drive)}` : null,
   ].filter(Boolean).map(t => `<span class="spec-chip">${t}</span>`).join('');
-  const img = c.img ? `<img loading="lazy" src="${c.img}" alt="${c.brand || 'Kugoo'} ${c.name}">` : '<span class="noimg">фото скоро</span>';
+  const gal = (c.gallery && c.gallery.length) ? c.gallery : (c.img ? [c.img] : []);
+  const slides = gal.length
+    ? gal.map((g, i) => `<img loading="lazy" src="${g}" alt="${c.brand || 'Kugoo'} ${c.name}" class="cg-slide${i ? '' : ' on'}">`).join('')
+    : '<span class="noimg">фото скоро</span>';
+  const galNav = gal.length > 1
+    ? `<button class="cg-arr cg-prev" data-cg="prev" aria-label="Предыдущее фото">‹</button><button class="cg-arr cg-next" data-cg="next" aria-label="Следующее фото">›</button><span class="cg-count">1/${gal.length}</span>`
+    : '';
   const on = compare.has(c.id) ? ' on' : '';
   const optNote = c.stock === 'opt' ? '<div class="opt-note">Оптовая позиция (от 10 шт) — наличие уточняйте; без гарантии производителя</div>' : '';
   const warr = c.warranty ? '<div class="warr">✓ Гарантия 12 мес · документы</div>' : '';
   const badges = (c.new ? '<span class="badge new">🆕 Новинка</span>' : '') + (c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : '') + BADGE[c.stock];
+  const u = utpOf(c);
   return `<article class="card" data-id="${c.id}">
-    <div class="card-img" data-open="${c.id}" role="button" tabindex="0" title="Подробнее"><div class="badges">${badges}</div>${img}</div>
+    <div class="card-img" data-gal="${gal.length}" data-open="${c.id}" role="button" tabindex="0" title="Подробнее"><div class="badges">${badges}</div><div class="cg-track">${slides}</div>${galNav}</div>
     <div class="card-body">
+      <div class="utp utp-${u[2]}">${u[0]} ${u[1]}</div>
       <div class="card-name" data-open="${c.id}">${c.brand || 'Kugoo'} ${c.name}</div>
       <div class="card-specs">${chips}</div>
       ${warr}${optNote}
@@ -206,6 +228,20 @@ function render() {
   document.querySelectorAll('[data-open]').forEach(el => {
     el.onclick = () => openModel(el.dataset.open);
     el.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModel(el.dataset.open); } };
+  });
+  // карусель фото прямо в карточке — стрелки + свайп, без открытия модалки
+  document.querySelectorAll('.card-img[data-gal]').forEach(box => {
+    if (Number(box.dataset.gal) <= 1) return;
+    const slides = [].slice.call(box.querySelectorAll('.cg-slide'));
+    const cnt = box.querySelector('.cg-count');
+    let i = 0;
+    const show = n => { i = (n + slides.length) % slides.length; slides.forEach((s, k) => s.classList.toggle('on', k === i)); if (cnt) cnt.textContent = (i + 1) + '/' + slides.length; };
+    const prev = box.querySelector('.cg-prev'), next = box.querySelector('.cg-next');
+    if (prev) prev.addEventListener('click', e => { e.stopPropagation(); show(i - 1); });
+    if (next) next.addEventListener('click', e => { e.stopPropagation(); show(i + 1); });
+    let x0 = null;
+    box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(dx < 0 ? i + 1 : i - 1); x0 = null; }, { passive: true });
   });
 
   const wrap = document.getElementById('showAllWrap');

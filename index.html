@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=180626a">
+<link rel="stylesheet" href="css/style.css?v=180626b">
 <script data-cfasync="false">document.documentElement.classList.add('js')</script>
-<script data-cfasync="false" src="js/metrika.js?v=180626a"></script>
+<script data-cfasync="false" src="js/metrika.js?v=180626b"></script>
 <!--SEO-HEAD-->
 <link rel="canonical" href="https://neoride.ru/">
 <meta property="og:type" content="website">
@@ -136,6 +136,8 @@
       </div>
       <span class="btn btn-accent" style="white-space:nowrap;padding:12px 22px">Смотреть AOVO →</span>
     </a>
+    <p class="uc-hint" style="color:var(--mut);font:600 13px Inter;margin:4px 0 6px">Подберите по задаче:</p>
+    <div class="usecase-row" id="useCaseTiles"></div>
     <div class="series-tabs" id="brandTabs" hidden></div>
     <div class="cat-tabs" id="catTabs"></div>
     <div class="series-tabs" id="seriesTabs"></div>
@@ -143,7 +145,7 @@
       <div class="fgroup"><span>Кому</span><div id="ageChips"></div></div>
       <div class="fgroup"><span>Цена</span><div id="priceChips"></div></div>
       <div class="fgroup"><span>Скорость</span><div id="speedChips"></div></div>
-      <label class="chk"><input type="checkbox" id="onlyStock"> В наличии</label>
+      <label class="chk"><input type="checkbox" id="onlyStock" checked> В наличии</label>
       <label class="chk hit"><input type="checkbox" id="onlyHit"> 🔥 Хиты</label>
       <label class="chk new"><input type="checkbox" id="onlyNew"> 🆕 Новинки</label>
       <select id="sortSel" style="margin-left:auto">
@@ -332,10 +334,10 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="data/catalog.js?v=180626a"></script>
-<script data-cfasync="false" src="js/app.js?v=180626a"></script>
-<script data-cfasync="false" src="js/cart.js?v=180626a"></script>
-<script data-cfasync="false" src="js/quiz.js?v=180626a"></script>
+<script data-cfasync="false" src="data/catalog.js?v=180626b"></script>
+<script data-cfasync="false" src="js/app.js?v=180626b"></script>
+<script data-cfasync="false" src="js/cart.js?v=180626b"></script>
+<script data-cfasync="false" src="js/quiz.js?v=180626b"></script>
 <script data-cfasync="false">
 /* На мобиле прячем «Подбор», «Серии» и «Фильтры» за тап-кнопки — короче главная, акцент на товар */
 (function () {
@@ -355,7 +357,7 @@
   collapsible(document.querySelector('#catalog .filters'), 'Фильтры');
 })();
 </script>
-<script data-cfasync="false" src="js/fx.js?v=180626a"></script>
-<script data-cfasync="false" src="js/chat.js?v=180626a"></script>
+<script data-cfasync="false" src="js/fx.js?v=180626b"></script>
+<script data-cfasync="false" src="js/chat.js?v=180626b"></script>
 </body>
 </html>

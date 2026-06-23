@@ -741,3 +741,36 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .hero-mega{opacity:.45}                                    /* гигантская подложка-NEORIDE тише */
   body::after{opacity:.5}                                    /* цветное пятно-фон спокойнее */
 }
+
+/* === Перестройка каталога: УТП-бейдж + карусель в карточке + плитки «по задаче» === */
+/* Плитки «по задаче» — главный вход для новичка */
+.usecase-row{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 18px}
+.usecase-tile{display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:14px;
+  border:1px solid var(--line2);background:var(--glass);color:var(--txt);font:700 15px Inter,sans-serif;cursor:pointer;transition:.2s}
+.usecase-tile .uc-ic{font-size:18px}
+.usecase-tile:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.usecase-tile.active{background:var(--grad);color:#06130a;border-color:transparent;box-shadow:0 6px 22px rgba(120,243,150,.25)}
+@media(max-width:600px){.usecase-tile{padding:11px 14px;font-size:14px;flex:1 1 calc(50% - 10px);justify-content:center}}
+
+/* УТП-бейдж в карточке: «для чего лучше» */
+.utp{display:inline-flex;align-items:center;gap:6px;font:700 12px Inter,sans-serif;padding:5px 10px;border-radius:8px;margin:0 0 8px;letter-spacing:.01em}
+.utp-off{background:rgba(184,255,46,.14);color:#b8ff2e}
+.utp-spd{background:rgba(255,61,139,.14);color:#ff6aa6}
+.utp-rng{background:rgba(46,230,255,.14);color:#2ee6ff}
+.utp-cur{background:rgba(139,92,246,.18);color:#b79bff}
+.utp-kid{background:rgba(255,200,46,.16);color:#ffce5a}
+.utp-seat{background:rgba(120,200,255,.14);color:#8fd0ff}
+.utp-city{background:rgba(46,230,255,.12);color:#7fe0ff}
+
+/* Карусель фото в карточке */
+.card-img .cg-track{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.card-img .cg-slide{display:none}
+.card-img .cg-slide.on{display:block}
+.card-img .cg-arr{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:34px;height:34px;border-radius:50%;
+  border:1px solid rgba(0,0,0,.12);background:rgba(255,255,255,.85);color:#0e0e14;font:700 20px/1 Inter;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;opacity:0;transition:.18s}
+.card-img:hover .cg-arr{opacity:1}
+.card-img .cg-prev{left:8px}.card-img .cg-next{right:8px}
+.card-img .cg-count{position:absolute;bottom:8px;right:8px;z-index:4;background:rgba(0,0,0,.6);color:#fff;
+  font:600 11px Inter;padding:2px 8px;border-radius:100px}
+@media(max-width:760px){.card-img .cg-arr{opacity:1;background:rgba(255,255,255,.9)}}
