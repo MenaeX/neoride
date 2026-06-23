@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=230626d">
+<link rel="stylesheet" href="css/style.css?v=230626e">
 <script data-cfasync="false">document.documentElement.classList.add('js')</script>
-<script data-cfasync="false" src="js/metrika.js?v=230626d"></script>
+<script data-cfasync="false" src="js/metrika.js?v=230626e"></script>
 <!--SEO-HEAD-->
 <link rel="canonical" href="https://neoride.ru/">
 <meta property="og:type" content="website">
@@ -74,7 +74,7 @@
       <p class="hero-sub rw" style="--d:.85s"><i>Самокаты, велосипеды, скутеры и питбайки Kugoo 2025–2026.
       Склад в Москве, проверка перед отправкой, доставка по всей России.</i></p>
       <div class="hero-cta rw" style="--d:1s"><i>
-        <a class="btn btn-accent" href="#catalog">Выбрать модель</a>
+        <a class="btn btn-accent" href="#topSalesSec">Выбрать модель</a>
         <a class="btn" href="#flagship">Флагман LX 11+</a>
       </i></div>
       <div class="hero-stats rw" style="--d:1.15s"><i>
@@ -96,40 +96,40 @@
   <span>ДОСТАВКА <em>ПО ВСЕЙ РФ</em></span><span>ПРОВЕРКА <em>ПЕРЕД ОТПРАВКОЙ</em></span>
 </div></div>
 
-<section class="flagship rw-trig" id="flagship">
-  <div class="flagship-bg" aria-hidden="true"><img src="img/flagship-scene.jpg" alt="" loading="lazy"></div>
-  <div class="container flagship-in">
-    <div class="flagship-info">
-      <div class="kicker rw" style="--d:.05s"><i>Флагман линейки · 2026</i></div>
-      <h2><span class="rw" style="--d:.15s"><i>Kugoo Kirin</i></span> <span class="rw" style="--d:.3s"><i class="g">LX 11+</i></span></h2>
-      <p class="sec-sub rw" style="--d:.45s"><i>Полный привод, двойная подвеска и запас хода на два дня города. Самый мощный самокат каталога — в наличии в Москве.</i></p>
-      <div class="hud-specs">
-        <div class="hud-row" style="--hd:.55s"><div class="hud-txt"><b>4 400 Вт</b><span>пиковая мощность</span></div><i></i></div>
-        <div class="hud-row" style="--hd:.7s"><div class="hud-txt"><b>85 км/ч</b><span>максимальная скорость</span></div><i></i></div>
-        <div class="hud-row" style="--hd:.85s"><div class="hud-txt"><b>160 км</b><span>запас хода</span></div><i></i></div>
-        <div class="hud-row" style="--hd:1s"><div class="hud-txt"><b>4×4</b><span>полный привод</span></div><i></i></div>
-      </div>
-      <div class="flagship-cta rw" style="--d:1.1s"><i>
-        <a class="btn btn-accent" href="#catalog">Смотреть в каталоге</a>
-        <span class="flagship-price">159 900 ₽ <small>· гарантия 12 мес</small></span>
-      </i></div>
-    </div>
-  </div>
-</section>
-
-<section class="scen" id="scen">
-  <div class="container" data-rev>
-    <div class="kicker">Подбор</div>
-    <h2>Под ваш <span class="g">сценарий</span></h2>
-    <p class="sec-sub">Выберите, как планируете ездить — покажем подходящие модели.</p>
-    <div class="scen-row" id="scenRow"></div>
-  </div>
-</section>
-
-<section class="catalog" id="catalog">
+<div id="vitrina">
+<section class="vsec" id="topSalesSec">
   <div class="container">
-    <div class="kicker" data-rev>Каталог</div>
-    <h2 data-rev>Выберите свой <span class="g">аппарат</span></h2>
+    <div class="vsec-head">
+      <h2 data-rev>ТОП-<span class="g">продаж</span></h2>
+      <div class="vcar-nav"><button class="vcar-prev" type="button" aria-label="Назад">‹</button><button class="vcar-next" type="button" aria-label="Вперёд">›</button></div>
+    </div>
+    <p class="sec-sub">Что покупают чаще всего — проверенные ходовые модели.</p>
+    <div class="vcar"><div class="vcar-track" id="topSalesTrack"></div></div>
+  </div>
+</section>
+
+<section class="vsec" id="newModelsSec">
+  <div class="container">
+    <div class="vsec-head">
+      <h2 data-rev>Новинки <span class="g">🔥</span></h2>
+      <div class="vcar-nav"><button class="vcar-prev" type="button" aria-label="Назад">‹</button><button class="vcar-next" type="button" aria-label="Вперёд">›</button></div>
+    </div>
+    <p class="sec-sub">Свежие поступления модельного ряда.</p>
+    <div class="vcar"><div class="vcar-track" id="newModelsTrack"></div></div>
+  </div>
+</section>
+
+<section class="vsec" id="catsSec">
+  <div class="container">
+    <h2 data-rev>Категории</h2>
+    <p class="sec-sub">Выберите тип транспорта — внутри только нужные модели, без лишнего.</p>
+    <div class="cat-tiles" id="catTiles"></div>
+  </div>
+</section>
+
+<section class="vsec" id="brandSec">
+  <div class="container">
+    <h2 data-rev>По бренду и опту</h2>
     <!-- BRAND_CHOOSER:start -->
     <div class="brand-pick" id="brandChooser" data-rev>
       <a class="bp-card bp-kugoo" href="kugoo.html">
@@ -149,6 +149,44 @@
       </a>
     </div>
     <!-- BRAND_CHOOSER:end -->
+  </div>
+</section>
+</div>
+
+<section class="flagship rw-trig" id="flagship">
+  <div class="flagship-bg" aria-hidden="true"><img src="img/flagship-scene.jpg" alt="" loading="lazy"></div>
+  <div class="container flagship-in">
+    <div class="flagship-info">
+      <div class="kicker rw" style="--d:.05s"><i>Флагман линейки · 2026</i></div>
+      <h2><span class="rw" style="--d:.15s"><i>Kugoo Kirin</i></span> <span class="rw" style="--d:.3s"><i class="g">LX 11+</i></span></h2>
+      <p class="sec-sub rw" style="--d:.45s"><i>Полный привод, двойная подвеска и запас хода на два дня города. Самый мощный самокат каталога — в наличии в Москве.</i></p>
+      <div class="hud-specs">
+        <div class="hud-row" style="--hd:.55s"><div class="hud-txt"><b>4 400 Вт</b><span>пиковая мощность</span></div><i></i></div>
+        <div class="hud-row" style="--hd:.7s"><div class="hud-txt"><b>85 км/ч</b><span>максимальная скорость</span></div><i></i></div>
+        <div class="hud-row" style="--hd:.85s"><div class="hud-txt"><b>160 км</b><span>запас хода</span></div><i></i></div>
+        <div class="hud-row" style="--hd:1s"><div class="hud-txt"><b>4×4</b><span>полный привод</span></div><i></i></div>
+      </div>
+      <div class="flagship-cta rw" style="--d:1.1s"><i>
+        <a class="btn btn-accent" href="katalog-samokaty.html">Смотреть в каталоге</a>
+        <span class="flagship-price">159 900 ₽ <small>· гарантия 12 мес</small></span>
+      </i></div>
+    </div>
+  </div>
+</section>
+
+<section class="scen" id="scen">
+  <div class="container" data-rev>
+    <div class="kicker">Подбор</div>
+    <h2>Под ваш <span class="g">сценарий</span></h2>
+    <p class="sec-sub">Выберите, как планируете ездить — покажем подходящие модели.</p>
+    <div class="scen-row" id="scenRow"></div>
+  </div>
+</section>
+
+<section class="catalog" id="catalog">
+  <div class="container">
+    <div class="kicker" data-rev>Каталог</div>
+    <h2 data-rev id="catTitle">Выберите свой <span class="g">аппарат</span></h2>
     <p class="uc-hint" style="color:var(--mut);font:600 13px Inter;margin:4px 0 6px">Подберите по задаче:</p>
     <div class="usecase-row" id="useCaseTiles"></div>
     <div class="series-tabs" id="brandTabs" hidden></div>
@@ -177,7 +215,7 @@
   </div>
 </section>
 
-<section class="cinema rw-trig" aria-label="Покатушки вдвоём">
+<section class="cinema rw-trig" id="cinema" aria-label="Покатушки вдвоём">
   <div class="cinema-bg" data-prlx="0.3">
     <img src="img/night-led.jpg" alt="Электросамокат Kugoo с зелёной LED-подсветкой на ночной неоновой улице" loading="lazy">
   </div>
@@ -349,10 +387,10 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="data/catalog.js?v=230626d"></script>
-<script data-cfasync="false" src="js/app.js?v=230626d"></script>
-<script data-cfasync="false" src="js/cart.js?v=230626d"></script>
-<script data-cfasync="false" src="js/quiz.js?v=230626d"></script>
+<script data-cfasync="false" src="data/catalog.js?v=230626e"></script>
+<script data-cfasync="false" src="js/app.js?v=230626e"></script>
+<script data-cfasync="false" src="js/cart.js?v=230626e"></script>
+<script data-cfasync="false" src="js/quiz.js?v=230626e"></script>
 <script data-cfasync="false">
 /* На мобиле прячем «Подбор», «Серии» и «Фильтры» за тап-кнопки — короче главная, акцент на товар */
 (function () {
@@ -372,7 +410,7 @@
   collapsible(document.querySelector('#catalog .filters'), 'Фильтры');
 })();
 </script>
-<script data-cfasync="false" src="js/fx.js?v=230626d"></script>
-<script data-cfasync="false" src="js/chat.js?v=230626d"></script>
+<script data-cfasync="false" src="js/fx.js?v=230626e"></script>
+<script data-cfasync="false" src="js/chat.js?v=230626e"></script>
 </body>
 </html>

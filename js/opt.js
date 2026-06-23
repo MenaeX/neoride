@@ -312,6 +312,46 @@ if (optTabs) {
     renderOpt();
   });
 }
+// окошки категорий + «ходовые оптом» (как на главной, но для опт-каталога)
+(function () {
+  const LBL = Object.fromEntries(OPT_CATS);
+  const order = ['самокат', 'велосипед', 'скутер', 'питбайк', 'трицикл', 'квадроцикл', 'мотоцикл'];
+  const plural = n => (n % 10 === 1 && n % 100 !== 11) ? 'модель' : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) ? 'модели' : 'моделей';
+  const tilesEl = document.getElementById('optCatTiles');
+  if (tilesEl) {
+    tilesEl.innerHTML = order.map(k => {
+      const list = optList.filter(c => c.cat === k);
+      if (!list.length) return '';
+      const rep = list.find(c => c.img) || list[0];
+      return `<button class="cat-tile" type="button" data-octile="${k}">
+        <div class="ct-img"><img loading="lazy" src="${rep.img || 'img/hero-poster.jpg'}" alt="${LBL[k] || k}"></div>
+        <div class="ct-info"><div class="ct-name">${LBL[k] || k}</div><div class="ct-count">${list.length} ${plural(list.length)}</div></div>
+      </button>`;
+    }).join('');
+    tilesEl.querySelectorAll('[data-octile]').forEach(b => b.onclick = () => {
+      optCat = b.dataset.octile; showAllOpt = false;
+      if (optTabs) optTabs.querySelectorAll('.cat-tab').forEach(x => x.classList.toggle('active', x.dataset.optcat === optCat));
+      renderOpt();
+      const g = document.getElementById('optGrid'); if (g) g.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+  // ходовые оптом — хиты
+  const top = optList.filter(c => c.hit && c.img);
+  const track = document.getElementById('optTopTrack'), wrap = document.getElementById('optTopWrap');
+  if (track && top.length) {
+    track.innerHTML = top.slice(0, 12).map(optCardHTML).join('');
+    track.querySelectorAll('[data-opt]').forEach(b => b.onclick = () => { document.getElementById('leadModel').value = b.dataset.name; leadModal.hidden = false; });
+    track.querySelectorAll('[data-open]').forEach(el => { el.onclick = () => openOptModel(el.dataset.open); });
+    if (wrap) {
+      wrap.hidden = false;
+      const prev = wrap.querySelector('.vcar-prev'), next = wrap.querySelector('.vcar-next');
+      const step = () => track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width + 16 : 300;
+      if (prev) prev.onclick = () => track.scrollBy({ left: -step() * 2, behavior: 'smooth' });
+      if (next) next.onclick = () => track.scrollBy({ left: step() * 2, behavior: 'smooth' });
+    }
+  }
+})();
+
 function wireOptChips(el, defs, getCur, setCur) {
   if (!el) return;
   el.innerHTML = defs.map(([k, l]) => `<button class="cat-tab${k === getCur() ? ' active' : ''}" data-k="${k}">${l}</button>`).join('');

@@ -51,8 +51,12 @@ const rub = n => n == null ? '—' : fmt(n) + ' ₽';
 // Брендовая страница (kugoo.html / aovo каталог): window.BRAND_LOCK фиксирует бренд,
 // прячет чипы брендов и ограничивает серии — общий движок, отдельные витрины.
 const BRAND_LOCK = (typeof window !== 'undefined' && window.BRAND_LOCK) || null;
+// Страница категории (katalog/<cat>.html): window.CAT_LOCK фиксирует категорию.
+const CAT_LOCK = (typeof window !== 'undefined' && window.CAT_LOCK) || null;
+// LOCK = режим листинга (бренд/категория). Без него — главная-витрина (ТОП/Новинки/окошки).
+const LOCK = BRAND_LOCK || CAT_LOCK;
 const inLock = c => !BRAND_LOCK || (c.brand || 'Kugoo') === BRAND_LOCK;
-let state = { cat: 'all', series: 'all', brand: BRAND_LOCK || 'all', stock: true, opt: false, hit: false, new: false, price: 'all', speed: 'all', age: 'all', scen: null, sort: 'pop' };
+let state = { cat: CAT_LOCK || 'all', series: 'all', brand: BRAND_LOCK || 'all', stock: true, opt: false, hit: false, new: false, price: 'all', speed: 'all', age: 'all', scen: null, sort: 'pop' };
 
 // Серия модели (семейство): A / S / M / G / F / V / LX / HX / EC / Wish … (не-Kugoo → бренд)
 function seriesOf(c) {
@@ -77,6 +81,7 @@ function chipRow(el, bands, key) {
 }
 const tabsEl = document.getElementById('catTabs');
 CATS.forEach(([key, label]) => {
+  if (CAT_LOCK) return;  // на странице категории вкладки категорий не нужны
   const b = document.createElement('button');
   b.className = 'cat-tab' + (key === state.cat ? ' active' : '');
   b.textContent = label;
@@ -212,7 +217,8 @@ function cardHTML(c) {
   const on = compare.has(c.id) ? ' on' : '';
   const optNote = c.stock === 'opt' ? '<div class="opt-note">Оптовая позиция (от 10 шт) — наличие уточняйте; без гарантии производителя</div>' : '';
   const warr = c.warranty ? '<div class="warr">✓ Гарантия 12 мес · документы</div>' : '';
-  const badges = (c.new ? '<span class="badge new">🆕 Новинка</span>' : '') + (c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : '') + BADGE[c.stock];
+  const hasSale = c.old && c.old > c.price;
+  const badges = (hasSale ? `<span class="badge sale">−${fmt(c.old - c.price)} ₽</span>` : '') + (c.new ? '<span class="badge new">🆕 Новинка</span>' : '') + (c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : '') + BADGE[c.stock];
   const u = utpOf(c);
   return `<article class="card" data-id="${c.id}">
     <div class="card-img" data-gal="${gal.length}" data-open="${c.id}" role="button" tabindex="0" title="Подробнее"><div class="badges">${badges}</div><div class="cg-track">${slides}</div>${galNav}</div>
@@ -222,7 +228,7 @@ function cardHTML(c) {
       <div class="card-specs">${chips}</div>
       ${warr}${optNote}
       <div class="card-foot">
-        <div class="price">${rub(c.price)}<small>розница</small></div>
+        <div class="price">${rub(c.price)}${hasSale ? `<s class="price-old">${rub(c.old)}</s>` : ''}<small>розница</small></div>
         <button class="cmp-toggle${on}" data-cmp="${c.id}" title="Добавить к сравнению">⚖ Сравнить</button>
       </div>
       ${c.stock === 'in'
@@ -252,26 +258,7 @@ function render() {
   document.getElementById('found').textContent = `Найдено моделей: ${list.length}${note}`;
   document.getElementById('grid').innerHTML = shown.map(cardHTML).join('') ||
     '<p style="color:var(--mut)">Под выбранные фильтры моделей нет — попробуйте смягчить условия.</p>';
-  document.querySelectorAll('[data-cmp]').forEach(b => b.onclick = () => toggleCompare(b.dataset.cmp));
-  document.querySelectorAll('[data-notify]').forEach(b => b.onclick = () => openNotify(b.dataset.notify));
-  document.querySelectorAll('[data-open]').forEach(el => {
-    el.onclick = () => openModel(el.dataset.open);
-    el.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModel(el.dataset.open); } };
-  });
-  // карусель фото прямо в карточке — стрелки + свайп, без открытия модалки
-  document.querySelectorAll('.card-img[data-gal]').forEach(box => {
-    if (Number(box.dataset.gal) <= 1) return;
-    const slides = [].slice.call(box.querySelectorAll('.cg-slide'));
-    const cnt = box.querySelector('.cg-count');
-    let i = 0;
-    const show = n => { i = (n + slides.length) % slides.length; slides.forEach((s, k) => s.classList.toggle('on', k === i)); if (cnt) cnt.textContent = (i + 1) + '/' + slides.length; };
-    const prev = box.querySelector('.cg-prev'), next = box.querySelector('.cg-next');
-    if (prev) prev.addEventListener('click', e => { e.stopPropagation(); show(i - 1); });
-    if (next) next.addEventListener('click', e => { e.stopPropagation(); show(i + 1); });
-    let x0 = null;
-    box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
-    box.addEventListener('touchend', e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(dx < 0 ? i + 1 : i - 1); x0 = null; }, { passive: true });
-  });
+  wireCards(document.getElementById('grid'));
 
   const wrap = document.getElementById('showAllWrap');
   const btn = document.getElementById('showAllBtn');
@@ -287,6 +274,83 @@ function toggleShowAll() {
   showAll = !showAll;
   render();
   if (!showAll) document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+}
+
+/* ---------- обвязка карточек (клик/сравнение/уведомить/карусель фото) ---------- */
+function wireCards(root) {
+  if (!root) return;
+  root.querySelectorAll('[data-cmp]').forEach(b => b.onclick = () => toggleCompare(b.dataset.cmp));
+  root.querySelectorAll('[data-notify]').forEach(b => b.onclick = () => openNotify(b.dataset.notify));
+  root.querySelectorAll('[data-open]').forEach(el => {
+    el.onclick = () => openModel(el.dataset.open);
+    el.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModel(el.dataset.open); } };
+  });
+  root.querySelectorAll('.card-img[data-gal]').forEach(box => {
+    if (Number(box.dataset.gal) <= 1) return;
+    const slides = [].slice.call(box.querySelectorAll('.cg-slide'));
+    const cnt = box.querySelector('.cg-count');
+    let i = 0;
+    const show = n => { i = (n + slides.length) % slides.length; slides.forEach((s, k) => s.classList.toggle('on', k === i)); if (cnt) cnt.textContent = (i + 1) + '/' + slides.length; };
+    const prev = box.querySelector('.cg-prev'), next = box.querySelector('.cg-next');
+    if (prev) prev.addEventListener('click', e => { e.stopPropagation(); show(i - 1); });
+    if (next) next.addEventListener('click', e => { e.stopPropagation(); show(i + 1); });
+    let x0 = null;
+    box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(dx < 0 ? i + 1 : i - 1); x0 = null; }, { passive: true });
+  });
+}
+
+/* ---------- главная-витрина: ТОП-продаж, Новинки, окошки категорий ---------- */
+const CAT_SLUG = { 'самокат': 'samokaty', 'велосипед': 'velosipedy', 'скутер': 'skutery', 'питбайк': 'pitbayki', 'трицикл': 'tricikly', 'квадроцикл': 'kvadrocikly', 'мотоцикл': 'motocikly' };
+const CAT_ORDER = ['самокат', 'велосипед', 'скутер', 'питбайк', 'трицикл', 'квадроцикл', 'мотоцикл'];
+function plModels(n) { return pluralRu(n, 'модель', 'модели', 'моделей'); }
+function fillCarousel(trackId, list) {
+  const el = document.getElementById(trackId);
+  if (!el) return false;
+  if (!list.length) return false;
+  el.innerHTML = list.map(cardHTML).join('');
+  wireCards(el);
+  // стрелки прокрутки
+  const car = el.closest('.vcar');
+  if (car) {
+    const prev = car.querySelector('.vcar-prev'), next = car.querySelector('.vcar-next');
+    const step = () => Math.max(260, el.firstElementChild ? el.firstElementChild.getBoundingClientRect().width + 16 : 300);
+    if (prev) prev.onclick = () => el.scrollBy({ left: -step() * 2, behavior: 'smooth' });
+    if (next) next.onclick = () => el.scrollBy({ left: step() * 2, behavior: 'smooth' });
+  }
+  return true;
+}
+function renderCatTiles() {
+  const el = document.getElementById('catTiles');
+  if (!el) return;
+  const pool = CATALOG.filter(c => c.price && c.img);
+  el.innerHTML = CAT_ORDER.map(cat => {
+    const list = pool.filter(c => c.cat === cat);
+    if (!list.length || !CAT_SLUG[cat]) return '';
+    const rep = list.find(c => c.stock === 'in') || list[0];
+    const label = (CATS.find(x => x[0] === cat) || [, cat])[1];
+    return `<a class="cat-tile" href="katalog-${CAT_SLUG[cat]}.html">
+      <div class="ct-img"><img loading="lazy" src="${rep.img}" alt="${label}"></div>
+      <div class="ct-info"><div class="ct-name">${label}</div><div class="ct-count">${list.length} ${plModels(list.length)}</div></div>
+    </a>`;
+  }).join('');
+}
+function buildVitrina() {
+  const pool = CATALOG.filter(c => c.price && c.img);
+  // ТОП-продаж: хиты, добиваем по популярности до 8
+  let top = pool.filter(c => c.hit);
+  if (top.length < 6) {
+    const extra = pool.filter(c => !c.hit).sort((a, b) => (b.pop || 0) - (a.pop || 0));
+    top = top.concat(extra).slice(0, 10);
+  }
+  top.sort((a, b) => (b.pop || 0) - (a.pop || 0));
+  fillCarousel('topSalesTrack', top.slice(0, 12));
+  // Новинки
+  const fresh = pool.filter(c => c.new);
+  const okNew = fillCarousel('newModelsTrack', fresh);
+  const newSec = document.getElementById('newModelsSec');
+  if (newSec && !okNew) newSec.hidden = true;
+  renderCatTiles();
 }
 
 /* ---------- сравнение ---------- */
@@ -629,5 +693,26 @@ function applyBrandFromHash(rerender) {
 applyBrandFromHash(false);
 window.addEventListener('hashchange', () => applyBrandFromHash(true));
 
-render();
+// Режим страницы: с замком (бренд/категория) — листинг с фильтрами; без замка — главная-витрина.
+if (LOCK) {
+  // листинг бренда/категории: прячем витрину и сторителлинг главной, оставляем каталог
+  ['vitrina', 'flagship', 'scen', 'cinema'].forEach(id => { const e = document.getElementById(id); if (e) e.hidden = true; });
+  if (CAT_LOCK) {
+    const label = (CATS.find(x => x[0] === CAT_LOCK) || [, CAT_LOCK])[1];
+    const h = document.getElementById('catTitle'); if (h) h.innerHTML = label + ' <span class="g">Kugoo и AOVO</span>';
+  }
+  render();
+} else {
+  // главная-витрина; при сбое — фолбэк на обычный каталог, чтобы магазин не остался пустым
+  try {
+    const cat = document.getElementById('catalog'); if (cat) cat.hidden = true;
+    // #scen на главной оставляем — это секция квиза «Подберём за 15 секунд»
+    buildVitrina();
+  } catch (e) {
+    const v = document.getElementById('vitrina'); if (v) v.hidden = true;
+    const cat = document.getElementById('catalog'); if (cat) cat.hidden = false;
+    const scen = document.getElementById('scen'); if (scen) scen.hidden = false;
+    render();
+  }
+}
 syncCompareUI();

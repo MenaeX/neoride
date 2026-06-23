@@ -814,3 +814,41 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .nav a.nav-brand{display:inline-flex!important;align-items:center;padding:6px 13px;border:1px solid var(--line2);border-radius:99px;color:var(--mut);font-weight:600;font-size:13px}
   .nav a.nav-brand.active{border-color:var(--cyan);color:var(--cyan);background:rgba(46,230,255,.1)}
 }
+
+/* скидка: зачёркнутая старая цена + бейдж экономии */
+.badge.sale{background:#ff3d5b;color:#fff}
+.price .price-old{display:inline;margin-left:8px;font:600 14px Inter;color:var(--mut);text-decoration:line-through;opacity:.8}
+@media(max-width:600px){.price .price-old{font-size:12px;margin-left:6px}}
+
+/* ===== Главная-витрина: ТОП-продаж / Новинки / Категории ===== */
+.vsec{padding:clamp(30px,5vw,56px) 0}
+.vsec-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.vsec h2{font:800 clamp(26px,4vw,42px)/1.05 Unbounded,sans-serif;letter-spacing:-.02em;margin:0}
+.vsec .sec-sub{margin:8px 0 18px}
+.vcar-nav{display:flex;gap:8px;flex:none}
+.vcar-nav button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line2);background:var(--glass);color:var(--txt);font-size:20px;cursor:pointer;transition:.2s}
+.vcar-nav button:hover{border-color:var(--cyan);color:var(--cyan)}
+.vcar{position:relative}
+.vcar-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.vcar-track::-webkit-scrollbar{height:6px}
+.vcar-track::-webkit-scrollbar-thumb{background:var(--line2);border-radius:99px}
+.vcar-track > .card{flex:0 0 300px;scroll-snap-align:start}
+/* окошки категорий */
+.cat-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:6px}
+.cat-tile{display:flex;flex-direction:column;border:1px solid var(--line2);border-radius:18px;overflow:hidden;background:var(--glass);text-decoration:none;transition:.22s}
+.cat-tile:hover{transform:translateY(-4px);border-color:var(--cyan)}
+.cat-tile .ct-img{aspect-ratio:4/3;background:#fff;display:flex;align-items:center;justify-content:center;padding:14px}
+.cat-tile .ct-img img{max-width:100%;max-height:100%;object-fit:contain}
+.cat-tile .ct-info{padding:14px 16px 16px}
+.cat-tile .ct-name{font:700 17px Inter,sans-serif;color:var(--txt)}
+.cat-tile .ct-count{font:600 13px Inter,sans-serif;color:var(--mut);margin-top:3px}
+@media(max-width:900px){.cat-tiles{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){
+  .vcar-nav{display:none}
+  .vcar-track > .card{flex:0 0 78vw;max-width:300px}
+  .cat-tiles{grid-template-columns:repeat(2,1fr);gap:10px}
+  .cat-tile .ct-img{padding:10px}
+  .cat-tile .ct-info{padding:9px 11px 11px}
+  .cat-tile .ct-name{font-size:14px}
+  .cat-tile .ct-count{font-size:11px}
+}
