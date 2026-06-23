@@ -211,51 +211,6 @@ const CATALOG = [
   }
  },
  {
-  "id": "18ah-m4-plus-pro",
-  "name": "M4 Pro+ 18Ah",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 61500,
-  "mrc": 49900,
-  "opt": 40700,
-  "stock": "in",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 1100,
-  "hit": false,
-  "new": false,
-  "warranty": true,
-  "img": "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
-  "gallery": [
-   "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
-   "img/gallery/18ah-m4-plus-pro/1.jpg",
-   "img/gallery/18ah-m4-plus-pro/2.jpg",
-   "img/gallery/18ah-m4-plus-pro/3.jpg",
-   "img/gallery/18ah-m4-plus-pro/4.jpg",
-   "img/gallery/18ah-m4-plus-pro/5.jpg",
-   "img/gallery/18ah-m4-plus-pro/6.jpg"
-  ],
-  "desc": "Kugoo M4 Pro+ — мощный самокат для уверенной езды по городу. 800-ваттный мотор разгонит вас до 45 км/ч, а батареи на 18 Ач хватит на 45 км пути. Крепкие 10-дюймовые колёса справятся с любым покрытием, дисковый тормоз обеспечит безопасность.\n\nВозьмёт пассажира весом до 140 кг и прослужит долго благодаря годовой гарантии. За пять часов зарядки получишь полный запас хода. Надёжный выбор для ежедневных поездок.",
-  "specs": {
-   "power": 800,
-   "battery_ah": 18.0,
-   "speed": 45,
-   "range": 45,
-   "load": 140,
-   "wheel": 10.0,
-   "charge": 5.0,
-   "gross": 31.16,
-   "box": "120×26×48 см",
-   "weight": 31.1,
-   "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний привод",
-   "seat": true
-  }
- },
- {
   "id": "g4-max",
   "name": "G4 Max",
   "brand": "Kugoo",
@@ -721,8 +676,7 @@ const CATALOG = [
   "opt": 41300,
   "stock": "opt",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
