@@ -43,7 +43,11 @@ const SPEC_LABELS = {
 const fmt = n => n == null ? '—' : Number(n).toLocaleString('ru-RU');
 const rub = n => n == null ? '—' : fmt(n) + ' ₽';
 
-let state = { cat: 'all', series: 'all', brand: 'all', stock: true, opt: false, hit: false, new: false, price: 'all', speed: 'all', age: 'all', scen: null, sort: 'pop' };
+// Брендовая страница (kugoo.html / aovo каталог): window.BRAND_LOCK фиксирует бренд,
+// прячет чипы брендов и ограничивает серии — общий движок, отдельные витрины.
+const BRAND_LOCK = (typeof window !== 'undefined' && window.BRAND_LOCK) || null;
+const inLock = c => !BRAND_LOCK || (c.brand || 'Kugoo') === BRAND_LOCK;
+let state = { cat: 'all', series: 'all', brand: BRAND_LOCK || 'all', stock: true, opt: false, hit: false, new: false, price: 'all', speed: 'all', age: 'all', scen: null, sort: 'pop' };
 
 // Серия модели (семейство): A / S / M / G / F / V / LX / HX / EC / Wish … (не-Kugoo → бренд)
 function seriesOf(c) {
@@ -76,7 +80,7 @@ CATS.forEach(([key, label]) => {
 });
 // чипы брендов (мультибренд) — показываем ряд только если в наличии 2+ бренда
 const brandEl = document.getElementById('brandTabs');
-if (brandEl) {
+if (brandEl && !BRAND_LOCK) {
   const bc = {};
   CATALOG.filter(c => c.price && c.img).forEach(c => { const b = c.brand || 'Kugoo'; bc[b] = (bc[b] || 0) + 1; });
   const brands = Object.keys(bc).sort((a, b) => bc[b] - bc[a] || a.localeCompare(b));
@@ -96,7 +100,7 @@ if (brandEl) {
 const seriesEl = document.getElementById('seriesTabs');
 if (seriesEl) {
   const cnt = {};
-  CATALOG.filter(c => c.price && c.img).forEach(c => { const s = seriesOf(c); cnt[s] = (cnt[s] || 0) + 1; });
+  CATALOG.filter(c => c.price && c.img && inLock(c)).forEach(c => { const s = seriesOf(c); cnt[s] = (cnt[s] || 0) + 1; });
   const list = Object.keys(cnt).sort((a, b) => cnt[b] - cnt[a] || a.localeCompare(b));
   [['all', 'Все серии']].concat(list.map(s => [s, s])).forEach(([key, label]) => {
     const b = document.createElement('button');

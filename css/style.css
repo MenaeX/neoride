@@ -775,3 +775,20 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .card-img .cg-count{position:absolute;bottom:8px;right:8px;z-index:4;background:rgba(0,0,0,.6);color:#fff;
   font:600 11px Inter;padding:2px 8px;border-radius:100px}
 @media(max-width:760px){.card-img .cg-arr{opacity:1;background:rgba(255,255,255,.9)}}
+
+/* ===== Блок выбора бренда (старт-хаб + брендовые страницы) ===== */
+.brand-pick{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 10px}
+.brand-pick .bp-card{display:flex;flex-direction:column;gap:8px;padding:22px 22px 20px;border-radius:18px;
+  border:1px solid var(--line2);background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+  text-decoration:none;transition:.22s}
+.brand-pick .bp-card:hover{transform:translateY(-4px);border-color:rgba(46,230,255,.45)}
+.brand-pick .bp-kugoo{border-color:rgba(184,255,46,.28);background:linear-gradient(160deg,rgba(184,255,46,.1),rgba(255,255,255,.01))}
+.brand-pick .bp-aovo{border-color:rgba(46,230,255,.3);background:linear-gradient(160deg,rgba(46,230,255,.12),rgba(255,255,255,.01))}
+.brand-pick .bp-name{font:800 22px Unbounded,sans-serif;color:#fff}
+.brand-pick .bp-desc{font:14px/1.5 Inter,sans-serif;color:#cfd0e0;flex:1}
+.brand-pick .bp-go{margin-top:6px;font:700 14px Inter,sans-serif;color:var(--cyan)}
+.brand-pick .bp-kugoo .bp-go{color:var(--lime,#b8ff2e)}
+@media(max-width:760px){.brand-pick{grid-template-columns:1fr;gap:10px}
+  .brand-pick .bp-card{padding:18px 18px 16px}.brand-pick .bp-name{font-size:19px}}
+.brand-pick.brand-pick-2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:760px){.brand-pick.brand-pick-2{grid-template-columns:1fr}}

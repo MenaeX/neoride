@@ -20,7 +20,8 @@
 
   function rub(n) { return Number(n).toLocaleString('ru-RU') + ' ₽'; }
 
-  function pool() { return CATALOG.filter(function (c) { return c.cat === 'самокат' && c.stock === 'in' && c.price; }); }
+  function pool() { var lock = (typeof window !== 'undefined' && window.BRAND_LOCK) || null;
+    return CATALOG.filter(function (c) { return c.cat === 'самокат' && c.stock === 'in' && c.price && (!lock || (c.brand || 'Kugoo') === lock); }); }
 
   function isOff(s) { return /полн|внедор/i.test(s.drive || '') || (s.power || 0) >= 1000; }
 
