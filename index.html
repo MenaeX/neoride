@@ -335,6 +335,7 @@
 <script data-cfasync="false" src="data/catalog.js?v=180626a"></script>
 <script data-cfasync="false" src="js/app.js?v=180626a"></script>
 <script data-cfasync="false" src="js/cart.js?v=180626a"></script>
+<script data-cfasync="false" src="js/quiz.js?v=180626a"></script>
 <script data-cfasync="false">
 /* На мобиле прячем «Подбор», «Серии» и «Фильтры» за тап-кнопки — короче главная, акцент на товар */
 (function () {
@@ -350,7 +351,6 @@
     set(false);
     btn.addEventListener('click', function () { set(!open); });
   }
-  collapsible(document.getElementById('scenRow'), 'Подбор по сценарию');
   collapsible(document.getElementById('seriesTabs'), 'Серии моделей');
   collapsible(document.querySelector('#catalog .filters'), 'Фильтры');
 })();
