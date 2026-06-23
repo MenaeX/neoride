@@ -6,15 +6,20 @@ const CATS = [
   ['скутер', 'Электроскутеры'], ['питбайк', 'Электропитбайки'], ['трицикл', 'Трициклы'],
   ['квадроцикл', 'Квадроциклы'], ['мотоцикл', 'Мотоциклы'],
 ];
-// Сценарии-чипы строго совпадают с УТП-бейджем карточки (utpOf), чтобы клик «Город»
-// показывал ровно те карточки, что помечены «Для города».
+// Внедорожник: полный привод или высокая мощность.
+function isOffroad(c) {
+  const s = c.specs || {};
+  return /полн|внедор/i.test(String(s.drive || '')) || (s.power || 0) >= 1500;
+}
+// Сценарии — НЕЗАВИСИМЫЕ предикаты (модель может попадать в несколько: быстрый внедорожник
+// есть и в «Бездорожье», и в «Максимум скорости»). Бейдж карточки (utpOf) — один, фильтры — пересекаются.
 const SCENARIOS = [
-  ['🏙', 'Город', c => utpOf(c)[2] === 'city'],
-  ['🛣', 'Дальние поездки', c => utpOf(c)[2] === 'rng'],
-  ['⛰', 'Бездорожье', c => utpOf(c)[2] === 'off'],
-  ['📦', 'Курьерам', c => utpOf(c)[2] === 'cur'],
-  ['🪶', 'Лёгкие', c => (c.specs.weight || 99) <= 16],
-  ['🏁', 'Максимум скорости', c => utpOf(c)[2] === 'spd'],
+  ['🏙', 'Город', c => c.cat === 'самокат' && !isOffroad(c) && (c.specs.speed || 0) < 60],
+  ['🛣', 'Дальние поездки', c => (c.specs.range || 0) >= 55],
+  ['⛰', 'Бездорожье', c => isOffroad(c)],
+  ['📦', 'Курьерам', c => c.cat === 'велосипед' || c.cat === 'трицикл' || ((c.specs.load || 0) >= 120 && (c.specs.range || 0) >= 45)],
+  ['🪶', 'Лёгкие', c => (c.specs.weight || 99) <= 20],
+  ['🏁', 'Максимум скорости', c => (c.specs.speed || 0) >= 55],
 ];
 // УТП-бейдж: один главный «для чего лучше» — из характеристик (приоритет сверху вниз)
 function utpOf(c) {
@@ -75,7 +80,12 @@ CATS.forEach(([key, label]) => {
   const b = document.createElement('button');
   b.className = 'cat-tab' + (key === state.cat ? ' active' : '');
   b.textContent = label;
-  b.onclick = () => { state.cat = key; document.querySelectorAll('.cat-tab').forEach(x => x.classList.remove('active')); b.classList.add('active'); render(); };
+  b.onclick = () => {
+    state.cat = key; showAll = false;
+    document.querySelectorAll('.cat-tab').forEach(x => x.classList.remove('active')); b.classList.add('active');
+    render();
+    const g = document.getElementById('found'); if (g) g.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
   tabsEl.appendChild(b);
 });
 // чипы брендов (мультибренд) — показываем ряд только если в наличии 2+ бренда
@@ -224,9 +234,17 @@ const VISIBLE = 12;
 let showAll = false;
 
 function render() {
-  const list = filtered();
+  let list = filtered();
+  // если под фильтр ничего нет в наличии — не показываем пустоту, выводим «под заказ»
+  let note = '';
+  if (!list.length && state.stock) {
+    state.stock = false;
+    const alt = filtered();
+    state.stock = true;
+    if (alt.length) { list = alt; note = ' · нет в наличии, показаны под заказ'; }
+  }
   const shown = showAll ? list : list.slice(0, VISIBLE);
-  document.getElementById('found').textContent = `Найдено моделей: ${list.length}`;
+  document.getElementById('found').textContent = `Найдено моделей: ${list.length}${note}`;
   document.getElementById('grid').innerHTML = shown.map(cardHTML).join('') ||
     '<p style="color:var(--mut)">Под выбранные фильтры моделей нет — попробуйте смягчить условия.</p>';
   document.querySelectorAll('[data-cmp]').forEach(b => b.onclick = () => toggleCompare(b.dataset.cmp));

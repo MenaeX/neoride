@@ -199,7 +199,7 @@ body::after{content:'';position:fixed;z-index:-1;width:820px;height:820px;border
 .cat-tab{padding:15px 26px;border-radius:99px;border:1px solid var(--line2);background:var(--glass);
   color:var(--txt);font:700 16px Inter;cursor:pointer;transition:.2s}
 .cat-tab:hover{color:var(--txt);border-color:var(--cyan);transform:translateY(-2px)}
-@media(max-width:600px){.cat-tab{padding:13px 18px;font-size:14px;flex:1 1 calc(50% - 11px);text-align:center;justify-content:center}}
+@media(max-width:600px){.cat-tabs{gap:7px;margin:16px 0 14px}.cat-tab{padding:7px 13px;font-size:12.5px;font-weight:600}}
 .cat-tab.active{background:var(--grad);color:#06130a;border-color:transparent;box-shadow:0 6px 20px rgba(120,243,150,.25)}
 .series-tabs{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 14px}
 .series-tab{padding:7px 12px;border-radius:10px;border:1px solid var(--line);background:transparent;
@@ -751,7 +751,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .usecase-tile .uc-ic{font-size:18px}
 .usecase-tile:hover{border-color:var(--cyan);transform:translateY(-2px)}
 .usecase-tile.active{background:var(--grad);color:#06130a;border-color:transparent;box-shadow:0 6px 22px rgba(120,243,150,.25)}
-@media(max-width:600px){.usecase-tile{padding:11px 14px;font-size:14px;flex:1 1 calc(50% - 10px);justify-content:center}}
+@media(max-width:600px){.usecase-row{gap:7px}.usecase-tile{padding:7px 12px;font-size:12.5px;font-weight:600}.usecase-tile .uc-ic{font-size:15px}}
 
 /* УТП-бейдж в карточке: «для чего лучше» */
 .utp{display:inline-flex;align-items:center;gap:6px;font:700 12px Inter,sans-serif;padding:5px 10px;border-radius:8px;margin:0 0 8px;letter-spacing:.01em}
