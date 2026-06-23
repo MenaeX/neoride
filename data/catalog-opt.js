@@ -314,7 +314,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": false,
+  "new": true,
   "warranty": true,
   "img": "img/kugoo-kirin-l2-pro-plus-2025.jpg",
   "gallery": [
@@ -1859,7 +1859,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": false,
+  "new": true,
   "warranty": true,
   "img": "img/kugoo-nb-300-водяное-охлаждение.jpg",
   "gallery": [
