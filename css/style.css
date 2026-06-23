@@ -922,3 +922,10 @@ details p{padding:0 22px 18px;color:var(--mut)}
 
 /* фото в карточке отзыва (lifestyle-кадр) */
 .rev-photo{width:100%;border-radius:12px;margin-top:4px;aspect-ratio:1/1;object-fit:cover;display:block}
+
+/* мобайл: ссылка «Отзывы» в шапке видима (остальные текст-ссылки скрыты) */
+@media(max-width:760px){
+  .nav a.nav-mob{display:inline-flex!important;align-items:center;padding:6px 12px;border:1px solid var(--line2);border-radius:99px;color:var(--mut);font-weight:600;font-size:13px}
+  .map-cols{grid-template-columns:1fr 1fr!important;gap:14px 16px}
+}
+@media(max-width:600px){.map-cols{grid-template-columns:1fr!important}}
