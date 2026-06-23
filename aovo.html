@@ -262,42 +262,6 @@
           </div>
         </div>
       </article>
-      <article class="amodel">
-        <div class="amodel-img"><img src="img/aovo/s1.png" alt="Электросамокат AOVO S1 NEW"></div>
-        <div class="amodel-body">
-          <h3>AOVO S1 NEW</h3>
-          <div class="amodel-tags"><span>Приложение</span><span>Лёгкий</span></div>
-          <div class="amodel-specs">
-            <div>Мотор <b>250 Вт</b></div>
-            <div>Скорость <b>25 км/ч</b></div>
-            <div>Запас хода <b>20 км</b></div>
-            <div>Батарея <b>5.2 Ah</b></div>
-            <div>Колесо <b>5.5"</b></div>
-            <div>Нагрузка <b>100 кг</b></div>
-          </div>
-          <div class="amodel-foot">
-            <span class="amodel-price" style="font-size:15px;color:var(--cyan)">Под заказ</span>
-            <a class="btn btn-accent" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener" style="padding:10px 18px">Узнать цену</a>
-          </div>
-        </div>
-      </article>
-      <article class="amodel">
-        <div class="amodel-img"><img src="img/aovo/s3-pro.png" alt="Электросамокат AOVO S3 Pro"></div>
-        <div class="amodel-body">
-          <h3>AOVO S3 Pro</h3>
-          <div class="amodel-tags"><span>Приложение</span></div>
-          <div class="amodel-specs">
-            <div>Скорость <b>30 км/ч</b></div>
-            <div>Запас хода <b>30 км</b></div>
-            <div>Вес <b>12 кг</b></div>
-            <div>Управление <b>смартфон</b></div>
-          </div>
-          <div class="amodel-foot">
-            <span class="amodel-price" style="font-size:15px;color:var(--cyan)">Под заказ</span>
-            <a class="btn btn-accent" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener" style="padding:10px 18px">Узнать цену</a>
-          </div>
-        </div>
-      </article>
     </div>
   </div>
 </section>
@@ -412,14 +376,6 @@
   function cartCta(id){return '<button class="btn btn-accent" data-addcart="'+id+'">🛒 В корзину</button>'
     +'<button class="btn" data-order="'+id+'">Купить в один клик</button>';}
   var M={
-    s1:{name:'AOVO S1 NEW',tags:['Приложение','Лёгкий'],
-      gal:['img/aovo/s1.png','img/aovo/s1/1.jpg','img/aovo/s1/2.jpg','img/aovo/s1/3.jpg'],
-      price:'<p class="am-priceline" style="color:var(--cyan)">Под заказ <small>· цену и сроки уточняйте</small></p>',cta:ctaOrder,
-      specs:[['Мотор','250 Вт (24 В)'],['Батарея','5.2 Ah'],['Скорость','25 км/ч'],['Запас хода','20 км'],['Колесо','5.5" перфо'],['Зарядка','3 ч'],['Нагрузка','100 кг'],['Управление','приложение']]},
-    s3pro:{name:'AOVO S3 Pro',tags:['IP65','Приложение'],
-      gal:['img/aovo/s3-pro.png','img/aovo/s3-pro/1.jpg','img/aovo/s3-pro/2.jpg','img/aovo/s3-pro/3.jpg'],
-      price:'<p class="am-priceline" style="color:var(--cyan)">Под заказ <small>· цену и сроки уточняйте</small></p>',cta:ctaOrder,
-      specs:[['Влагозащита','IP65'],['Мотор','350 Вт (36 В)'],['Батарея','8 Ah'],['Скорость','30 км/ч'],['Запас хода','35 км'],['Колесо','8" перфо'],['Зарядка','4 ч'],['Нагрузка','120 кг'],['Управление','приложение']]},
     m365pro:{name:'AOVO M365 Pro',tags:['IP65','Приложение','В наличии'],
       gal:['img/aovo-m365-pro.jpg'],
       price:'<p class="am-priceline">24 100 ₽ <small>· в наличии, склад в Москве</small></p>',
@@ -438,7 +394,7 @@
       price:'<p class="am-priceline">40 200 ₽ <small>· в наличии, склад в Москве</small></p>',cta:cartCta('aovo-promax'),
       specs:[['Влагозащита','IP65'],['Мотор','500 Вт (36 В)'],['Батарея','14.5 Ah'],['Скорость','35 км/ч'],['Запас хода','40 км'],['Колесо','10" пневмо'],['Привод','передний'],['Зарядка','4–5 ч'],['Вес','18.8 кг'],['Нагрузка','130 кг']]}
   };
-  var NAME2ID={'AOVO S1 NEW':'s1','AOVO S3 Pro':'s3pro','AOVO M365 Pro':'m365pro','AOVO M365 Lux':'lux','AOVO Lux Pro 10.5Ah':'luxpro','AOVO Pro Max':'promax'};
+  var NAME2ID={'AOVO M365 Pro':'m365pro','AOVO M365 Lux':'lux','AOVO Lux Pro 10.5Ah':'luxpro','AOVO Pro Max':'promax'};
   var modal=document.getElementById('aovoModal'), body=document.getElementById('amBody'), titleEl=document.getElementById('amTitle');
   var gi=0, gal=[];
   function showImg(){ var img=document.getElementById('amImg'); if(img){img.src=gal[gi];} var c=document.getElementById('amCount'); if(c)c.textContent=(gi+1)+'/'+gal.length; }
