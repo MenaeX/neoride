@@ -897,7 +897,15 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .cmp-col.win li::before{content:"✓";color:var(--lime,#b8ff2e)}
 .cmp-note{font:12px/1.5 Inter,sans-serif;color:var(--mut);margin-top:14px}
 @media(max-width:1000px){.cmp-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.cmp-grid{grid-template-columns:1fr}}
+/* мобайл: все 4 окошка 2×2 компактно (без длинного скролла) */
+@media(max-width:560px){
+  .cmp-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .cmp-col{padding:13px 11px;gap:7px;border-radius:13px}
+  .cmp-col h3{font-size:14px}
+  .cmp-col .cmp-sum{font-size:17px}
+  .cmp-col .cmp-sum small{font-size:10px}
+  .cmp-col li{font-size:11.5px;line-height:1.35}
+}
 
 /* #6 — заметность фильтров и сортировки (неон + hover) */
 .fchip:hover{border-color:var(--cyan);color:var(--txt);box-shadow:0 0 10px rgba(46,230,255,.22)}
@@ -918,7 +926,15 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .rev-stars{margin-left:auto;color:#ffc24b;font-size:14px;letter-spacing:1px;flex:none}
 .rev-card p{color:#cfd0e0;font:14px/1.6 Inter,sans-serif;margin:0}
 @media(max-width:900px){.rev-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.rev-grid{grid-template-columns:1fr}}
+/* мобайл: отзывы — горизонтальный свайп, компактнее */
+@media(max-width:600px){
+  .rev-grid{display:flex;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;gap:12px;padding:2px 0 10px;scrollbar-width:none}
+  .rev-grid::-webkit-scrollbar{display:none}
+  .rev-card{flex:0 0 82%;scroll-snap-align:start;padding:16px}
+  .rev-card p{font-size:13px}
+  .rev-photo{aspect-ratio:4/3}
+}
 
 /* фото в карточке отзыва (lifestyle-кадр) */
 .rev-photo{width:100%;border-radius:12px;margin-top:4px;aspect-ratio:1/1;object-fit:cover;display:block}
