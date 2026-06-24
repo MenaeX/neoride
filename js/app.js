@@ -220,8 +220,12 @@ function cardHTML(c) {
   const hasSale = c.old && c.old > c.price;
   const badges = (hasSale ? `<span class="badge sale">−${fmt(c.old - c.price)} ₽</span>` : '') + (c.new ? '<span class="badge new">🆕 Новинка</span>' : '') + (c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : '') + BADGE[c.stock];
   const u = utpOf(c);
+  // неон-кадр (для каталога) — главный, полным кадром; детальные фото остаются в модалке
+  const imgInner = c.neon
+    ? `<img class="card-neonimg" loading="lazy" src="${c.neon}" alt="${c.brand || 'Kugoo'} ${c.name}">`
+    : `<div class="cg-track">${slides}</div>${galNav}`;
   return `<article class="card" data-id="${c.id}">
-    <div class="card-img" data-gal="${gal.length}" data-open="${c.id}" role="button" tabindex="0" title="Подробнее"><div class="badges">${badges}</div><div class="cg-track">${slides}</div>${galNav}</div>
+    <div class="card-img${c.neon ? ' card-neon' : ''}" data-gal="${c.neon ? 1 : gal.length}" data-open="${c.id}" role="button" tabindex="0" title="Подробнее"><div class="badges">${badges}</div>${imgInner}</div>
     <div class="card-body">
       <div class="utp utp-${u[2]}">${u[0]} ${u[1]}</div>
       <div class="card-name" data-open="${c.id}">${c.brand || 'Kugoo'} ${c.name}</div>

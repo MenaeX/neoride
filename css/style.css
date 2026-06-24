@@ -929,3 +929,8 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .map-cols{grid-template-columns:1fr 1fr!important;gap:14px 16px}
 }
 @media(max-width:600px){.map-cols{grid-template-columns:1fr!important}}
+
+/* неон-каталог: главный кадр карточки полным кадром (без белого фона/multiply) */
+.card-img.card-neon{background:#0a0e15}
+.card-neonimg{width:100%;height:100%;object-fit:cover;display:block;mix-blend-mode:normal;transition:.35s}
+.card:hover .card-neon .card-neonimg{transform:scale(1.05)}
