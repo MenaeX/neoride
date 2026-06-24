@@ -207,9 +207,11 @@ function cardHTML(c) {
     s.wheel ? `◯ ${s.wheel}″` : null,
     driveTxt(s.drive) ? `⚙ ${driveTxt(s.drive)}` : null,
   ].filter(Boolean).map(t => `<span class="spec-chip">${t}</span>`).join('');
-  const gal = (c.gallery && c.gallery.length) ? c.gallery : (c.img ? [c.img] : []);
+  // неон-кадр (для каталога) первым в карусели, затем белые детальные фото — листаются прямо в карточке
+  const baseGal = (c.gallery && c.gallery.length) ? c.gallery : (c.img ? [c.img] : []);
+  const gal = c.neon ? [c.neon].concat(baseGal.filter(g => g.indexOf('/neon/') < 0)) : baseGal;
   const slides = gal.length
-    ? gal.map((g, i) => `<img loading="lazy" src="${g}" alt="${c.brand || 'Kugoo'} ${c.name}" class="cg-slide${i ? '' : ' on'}">`).join('')
+    ? gal.map((g, i) => `<img loading="lazy" src="${g}" alt="${c.brand || 'Kugoo'} ${c.name}" class="cg-slide${i ? '' : ' on'}${g.indexOf('/neon/') >= 0 ? ' cg-neon' : ''}">`).join('')
     : '<span class="noimg">фото скоро</span>';
   const galNav = gal.length > 1
     ? `<button class="cg-arr cg-prev" data-cg="prev" aria-label="Предыдущее фото">‹</button><button class="cg-arr cg-next" data-cg="next" aria-label="Следующее фото">›</button><span class="cg-count">1/${gal.length}</span>`
@@ -220,12 +222,8 @@ function cardHTML(c) {
   const hasSale = c.old && c.old > c.price;
   const badges = (hasSale ? `<span class="badge sale">−${fmt(c.old - c.price)} ₽</span>` : '') + (c.new ? '<span class="badge new">🆕 Новинка</span>' : '') + (c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : '') + BADGE[c.stock];
   const u = utpOf(c);
-  // неон-кадр (для каталога) — главный, полным кадром; детальные фото остаются в модалке
-  const imgInner = c.neon
-    ? `<img class="card-neonimg" loading="lazy" src="${c.neon}" alt="${c.brand || 'Kugoo'} ${c.name}">`
-    : `<div class="cg-track">${slides}</div>${galNav}`;
   return `<article class="card" data-id="${c.id}">
-    <div class="card-img${c.neon ? ' card-neon' : ''}" data-gal="${c.neon ? 1 : gal.length}" data-open="${c.id}" role="button" tabindex="0" title="Подробнее"><div class="badges">${badges}</div>${imgInner}</div>
+    <div class="card-img" data-gal="${gal.length}" data-open="${c.id}" role="button" tabindex="0" title="Подробнее"><div class="badges">${badges}</div><div class="cg-track">${slides}</div>${galNav}</div>
     <div class="card-body">
       <div class="utp utp-${u[2]}">${u[0]} ${u[1]}</div>
       <div class="card-name" data-open="${c.id}">${c.brand || 'Kugoo'} ${c.name}</div>
