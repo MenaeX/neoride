@@ -942,6 +942,9 @@ details p{padding:0 22px 18px;color:var(--mut)}
 /* мобайл: ссылка «Отзывы» в шапке видима (остальные текст-ссылки скрыты) */
 @media(max-width:760px){
   .nav a.nav-mob{display:inline-flex!important;align-items:center;padding:6px 12px;border:1px solid var(--line2);border-radius:99px;color:var(--mut);font-weight:600;font-size:13px}
+  /* клик-звонок в шапке: компактная 📞-плашка, видима на мобиле (tap-to-call под рекламу) */
+  .nav a.nav-phone{display:inline-flex!important;align-items:center;padding:6px 11px;border:1px solid var(--cyan);border-radius:99px;color:var(--cyan)!important;font-size:15px;background:rgba(46,230,255,.08)}
+  .nav a.nav-phone .np-num{display:none}
   .map-cols{grid-template-columns:1fr 1fr!important;gap:14px 16px}
 }
 @media(max-width:600px){.map-cols{grid-template-columns:1fr!important}}
