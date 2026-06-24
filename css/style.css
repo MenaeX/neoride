@@ -958,3 +958,8 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .video-side{display:grid;grid-template-rows:1fr 1fr;gap:16px}
 @media(max-width:760px){.video-grid{grid-template-columns:1fr}.video-side{grid-template-rows:none;grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.video-side{grid-template-columns:1fr}}
+
+/* одиночное видео по центру */
+.video-solo{max-width:880px;margin:8px auto 0}
+.video-solo .video-embed{aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid var(--line2);background:#000;position:relative}
+.video-solo .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
