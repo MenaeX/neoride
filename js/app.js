@@ -209,9 +209,9 @@ function cardHTML(c) {
   ].filter(Boolean).map(t => `<span class="spec-chip">${t}</span>`).join('');
   // неон-кадр (для каталога) первым в карусели, затем белые детальные фото — листаются прямо в карточке
   const baseGal = (c.gallery && c.gallery.length) ? c.gallery : (c.img ? [c.img] : []);
-  const gal = c.neon ? [c.neon].concat(baseGal.filter(g => g.indexOf('/neon/') < 0)) : baseGal;
+  const gal = c.neon ? [c.neon].concat(baseGal.filter(g => g.indexOf('/neon') < 0)) : baseGal;
   const slides = gal.length
-    ? gal.map((g, i) => `<img loading="lazy" src="${g}" alt="${c.brand || 'Kugoo'} ${c.name}" class="cg-slide${i ? '' : ' on'}${g.indexOf('/neon/') >= 0 ? ' cg-neon' : ''}">`).join('')
+    ? gal.map((g, i) => `<img loading="lazy" src="${g}" alt="${c.brand || 'Kugoo'} ${c.name}" class="cg-slide${i ? '' : ' on'}${g.indexOf('/neon') >= 0 ? ' cg-neon' : ''}">`).join('')
     : '<span class="noimg">фото скоро</span>';
   const galNav = gal.length > 1
     ? `<button class="cg-arr cg-prev" data-cg="prev" aria-label="Предыдущее фото">‹</button><button class="cg-arr cg-next" data-cg="next" aria-label="Следующее фото">›</button><span class="cg-count">1/${gal.length}</span>`
