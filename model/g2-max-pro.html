@@ -28,6 +28,11 @@
 .mp-crumb a{color:var(--cyan,#2ee6ff);text-decoration:none}
 .mp-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
 .mp-photo img{width:100%;border-radius:16px;background:#11131c}
+.mp-gal{position:relative}
+.mp-gal img{width:100%;border-radius:16px;background:#11131c;display:block}
+.mp-arr{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid rgba(0,0,0,.12);background:rgba(255,255,255,.9);color:#0e0e14;font:700 24px/1 Inter,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:3}
+.mp-prev{left:10px}.mp-next{right:10px}
+.mp-count{position:absolute;bottom:10px;right:10px;z-index:3;background:rgba(0,0,0,.6);color:#fff;font:600 12px Inter,sans-serif;padding:3px 9px;border-radius:100px}
 .mp-noimg{width:100%;aspect-ratio:4/3;border-radius:16px;background:#11131c;display:flex;align-items:center;justify-content:center;color:#5a5a72;font:14px 'Space Mono',monospace;border:1px dashed rgba(255,255,255,.12)}
 .mp h1{font:700 30px/1.15 Unbounded,sans-serif;margin:6px 0 4px}
 .mp .mp-type{color:#8a8aa0;font:14px Inter,sans-serif}
@@ -63,7 +68,7 @@
   <div class="mp-crumb"><a href="/">Главная</a> → <a href="/#catalog">Каталог</a> → Kugoo G2 Pro Max</div>
   <div class="mp-grid">
     <div class="mp-photo">
-      <img src="../img/kugoo-kirin-g2-pro-max-2025.png" alt="Электросамокат Kugoo G2 Pro Max — фото" loading="eager">
+      <div class="mp-gal" id="mpGal"><img id="mpGalImg" src="../img/kugoo-kirin-g2-pro-max-2025.png" alt="Электросамокат Kugoo G2 Pro Max — фото" loading="eager"><button class="mp-arr mp-prev" type="button" aria-label="Предыдущее фото">‹</button><button class="mp-arr mp-next" type="button" aria-label="Следующее фото">›</button><span class="mp-count" id="mpCount">1 / 7</span></div>
     </div>
     <div class="mp-info">
       <div class="mp-type">Электросамокат · Kugoo</div>
@@ -125,5 +130,6 @@
 </a>
 <script data-cfasync="false" src="../js/fx.js?v=250626b"></script>
 <script data-cfasync="false" src="../js/chat.js?v=250626b"></script>
+<script data-cfasync="false">(function(){var G=["../img/kugoo-kirin-g2-pro-max-2025.png", "../img/gallery/g2-max-pro/1.jpg", "../img/gallery/g2-max-pro/2.jpg", "../img/gallery/g2-max-pro/3.jpg", "../img/gallery/g2-max-pro/4.jpg", "../img/gallery/g2-max-pro/5.jpg", "../img/gallery/g2-max-pro/6.jpg"];var i=0,img=document.getElementById("mpGalImg"),c=document.getElementById("mpCount"),b=document.getElementById("mpGal");if(!img||!b)return;function s(n){i=(n+G.length)%G.length;img.src=G[i];c.textContent=(i+1)+" / "+G.length;}b.querySelector(".mp-prev").onclick=function(){s(i-1);};b.querySelector(".mp-next").onclick=function(){s(i+1);};var x=null;b.addEventListener("touchstart",function(e){x=e.touches[0].clientX;},{passive:true});b.addEventListener("touchend",function(e){if(x==null)return;var d=e.changedTouches[0].clientX-x;if(Math.abs(d)>40)s(d<0?i+1:i-1);x=null;},{passive:true});})();</script>
 </body>
 </html>
