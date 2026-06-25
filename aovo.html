@@ -483,8 +483,38 @@ window.CART_EXTRA = [
   { id: 'aovo-promax', brand: 'AOVO', name: 'Pro Max', price: 40200, img: 'img/aovo/pro-max.png', stock: 'in', warranty: false }
 ];
 </script>
-<script data-cfasync="false" src="data/catalog.js?v=240626h"></script>
+<script data-cfasync="false" src="data/catalog.js?v=250626b"></script>
 <script data-cfasync="false" src="js/cart.js?v=240626h"></script>
 <script data-cfasync="false" src="js/order.js?v=240626h"></script>
+<script data-cfasync="false">
+/* Галерея фото на статичных карточках AOVO: берём gallery из CATALOG по id, листаем сменой src */
+(function () {
+  var CAT = (typeof CATALOG !== 'undefined') ? CATALOG : (window.CATALOG || []);
+  function galOf(id) { var c = CAT.find(function (x) { return x.id === id; }); return (c && c.gallery && c.gallery.length > 1) ? c.gallery : null; }
+  function mkArr(txt, side) {
+    var b = document.createElement('button'); b.textContent = txt; b.setAttribute('aria-label', side === 'left' ? 'Предыдущее фото' : 'Следующее фото');
+    b.style.cssText = 'position:absolute;top:50%;transform:translateY(-50%);' + side + ':8px;z-index:3;width:34px;height:34px;border-radius:50%;border:1px solid rgba(0,0,0,.12);background:rgba(255,255,255,.9);color:#0e0e14;font:700 20px/1 Inter,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center';
+    return b;
+  }
+  document.querySelectorAll('.amodel').forEach(function (card) {
+    var btn = card.querySelector('[data-addcart]'); if (!btn) return;
+    var g = galOf(btn.getAttribute('data-addcart')); if (!g) return;
+    var box = card.querySelector('.amodel-img'), img = box && box.querySelector('img'); if (!img) return;
+    box.style.position = 'relative';
+    var i = 0;
+    var cnt = document.createElement('span');
+    cnt.style.cssText = 'position:absolute;bottom:8px;right:8px;z-index:3;background:rgba(0,0,0,.6);color:#fff;font:600 11px Inter,sans-serif;padding:2px 8px;border-radius:100px';
+    cnt.textContent = '1/' + g.length;
+    function show(n) { i = (n + g.length) % g.length; img.src = g[i]; cnt.textContent = (i + 1) + '/' + g.length; }
+    var prev = mkArr('‹', 'left'), next = mkArr('›', 'right');
+    prev.onclick = function (e) { e.stopPropagation(); show(i - 1); };
+    next.onclick = function (e) { e.stopPropagation(); show(i + 1); };
+    box.appendChild(prev); box.appendChild(next); box.appendChild(cnt);
+    var x0 = null;
+    box.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', function (e) { if (x0 == null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(dx < 0 ? i + 1 : i - 1); x0 = null; }, { passive: true });
+  });
+})();
+</script>
 </body>
 </html>
