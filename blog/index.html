@@ -15,10 +15,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css?v=240626g">
+<link rel="stylesheet" href="../css/style.css?v=250626e">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "Блог NEORIDE", "url": "https://neoride.ru/blog/", "description": "Статьи об электросамокатах: выбор, права, запас хода, уход за батареей."}</script>
 <script data-cfasync="false">document.documentElement.classList.add('js')</script>
-<script data-cfasync="false" src="../js/metrika.js?v=240626g"></script>
+<script data-cfasync="false" src="../js/metrika.js?v=250626e"></script>
 <style>
 .bl{max-width:820px;margin:0 auto;padding:24px 18px 80px}
 .bl-crumb{font:13px/1.4 'Space Mono',monospace;color:#8a8aa0;margin:8px 0 18px}
@@ -41,16 +41,21 @@
 .bl-card p{font:14px/1.55 Inter,sans-serif;color:#9a9bb0;margin:0}
 </style>
 </head>
-<body>
+<body data-nav="blog">
 <header class="topbar">
   <div class="container topbar-in">
     <a class="logo" href="/">NEO<b>RIDE</b></a>
     <nav class="nav">
-      <a href="/#catalog">Каталог</a>
-      <a href="/aovo.html">AOVO</a>
-      <a href="/blog/">Блог</a>
-      <a href="/#contacts">Контакты</a>
-      <a class="nav-opt" href="/opt.html">Оптовикам →</a>
+      <a href="/kugoo.html" class="nav-brand" data-nav="kugoo">Kugoo</a>
+      <a href="/aovo.html" class="nav-brand" data-nav="aovo">AOVO</a>
+      <a href="/#why">Почему мы</a>
+      <a href="/#reviewsSec" class="nav-mob">Отзывы</a>
+      <a href="/#faq">Вопросы</a>
+      <a href="/blog/" data-nav="blog">Блог</a>
+      <a href="/contacts.html" data-nav="contacts">Контакты</a>
+      <a href="tel:+79104028858" class="nav-phone" style="color:#fff;font-weight:700;white-space:nowrap">📞<span class="np-num"> +7 910 402-88-58</span></a>
+      <a class="nav-cart" id="navCart" href="/#catalog" aria-label="Корзина">🛒<b class="cart-cnt" id="cartCnt" hidden>0</b></a>
+      <a class="nav-opt" href="/opt.html" data-nav="opt">Оптовикам →</a>
     </nav>
   </div>
 </header>
@@ -78,7 +83,8 @@
   <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
   <span>Telegram</span>
 </a>
-<script data-cfasync="false" src="../js/fx.js?v=240626g"></script>
-<script data-cfasync="false" src="../js/chat.js?v=240626g"></script>
+<script data-cfasync="false" src="../js/fx.js?v=250626e"></script>
+<script data-cfasync="false" src="../js/chat.js?v=250626e"></script>
+<script data-cfasync="false" src="../js/nav-active.js?v=250626e"></script>
 </body>
 </html>

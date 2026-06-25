@@ -819,6 +819,11 @@ details p{padding:0 22px 18px;color:var(--mut)}
 
 /* брендовые пилюли в навигации — видимы на всех страницах, в т.ч. мобайл (было только инлайн на index/aovo) */
 .nav .nav-brand.active{color:var(--cyan)}
+/* единая подсветка активной страницы в шапке (ставит nav-active.js) */
+.nav a.active:not(.nav-opt):not(.nav-brand){color:var(--cyan)}
+.nav a.active:not(.nav-opt)::after{width:100%}
+.nav .nav-brand.active{border-color:var(--cyan);color:var(--cyan)}
+.nav .nav-opt.active{background:var(--grad);color:#06130a;border-color:transparent}
 .nav-opt-active{background:var(--grad)!important;color:#06130a!important;border-color:transparent!important}
 .nav-opt-active:hover{box-shadow:none!important}
 @media(max-width:760px){

@@ -127,7 +127,7 @@
     document.getElementById('cartClear').onclick = close;  // «продолжить покупки» = закрыть корзину (товары остаются; убрать позицию — крестик ✕)
   }
 
-  function open() { renderBody(); if (modal) modal.hidden = false; }
+  function open(e) { if (e && e.preventDefault) e.preventDefault(); renderBody(); if (modal) modal.hidden = false; }
   function close() { if (modal) modal.hidden = true; }
 
   /* ---- инициализация ---- */

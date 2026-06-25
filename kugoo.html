@@ -42,17 +42,17 @@
   <div class="container topbar-in">
     <a class="logo" href="index.html">NEO<b>RIDE</b></a>
     <nav class="nav">
-      <a href="kugoo.html" class="nav-brand active">Kugoo</a>
-      <a href="aovo.html" class="nav-brand">AOVO</a>
-      <a href="#why">Почему мы</a>
+      <a href="/kugoo.html" class="nav-brand" data-nav="kugoo">Kugoo</a>
+      <a href="/aovo.html" class="nav-brand" data-nav="aovo">AOVO</a>
+      <a href="/#why">Почему мы</a>
       <a href="/#reviewsSec" class="nav-mob">Отзывы</a>
-      <a href="#faq">Вопросы</a>
-      <a href="/blog/">Блог</a>
-      <a href="/contacts.html">Контакты</a>
+      <a href="/#faq">Вопросы</a>
+      <a href="/blog/" data-nav="blog">Блог</a>
+      <a href="/contacts.html" data-nav="contacts">Контакты</a>
       <a href="tel:+79104028858" class="nav-phone" style="color:#fff;font-weight:700;white-space:nowrap">📞<span class="np-num"> +7 910 402-88-58</span></a>
       <button class="btn btn-ghost" id="topCompareBtn" hidden style="padding:9px 16px">⚖ <b id="topCompareCnt">0</b></button>
       <button class="nav-cart" id="navCart" type="button" aria-label="Корзина">🛒<b class="cart-cnt" id="cartCnt" hidden>0</b></button>
-      <a class="nav-opt" href="opt.html">Оптовикам →</a>
+      <a class="nav-opt" href="/opt.html" data-nav="opt">Оптовикам →</a>
     </nav>
   </div>
 </header>
@@ -479,7 +479,7 @@
 <script data-cfasync="false" src="data/catalog.js?v=250626b"></script>
 <script>window.BRAND_LOCK='Kugoo'</script>
 <script data-cfasync="false" src="js/app.js?v=250626c"></script>
-<script data-cfasync="false" src="js/cart.js?v=240626h"></script>
+<script data-cfasync="false" src="js/cart.js?v=250626e"></script>
 <script data-cfasync="false" src="js/quiz.js?v=240626h"></script>
 <script data-cfasync="false">
 /* На мобиле прячем «Подбор», «Серии» и «Фильтры» за тап-кнопки — короче главная, акцент на товар */
@@ -502,5 +502,6 @@
 </script>
 <script data-cfasync="false" src="js/fx.js?v=240626h"></script>
 <script data-cfasync="false" src="js/chat.js?v=240626h"></script>
+<script data-cfasync="false" src="/js/nav-active.js?v=250626e"></script>
 </body>
 </html>
