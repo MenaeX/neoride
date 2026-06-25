@@ -769,7 +769,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .card-img .cg-slide.on{display:block}
 .card-img .cg-arr{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:34px;height:34px;border-radius:50%;
   border:1px solid rgba(0,0,0,.12);background:rgba(255,255,255,.85);color:#0e0e14;font:700 20px/1 Inter;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;opacity:0;transition:.18s}
+  display:flex;align-items:center;justify-content:center;opacity:.6;transition:.18s}
 .card-img:hover .cg-arr{opacity:1}
 .card-img .cg-prev{left:8px}.card-img .cg-next{right:8px}
 .card-img .cg-count{position:absolute;bottom:8px;right:8px;z-index:4;background:rgba(0,0,0,.6);color:#fff;
