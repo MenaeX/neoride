@@ -533,6 +533,17 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .bento{grid-template-columns:1fr}
   .bento-media,.strip-item{grid-column:span 1}
 }
+/* мобайл-шапка: не даём ряду переполняться и прятать корзину за край */
+@media (max-width:760px){
+  .topbar-in{gap:12px}
+  .nav{gap:8px;margin-left:auto;flex-wrap:nowrap;align-items:center}
+  .nav .nav-phone .np-num{display:none}   /* телефон — только иконка 📞 */
+  .nav .nav-opt{display:none}              /* «Оптовикам» — в футере и мегаменю */
+  .nav-cart{flex:none;order:99}            /* корзина всегда крайняя справа и не сжимается */
+}
+@media (max-width:560px){
+  .nav a.nav-brand{display:none!important}  /* бренд-пилюли — только планшет, на телефоне прячем ради корзины */
+}
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   [data-rev],.card.fx{opacity:1;transform:none}
