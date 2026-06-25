@@ -393,7 +393,8 @@ const CATALOG = [
   "opt": 59400,
   "stock": "opt",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -503,6 +504,49 @@ const CATALOG = [
    "box": "114×17×49 см",
    "volt": 60,
    "brakes": "гидравличкский"
+  }
+ },
+ {
+  "id": "c1-plus",
+  "name": "C1+ (корзина)",
+  "brand": "Kugoo",
+  "cat": "скутер",
+  "price": 43900,
+  "mrc": 40900,
+  "opt": 33600,
+  "stock": "opt",
+  "src": [
+   "k2025"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-c1-с-корзинкой.jpg",
+  "gallery": [
+   "img/kugoo-kirin-c1-с-корзинкой.jpg",
+   "img/gallery/c1-plus/1.jpg",
+   "img/gallery/c1-plus/2.jpg",
+   "img/gallery/c1-plus/3.jpg",
+   "img/gallery/c1-plus/4.jpg",
+   "img/gallery/c1-plus/5.jpg"
+  ],
+  "desc": "Kugoo C1+ – стильный помощник для города с корзиной для вещей. Мощный 500-ваттный мотор разгонит вас до 35 км/ч, а аккумулятора хватит на 40 км пути. Компактный и лёгкий – всего 25 кг, удобно носить и парковать.\n\nДисковые тормоза обеспечивают уверенную остановку, а широкие 12-дюймовые колёса справляются с городским асфальтом. Скутер выдерживает до 120 кг и идеален для поездок по районам и окрестностям.",
+  "specs": {
+   "power": 500,
+   "battery_ah": 11.0,
+   "volt": 48,
+   "speed": 35,
+   "load": 120,
+   "weight": 25.0,
+   "wheel": 12.0,
+   "charge": 35.0,
+   "gross": 26.8,
+   "box": "117×25×62 см",
+   "range": 40.0,
+   "brakes": "Дисковый",
+   "drive": "задний привод",
+   "seat": true
   }
  },
  {
@@ -896,10 +940,10 @@ const CATALOG = [
   "cat": "трицикл",
   "price": 135900,
   "mrc": 135900,
-  "opt": 82500,
+  "opt": 110600,
   "stock": "in",
   "src": [
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
