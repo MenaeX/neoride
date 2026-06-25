@@ -2959,7 +2959,10 @@ const CATALOG = [
   "warranty": false,
   "img": "img/aovo-m365-pro.jpg",
   "gallery": [
-   "img/aovo-m365-pro.jpg"
+   "img/aovo-m365-pro.jpg",
+   "img/aovo/aovo-m365pro/1.jpg",
+   "img/aovo/aovo-m365pro/2.jpg",
+   "img/aovo/aovo-m365pro/3.jpg"
   ],
   "desc": "Электросамокат AOVO M365 Pro с заводской влагозащитой IP65 — не боится дождя и луж. Управление со смартфона: противоугон, круиз-контроль, настройка. Склад в Москве.",
   "specs": {
@@ -2992,7 +2995,9 @@ const CATALOG = [
   "gallery": [
    "img/aovo/m365-pro-lux.png",
    "img/aovo/m365-pro-lux/1.jpg",
-   "img/aovo/m365-pro-lux/2.jpg"
+   "img/aovo/m365-pro-lux/2.jpg",
+   "img/aovo/m365-pro-lux/3.jpg",
+   "img/aovo/m365-pro-lux/4.jpg"
   ],
   "desc": "Электросамокат AOVO M365 Lux с влагозащитой IP65 и управлением со смартфона. Мотор 350 Вт, запас хода до 35 км. Склад в Москве.",
   "specs": {
