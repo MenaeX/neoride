@@ -3001,8 +3001,6 @@ const CATALOG = [
   "gallery": [
    "img/aovo/m365-pro-lux.png",
    "img/aovo/m365-pro-lux/1.jpg",
-   "img/aovo/m365-pro-lux/2.jpg",
-   "img/aovo/m365-pro-lux/3.jpg",
    "img/aovo/m365-pro-lux/4.jpg",
    "img/aovo/m365-pro-lux/5.jpg"
   ],
@@ -3035,7 +3033,6 @@ const CATALOG = [
   "img": "img/aovo/lux-pro.png",
   "gallery": [
    "img/aovo/lux-pro.png",
-   "img/aovo/lux-pro/1.jpg",
    "img/aovo/lux-pro/2.jpg",
    "img/aovo/lux-pro/3.jpg"
   ],
