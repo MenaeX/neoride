@@ -17,11 +17,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css?v=250626c">
+<link rel="stylesheet" href="../css/style.css?v=250626d">
 <script type="application/ld+json">{"@context": "https://schema.org/", "@type": "Product", "name": "Kugoo Kirin C2", "alternateName": ["скутер Kugoo Kirin C2", "скутер Kirin C2", "Кугу Kirin C2", "скутер Кугу Kirin C2", "Куго Kirin C2", "скутер Куго Kirin C2"], "image": ["https://neoride.ru/img/kugoo-kirin-с2-1000w-48v-15ah.jpg"], "description": "Kugoo Kirin C2 — это компактный электроскутер, созданный для быстрых и комфортных поездок по городу. Мощный мотор в 1000 Вт разгонит вас до 50 км/ч, а аккумулятора на 48 В хватит примерно на 50 км пути. Легкий корпус весом всего 25 кг удобно носить и парковать где угодно. Просторная дека выдержит нагрузку до 120 кг, большие 10-дюймовые колёса обеспечивают уверенное сцепление с дорогой. На скутер распространяется гарантия в течение 12 месяцев.", "brand": {"@type": "Brand", "name": "Kugoo"}, "category": "Электроскутеры", "offers": {"@type": "Offer", "url": "https://neoride.ru/model/c2.html", "priceCurrency": "RUB", "price": "75900", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "NEORIDE"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://neoride.ru/"}, {"@type": "ListItem", "position": 2, "name": "Каталог", "item": "https://neoride.ru/#catalog"}, {"@type": "ListItem", "position": 3, "name": "Kugoo Kirin C2", "item": "https://neoride.ru/model/c2.html"}]}</script>
 <script data-cfasync="false">document.documentElement.classList.add('js')</script>
-<script data-cfasync="false" src="../js/metrika.js?v=250626c"></script>
+<script data-cfasync="false" src="../js/metrika.js?v=250626d"></script>
 <style>
 .mp{max-width:1100px;margin:0 auto;padding:24px 18px 80px}
 .mp-crumb{font:13px/1.4 'Space Mono',monospace;color:#8a8aa0;margin:8px 0 18px}
@@ -61,6 +61,16 @@
   .mp-sticky .s-call{flex:none;width:46px;height:46px;display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid rgba(255,255,255,.2);color:#fff;font-size:20px;text-decoration:none}
   .mp-sticky .s-order{flex:none;height:46px;padding:0 16px;display:flex;align-items:center;border-radius:12px;background:var(--cyan,#2ee6ff);color:#06121a;font:700 15px Inter,sans-serif;text-decoration:none}
   .channel-fab,.max-fab,.tg-fab{display:none!important}}
+.mp-callback{margin:16px 0 0}
+.mp-cb-toggle{font-weight:600}
+.mp-cb-form{display:flex;flex-direction:column;gap:9px;margin-top:12px;max-width:380px;position:relative}
+.mp-cb-form input[type=text],.mp-cb-form input[type=tel]{padding:11px 13px;border-radius:10px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:#fff;font:15px Inter,sans-serif}
+.mp-cb-form input::placeholder{color:#7a7a90}
+.mp-cb-consent{font:12px Inter,sans-serif;color:#9a9ab0;display:flex;gap:8px;align-items:flex-start;line-height:1.4}
+.mp-cb-consent a{color:var(--cyan,#2ee6ff)}
+.mp-cb-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.mp-cb-status{font:13px Inter,sans-serif;margin:2px 0 0}
+.mp-cb-status.ok{color:#7ee787}.mp-cb-status.err{color:#ff8585}
 </style>
 </head>
 <body>
@@ -92,6 +102,17 @@
         <a class="btn" href="#" data-max>MAX</a>
       </div>
       <div class="mp-trust"><span>✓ Гарантия 12 мес</span><span>✓ Проверка перед отправкой</span><span>✓ Доставка по РФ</span></div>
+      <div class="mp-callback">
+        <button type="button" class="btn mp-cb-toggle" id="cbToggle">📲 Перезвоните мне</button>
+        <form class="mp-cb-form" id="cbForm" hidden>
+          <input type="text" name="website" class="mp-cb-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="text" id="cbName" placeholder="Имя (необязательно)" autocomplete="name">
+          <input type="tel" id="cbContact" placeholder="Телефон или Telegram *" autocomplete="tel" required>
+          <label class="mp-cb-consent"><input type="checkbox" id="cbConsent" required><span>Согласен с <a href="/privacy.html" target="_blank" rel="noopener">Политикой</a> и <a href="/consent.html" target="_blank" rel="noopener">Согласием на обработку ПДн</a></span></label>
+          <button type="submit" class="btn btn-accent" id="cbSubmit">Жду звонка</button>
+          <p class="mp-cb-status" id="cbStatus" hidden></p>
+        </form>
+      </div>
       <p class="mp-warr">🛡 12 месяцев официальной гарантии.</p>
       <table class="mp-specs">
         <caption style="text-align:left;color:#8a8aa0;font:13px 'Space Mono',monospace;padding:0 0 8px">ХАРАКТЕРИСТИКИ</caption>
@@ -139,8 +160,40 @@
   <a class="s-call" href="tel:+79104028858" aria-label="Позвонить">📞</a>
   <a class="s-order" href="https://t.me/neoride_shop_bot?start=m_c2" target="_blank" rel="noopener">Заказать</a>
 </div>
-<script data-cfasync="false" src="../js/fx.js?v=250626c"></script>
-<script data-cfasync="false" src="../js/chat.js?v=250626c"></script>
+<script data-cfasync="false">
+(function(){
+  var LEAD_API='https://neoride-bot.amenshikov007.workers.dev/api/lead';
+  var MODEL="Kugoo Kirin C2", MODEL_ID="c2";
+  var t=document.getElementById('cbToggle'), f=document.getElementById('cbForm');
+  if(!t||!f) return;
+  t.addEventListener('click',function(){f.hidden=!f.hidden; if(!f.hidden) document.getElementById('cbContact').focus();});
+  f.addEventListener('submit',async function(e){
+    e.preventDefault();
+    var st=document.getElementById('cbStatus'), btn=document.getElementById('cbSubmit');
+    var contact=document.getElementById('cbContact').value.trim();
+    if(!contact) return;
+    if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
+    btn.disabled=true;btn.textContent='Отправляем…';
+    var payload={name:document.getElementById('cbName').value,contact:contact,consent:true,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true};
+    try{
+      var r=await fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});
+      var j=await r.json().catch(function(){return {};});
+      if(r.ok&&j.ok){
+        if(window.ymGoal) window.ymGoal('lead');
+        f.hidden=true; t.style.display='none';
+        var ok=document.createElement('p');ok.className='mp-cb-status ok';
+        ok.textContent='✅ Заявка принята! Перезвоним в течение 15 минут в рабочее время (09:00–21:00 МСК).';
+        t.parentNode.appendChild(ok);
+      } else throw 0;
+    }catch(_){
+      btn.disabled=false;btn.textContent='Жду звонка';
+      st.textContent='⚠ Не удалось отправить. Напишите нам в Telegram кнопкой выше.';st.className='mp-cb-status err';st.hidden=false;
+    }
+  });
+})();
+</script>
+<script data-cfasync="false" src="../js/fx.js?v=250626d"></script>
+<script data-cfasync="false" src="../js/chat.js?v=250626d"></script>
 
 </body>
 </html>
