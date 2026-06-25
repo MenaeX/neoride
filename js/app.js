@@ -644,6 +644,9 @@ function openModel(id) {
       `<button class="mm-nav mm-next" id="mmNext" aria-label="Вперёд">›</button>` +
       `<div class="mm-counter" id="mmCounter">1 / ${gal.length}</div>` : '') + `</div>` : '';
   const warr = c.warranty ? '<div class="warr">✓ Гарантия 12 мес · документы</div>' : '';
+  const trust = '<div class="mm-trust" style="display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0 2px;font:13px Inter,sans-serif;color:#aeb4c4">' +
+    (c.warranty ? '<span>✓ Гарантия 12 мес</span>' : '') +
+    '<span>✓ Проверка перед отправкой</span><span>✓ Доставка по РФ</span></div>';
   // Гарантию и «товарный чек / гарантийный талон» показываем ТОЛЬКО для гарантийных моделей (склад).
   // Для остальных — без гарантии производителя и без гарантийного талона (учтено в цене).
   const kitRows = c.warranty
@@ -654,12 +657,13 @@ function openModel(id) {
   const desc = cleanDesc(c.desc);
   document.getElementById('mmBody').innerHTML =
     galHTML +
-    `<div class="mm-price">${rub(c.price)}<small>розница</small></div>` + warr +
+    `<div class="mm-price">${rub(c.price)}<small>розница</small></div>` + warr + trust +
     `<table class="mm-specs">${rows}${kitRows}</table>` +
     (desc ? `<p class="mm-desc">${desc}</p>` : '') +
     `<div class="mm-actions">
        <button class="btn btn-accent" data-addcart="${c.id}">🛒 В корзину</button>
        <button class="btn" id="mmOrder">Купить в один клик</button>
+       <button class="btn" id="mmCallback">📲 Перезвоните мне</button>
        <a class="btn lead-tg" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener">Написать в Telegram</a>
      </div>` +
     `<div class="mm-share" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px;font-size:13px">
@@ -689,6 +693,11 @@ function openModel(id) {
   document.getElementById('mmOrder').onclick = () => {
     modelModal.hidden = true;
     openLead({ order: c.id, name: (c.brand || 'Kugoo') + ' ' + c.name, stock: c.stock, warr: c.warranty ? '1' : '0', src: (c.src || []).join(',') });
+  };
+  document.getElementById('mmCallback').onclick = () => {
+    modelModal.hidden = true;
+    openLead({ order: c.id, name: (c.brand || 'Kugoo') + ' ' + c.name, stock: c.stock, warr: c.warranty ? '1' : '0', src: (c.src || []).join(',') });
+    setLeadChrome({ title: 'Перезвоните мне', intro: 'Оставьте телефон — перезвоним в течение 15 минут в рабочее время (09:00–21:00 МСК).', submit: 'Жду звонка' });
   };
   modelModal.hidden = false;
 }
