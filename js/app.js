@@ -661,7 +661,18 @@ function openModel(id) {
        <button class="btn btn-accent" data-addcart="${c.id}">🛒 В корзину</button>
        <button class="btn" id="mmOrder">Купить в один клик</button>
        <a class="btn lead-tg" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener">Написать в Telegram</a>
+     </div>` +
+    `<div class="mm-share" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px;font-size:13px">
+       <a href="/model/${c.id}.html" target="_blank" rel="noopener" style="color:var(--cyan);text-decoration:none">🔗 Открыть страницу товара</a>
+       <button type="button" id="mmCopyLink" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#cfd0e0;border-radius:8px;padding:5px 11px;cursor:pointer;font-size:12px">Копировать ссылку</button>
      </div>`;
+  const _copyBtn = document.getElementById('mmCopyLink');
+  if (_copyBtn) _copyBtn.onclick = () => {
+    const u = 'https://neoride.ru/model/' + c.id + '.html';
+    const done = () => { _copyBtn.textContent = 'Скопировано ✓'; setTimeout(() => { _copyBtn.textContent = 'Копировать ссылку'; }, 1500); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(done, () => prompt('Ссылка на товар:', u));
+    else prompt('Ссылка на товар:', u);
+  };
   if (gal.length > 1) {
     let gi = 0;
     const gimg = document.getElementById('mmGalImg');
