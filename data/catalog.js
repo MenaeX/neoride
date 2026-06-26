@@ -479,7 +479,7 @@ const CATALOG = [
   "name": "M4 Pro+ 18Ah",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 61500,
+  "price": 64900,
   "stock": "in",
   "src": [
    "k2025"
