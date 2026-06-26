@@ -29,9 +29,10 @@
     trackLinks: true,
   });
 
-  // Делегированные цели: клик в Telegram и MAX (мессенджер-конверсии)
+  // Делегированные цели: клик по телефону (звонок), Telegram и MAX (мессенджер-конверсии)
   document.addEventListener('click', function (e) {
     if (!e.target.closest) return;
+    if (e.target.closest('a[href^="tel:"]')) { window.ymGoal('phone_click'); return; }
     if (e.target.closest('a[href*="t.me/"]')) { window.ymGoal('tg_click'); return; }
     if (e.target.closest('[data-max]')) { window.ymGoal('max_click'); }
   });
