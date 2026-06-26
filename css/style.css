@@ -537,12 +537,8 @@ details p{padding:0 22px 18px;color:var(--mut)}
 @media (max-width:760px){
   .topbar-in{gap:12px}
   .nav{gap:8px;margin-left:auto;flex-wrap:nowrap;align-items:center}
-  .nav .nav-phone .np-num{display:none}   /* телефон — только иконка 📞 */
   .nav .nav-opt{display:none}              /* «Оптовикам» — в футере и мегаменю */
-  .nav-cart{flex:none;order:99}            /* корзина всегда крайняя справа и не сжимается */
-}
-@media (max-width:560px){
-  .nav a.nav-brand{display:none!important}  /* бренд-пилюли — только планшет, на телефоне прячем ради корзины */
+  .nav-cart{flex:none}                     /* корзину не сжимаем */
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -957,7 +953,10 @@ details p{padding:0 22px 18px;color:var(--mut)}
 
 /* мобайл: ссылка «Отзывы» в шапке видима (остальные текст-ссылки скрыты) */
 @media(max-width:760px){
-  .nav a.nav-mob{display:inline-flex!important;align-items:center;padding:6px 12px;border:1px solid var(--line2);border-radius:99px;color:var(--mut);font-weight:600;font-size:13px}
+  /* мобильная шапка: оставляем логотип · 📞 · 🛒. Бренд-пилюли и Отзывы прячем,
+     чтобы корзина гарантированно влезала (эти правила последние в файле — побеждают). */
+  .nav a.nav-mob{display:none!important}
+  .nav a.nav-brand{display:none!important}
   /* клик-звонок в шапке: компактная 📞-плашка, видима на мобиле (tap-to-call под рекламу) */
   .nav a.nav-phone{display:inline-flex!important;align-items:center;padding:6px 11px;border:1px solid var(--cyan);border-radius:99px;color:var(--cyan)!important;font-size:15px;background:rgba(46,230,255,.08)}
   .nav a.nav-phone .np-num{display:none}
