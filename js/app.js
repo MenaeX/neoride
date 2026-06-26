@@ -218,7 +218,7 @@ function cardHTML(c) {
     : '';
   const on = compare.has(c.id) ? ' on' : '';
   const optNote = c.stock === 'opt' ? '<div class="opt-note">Оптовая позиция (от 10 шт) — наличие уточняйте; без гарантии производителя</div>' : '';
-  const warr = c.warranty ? '<div class="warr">✓ Гарантия 12 мес · документы</div>' : '';
+  const warr = c.warranty ? '<div class="warr">✓ Гарантия 12 мес · документы</div>' : '<div class="warr" style="color:#9a9ab0">Гарантия поставщика — уточняйте у менеджера</div>';
   const hasSale = c.old && c.old > c.price;
   const badges = (hasSale ? `<span class="badge sale">−${fmt(c.old - c.price)} ₽</span>` : '') + (c.new ? '<span class="badge new">🆕 Новинка</span>' : '') + (c.hit ? '<span class="badge hit">🔥 ХИТ</span>' : '') + BADGE[c.stock];
   const u = utpOf(c);
@@ -459,7 +459,7 @@ function setLeadChrome(o) {
   const btn = document.getElementById('leadSubmit');
   const st = document.getElementById('leadStatus');
   if (title) title.textContent = o.title || 'Оставить заявку';
-  if (intro) intro.textContent = o.intro || 'Оставьте контакт — ответим в течение 15 минут в рабочее время (09:00–21:00 МСК).';
+  if (intro) intro.textContent = o.intro || 'Оставьте контакт — ответим в течение 15 минут в рабочее время (09:00–21:00 МСК). Сначала подтвердим наличие и цену, оплата — после, отправка СДЭК с трек-номером.';
   if (tg) { tg.textContent = o.tgText || 'Написать в Telegram'; tg.href = o.tgHref || TG_BOT; }
   if (btn) { btn.disabled = false; btn.textContent = o.submit || 'Отправить заявку'; }
   if (st) st.hidden = true;
@@ -643,7 +643,7 @@ function openModel(id) {
     (gal.length > 1 ? `<button class="mm-nav mm-prev" id="mmPrev" aria-label="Назад">‹</button>` +
       `<button class="mm-nav mm-next" id="mmNext" aria-label="Вперёд">›</button>` +
       `<div class="mm-counter" id="mmCounter">1 / ${gal.length}</div>` : '') + `</div>` : '';
-  const warr = c.warranty ? '<div class="warr">✓ Гарантия 12 мес · документы</div>' : '';
+  const warr = c.warranty ? '<div class="warr">✓ Гарантия 12 мес · документы</div>' : '<div class="warr" style="color:#9a9ab0">Гарантия поставщика — уточняйте у менеджера</div>';
   const trust = '<div class="mm-trust" style="display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0 2px;font:13px Inter,sans-serif;color:#aeb4c4">' +
     (c.warranty ? '<span>✓ Гарантия 12 мес</span>' : '') +
     '<span>✓ Проверка перед отправкой</span><span>✓ Доставка по РФ</span></div>';
@@ -660,6 +660,11 @@ function openModel(id) {
     `<div class="mm-price">${rub(c.price)}<small>розница</small></div>` + warr + trust +
     `<table class="mm-specs">${rows}${kitRows}</table>` +
     (desc ? `<p class="mm-desc">${desc}</p>` : '') +
+    `<div class="mm-howto" style="margin:14px 0 10px;padding:12px 14px;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.03);font:13px/1.5 Inter,sans-serif;color:#cfd0e0">
+       <b style="color:#fff">Как купить — 3 шага:</b>
+       <div style="margin-top:6px">1. Оставьте заявку (телефон/Telegram) → 2. Подтвердим наличие и итоговую цену → 3. Оплата, отправляем СДЭК с трек-номером. Чек по запросу.</div>
+       <div style="margin-top:6px;color:#9a9ab0">🏢 Склад в Москве · 📦 проверка перед отправкой · 🚚 доставка по РФ</div>
+     </div>` +
     `<div class="mm-actions">
        <button class="btn btn-accent" data-addcart="${c.id}">🛒 В корзину</button>
        <button class="btn" id="mmOrder">Купить в один клик</button>
