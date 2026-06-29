@@ -211,51 +211,6 @@ const CATALOG = [
   }
  },
  {
-  "id": "18ah-m4-plus-pro",
-  "name": "M4 Pro+ 18Ah",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 64900,
-  "mrc": 49900,
-  "opt": 40700,
-  "stock": "in",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 1100,
-  "hit": false,
-  "new": false,
-  "warranty": true,
-  "img": "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
-  "gallery": [
-   "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
-   "img/gallery/18ah-m4-plus-pro/1.jpg",
-   "img/gallery/18ah-m4-plus-pro/2.jpg",
-   "img/gallery/18ah-m4-plus-pro/3.jpg",
-   "img/gallery/18ah-m4-plus-pro/4.jpg",
-   "img/gallery/18ah-m4-plus-pro/5.jpg",
-   "img/gallery/18ah-m4-plus-pro/6.jpg"
-  ],
-  "desc": "Kugoo M4 Pro+ — мощный самокат для уверенной езды по городу. 800-ваттный мотор разгонит вас до 45 км/ч, а батареи на 18 Ач хватит на 45 км пути. Крепкие 10-дюймовые колёса справятся с любым покрытием, дисковый тормоз обеспечит безопасность.\n\nВозьмёт пассажира весом до 140 кг и прослужит долго благодаря годовой гарантии. За пять часов зарядки получишь полный запас хода. Надёжный выбор для ежедневных поездок.",
-  "specs": {
-   "power": 800,
-   "battery_ah": 18.0,
-   "speed": 45,
-   "range": 45,
-   "load": 140,
-   "wheel": 10.0,
-   "charge": 5.0,
-   "gross": 31.16,
-   "box": "120×26×48 см",
-   "weight": 31.1,
-   "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний привод",
-   "seat": true
-  }
- },
- {
   "id": "g4-max",
   "name": "G4 Max",
   "brand": "Kugoo",
@@ -1562,39 +1517,6 @@ const CATALOG = [
   }
  },
  {
-  "id": "wish01",
-  "name": "Wish 01",
-  "brand": "Kugoo",
-  "cat": "питбайк",
-  "price": 99900,
-  "mrc": 99900,
-  "opt": 84700,
-  "stock": "opt",
-  "src": [
-   "koptom"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": false,
-  "warranty": false,
-  "img": "img/электропитбайк-kugoo-wish-01-48v-21ah-1500w.png",
-  "gallery": [],
-  "desc": "Kugoo Wish 01 — питбайк для тех, кто хочет ездить быстро и далеко. Мощный мотор в 1500 Вт разгонит тебя до 50 км/ч, а батарея на 21 ампер-часа обеспечит запас хода до 65 км. Компактные 14-дюймовые колёса делают его манёвренным и весёлым в управлении.\n\nВесит всего 48 кг и выдерживает нагрузку до 120 кг. Зарядишься за 7 часов — и готов к новым приключениям. На байк распространяется гарантия на 12 месяцев, так что можешь ездить без забот.",
-  "specs": {
-   "power": 1500,
-   "battery_ah": 21.0,
-   "volt": 48,
-   "speed": 50,
-   "range": 65,
-   "load": 120,
-   "weight": 48.0,
-   "wheel": 14.0,
-   "charge": 7.0,
-   "gross": 55.0,
-   "box": "127.6×27.6×74.5 см"
-  }
- },
- {
   "id": "se-wish01",
   "name": "Wish 01 SE",
   "brand": "Kugoo",
@@ -1761,48 +1683,6 @@ const CATALOG = [
    "battery_ah": 36.0,
    "volt": 60,
    "brakes": "гидравлический"
-  }
- },
- {
-  "id": "pro-wish04",
-  "name": "Wish 04 Pro",
-  "brand": "Kugoo",
-  "cat": "питбайк",
-  "price": 209900,
-  "mrc": 209900,
-  "opt": 176000,
-  "stock": "in",
-  "src": [
-   "koptom"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": false,
-  "warranty": true,
-  "img": "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
-  "gallery": [
-   "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
-   "img/gallery/pro-wish04/1.jpg",
-   "img/gallery/pro-wish04/2.jpg",
-   "img/gallery/pro-wish04/3.jpg",
-   "img/gallery/pro-wish04/4.jpg",
-   "img/gallery/pro-wish04/5.jpg",
-   "img/gallery/pro-wish04/6.jpg"
-  ],
-  "desc": "Мощный питбайк для любителей активного отдыха. 500-ваттный мотор разгоняет Kugoo Wish 04 Pro до 55 км/ч, а батарея на 72 В обеспечивает запас хода до 55 км на одной зарядке. Справится с нагрузкой до 150 кг и легко преодолеет любые препятствия.\n\nНадёжные гидравлические 4-поршневые тормоза дарят уверенность в управлении, а 16-дюймовые колёса обещают комфортную езду. Зарядится за 7 часов, и вы готовы к новым приключениям. На покупку распространяется гарантия 12 месяцев.",
-  "specs": {
-   "power": 500,
-   "battery_ah": 21.0,
-   "speed": 55,
-   "range": 55,
-   "load": 150,
-   "wheel": 16.0,
-   "charge": 7.0,
-   "gross": 65.0,
-   "box": "148×31×72 см",
-   "weight": 97.3,
-   "volt": 72,
-   "brakes": "гидравлический-4-поршневые"
   }
  },
  {
