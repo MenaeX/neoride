@@ -533,12 +533,13 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .bento{grid-template-columns:1fr}
   .bento-media,.strip-item{grid-column:span 1}
 }
-/* мобайл-шапка: не даём ряду переполняться и прятать корзину за край */
+/* мобайл-шапка: лого — первая строка, кнопки — вторым рядом под ним с переносом (всё влезает) */
 @media (max-width:760px){
-  .topbar-in{gap:12px}
-  .nav{gap:8px;margin-left:auto;flex-wrap:nowrap;align-items:center}
-  .nav .nav-opt{display:inline-flex;align-items:center;padding:7px 12px;font-size:13px;flex:none}  /* «Оптовикам» виден на мобиле (ряд = лого·📞·🛒·Опт, бренд-пилюли скрыты) */
-  .nav-cart{flex:none}                     /* корзину не сжимаем */
+  .topbar-in{gap:8px 10px;height:auto;flex-wrap:wrap;padding:10px 0;align-items:center}
+  .logo{flex:0 0 100%}                                  /* лого занимает всю первую строку */
+  .nav{gap:8px;margin-left:0;width:100%;flex-wrap:wrap;justify-content:flex-start;align-items:center}
+  .nav .nav-opt{display:inline-flex;align-items:center;padding:7px 12px;font-size:13px;flex:none}  /* «Оптовикам» виден во втором ряду */
+  .nav-cart{flex:none}                                  /* корзину не сжимаем */
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
