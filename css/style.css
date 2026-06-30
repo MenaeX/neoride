@@ -537,7 +537,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
 @media (max-width:760px){
   .topbar-in{gap:12px}
   .nav{gap:8px;margin-left:auto;flex-wrap:nowrap;align-items:center}
-  .nav .nav-opt{display:none}              /* «Оптовикам» — в футере и мегаменю */
+  .nav .nav-opt{display:inline-flex;align-items:center;padding:7px 12px;font-size:13px;flex:none}  /* «Оптовикам» виден на мобиле (ряд = лого·📞·🛒·Опт, бренд-пилюли скрыты) */
   .nav-cart{flex:none}                     /* корзину не сжимаем */
 }
 @media (prefers-reduced-motion:reduce){
