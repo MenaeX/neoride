@@ -501,6 +501,12 @@ function openLeadCart() {
   leadModal.hidden = false;
 }
 window.neorideOpenLeadCart = openLeadCart;
+window.neorideOpenLead = openLead;
+// Универсальный триггер заявки: любой элемент с data-openlead открывает лид-форму (первый экран, CTA и т.п.)
+document.addEventListener('click', function (e) {
+  const b = e.target.closest && e.target.closest('[data-openlead]');
+  if (b) { e.preventDefault(); openLead({ src: b.getAttribute('data-openlead') || 'cta' }); }
+});
 // «Сообщить о наличии» для моделей вне склада: подписка в Telegram-боте (бот сам напишет,
 // как только модель перейдёт в наличие) либо контакт для ручного уведомления менеджером.
 function openNotify(id) {
@@ -759,3 +765,28 @@ if (LOCK) {
   }
 }
 syncCompareUI();
+
+// === Exit-intent: один раз ловим уходящего посетителя и предлагаем оставить телефон ===
+(function () {
+  if (!leadModal) return;
+  var KEY = 'neoride_exit_v1', shown = false;
+  function already() { try { return localStorage.getItem(KEY); } catch (e) { return 0; } }
+  function show() {
+    if (shown || already() || !leadModal.hidden) return;   // не дублируем: форма уже открыта / уже показывали
+    shown = true;
+    try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
+    openLead({ src: 'exit' });
+    var t = document.getElementById('leadTitle'); if (t) t.textContent = 'Подберём за 5 минут — оставьте контакт';
+    var intro = document.getElementById('leadIntro');
+    if (intro) intro.textContent = 'Уходите? Оставьте телефон или Telegram — подберём модель под вашу задачу и назовём цену с доставкой. Оплата только после подтверждения наличия.';
+    if (window.ymGoal) window.ymGoal('exit_popup');
+  }
+  // десктоп: курсор ушёл за верхнюю кромку окна (намерение закрыть вкладку)
+  document.addEventListener('mouseout', function (e) {
+    if (e.clientY <= 0 && !e.relatedTarget && !e.toElement) show();
+  });
+  // мобайл/планшет: после 30 c вовлечённости, если человек проскроллил вглубь
+  if (window.matchMedia && window.matchMedia('(max-width:760px)').matches) {
+    setTimeout(function () { if (window.scrollY > 600) show(); }, 30000);
+  }
+})();

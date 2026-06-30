@@ -98,6 +98,8 @@ body::after{content:'';position:fixed;z-index:-1;width:820px;height:820px;border
 .hero h1 .neon{color:var(--lime);text-shadow:0 0 8px rgba(184,255,46,.6),0 0 30px rgba(184,255,46,.45),0 0 70px rgba(184,255,46,.3)}
 .hero-sub{color:#aeb9c8;max-width:520px;margin:22px 0 32px;font-size:17px;line-height:1.6}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{margin:16px 0 0;max-width:560px;font:500 13px/1.55 Inter,sans-serif;color:#9aa0b4}
+.hero-note.rw{display:block}
 .hero-cta>i{display:flex;gap:14px;flex-wrap:wrap}
 .hero-stats{margin-top:44px}
 .hero-stats>i{display:flex;gap:38px;flex-wrap:wrap}
