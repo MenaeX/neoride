@@ -907,8 +907,7 @@ const CATALOG = [
   "stock": "opt",
   "src": [
    "drop",
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1744,6 +1743,49 @@ const CATALOG = [
    "battery_ah": 36.0,
    "volt": 60,
    "brakes": "гидравлический",
+   "drive": "задний"
+  }
+ },
+ {
+  "id": "pro-wish04",
+  "name": "Wish 04 Pro",
+  "brand": "Kugoo",
+  "cat": "питбайк",
+  "price": 209900,
+  "mrc": 209900,
+  "opt": 176000,
+  "stock": "in",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": true,
+  "img": "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
+  "gallery": [
+   "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
+   "img/gallery/pro-wish04/1.jpg",
+   "img/gallery/pro-wish04/2.jpg",
+   "img/gallery/pro-wish04/3.jpg",
+   "img/gallery/pro-wish04/4.jpg",
+   "img/gallery/pro-wish04/5.jpg",
+   "img/gallery/pro-wish04/6.jpg"
+  ],
+  "desc": "Мощный питбайк для любителей активного отдыха. 500-ваттный мотор разгоняет Kugoo Wish 04 Pro до 55 км/ч, а батарея на 72 В обеспечивает запас хода до 55 км на одной зарядке. Справится с нагрузкой до 150 кг и легко преодолеет любые препятствия.\n\nНадёжные гидравлические 4-поршневые тормоза дарят уверенность в управлении, а 16-дюймовые колёса обещают комфортную езду. Зарядится за 7 часов, и вы готовы к новым приключениям. На покупку распространяется гарантия 12 месяцев.",
+  "specs": {
+   "power": 5000,
+   "battery_ah": 36.0,
+   "speed": 96,
+   "range": 70,
+   "load": 150,
+   "wheel": 19.0,
+   "charge": 7.0,
+   "gross": 65.0,
+   "box": "148×31×72 см",
+   "weight": 77.0,
+   "volt": 72,
+   "brakes": "гидравлический-4-поршневые",
    "drive": "задний"
   }
  },
