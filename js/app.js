@@ -194,6 +194,7 @@ function driveTxt(d) {
   if (d.includes('перед')) return 'передний привод';
   if (d.includes('задн')) return 'задний привод';
   if (d.includes('центр')) return 'центральный мотор';
+  if (d.includes('цеп')) return 'цепной привод';
   return null;
 }
 
