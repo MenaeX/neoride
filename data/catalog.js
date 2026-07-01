@@ -6,7 +6,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 14900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -14,7 +14,7 @@ const CATALOG = [
   "pop": 200,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-a2-150w-24v-2-6-ah.jpg",
   "gallery": [
    "img/kugoo-kirin-a2-150w-24v-2-6-ah.jpg",
@@ -901,14 +901,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 59900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "koptom"
   ],
   "pop": 635,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/new-kugoo-kirin-f1-pro.png",
   "gallery": [
    "img/new-kugoo-kirin-f1-pro.png",
@@ -2906,14 +2906,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 69900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "drop"
   ],
   "pop": 0,
   "hit": false,
   "new": true,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-f1-pro-max.jpg",
   "gallery": [
    "img/kugoo-f1-pro-max.jpg",

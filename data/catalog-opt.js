@@ -8,7 +8,7 @@ const CATALOG = [
   "price": 14900,
   "mrc": 14900,
   "opt": 12100,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -16,7 +16,7 @@ const CATALOG = [
   "pop": 200,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-a2-150w-24v-2-6-ah.jpg",
   "gallery": [
    "img/kugoo-kirin-a2-150w-24v-2-6-ah.jpg",
@@ -308,14 +308,14 @@ const CATALOG = [
   "price": 59900,
   "mrc": 59900,
   "opt": 44000,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "koptom"
   ],
   "pop": 635,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/new-kugoo-kirin-f1-pro.png",
   "gallery": [
    "img/new-kugoo-kirin-f1-pro.png",
