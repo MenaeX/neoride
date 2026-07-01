@@ -45,50 +45,6 @@ const CATALOG = [
   }
  },
  {
-  "id": "m2-plus",
-  "name": "M2+",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 33900,
-  "mrc": 33900,
-  "opt": 27500,
-  "stock": "opt",
-  "src": [
-   "koptom"
-  ],
-  "pop": 2650,
-  "hit": true,
-  "new": false,
-  "warranty": false,
-  "img": "img/kugoo-kirin-m2-new-2025.jpg",
-  "gallery": [
-   "img/kugoo-kirin-m2-new-2025.jpg",
-   "img/gallery/m2-plus/1.jpg",
-   "img/gallery/m2-plus/2.jpg",
-   "img/gallery/m2-plus/3.jpg",
-   "img/gallery/m2-plus/4.jpg",
-   "img/gallery/m2-plus/5.jpg",
-   "img/gallery/m2-plus/6.jpg"
-  ],
-  "desc": "Kugoo M2+ — идеальный выбор для города и коротких поездок за город. Мощный мотор разгоняет самокат до 40 км/ч, а батареи хватает на 25 км пути. Компактный и лёгкий — всего 18 кг, легко носить с собой или хранить дома.\n\nНадёжный помощник с барабанными тормозами и прочными 8-дюймовыми колёсами. Выдерживает нагрузку до 120 кг, заряжается за 3 часа. Год гарантии — спокойствие и уверенность в покупке.",
-  "specs": {
-   "power": 350,
-   "battery_ah": 8.0,
-   "volt": 36,
-   "speed": 32,
-   "range": 25,
-   "load": 120,
-   "weight": 19.0,
-   "wheel": 8.0,
-   "gross": 22.8,
-   "box": "107×25×43 см",
-   "charge": 3.0,
-   "brakes": "барабанный",
-   "drive": "задний",
-   "seat": true
-  }
- },
- {
   "id": "m2-pro",
   "name": "M2 Pro",
   "brand": "Kugoo",
