@@ -558,16 +558,59 @@ const CATALOG = [
   }
  },
  {
+  "id": "c1-plus",
+  "name": "C1+ (корзина)",
+  "brand": "Kugoo",
+  "cat": "скутер",
+  "price": 43900,
+  "mrc": 40900,
+  "opt": 33600,
+  "stock": "opt",
+  "src": [
+   "k2025"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-c1-с-корзинкой.jpg",
+  "gallery": [
+   "img/kugoo-kirin-c1-с-корзинкой.jpg",
+   "img/gallery/c1-plus/1.jpg",
+   "img/gallery/c1-plus/2.jpg",
+   "img/gallery/c1-plus/3.jpg",
+   "img/gallery/c1-plus/4.jpg",
+   "img/gallery/c1-plus/5.jpg"
+  ],
+  "desc": "Kugoo C1+ – стильный помощник для города с корзиной для вещей. Мощный 500-ваттный мотор разгонит вас до 35 км/ч, а аккумулятора хватит на 40 км пути. Компактный и лёгкий – всего 25 кг, удобно носить и парковать.\n\nДисковые тормоза обеспечивают уверенную остановку, а широкие 12-дюймовые колёса справляются с городским асфальтом. Скутер выдерживает до 120 кг и идеален для поездок по районам и окрестностям.",
+  "specs": {
+   "power": 500,
+   "battery_ah": 11.0,
+   "volt": 48,
+   "speed": 45,
+   "load": 120,
+   "weight": 20.0,
+   "wheel": 13.0,
+   "charge": 35.0,
+   "gross": 26.8,
+   "box": "117×25×62 см",
+   "range": 35,
+   "brakes": "Дисковый",
+   "drive": "задний",
+   "seat": true
+  }
+ },
+ {
   "id": "c1-plus-pro",
   "name": "C1 Pro+",
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 54900,
   "mrc": 54900,
-  "opt": 41800,
+  "opt": 38500,
   "stock": "opt",
   "src": [
-   "k2025"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1895,49 +1938,6 @@ const CATALOG = [
    "load": 150,
    "box": "179×54×87 см",
    "drive": "цепной"
-  }
- },
- {
-  "id": "f1-max-pro",
-  "name": "F1 Pro Max",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 69900,
-  "mrc": 69900,
-  "opt": 58300,
-  "stock": "in",
-  "src": [
-   "koptom"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": true,
-  "warranty": true,
-  "img": "img/kugoo-f1-pro-max.jpg",
-  "gallery": [
-   "img/kugoo-f1-pro-max.jpg",
-   "img/gallery/f1-max-pro/1.jpg",
-   "img/gallery/f1-max-pro/2.jpg",
-   "img/gallery/f1-max-pro/3.jpg",
-   "img/gallery/f1-max-pro/4.jpg",
-   "img/gallery/f1-max-pro/5.jpg",
-   "img/gallery/f1-max-pro/6.jpg"
-  ],
-  "desc": "Kugoo F1 Pro Max — это мощный самокат для тех, кто не боится скорости. Два мотора (1600 Вт) дарят истинное ощущение полета, разгоняя до 55 км/ч. Крепкие дисковые тормоза держат ситуацию под контролем в любой момент.\n\nНа одной зарядке проедешь до 50 км — хватит для работы, учебы и забега по городу. Колеса диаметром 10 дюймов уверенно берут асфальт и неровности. Выдерживает до 120 кг и работает 12 месяцев на гарантии.",
-  "specs": {
-   "power": 1600,
-   "battery_ah": 22.5,
-   "volt": 48,
-   "speed": 56,
-   "range": 50,
-   "load": 120,
-   "wheel": 10.0,
-   "charge": 9.0,
-   "box": "127.5×23×59 см",
-   "brakes": "дисковый",
-   "drive": "полный",
-   "seat": false,
-   "weight": 33.9
   }
  }
 ];
