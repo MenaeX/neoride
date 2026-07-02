@@ -2839,14 +2839,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "квадроцикл",
   "price": 399900,
-  "stock": "wait",
+  "stock": "in",
   "src": [
-   "drop"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/квадроцикл-kugoo-k5-300см.jpg",
   "gallery": [
    "img/квадроцикл-kugoo-k5-300см.jpg",
@@ -2874,14 +2874,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "квадроцикл",
   "price": 699900,
-  "stock": "wait",
+  "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
   "new": true,
-  "warranty": false,
+  "warranty": true,
   "img": "",
   "gallery": [
    "img/gallery/k6/1.jpg",
