@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>AOVO — электросамокаты с влагозащитой IP65 и приложением | NEORIDE</title>
 <meta name="description" content="Электросамокаты AOVO с заводской влагозащитой IP65: не боятся дождя и луж. Управление со смартфона — противоугон, круиз-контроль, настройка. Склад в Москве, доставка по России.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=250630f">
+<link rel="stylesheet" href="css/style.css?v=250701a">
 <script data-cfasync="false">document.documentElement.classList.add('js')</script>
-<script data-cfasync="false" src="js/metrika.js?v=250630f"></script>
+<script data-cfasync="false" src="js/metrika.js?v=250701a"></script>
 <link rel="canonical" href="https://neoride.ru/aovo.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AOVO — электросамокаты с влагозащитой IP65 | NEORIDE">
@@ -156,7 +158,8 @@
     <h1>Дождь? <span class="drop">Не помеха.</span></h1>
     <p class="aovo-hero-sub">Электросамокаты AOVO с заводской влагозащитой <b>IP65</b> — спокойно по лужам и под дождём. А ещё — полное управление со смартфона. Склад в Москве, доставка по России.</p>
     <div class="aovo-cta">
-      <a class="btn btn-accent" href="#models">Выбрать AOVO</a>
+      <button class="btn btn-accent" data-openlead="aovo-hero">📲 Подберём AOVO и назовём цену</button>
+      <a class="btn" href="#models">Выбрать модель</a>
       <a class="btn" href="#ip65">Чем хорош IP65</a>
     </div>
     <div class="aovo-stats">
@@ -349,6 +352,15 @@
   </div>
 </section>
 
+<section class="container" style="padding:26px 18px 40px">
+  <p style="font:13px Inter,sans-serif;color:#9a9bb0">Страницы моделей AOVO:
+    <a href="/model/aovo-m365pro.html" style="color:var(--cyan)">M365 Pro</a> ·
+    <a href="/model/aovo-lux.html" style="color:var(--cyan)">M365 Lux</a> ·
+    <a href="/model/aovo-luxpro.html" style="color:var(--cyan)">Lux Pro 10.5Ah</a> ·
+    <a href="/model/aovo-promax.html" style="color:var(--cyan)">Pro Max</a> ·
+    <a href="/blog/elektrosamokat-dlya-dozhdya.html" style="color:var(--cyan)">про IP65 и дождь</a>
+  </p>
+</section>
 <footer class="footer" id="contacts">
   <div class="container footer-in">
     <div class="logo">NEO<b>RIDE</b></div>
@@ -360,6 +372,7 @@
   </div>
 </footer>
 
+
 <div class="modal" id="aovoModal" hidden>
   <div class="modal-box modal-box-md">
     <div class="modal-head">
@@ -370,8 +383,8 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="js/fx.js?v=240626h"></script>
-<script data-cfasync="false" src="js/chat.js?v=240626h"></script>
+<script data-cfasync="false" src="js/fx.js?v=250701a"></script>
+<script data-cfasync="false" src="js/chat.js?v=250701a"></script>
 <script data-cfasync="false">
 (function(){
   var TG='https://t.me/neoride_shop_bot';
@@ -479,16 +492,11 @@
 </div>
 <script data-cfasync="false">
 /* товары витрины AOVO для общей корзины (id, цена, фото) — резолвятся cart.js */
-window.CART_EXTRA = [
-  { id: 'aovo-m365pro', brand: 'AOVO', name: 'M365 Pro', price: 24100, img: 'img/aovo-m365-pro.jpg', stock: 'in', warranty: false },
-  { id: 'aovo-lux', brand: 'AOVO', name: 'M365 Lux', price: 26100, img: 'img/aovo/m365-pro-lux.png', stock: 'in', warranty: false },
-  { id: 'aovo-luxpro', brand: 'AOVO', name: 'Lux Pro 10.5Ah', price: 28200, img: 'img/aovo/lux-pro.png', stock: 'in', warranty: false },
-  { id: 'aovo-promax', brand: 'AOVO', name: 'Pro Max', price: 40200, img: 'img/aovo/pro-max.png', stock: 'in', warranty: false }
-];
+// AOVO есть в основном каталоге (catalog.js) — отдельный CART_EXTRA больше не нужен
 </script>
-<script data-cfasync="false" src="data/catalog.js?v=250630f"></script>
-<script data-cfasync="false" src="js/cart.js?v=250630f"></script>
-<script data-cfasync="false" src="js/order.js?v=240626h"></script>
+<script data-cfasync="false" src="data/catalog.js?v=250701a"></script>
+<script data-cfasync="false" src="js/cart.js?v=250701a"></script>
+<script data-cfasync="false" src="js/order.js?v=250701a"></script>
 <script data-cfasync="false">
 /* Галерея фото на статичных карточках AOVO: берём gallery из CATALOG по id, листаем сменой src */
 (function () {
@@ -519,6 +527,6 @@ window.CART_EXTRA = [
   });
 })();
 </script>
-<script data-cfasync="false" src="/js/nav-active.js?v=250630f"></script>
+<script data-cfasync="false" src="/js/nav-active.js?v=250701a"></script>
 </body>
 </html>

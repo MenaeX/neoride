@@ -440,7 +440,8 @@ function drawCompare() {
 
 /* ---------- модал заявки ---------- */
 const leadModal = document.getElementById('leadModal');
-// Бэкенд заявок — воркер neoride-bot (workers.dev доступен в РФ; форма работает и с GitHub Pages).
+// Бэкенд заявок — воркер neoride-bot. Шлём через neoridePost (api.neoride.ru → фолбэк workers.dev):
+// workers.dev из РФ работает нестабильно (РКН), кастом-домен на своей CF-зоне надёжнее.
 const LEAD_API = 'https://neoride-bot.amenshikov007.workers.dev/api/lead';
 let orderCtx = {};
 function pluralRu(n, a, b, c) {
@@ -576,13 +577,14 @@ if (leadModal) {
           stock: orderCtx.stock,
           warranty: orderCtx.warranty,
           src: orderCtx.src,
+          ...(orderCtx.callback ? { callback: true } : {}),
         };
     try {
-      const r = await fetch(LEAD_API, {
+      const r = await (window.neoridePost ? window.neoridePost('/api/lead', payload) : fetch(LEAD_API, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(payload),
-      });
+      }));
       const j = await r.json().catch(() => ({}));
       if (r.ok && j.ok) {
         if (window.ymGoal) window.ymGoal(orderCtx.notify ? 'restock_sub' : orderCtx.cart ? 'cart_order' : 'lead');
@@ -590,7 +592,7 @@ if (leadModal) {
         form.hidden = true;
         st.textContent = orderCtx.notify
           ? '✅ Готово! Сообщим, как только модель появится в наличии. Для мгновенного уведомления подпишитесь в Telegram кнопкой ниже.'
-          : '✅ Заявка отправлена! Менеджер подтвердит наличие и итоговую цену и пришлёт ссылку на оплату — в течение 15 минут в рабочее время (09:00–21:00 МСК).';
+          : '✅ Заявка отправлена! Менеджер подтвердит наличие и итоговую цену и согласует оплату и доставку — в течение 15 минут в рабочее время (09:00–21:00 МСК).';
         st.className = 'lead-status ok'; st.hidden = false;
       } else throw new Error();
     } catch (_) {
@@ -709,6 +711,7 @@ function openModel(id) {
   document.getElementById('mmCallback').onclick = () => {
     modelModal.hidden = true;
     openLead({ order: c.id, name: (c.brand || 'Kugoo') + ' ' + c.name, stock: c.stock, warr: c.warranty ? '1' : '0', src: (c.src || []).join(',') });
+    orderCtx.callback = true;
     setLeadChrome({ title: 'Перезвоните мне', intro: 'Оставьте телефон — перезвоним в течение 15 минут в рабочее время (09:00–21:00 МСК).', submit: 'Жду звонка' });
   };
   modelModal.hidden = false;
@@ -772,7 +775,7 @@ syncCompareUI();
   var KEY = 'neoride_exit_v1', shown = false;
   function already() { try { return localStorage.getItem(KEY); } catch (e) { return 0; } }
   function show() {
-    if (shown || already() || !leadModal.hidden) return;   // не дублируем: форма уже открыта / уже показывали
+    if (shown || already() || document.querySelector('.modal:not([hidden])')) return; // не поверх открытых модалок
     shown = true;
     try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
     openLead({ src: 'exit' });
@@ -789,4 +792,31 @@ syncCompareUI();
   if (window.matchMedia && window.matchMedia('(max-width:760px)').matches) {
     setTimeout(function () { if (window.scrollY > 600) show(); }, 30000);
   }
+})();
+
+
+// Счётчик «N моделей в каталоге» в hero — из фактического каталога, а не хардкод
+(function () {
+  var el = document.getElementById('statModels');
+  if (el && typeof CATALOG !== 'undefined') el.textContent = CATALOG.filter(function (c) { return c.price && c.img; }).length;
+})();
+
+// /#catalog должен работать и в режиме витрины (реклама ведёт на этот якорь)
+(function () {
+  function revealCatalog() {
+    if (location.hash !== '#catalog') return;
+    try { setHidden('vitrina', true); setHidden('catalog', false); render(); } catch (e) {}
+    var el = document.getElementById('catalog');
+    if (el) setTimeout(function () { el.scrollIntoView({ block: 'start' }); }, 50);
+  }
+  window.addEventListener('hashchange', revealCatalog);
+  revealCatalog();
+})();
+
+// Открытая модалка блокирует прокрутку фона (iOS «прокрутка насквозь»)
+(function () {
+  var ms = [].slice.call(document.querySelectorAll('.modal'));
+  if (!ms.length || !window.MutationObserver) return;
+  var sync = function () { document.body.style.overflow = ms.some(function (m) { return !m.hidden; }) ? 'hidden' : ''; };
+  ms.forEach(function (m) { new MutationObserver(sync).observe(m, { attributes: true, attributeFilter: ['hidden'] }); });
 })();

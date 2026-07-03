@@ -38,7 +38,7 @@
     return items.filter(function (it) { return MAP[it.id]; }).map(function (it) {
       var c = MAP[it.id];
       return {
-        id: it.id, qty: it.qty, name: nameOf(c), price: c.price || 0,
+        id: it.id, qty: it.qty, name: nameOf(c), price: c.price || 0, img: c.img || '',
         stock: c.stock || '', warranty: !!c.warranty, src: Array.isArray(c.src) ? c.src : [],
       };
     });

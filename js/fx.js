@@ -11,8 +11,11 @@
   var led = document.getElementById('scrollLed');
 
   /* видеофон hero: грузим на всех устройствах (mobile autoplay требует muted+playsinline) */
+  var isMobile = matchMedia('(max-width: 760px)').matches;
+  var saveData = navigator.connection && navigator.connection.saveData;
   [].slice.call(document.querySelectorAll('.hero-video')).forEach(function (hv) {
     if (!hv.dataset.src) return;
+    if (isMobile || saveData) return; // мобиле хватает постера — не тянем 2-3 МБ видео
     hv.muted = true;
     hv.setAttribute('playsinline', '');
     hv.src = hv.dataset.src;
@@ -160,4 +163,14 @@
   function upd() { if (window.scrollY > 600) b.classList.add('show'); else b.classList.remove('show'); }
   window.addEventListener('scroll', upd, { passive: true }); upd();
   b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+
+/* тяжёлые декоративные видео (bento) — только десктоп, лениво */
+(function () {
+  var isMobile = matchMedia('(max-width: 760px)').matches;
+  var saveData = navigator.connection && navigator.connection.saveData;
+  [].slice.call(document.querySelectorAll('video[data-lazy-src]')).forEach(function (v) {
+    if (isMobile || saveData) return;
+    v.src = v.dataset.lazySrc; v.muted = true; v.play && v.play().catch(function () {});
+  });
 })();

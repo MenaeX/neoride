@@ -10,7 +10,7 @@
   --r:18px; --mono:'Space Mono',ui-monospace,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{background:var(--bg);color:var(--txt);font:400 16px/1.55 Inter,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.logo,.price,.calc-out b{font-family:Unbounded,Inter,sans-serif}
 h2{font-size:clamp(28px,4.2vw,46px);font-weight:700;line-height:1.05;letter-spacing:-.01em}
@@ -524,7 +524,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .hero-scan,.hero-bokeh,.hero-mega,.glow-lime{display:none}  /* скан-линии(mix-blend)/боке/мега-текст */
   .topbar{backdrop-filter:none;background:rgba(4,6,11,.96)}
   /* высоты секций — по контенту, без длинных тёмных пустот */
-  .hero{height:auto;min-height:520px;padding:84px 0 44px;margin-top:-68px}
+  .hero{height:auto;min-height:520px;padding:40px 0 44px;margin-top:0}
   .hero-bg img{object-position:60% 38%;animation:none;transform:none}
   .hero-content{padding-top:0}
   .hero-stats>i{gap:24px}
@@ -984,3 +984,16 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .video-solo{max-width:880px;margin:8px auto 0}
 .video-solo .video-embed{aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid var(--line2);background:#000;position:relative}
 .video-solo .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ===== аудит 01.07: доступность/единообразие ===== */
+/* тап-таргеты: крестик модалок ощутимо больше на тачах */
+.modal-close{min-width:40px;min-height:40px;display:inline-flex;align-items:center;justify-content:center}
+@media (max-width:760px){
+  /* scroll-padding под высокую двухрядную шапку */
+  html{scroll-padding-top:150px}
+  /* единая мобильная шапка НА ВСЕХ страницах: бренд-пилюли видимы (раньше index переопределял инлайном, остальные — нет) */
+  .nav a.nav-brand{display:inline-flex!important;align-items:center;padding:6px 13px;border:1px solid var(--line2);border-radius:99px;color:var(--mut);font-weight:600;font-size:13px}
+  .nav a.nav-brand.active{border-color:var(--cyan);color:var(--cyan);background:rgba(46,230,255,.1)}
+  .nav .nav-opt{padding:6px 12px;font-size:13px}
+  .cmp-toggle{min-width:40px;min-height:40px}
+}

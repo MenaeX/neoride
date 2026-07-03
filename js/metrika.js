@@ -6,6 +6,14 @@
 
   // Безопасная отправка цели из любого места кода (заявка/чат/клик в мессенджер).
   // Работает как заглушка, пока счётчик не настроен.
+  // Бэкенд-запросы: сперва свой домен api.neoride.ru (кастом-домен CF, живёт в РФ),
+  // при сетевой ошибке — прямой workers.dev. Ответ (даже 4xx/5xx) не считаем сетевой ошибкой.
+  window.neoridePost = function (path, payload) {
+    var bases = ['https://api.neoride.ru', 'https://neoride-bot.amenshikov007.workers.dev'];
+    var opts = { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) };
+    return fetch(bases[0] + path, opts).catch(function () { return fetch(bases[1] + path, opts); });
+  };
+
   window.ymGoal = function (name, params) {
     try { if (COUNTER && window.ym) window.ym(COUNTER, 'reachGoal', name, params || {}); }
     catch (e) {}
@@ -33,7 +41,7 @@
   document.addEventListener('click', function (e) {
     if (!e.target.closest) return;
     if (e.target.closest('a[href^="tel:"]')) { window.ymGoal('phone_click'); return; }
-    if (e.target.closest('a[href*="t.me/"]')) { window.ymGoal('tg_click'); return; }
+    if (e.target.closest('a[href*="t.me/neoride_shop_bot"]')) { window.ymGoal('tg_click'); return; }
     if (e.target.closest('[data-max]')) { window.ymGoal('max_click'); }
   });
 })();

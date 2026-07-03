@@ -83,6 +83,9 @@ document.getElementById('optRequest').onclick = e => {
   e.preventDefault();
   const txt = cart.map(it => { const c = byId[it.id]; return c ? `Kugoo ${c.name} x${it.qty}` : ''; }).filter(Boolean).join(', ');
   document.getElementById('leadModel').value = txt || 'Оптовая заявка';
+  // сброс после прошлой успешной отправки — иначе вторая заявка в той же сессии невозможна
+  leadForm.hidden = false; st.hidden = true;
+  const sb = document.getElementById('leadSubmit'); if (sb) { sb.disabled = false; sb.textContent = 'Отправить заявку'; }
   leadModal.hidden = false;
 };
 document.getElementById('closeLead').onclick = () => leadModal.hidden = true;
@@ -111,11 +114,11 @@ leadForm.addEventListener('submit', async e => {
     website: leadForm.website.value,
   };
   try {
-    const r = await fetch(LEAD_API, {
+    const r = await (window.neoridePost ? window.neoridePost('/api/lead', payload) : fetch(LEAD_API, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(payload),
-    });
+    }));
     const j = await r.json().catch(() => ({}));
     if (r.ok && j.ok) {
       if (window.ymGoal) window.ymGoal('opt_lead');

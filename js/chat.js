@@ -2,7 +2,8 @@
 (function () {
   'use strict';
 
-  // Бэкенд чата — Cloudflare Worker (workers.dev доступен в РФ без VPN, в отличие от CF-страниц).
+  // Бэкенд чата — Cloudflare Worker. Шлём через neoridePost (api.neoride.ru → фолбэк workers.dev):
+  // прямой workers.dev из РФ работает нестабильно.
   var API = 'https://neoride-bot.amenshikov007.workers.dev/api/chat';
   var GREETING = 'Привет! Я Андрей, ИИ-консультант NEORIDE 🛴\nПомогу выбрать электротранспорт под вашу задачу. Что ищете — самокат для города, подальше поездить или для подростка?';
   var QUICK = [
@@ -137,7 +138,7 @@
           var a = document.createElement('a');
           a.className = 'chat-model';
           // всегда настоящая ссылка на страницу модели — кликабельна даже без модалки
-          a.href = 'model/' + model.id + '.html';
+          a.href = '/model/' + model.id + '.html';
           a.textContent = (model.brand || 'Kugoo') + ' ' + model.name + (model.price ? ' · ' + rub(model.price) : '');
           a.onclick = function (e) {
             if (typeof window.neorideOpenModel === 'function') {
