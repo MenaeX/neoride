@@ -557,6 +557,7 @@ if (leadModal) {
       name: document.getElementById('leadName').value,
       contact,
       consent: true,
+      promo: (document.getElementById('leadPromo') || { value: '' }).value,
       page: location.pathname,
       website: form.website.value,
     };
