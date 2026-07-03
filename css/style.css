@@ -997,3 +997,10 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .nav .nav-opt{padding:6px 12px;font-size:13px}
   .cmp-toggle{min-width:40px;min-height:40px}
 }
+
+/* ===== новый hero 01.07: SEO-заголовок двумя строками + слоган ===== */
+.hero h1{font-size:clamp(32px,4.6vw,72px)}
+.hero h1 .h1-line2{display:inline-block;font-size:.58em;font-weight:800;color:#dfe3ee;letter-spacing:-.01em;margin-top:6px}
+.hero-slogan{margin:16px 0 0;font:700 13px 'Space Mono',monospace;letter-spacing:.4em;text-transform:uppercase;color:var(--cyan,#2ee6ff);text-shadow:0 0 16px rgba(46,230,255,.45)}
+.hero-slogan.rw{display:block}
+@media (max-width:760px){.hero h1{font-size:clamp(30px,8.4vw,42px)}.hero-slogan{letter-spacing:.28em;font-size:12px}}

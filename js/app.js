@@ -797,8 +797,9 @@ syncCompareUI();
 
 // Счётчик «N моделей в каталоге» в hero — из фактического каталога, а не хардкод
 (function () {
-  var el = document.getElementById('statModels');
-  if (el && typeof CATALOG !== 'undefined') el.textContent = CATALOG.filter(function (c) { return c.price && c.img; }).length;
+  if (typeof CATALOG === 'undefined') return;
+  var n = CATALOG.filter(function (c) { return c.price && c.img; }).length;
+  [].slice.call(document.querySelectorAll('[data-models-count]')).forEach(function (el) { el.textContent = n; });
 })();
 
 // /#catalog должен работать и в режиме витрины (реклама ведёт на этот якорь)
