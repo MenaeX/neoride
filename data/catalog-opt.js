@@ -1703,49 +1703,6 @@ const CATALOG = [
   }
  },
  {
-  "id": "pro-wish04",
-  "name": "Wish 04 Pro",
-  "brand": "Kugoo",
-  "cat": "питбайк",
-  "price": 209900,
-  "mrc": 209900,
-  "opt": 176000,
-  "stock": "in",
-  "src": [
-   "koptom"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": false,
-  "warranty": true,
-  "img": "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
-  "gallery": [
-   "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
-   "img/gallery/pro-wish04/1.jpg",
-   "img/gallery/pro-wish04/2.jpg",
-   "img/gallery/pro-wish04/3.jpg",
-   "img/gallery/pro-wish04/4.jpg",
-   "img/gallery/pro-wish04/5.jpg",
-   "img/gallery/pro-wish04/6.jpg"
-  ],
-  "desc": "Kugoo Wish 04 Pro — это настоящий зверь среди питбайков. Мощный мотор в 5000 Вт разгонит тебя до 96 км/ч, а батарея на 36 А·ч обеспечит запас хода до 70 км на одной зарядке. Крепкие гидравлические тормоза с четырьмя поршнями держат ситуацию под контролем в любых условиях.\n\nВесит всего 77 кг, но выдерживает нагрузку до 150 кг — отличный баланс производительности и управляемости. Твёрдые 19-дюймовые колёса уверенно держат дорогу. Плюс год официальной гарантии для спокойствия.",
-  "specs": {
-   "power": 5000,
-   "battery_ah": 36.0,
-   "speed": 96,
-   "range": 70,
-   "load": 150,
-   "wheel": 19.0,
-   "charge": 7.0,
-   "gross": 65.0,
-   "box": "148×31×72 см",
-   "weight": 77.0,
-   "volt": 72,
-   "brakes": "гидравлический-4-поршневые",
-   "drive": "задний"
-  }
- },
- {
   "id": "300-jl",
   "name": "JL-300 эндуро",
   "brand": "Kugoo",
