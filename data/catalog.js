@@ -1627,7 +1627,8 @@ const CATALOG = [
    "gross": 111.0,
    "box": "135×82×68 см",
    "brakes": "Барабаный",
-   "drive": "задний"
+   "drive": "задний",
+   "cargo": true
   }
  },
  {
@@ -1669,7 +1670,8 @@ const CATALOG = [
    "box": "172×91×76 см",
    "weight": 133.0,
    "brakes": "Барабаный",
-   "drive": "задний"
+   "drive": "задний",
+   "cargo": true
   }
  },
  {
@@ -1710,7 +1712,8 @@ const CATALOG = [
    "gross": 128.0,
    "box": "195×84×71 см",
    "brakes": "Барабаный",
-   "drive": "задний"
+   "drive": "задний",
+   "cargo": true
   }
  },
  {
@@ -1994,7 +1997,8 @@ const CATALOG = [
    "brakes": "гидравлический",
    "drive": "задний",
    "seat": true,
-   "volt": 48
+   "volt": 48,
+   "cargo": true
   }
  },
  {
@@ -2037,7 +2041,8 @@ const CATALOG = [
    "brakes": "гидравлический",
    "drive": "задний",
    "seat": true,
-   "weight": 40.0
+   "weight": 40.0,
+   "cargo": true
   }
  },
  {
@@ -2077,7 +2082,8 @@ const CATALOG = [
    "brakes": "гидравлический",
    "drive": "задний",
    "seat": true,
-   "weight": 66.0
+   "weight": 66.0,
+   "cargo": true
   }
  },
  {
@@ -2117,7 +2123,8 @@ const CATALOG = [
    "volt": 60,
    "brakes": "гидравлический",
    "drive": "задний привод",
-   "seat": true
+   "seat": true,
+   "cargo": true
   }
  },
  {
@@ -2160,7 +2167,8 @@ const CATALOG = [
    "brakes": "гидравлический",
    "drive": "задний",
    "seat": true,
-   "weight": 65.0
+   "weight": 65.0,
+   "cargo": true
   }
  },
  {
@@ -2322,7 +2330,8 @@ const CATALOG = [
    "brakes": "гидравлический",
    "drive": "задний",
    "seat": true,
-   "weight": 60.0
+   "weight": 60.0,
+   "cargo": true
   }
  },
  {
@@ -2394,7 +2403,8 @@ const CATALOG = [
    "wheel": 300.0,
    "battery_ah": 45.0,
    "brakes": "гидравлические",
-   "drive": "задний"
+   "drive": "задний",
+   "cargo": true
   }
  },
  {
@@ -2434,7 +2444,8 @@ const CATALOG = [
    "range": 95.0,
    "battery_ah": 45.0,
    "brakes": "гидравлический",
-   "drive": "задний привод"
+   "drive": "задний привод",
+   "cargo": true
   }
  },
  {

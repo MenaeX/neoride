@@ -40,7 +40,7 @@
     // сценарий
     if (ans.where === 'far') sc += (s.range || 0) / 25;
     else if (ans.where === 'offroad') sc += (s.power || 0) / 350 + (isOff(s) ? 3 : 0);
-    else if (ans.where === 'courier') sc += (s.range || 0) / 35 + load / 70;
+    else if (ans.where === 'courier') sc += (s.range || 0) / 35 + load / 70 + (s.cargo ? 2.5 : 0) + (s.seat === true ? 0.8 : 0);
     else if (ans.where === 'city') sc += s.weight ? (28 - Math.min(s.weight, 28)) / 7 : 0;
     // кому
     if (ans.who === 'teen') sc += -(s.power || 600) / 700 - (s.weight || 15) / 30;
