@@ -132,14 +132,14 @@ const CATALOG = [
   "price": 38900,
   "mrc": 38900,
   "opt": 33000,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "k2025"
   ],
   "pop": 5175,
   "hit": true,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-m4-11ah-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-m4-11ah-2025.jpg",
