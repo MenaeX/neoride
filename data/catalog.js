@@ -316,8 +316,7 @@ const CATALOG = [
   "price": 38900,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 5175,
   "hit": true,
@@ -609,14 +608,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 73900,
-  "stock": "wait",
+  "stock": "in",
   "src": [
    "k2025"
   ],
   "pop": 1386,
   "hit": true,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-m5-pro-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-m5-pro-2025.jpg",
@@ -1424,14 +1423,15 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 50900,
-  "stock": "no",
+  "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-ec02.jpg",
   "gallery": [
    "img/kugoo-ec02.jpg",

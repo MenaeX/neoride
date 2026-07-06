@@ -134,8 +134,7 @@ const CATALOG = [
   "opt": 33000,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 5175,
   "hit": true,
@@ -638,14 +637,15 @@ const CATALOG = [
   "price": 50900,
   "mrc": 49900,
   "opt": 40700,
-  "stock": "opt",
+  "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-ec02.jpg",
   "gallery": [
    "img/kugoo-ec02.jpg",
