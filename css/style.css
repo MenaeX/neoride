@@ -1026,7 +1026,7 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .hero h1 .h1-line2{display:inline-block;font-size:.58em;font-weight:800;color:#dfe3ee;letter-spacing:-.01em;margin-top:6px}
 .hero-slogan{margin:16px 0 0;font:700 13px 'Space Mono',monospace;letter-spacing:.4em;text-transform:uppercase;color:var(--cyan,#2ee6ff);text-shadow:0 0 16px rgba(46,230,255,.45)}
 .hero-slogan.rw{display:block}
-@media (max-width:760px){.hero h1{font-size:clamp(30px,8.4vw,42px)}.hero-slogan{letter-spacing:.28em;font-size:12px}}
+@media (max-width:760px){.hero h1{font-size:clamp(24px,7.2vw,40px);overflow-wrap:anywhere}.hero h1 .rw{max-width:100%}.hero h1 .rw>i{overflow-wrap:anywhere}.hero-slogan{letter-spacing:.28em;font-size:12px}}
 
 /* ===== финал 05.07: на мобиле навигация только через бургер, пилюли/ссылки скрыты ===== */
 @media (max-width:760px){.nav a.nav-brand,.nav a:not(.nav-phone),.nav .nav-opt{display:none!important}.nav-phone,.nav-cart{display:inline-flex!important}}
