@@ -290,9 +290,12 @@ function wireCards(root) {
   if (!root) return;
   root.querySelectorAll('[data-cmp]').forEach(b => b.onclick = () => toggleCompare(b.dataset.cmp));
   root.querySelectorAll('[data-notify]').forEach(b => b.onclick = () => openNotify(b.dataset.notify));
+  // Клик по карточке → страница модели В ТОМ ЖЕ ОКНЕ (без всплывающей модалки; хлебные крошки на странице есть).
+  // Клики по стрелкам галереи (data-cg) не считаем переходом.
   root.querySelectorAll('[data-open]').forEach(el => {
-    el.onclick = () => openModel(el.dataset.open);
-    el.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModel(el.dataset.open); } };
+    const goModel = e => { if (e && e.target && e.target.closest && e.target.closest('[data-cg]')) return; location.href = '/model/' + el.dataset.open + '.html'; };
+    el.onclick = goModel;
+    el.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goModel(e); } };
   });
   root.querySelectorAll('.card-img[data-gal]').forEach(box => {
     if (Number(box.dataset.gal) <= 1) return;

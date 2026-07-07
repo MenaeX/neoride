@@ -535,14 +535,37 @@ details p{padding:0 22px 18px;color:var(--mut)}
   .bento{grid-template-columns:1fr}
   .bento-media,.strip-item{grid-column:span 1}
 }
-/* мобайл-шапка: лого — первая строка, кнопки — вторым рядом под ним с переносом (всё влезает) */
+/* мобайл-шапка: чистый один ряд — лого слева, справа 📞 · 🛒 · ☰ (бургер). Всё меню — в бургере. */
 @media (max-width:760px){
-  .topbar-in{gap:8px 10px;height:auto;flex-wrap:wrap;padding:10px 0;align-items:center}
-  .logo{flex:0 0 100%}                                  /* лого занимает всю первую строку */
-  .nav{gap:8px;margin-left:0;width:100%;flex-wrap:wrap;justify-content:flex-start;align-items:center}
-  .nav .nav-opt{display:inline-flex;align-items:center;padding:7px 12px;font-size:13px;flex:none}  /* «Оптовикам» виден во втором ряду */
-  .nav-cart{flex:none}                                  /* корзину не сжимаем */
+  .topbar-in{gap:10px;height:56px;flex-wrap:nowrap;align-items:center}
+  .logo{flex:none;padding-left:4px;font-size:19px}                 /* отступ логотипа (п.5) */
+  .nav{gap:10px;margin-left:auto;flex-wrap:nowrap;align-items:center}
+  /* в шапке на мобиле оставляем только телефон, корзину и бургер — остальное в меню */
+  .nav a:not(.nav-phone), .nav .nav-opt, .nav a.nav-brand{display:none!important}
+  .nav-phone,.nav-cart{display:inline-flex!important;flex:none}
 }
+/* ===== бургер-кнопка ===== */
+.burger{display:none;width:40px;height:40px;flex:none;background:none;border:0;cursor:pointer;padding:9px;flex-direction:column;justify-content:space-between}
+.burger span{display:block;height:2px;width:100%;background:#fff;border-radius:2px;transition:.25s}
+.burger.on span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+@media (max-width:760px){.burger{display:flex}}
+/* ===== выезжающее меню ===== */
+.burger-menu{position:fixed;inset:0;z-index:120;background:rgba(6,8,13,.86);backdrop-filter:blur(8px);display:flex;flex-direction:column}
+.bm-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
+.bm-logo{font:900 22px Unbounded,sans-serif;color:#fff}.bm-logo b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bm-close{background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;width:44px;height:44px}
+.bm-links{display:flex;flex-direction:column;padding:8px 0;overflow-y:auto;flex:1}
+.bm-links a{display:block;padding:14px 22px;color:#e8e9f2;text-decoration:none;font:600 17px Inter,sans-serif;border-bottom:1px solid rgba(255,255,255,.05)}
+.bm-links a:active{background:rgba(46,230,255,.12)}
+.bm-foot{padding:16px 20px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:10px}
+.bm-foot a{display:block;text-align:center;padding:13px;border-radius:12px;text-decoration:none;font:700 15px Inter,sans-serif}
+.bm-call{background:var(--grad);color:#06130a}
+.bm-tg{border:1px solid var(--line2);color:#2ee6ff}
+/* ===== п.6: длинное имя в окошке категории не обрезается ===== */
+.cat-tile .ct-name{overflow-wrap:anywhere;line-height:1.15}
+@media (max-width:760px){.cat-tile .ct-name{font-size:14px}}
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   [data-rev],.card.fx{opacity:1;transform:none}
@@ -1004,3 +1027,6 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .hero-slogan{margin:16px 0 0;font:700 13px 'Space Mono',monospace;letter-spacing:.4em;text-transform:uppercase;color:var(--cyan,#2ee6ff);text-shadow:0 0 16px rgba(46,230,255,.45)}
 .hero-slogan.rw{display:block}
 @media (max-width:760px){.hero h1{font-size:clamp(30px,8.4vw,42px)}.hero-slogan{letter-spacing:.28em;font-size:12px}}
+
+/* ===== финал 05.07: на мобиле навигация только через бургер, пилюли/ссылки скрыты ===== */
+@media (max-width:760px){.nav a.nav-brand,.nav a:not(.nav-phone),.nav .nav-opt{display:none!important}.nav-phone,.nav-cart{display:inline-flex!important}}
