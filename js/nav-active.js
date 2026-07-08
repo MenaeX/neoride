@@ -83,4 +83,22 @@
     menu.querySelectorAll('.bm-links a').forEach(function (a) { a.addEventListener('click', close); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) close(); });
   })();
+
+  // 5) cookie/аналитика — лёгкая плашка согласия (показываем один раз, запоминаем выбор).
+  (function () {
+    try { if (localStorage.getItem('neoride_cookie_ok')) return; } catch (e) {}
+    if (document.getElementById('cookieBar')) return;
+    var bar = document.createElement('div');
+    bar.id = 'cookieBar'; bar.className = 'cookie-bar';
+    bar.innerHTML =
+      '<span>Мы используем cookies и Яндекс.Метрику для аналитики и оптимизации рекламы. Продолжая пользоваться сайтом, вы соглашаетесь с ' +
+      '<a href="/privacy.html" target="_blank" rel="noopener">Политикой</a> и ' +
+      '<a href="/consent.html" target="_blank" rel="noopener">Согласием</a> на обработку персональных данных.</span>' +
+      '<button type="button" class="cookie-ok">Хорошо</button>';
+    document.body.appendChild(bar);
+    bar.querySelector('.cookie-ok').addEventListener('click', function () {
+      try { localStorage.setItem('neoride_cookie_ok', '1'); } catch (e) {}
+      bar.remove();
+    });
+  })();
 })();

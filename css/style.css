@@ -1030,3 +1030,10 @@ details p{padding:0 22px 18px;color:var(--mut)}
 
 /* ===== финал 05.07: на мобиле навигация только через бургер, пилюли/ссылки скрыты ===== */
 @media (max-width:760px){.nav a.nav-brand,.nav a:not(.nav-phone),.nav .nav-opt{display:none!important}.nav-phone,.nav-cart{display:inline-flex!important}}
+
+/* ===== cookie/аналитика — плашка согласия (08.07) ===== */
+.cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:1200;display:flex;align-items:center;gap:14px;max-width:940px;margin:0 auto;padding:12px 16px;background:rgba(16,18,24,.96);border:1px solid var(--line2,rgba(255,255,255,.12));border-radius:14px;box-shadow:0 12px 44px rgba(0,0,0,.55);backdrop-filter:blur(10px);font:500 13px Inter,sans-serif;color:rgba(255,255,255,.86)}
+.cookie-bar a{color:var(--cyan,#2ee6ff)}
+.cookie-bar .cookie-ok{flex:none;padding:9px 22px;border:0;border-radius:10px;background:var(--lime,#b8ff2e);color:#0a0a0a;font:700 13px Inter,sans-serif;cursor:pointer}
+.cookie-bar .cookie-ok:hover{filter:brightness(1.06)}
+@media(max-width:600px){.cookie-bar{flex-direction:column;align-items:stretch;gap:10px;text-align:center;font-size:12px;left:8px;right:8px;bottom:8px}.cookie-bar .cookie-ok{width:100%}}
