@@ -90,7 +90,8 @@ const CATALOG = [
   "opt": 33000,
   "stock": "opt",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 5175,
   "hit": true,
@@ -219,10 +220,10 @@ const CATALOG = [
   "cat": "самокат",
   "price": 159900,
   "mrc": 159900,
-  "opt": 132000,
+  "opt": 148000,
   "stock": "in",
   "src": [
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -254,49 +255,6 @@ const CATALOG = [
    "drive": "полный",
    "seat": false,
    "weight": 47.0
-  }
- },
- {
-  "id": "f1-pro",
-  "name": "F1 Pro",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 59900,
-  "mrc": 59900,
-  "opt": 44000,
-  "stock": "opt",
-  "src": [
-   "koptom"
-  ],
-  "pop": 635,
-  "hit": false,
-  "new": false,
-  "warranty": false,
-  "img": "img/new-kugoo-kirin-f1-pro.jpg",
-  "gallery": [
-   "img/new-kugoo-kirin-f1-pro.jpg",
-   "img/gallery/f1-pro/1.jpg",
-   "img/gallery/f1-pro/2.jpg",
-   "img/gallery/f1-pro/3.jpg",
-   "img/gallery/f1-pro/4.jpg",
-   "img/gallery/f1-pro/5.jpg",
-   "img/gallery/f1-pro/6.jpg"
-  ],
-  "desc": "Мощный самокат для серьёзных поездок по городу. 800-ваттный мотор разгонит вас до 50 км/ч, а батареи хватит на 48 км пути. Массивные 10-дюймовые колёса справляются с неровностями, дисковые тормоза держат уверенно.\n\nБерёт на борт до 120 кг и весит сам 75 кг — не самый лёгкий, зато устойчивый и стабильный. Одной зарядки за 9 часов хватает надолго. Отличный выбор для тех, кто ценит мощность и дальность заезда.",
-  "specs": {
-   "power": 800,
-   "battery_ah": 18.0,
-   "volt": 48,
-   "speed": 50,
-   "range": 48,
-   "load": 120,
-   "wheel": 10.0,
-   "charge": 9.0,
-   "box": "127.5×23×59 см",
-   "brakes": "дисковый",
-   "drive": "задний",
-   "seat": false,
-   "weight": 29.4
   }
  },
  {
@@ -340,51 +298,6 @@ const CATALOG = [
    "volt": 48,
    "brakes": "дисковый",
    "drive": "задний",
-   "seat": false
-  }
- },
- {
-  "id": "f3-max-pro",
-  "name": "F3 Pro Max",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 93900,
-  "mrc": 93900,
-  "opt": 77000,
-  "stock": "opt",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 1353,
-  "hit": true,
-  "new": false,
-  "warranty": false,
-  "img": "img/kugoo-f3-pro-max.jpg",
-  "gallery": [
-   "img/kugoo-f3-pro-max.jpg",
-   "img/gallery/f3-max-pro/1.jpg",
-   "img/gallery/f3-max-pro/2.jpg",
-   "img/gallery/f3-max-pro/3.jpg",
-   "img/gallery/f3-max-pro/4.jpg",
-   "img/gallery/f3-max-pro/5.jpg",
-   "img/gallery/f3-max-pro/6.jpg"
-  ],
-  "desc": "Kugoo F3 Pro Max — мощный самокат для тех, кто не готов экономить на скорости и дальности. С двумя моторами по 1100 Вт каждый он разгоняется до 68 км/ч и преодолевает до 70 км на одном заряде. Гидравлические тормоза гарантируют уверенную остановку даже на высокой скорости.\n\nОгромный аккумулятор 52В 23.4 А·ч держит заряд долго, а массивные 10-дюймовые колёса уверенно едят километры. Весит 32.5 кг, выдерживает до 120 кг — подойдёт для большинства райдеров. Идеален для дальних поездок и активного катания.",
-  "specs": {
-   "power": 2200,
-   "battery_ah": 23.4,
-   "volt": 52,
-   "speed": 68,
-   "range": 70,
-   "load": 120,
-   "weight": 32.5,
-   "gross": 41.0,
-   "box": "134×28×63.5 см",
-   "charge": 12.0,
-   "wheel": 10.0,
-   "brakes": "гидравлический",
-   "drive": "полный",
    "seat": false
   }
  },
@@ -595,8 +508,7 @@ const CATALOG = [
   "opt": 40700,
   "stock": "opt",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1663,6 +1575,49 @@ const CATALOG = [
    "battery_ah": 36.0,
    "volt": 60,
    "brakes": "гидравлический",
+   "drive": "задний"
+  }
+ },
+ {
+  "id": "pro-wish04",
+  "name": "Wish 04 Pro",
+  "brand": "Kugoo",
+  "cat": "питбайк",
+  "price": 209900,
+  "mrc": 209900,
+  "opt": 176000,
+  "stock": "in",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": true,
+  "img": "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
+  "gallery": [
+   "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
+   "img/gallery/pro-wish04/1.jpg",
+   "img/gallery/pro-wish04/2.jpg",
+   "img/gallery/pro-wish04/3.jpg",
+   "img/gallery/pro-wish04/4.jpg",
+   "img/gallery/pro-wish04/5.jpg",
+   "img/gallery/pro-wish04/6.jpg"
+  ],
+  "desc": "Kugoo Wish 04 Pro — это настоящий зверь среди питбайков. Мощный мотор в 5000 Вт разгонит тебя до 96 км/ч, а батарея на 36 А·ч обеспечит запас хода до 70 км на одной зарядке. Крепкие гидравлические тормоза с четырьмя поршнями держат ситуацию под контролем в любых условиях.\n\nВесит всего 77 кг, но выдерживает нагрузку до 150 кг — отличный баланс производительности и управляемости. Твёрдые 19-дюймовые колёса уверенно держат дорогу. Плюс год официальной гарантии для спокойствия.",
+  "specs": {
+   "power": 5000,
+   "battery_ah": 36.0,
+   "speed": 96,
+   "range": 70,
+   "load": 150,
+   "wheel": 19.0,
+   "charge": 7.0,
+   "gross": 65.0,
+   "box": "148×31×72 см",
+   "weight": 77.0,
+   "volt": 72,
+   "brakes": "гидравлический-4-поршневые",
    "drive": "задний"
   }
  },
