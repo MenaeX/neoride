@@ -2884,10 +2884,10 @@ const CATALOG = [
   "name": "Квадроцикл K6",
   "brand": "Kugoo",
   "cat": "квадроцикл",
-  "price": 699900,
+  "price": 599000,
   "stock": "in",
   "src": [
-   "drop"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
