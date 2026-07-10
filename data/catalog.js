@@ -1250,7 +1250,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 43900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "k2025"
   ],
@@ -2653,7 +2653,7 @@ const CATALOG = [
   "price": 209900,
   "stock": "in",
   "src": [
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,

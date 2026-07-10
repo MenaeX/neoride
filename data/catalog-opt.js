@@ -427,6 +427,49 @@ const CATALOG = [
   }
  },
  {
+  "id": "c1-plus",
+  "name": "C1+ (корзина)",
+  "brand": "Kugoo",
+  "cat": "скутер",
+  "price": 43900,
+  "mrc": 40900,
+  "opt": 33600,
+  "stock": "opt",
+  "src": [
+   "k2025"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-c1-с-корзинкой.jpg",
+  "gallery": [
+   "img/kugoo-kirin-c1-с-корзинкой.jpg",
+   "img/gallery/c1-plus/1.jpg",
+   "img/gallery/c1-plus/2.jpg",
+   "img/gallery/c1-plus/3.jpg",
+   "img/gallery/c1-plus/4.jpg",
+   "img/gallery/c1-plus/5.jpg"
+  ],
+  "desc": "Надёжный городской помощник для коротких поездок. Kugoo C1+ разгоняется до 45 км/ч и преодолевает до 35 км на одной зарядке. Мощный 500-ваттный мотор и дисковые тормоза обеспечивают уверенное управление на дороге.\n\nКомпактный и лёгкий — всего 20 кг весит скутер с удобной корзиной для мелочей. Держит нагрузку до 120 кг, подходит почти всем. 13-дюймовые колёса уверенно едят неровности асфальта. Идеальный выбор для спешащих по делам.",
+  "specs": {
+   "power": 500,
+   "battery_ah": 11.0,
+   "volt": 48,
+   "speed": 45,
+   "load": 120,
+   "weight": 20.0,
+   "wheel": 13.0,
+   "charge": 35.0,
+   "gross": 26.8,
+   "box": "117×25×62 см",
+   "range": 35,
+   "brakes": "Дисковый",
+   "drive": "задний",
+   "seat": true
+  }
+ },
+ {
   "id": "c1-plus-pro",
   "name": "C1 Pro+",
   "brand": "Kugoo",
@@ -1620,49 +1663,6 @@ const CATALOG = [
    "battery_ah": 36.0,
    "volt": 60,
    "brakes": "гидравлический",
-   "drive": "задний"
-  }
- },
- {
-  "id": "pro-wish04",
-  "name": "Wish 04 Pro",
-  "brand": "Kugoo",
-  "cat": "питбайк",
-  "price": 209900,
-  "mrc": 209900,
-  "opt": 176000,
-  "stock": "in",
-  "src": [
-   "koptom"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": false,
-  "warranty": true,
-  "img": "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
-  "gallery": [
-   "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
-   "img/gallery/pro-wish04/1.jpg",
-   "img/gallery/pro-wish04/2.jpg",
-   "img/gallery/pro-wish04/3.jpg",
-   "img/gallery/pro-wish04/4.jpg",
-   "img/gallery/pro-wish04/5.jpg",
-   "img/gallery/pro-wish04/6.jpg"
-  ],
-  "desc": "Kugoo Wish 04 Pro — это настоящий зверь среди питбайков. Мощный мотор в 5000 Вт разгонит тебя до 96 км/ч, а батарея на 36 А·ч обеспечит запас хода до 70 км на одной зарядке. Крепкие гидравлические тормоза с четырьмя поршнями держат ситуацию под контролем в любых условиях.\n\nВесит всего 77 кг, но выдерживает нагрузку до 150 кг — отличный баланс производительности и управляемости. Твёрдые 19-дюймовые колёса уверенно держат дорогу. Плюс год официальной гарантии для спокойствия.",
-  "specs": {
-   "power": 5000,
-   "battery_ah": 36.0,
-   "speed": 96,
-   "range": 70,
-   "load": 150,
-   "wheel": 19.0,
-   "charge": 7.0,
-   "gross": 65.0,
-   "box": "148×31×72 см",
-   "weight": 77.0,
-   "volt": 72,
-   "brakes": "гидравлический-4-поршневые",
    "drive": "задний"
   }
  },
