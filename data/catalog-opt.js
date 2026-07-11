@@ -126,51 +126,6 @@ const CATALOG = [
   }
  },
  {
-  "id": "18ah-m4-pro",
-  "name": "M4 Pro 18Ah",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 51900,
-  "mrc": 47900,
-  "opt": 38500,
-  "stock": "opt",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 7618,
-  "hit": true,
-  "new": false,
-  "warranty": false,
-  "img": "img/kugoo-kirin-m4-pro-18ah-2025.jpg",
-  "gallery": [
-   "img/kugoo-kirin-m4-pro-18ah-2025.jpg",
-   "img/gallery/18ah-m4-pro/1.jpg",
-   "img/gallery/18ah-m4-pro/2.jpg",
-   "img/gallery/18ah-m4-pro/3.jpg",
-   "img/gallery/18ah-m4-pro/4.jpg",
-   "img/gallery/18ah-m4-pro/5.jpg",
-   "img/gallery/18ah-m4-pro/6.jpg"
-  ],
-  "desc": "Kugoo M4 Pro — надёжный помощник для городских поездок. 600 ватт мощности разгонят тебя до 45 км/ч, а батарея на 18 ампер-часов обеспечит путь до 45 км на одной зарядке. Дисковые тормоза держат ситуацию под контролем, задний привод даёт стабильность и уверенность на дороге.\n\nМассивные 10-дюймовые колёса справляются с неровностями, конструкция выдерживает до 120 кг. Весит 27 кг — не тяжело таскать с собой. За 8 часов зарядки получаешь полную готовность к следующему приключению.",
-  "specs": {
-   "power": 600,
-   "battery_ah": 18.0,
-   "volt": 48,
-   "speed": 45,
-   "range": 45,
-   "load": 120,
-   "weight": 27.0,
-   "wheel": 10.0,
-   "gross": 30.0,
-   "box": "119.5×49.5×28 см",
-   "charge": 8.0,
-   "brakes": "Дисковый",
-   "drive": "задний привод",
-   "seat": true
-  }
- },
- {
   "id": "18ah-m4-plus-pro",
   "name": "M4 Pro+ 18Ah",
   "brand": "Kugoo",
@@ -357,8 +312,7 @@ const CATALOG = [
   "opt": 59400,
   "stock": "opt",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1710,6 +1664,49 @@ const CATALOG = [
    "battery_ah": 36.0,
    "volt": 60,
    "brakes": "гидравлический",
+   "drive": "задний"
+  }
+ },
+ {
+  "id": "pro-wish04",
+  "name": "Wish 04 Pro",
+  "brand": "Kugoo",
+  "cat": "питбайк",
+  "price": 209900,
+  "mrc": 209900,
+  "opt": 176000,
+  "stock": "in",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": true,
+  "img": "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
+  "gallery": [
+   "img/электропитбайк-kugoo-wish-04-pro-72v-36ah-5000w.jpg",
+   "img/gallery/pro-wish04/1.jpg",
+   "img/gallery/pro-wish04/2.jpg",
+   "img/gallery/pro-wish04/3.jpg",
+   "img/gallery/pro-wish04/4.jpg",
+   "img/gallery/pro-wish04/5.jpg",
+   "img/gallery/pro-wish04/6.jpg"
+  ],
+  "desc": "Kugoo Wish 04 Pro — это настоящий зверь среди питбайков. Мощный мотор в 5000 Вт разгонит тебя до 96 км/ч, а батарея на 36 А·ч обеспечит запас хода до 70 км на одной зарядке. Крепкие гидравлические тормоза с четырьмя поршнями держат ситуацию под контролем в любых условиях.\n\nВесит всего 77 кг, но выдерживает нагрузку до 150 кг — отличный баланс производительности и управляемости. Твёрдые 19-дюймовые колёса уверенно держат дорогу. Плюс год официальной гарантии для спокойствия.",
+  "specs": {
+   "power": 5000,
+   "battery_ah": 36.0,
+   "speed": 96,
+   "range": 70,
+   "load": 150,
+   "wheel": 19.0,
+   "charge": 7.0,
+   "gross": 65.0,
+   "box": "148×31×72 см",
+   "weight": 77.0,
+   "volt": 72,
+   "brakes": "гидравлический-4-поршневые",
    "drive": "задний"
   }
  },
