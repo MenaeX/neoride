@@ -126,6 +126,51 @@ const CATALOG = [
   }
  },
  {
+  "id": "18ah-m4-plus-pro",
+  "name": "M4 Pro+ 18Ah",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 64900,
+  "mrc": 49900,
+  "opt": 40700,
+  "stock": "in",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 1100,
+  "hit": false,
+  "new": false,
+  "warranty": true,
+  "img": "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
+  "gallery": [
+   "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
+   "img/gallery/18ah-m4-plus-pro/1.jpg",
+   "img/gallery/18ah-m4-plus-pro/2.jpg",
+   "img/gallery/18ah-m4-plus-pro/3.jpg",
+   "img/gallery/18ah-m4-plus-pro/4.jpg",
+   "img/gallery/18ah-m4-plus-pro/5.jpg",
+   "img/gallery/18ah-m4-plus-pro/6.jpg"
+  ],
+  "desc": "Kugoo M4 Pro+ — мощный самокат для уверенной езды по городу. 800-ваттный мотор разгонит вас до 45 км/ч, а батареи на 18 Ач хватит на 45 км пути. Крепкие 10-дюймовые колёса справятся с любым покрытием, дисковый тормоз обеспечит безопасность.\n\nВозьмёт пассажира весом до 140 кг и прослужит долго благодаря годовой гарантии. За пять часов зарядки получишь полный запас хода. Надёжный выбор для ежедневных поездок.",
+  "specs": {
+   "power": 800,
+   "battery_ah": 18.0,
+   "speed": 45,
+   "range": 45,
+   "load": 140,
+   "wheel": 10.0,
+   "charge": 5.0,
+   "gross": 31.16,
+   "box": "120×26×48 см",
+   "weight": 27.0,
+   "volt": 48,
+   "brakes": "дисковый",
+   "drive": "задний",
+   "seat": true
+  }
+ },
+ {
   "id": "g4-max",
   "name": "G4 Max",
   "brand": "Kugoo",
@@ -379,6 +424,49 @@ const CATALOG = [
    "volt": 36,
    "brakes": "гидравличкский",
    "drive": "передний"
+  }
+ },
+ {
+  "id": "c1-plus",
+  "name": "C1+ (корзина)",
+  "brand": "Kugoo",
+  "cat": "скутер",
+  "price": 40900,
+  "mrc": 40900,
+  "opt": 33600,
+  "stock": "opt",
+  "src": [
+   "k2025"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-c1-с-корзинкой.jpg",
+  "gallery": [
+   "img/kugoo-kirin-c1-с-корзинкой.jpg",
+   "img/gallery/c1-plus/1.jpg",
+   "img/gallery/c1-plus/2.jpg",
+   "img/gallery/c1-plus/3.jpg",
+   "img/gallery/c1-plus/4.jpg",
+   "img/gallery/c1-plus/5.jpg"
+  ],
+  "desc": "Надёжный городской помощник для коротких поездок. Kugoo C1+ разгоняется до 45 км/ч и преодолевает до 35 км на одной зарядке. Мощный 500-ваттный мотор и дисковые тормоза обеспечивают уверенное управление на дороге.\n\nКомпактный и лёгкий — всего 20 кг весит скутер с удобной корзиной для мелочей. Держит нагрузку до 120 кг, подходит почти всем. 13-дюймовые колёса уверенно едят неровности асфальта. Идеальный выбор для спешащих по делам.",
+  "specs": {
+   "power": 500,
+   "battery_ah": 11.0,
+   "volt": 48,
+   "speed": 45,
+   "load": 120,
+   "weight": 20.0,
+   "wheel": 13.0,
+   "charge": 35.0,
+   "gross": 26.8,
+   "box": "117×25×62 см",
+   "range": 35,
+   "brakes": "Дисковый",
+   "drive": "задний",
+   "seat": true
   }
  },
  {
@@ -1726,6 +1814,39 @@ const CATALOG = [
    "speed": 88,
    "load": 150,
    "box": "179×54×87 см",
+   "drive": "цепной"
+  }
+ },
+ {
+  "id": "k6",
+  "name": "Квадроцикл K6",
+  "brand": "Kugoo",
+  "cat": "квадроцикл",
+  "price": 599000,
+  "mrc": 599000,
+  "opt": 530600,
+  "stock": "in",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": true,
+  "warranty": true,
+  "img": "img/gallery/k6/1.jpg",
+  "gallery": [
+   "img/gallery/k6/1.jpg",
+   "img/gallery/k6/2.jpg",
+   "img/gallery/k6/3.jpg",
+   "img/gallery/k6/4.jpg",
+   "img/gallery/k6/5.jpg",
+   "img/gallery/k6/6.jpg"
+  ],
+  "desc": "Kugoo K6 — серьёзный бензиновый квадроцикл для тех, кто ценит мощность и надёжность. Полный привод справляется с любой местностью, а система на 12 В обеспечивает стабильную работу всех компонентов. Разгоняется до 90 км/ч и выдерживает нагрузку до 500 кг.\n\nКомпактный и тяжёлый в хорошем смысле — весит 417 кг, что говорит о добротной конструкции. Идеален для активного отдыха и серьёзных приключений на бездорожье.",
+  "specs": {
+   "speed": 90.0,
+   "load": 500.0,
+   "weight": 417.0,
    "drive": "цепной"
   }
  }
