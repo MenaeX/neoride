@@ -272,7 +272,7 @@ const CATALOG = [
   "name": "M3 Pro",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 57900,
+  "price": 55900,
   "stock": "wait",
   "src": [
    "drop"
@@ -440,7 +440,7 @@ const CATALOG = [
   "name": "M4 Pro 18Ah",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 51900,
+  "price": 47900,
   "stock": "wait",
   "src": [
    "k2025"
@@ -485,8 +485,7 @@ const CATALOG = [
   "price": 64900,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 1100,
   "hit": false,
@@ -525,7 +524,7 @@ const CATALOG = [
   "name": "M4 Pro Max 1600W",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 59900,
+  "price": 56900,
   "stock": "wait",
   "src": [
    "k2025"
@@ -567,7 +566,7 @@ const CATALOG = [
   "name": "M5",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 69900,
+  "price": 63900,
   "stock": "wait",
   "src": [
    "k2025"
@@ -609,7 +608,7 @@ const CATALOG = [
   "name": "M5 Pro",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 73900,
+  "price": 66900,
   "stock": "wait",
   "src": [
    "k2025"
@@ -725,9 +724,9 @@ const CATALOG = [
    "charge": 8.0,
    "gross": 39.5,
    "box": "131×24.5×57 см",
-   "brakes": "дисковый",
+   "brakes": "гидравлический",
    "drive": "полный",
-   "seat": true
+   "seat": false
   }
  },
  {
@@ -817,7 +816,7 @@ const CATALOG = [
   "name": "LX 10+ / LX 10 Pro",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 129900,
+  "price": 128900,
   "stock": "in",
   "src": [
    "k2025",
@@ -984,7 +983,7 @@ const CATALOG = [
   "name": "F3 Pro",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 64900,
+  "price": 59900,
   "stock": "wait",
   "src": [
    "k2025"
@@ -1249,8 +1248,8 @@ const CATALOG = [
   "name": "C1+ (корзина)",
   "brand": "Kugoo",
   "cat": "скутер",
-  "price": 43900,
-  "stock": "no",
+  "price": 40900,
+  "stock": "wait",
   "src": [
    "k2025"
   ],
@@ -1401,7 +1400,7 @@ const CATALOG = [
   "name": "C4 трёхколёсный",
   "brand": "Kugoo",
   "cat": "трицикл",
-  "price": 85900,
+  "price": 84900,
   "stock": "in",
   "src": [
    "drop"
@@ -1423,7 +1422,7 @@ const CATALOG = [
   "name": "EC02",
   "brand": "Kugoo",
   "cat": "скутер",
-  "price": 50900,
+  "price": 49900,
   "stock": "no",
   "src": [
    "k2025"
@@ -1465,7 +1464,7 @@ const CATALOG = [
   "name": "EC02 Pro",
   "brand": "Kugoo",
   "cat": "скутер",
-  "price": 52900,
+  "price": 50900,
   "stock": "no",
   "src": [
    "k2025"
@@ -1721,7 +1720,7 @@ const CATALOG = [
   "name": "V1",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 39900,
+  "price": 37900,
   "stock": "in",
   "src": [
    "k2025",
@@ -1764,7 +1763,7 @@ const CATALOG = [
   "name": "V1+",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 39900,
+  "price": 37900,
   "stock": "no",
   "src": [
    "k2025",
@@ -1842,7 +1841,7 @@ const CATALOG = [
   "name": "V1 Max",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 64900,
+  "price": 59900,
   "stock": "wait",
   "src": [
    "k2025"
@@ -2050,7 +2049,7 @@ const CATALOG = [
   "name": "V3 Pro+ 21Ah",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 69900,
+  "price": 66900,
   "stock": "wait",
   "src": [
    "drop"
@@ -2091,7 +2090,7 @@ const CATALOG = [
   "name": "V3 Pro+ 28.6Ah",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 73900,
+  "price": 68900,
   "stock": "wait",
   "src": [
    "koptom"
@@ -2132,7 +2131,7 @@ const CATALOG = [
   "name": "V3 Pro Max 28.6Ah",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 79900,
+  "price": 69900,
   "stock": "in",
   "src": [
    "k2025",
@@ -2783,7 +2782,7 @@ const CATALOG = [
   "name": "Tank скутер",
   "brand": "Kugoo",
   "cat": "мотоцикл",
-  "price": 178900,
+  "price": 129900,
   "stock": "in",
   "src": [
    "koptom"
@@ -2884,10 +2883,10 @@ const CATALOG = [
   "name": "Квадроцикл K6",
   "brand": "Kugoo",
   "cat": "квадроцикл",
-  "price": 599000,
+  "price": 699900,
   "stock": "in",
   "src": [
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
