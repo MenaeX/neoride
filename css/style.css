@@ -1037,3 +1037,20 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .cookie-bar .cookie-ok{flex:none;padding:9px 22px;border:0;border-radius:10px;background:var(--lime,#b8ff2e);color:#0a0a0a;font:700 13px Inter,sans-serif;cursor:pointer}
 .cookie-bar .cookie-ok:hover{filter:brightness(1.06)}
 @media(max-width:600px){.cookie-bar{flex-direction:column;align-items:stretch;gap:10px;text-align:center;font-size:12px;left:8px;right:8px;bottom:8px}.cookie-bar .cookie-ok{width:100%}}
+
+/* ===== SEO-текст со сворачиванием: видно ~3 строки, остальное под стрелкой (08.07) ===== */
+.seo-text{padding:54px 0}
+.seo-text .st-body{position:relative;max-height:5.4em;overflow:hidden;transition:max-height .4s ease}
+.seo-text.open .st-body{max-height:500em}
+/* затухание нижней строки в фон, пока свёрнуто */
+.seo-text .st-body::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3.2em;background:linear-gradient(180deg,rgba(6,8,13,0),var(--bg));pointer-events:none;transition:opacity .3s}
+.seo-text.open .st-body::after{opacity:0}
+.seo-text p{margin:0 0 14px;max-width:940px;font:400 15px/1.8 Inter,sans-serif;color:rgba(238,243,250,.72)}
+.seo-text h3{margin:26px 0 10px;font:700 19px Unbounded,sans-serif;color:var(--txt)}
+.seo-text ul{margin:0 0 14px;padding-left:20px;max-width:940px}
+.seo-text li{margin:4px 0;font:400 15px/1.8 Inter,sans-serif;color:rgba(238,243,250,.72)}
+.seo-text .st-toggle{margin-top:16px;display:inline-flex;align-items:center;gap:9px;padding:9px 20px;background:none;border:1px solid var(--line2);border-radius:99px;color:var(--cyan);font:700 14px Inter,sans-serif;cursor:pointer;transition:.2s}
+.seo-text .st-toggle:hover{border-color:var(--cyan);background:rgba(46,230,255,.06)}
+.seo-text .st-arr{display:inline-block;transition:transform .25s}
+.seo-text.open .st-arr{transform:rotate(180deg)}
+@media(max-width:760px){.seo-text{padding:34px 0}.seo-text p,.seo-text li{font-size:14px}.seo-text h3{font-size:16px;margin-top:20px}}

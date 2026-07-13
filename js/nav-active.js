@@ -101,4 +101,16 @@
       bar.remove();
     });
   })();
+
+  // 6) SEO-текст: раскрытие/сворачивание по кнопке (текст всегда в DOM — поисковик его видит).
+  document.querySelectorAll('.seo-text .st-toggle').forEach(function (btn) {
+    var sec = btn.closest('.seo-text');
+    if (!sec) return;
+    var label = btn.querySelector('.st-lbl');
+    btn.addEventListener('click', function () {
+      var open = sec.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (label) label.textContent = open ? 'Свернуть' : 'Читать далее';
+    });
+  });
 })();

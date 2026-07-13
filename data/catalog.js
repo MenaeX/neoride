@@ -725,9 +725,9 @@ const CATALOG = [
    "charge": 8.0,
    "gross": 39.5,
    "box": "131×24.5×57 см",
-   "brakes": "дисковый",
+   "brakes": "гидравлический",
    "drive": "полный",
-   "seat": true
+   "seat": false
   }
  },
  {
@@ -1925,8 +1925,7 @@ const CATALOG = [
   "price": 59900,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -2008,7 +2007,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 66900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -2016,7 +2015,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro.png",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro.png",
