@@ -1076,7 +1076,8 @@ const CATALOG = [
   "opt": 48400,
   "stock": "in",
   "src": [
-   "drop"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1118,7 +1119,7 @@ const CATALOG = [
   "price": 66900,
   "mrc": 66900,
   "opt": 56100,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "k2025",
    "koptom"
@@ -1126,7 +1127,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro.png",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro.png",

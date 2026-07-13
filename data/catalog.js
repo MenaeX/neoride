@@ -1925,7 +1925,8 @@ const CATALOG = [
   "price": 59900,
   "stock": "in",
   "src": [
-   "drop"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2007,7 +2008,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 66900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "k2025",
    "koptom"
@@ -2015,7 +2016,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro.png",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro.png",
