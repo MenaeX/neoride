@@ -485,8 +485,7 @@ const CATALOG = [
   "price": 64900,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 1100,
   "hit": false,
@@ -725,9 +724,9 @@ const CATALOG = [
    "charge": 8.0,
    "gross": 39.5,
    "box": "131×24.5×57 см",
-   "brakes": "гидравлический",
+   "brakes": "дисковый",
    "drive": "полный",
-   "seat": false
+   "seat": true
   }
  },
  {
