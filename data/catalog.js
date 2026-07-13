@@ -483,14 +483,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 64900,
-  "stock": "in",
+  "stock": "wait",
   "src": [
    "k2025"
   ],
   "pop": 1100,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
