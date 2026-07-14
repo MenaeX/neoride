@@ -357,14 +357,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 40900,
-  "stock": "wait",
+  "stock": "in",
   "src": [
    "drop"
   ],
   "pop": 3673,
   "hit": true,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-max-speed-600w-new-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-max-speed-600w-new-2025.jpg",
@@ -1465,14 +1465,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 50900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-ec-02-pro-48v-21ah-600w.jpg",
   "gallery": [
    "img/kugoo-kirin-ec-02-pro-48v-21ah-600w.jpg",
@@ -2653,7 +2653,7 @@ const CATALOG = [
   "price": 209900,
   "stock": "in",
   "src": [
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
