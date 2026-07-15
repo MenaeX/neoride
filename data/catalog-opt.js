@@ -126,6 +126,51 @@ const CATALOG = [
   }
  },
  {
+  "id": "18ah-m4-pro",
+  "name": "M4 Pro 18Ah",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 47900,
+  "mrc": 47900,
+  "opt": 38500,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 7618,
+  "hit": true,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-m4-pro-18ah-2025.jpg",
+  "gallery": [
+   "img/kugoo-kirin-m4-pro-18ah-2025.jpg",
+   "img/gallery/18ah-m4-pro/1.jpg",
+   "img/gallery/18ah-m4-pro/2.jpg",
+   "img/gallery/18ah-m4-pro/3.jpg",
+   "img/gallery/18ah-m4-pro/4.jpg",
+   "img/gallery/18ah-m4-pro/5.jpg",
+   "img/gallery/18ah-m4-pro/6.jpg"
+  ],
+  "desc": "Kugoo M4 Pro — надёжный помощник для городских поездок. 600 ватт мощности разгонят тебя до 45 км/ч, а батарея на 18 ампер-часов обеспечит путь до 45 км на одной зарядке. Дисковые тормоза держат ситуацию под контролем, задний привод даёт стабильность и уверенность на дороге.\n\nМассивные 10-дюймовые колёса справляются с неровностями, конструкция выдерживает до 120 кг. Весит 27 кг — не тяжело таскать с собой. За 8 часов зарядки получаешь полную готовность к следующему приключению.",
+  "specs": {
+   "power": 600,
+   "battery_ah": 18.0,
+   "volt": 48,
+   "speed": 45,
+   "range": 45,
+   "load": 120,
+   "weight": 27.0,
+   "wheel": 10.0,
+   "gross": 30.0,
+   "box": "119.5×49.5×28 см",
+   "charge": 8.0,
+   "brakes": "Дисковый",
+   "drive": "задний привод",
+   "seat": true
+  }
+ },
+ {
   "id": "g4-max",
   "name": "G4 Max",
   "brand": "Kugoo",
@@ -549,14 +594,14 @@ const CATALOG = [
   "price": 49900,
   "mrc": 49900,
   "opt": 40700,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-ec02.jpg",
   "gallery": [
    "img/kugoo-ec02.jpg",
@@ -593,14 +638,14 @@ const CATALOG = [
   "price": 50900,
   "mrc": 50900,
   "opt": 41300,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-ec-02-pro-48v-21ah-600w.jpg",
   "gallery": [
    "img/kugoo-kirin-ec-02-pro-48v-21ah-600w.jpg",

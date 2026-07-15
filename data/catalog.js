@@ -441,9 +441,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 47900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 7618,
   "hit": true,
@@ -1423,14 +1424,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 49900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-ec02.jpg",
   "gallery": [
    "img/kugoo-ec02.jpg",
@@ -1465,14 +1466,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 50900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-ec-02-pro-48v-21ah-600w.jpg",
   "gallery": [
    "img/kugoo-kirin-ec-02-pro-48v-21ah-600w.jpg",
