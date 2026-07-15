@@ -92,8 +92,9 @@ CATS.forEach(([key, label]) => {
   b.className = 'cat-tab' + (key === state.cat ? ' active' : '');
   b.textContent = label;
   b.onclick = () => {
-    state.cat = key; showAll = false;
+    state.cat = key; state.series = 'all'; showAll = false;  // серия чужой категории → сбрасываем, чтобы не было пусто
     document.querySelectorAll('.cat-tab').forEach(x => x.classList.remove('active')); b.classList.add('active');
+    buildSeries();  // перестроить чипы серий под новую категорию
     render();
     const g = document.getElementById('found'); if (g) g.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
@@ -117,12 +118,16 @@ if (brandEl && !BRAND_LOCK) {
     });
   }
 }
-// чипы серий — все семейства, по убыванию числа моделей
-const seriesEl = document.getElementById('seriesTabs');
-if (seriesEl) {
+// чипы серий — только семейства ТЕКУЩЕЙ категории (иначе чип чужой категории, напр. Wish-питбайки
+// на вкладке самокатов, давал бы пустой результат). Перестраивается при смене категории.
+function buildSeries() {
+  const seriesEl = document.getElementById('seriesTabs');
+  if (!seriesEl) return;
   const cnt = {};
-  CATALOG.filter(c => c.price && c.img && inLock(c)).forEach(c => { const s = seriesOf(c); cnt[s] = (cnt[s] || 0) + 1; });
+  CATALOG.filter(c => c.price && c.img && inLock(c) && (state.cat === 'all' || c.cat === state.cat))
+    .forEach(c => { const s = seriesOf(c); cnt[s] = (cnt[s] || 0) + 1; });
   const list = Object.keys(cnt).sort((a, b) => cnt[b] - cnt[a] || a.localeCompare(b));
+  seriesEl.innerHTML = '';
   [['all', 'Все серии']].concat(list.map(s => [s, s])).forEach(([key, label]) => {
     const b = document.createElement('button');
     b.className = 'series-tab' + (key === state.series ? ' active' : '');
@@ -132,6 +137,7 @@ if (seriesEl) {
     seriesEl.appendChild(b);
   });
 }
+buildSeries();
 chipRow(document.getElementById('ageChips'), AGE_BANDS, 'age');
 chipRow(document.getElementById('priceChips'), PRICE_BANDS, 'price');
 chipRow(document.getElementById('speedChips'), SPEED_BANDS, 'speed');

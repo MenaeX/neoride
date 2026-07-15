@@ -4,7 +4,8 @@
 
   // Бэкенд чата — Cloudflare Worker. Шлём через neoridePost (api.neoride.ru → фолбэк workers.dev):
   // прямой workers.dev из РФ работает нестабильно.
-  var API = 'https://neoride-bot.amenshikov007.workers.dev/api/chat';
+  var API = 'https://api.neoride.ru/api/chat';                            // кастом-домен CF — открывается из РФ БЕЗ VPN
+  var API_FB = 'https://neoride-bot.amenshikov007.workers.dev/api/chat';  // фолбэк (workers.dev в РФ браузером не грузится)
   var GREETING = 'Привет! Я Андрей, ИИ-консультант NEORIDE 🛴\nПомогу выбрать электротранспорт под вашу задачу. Что ищете — самокат для города, подальше поездить или для подростка?';
   var QUICK = [
     'Посоветуй до 40 000 ₽',
@@ -191,11 +192,12 @@
     busy = true;
     els.send.disabled = true;
     typing(true);
-    return fetch(API, {
+    var _opts = {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ messages: history, page: location.pathname, sid: sid }),
-    })
+    };
+    return fetch(API, _opts).catch(function () { return fetch(API_FB, _opts); })
       .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
       .then(function (d) {
         typing(false);
