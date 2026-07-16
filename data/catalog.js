@@ -356,14 +356,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 40900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "drop"
   ],
   "pop": 3673,
   "hit": true,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-max-speed-600w-new-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-max-speed-600w-new-2025.jpg",
