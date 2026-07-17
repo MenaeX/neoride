@@ -118,7 +118,7 @@
       <div class="mp-type">Электровелосипед · Kugoo</div>
       <h1>Kugoo V3 Pro (Monster)</h1>
       <div class="mp-price">66 900 ₽</div>
-      <div class="mp-stock">Уточняйте наличие · доставка по всей России</div>
+      <div class="mp-stock">Ожидается поступление · доставка по всей России</div>
       <div class="mp-cta">
         <a class="btn btn-accent" href="https://t.me/neoride_shop_bot?start=m_pro-v3" target="_blank" rel="noopener">Заказать в Telegram</a>
         <a class="btn" href="tel:+79104028858">📞 +7 910 402-88-58</a>
@@ -190,7 +190,7 @@
   <span>Написать</span>
 </a>
 <div class="mp-sticky">
-  <div class="sp"><b>66 900 ₽</b><small>Уточняйте наличие · доставка по РФ</small></div>
+  <div class="sp"><b>66 900 ₽</b><small>Ожидается поступление · доставка по РФ</small></div>
   <a class="s-call" href="tel:+79104028858" aria-label="Позвонить">📞</a>
   <a class="s-order" href="https://t.me/neoride_shop_bot?start=m_pro-v3" target="_blank" rel="noopener">Заказать</a>
 </div>
@@ -208,7 +208,7 @@
     if(!contact) return;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,contact:contact,consent:true,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"no",warranty:false,src:["k2025", "koptom"]};
+    var payload={name:document.getElementById('cbName').value,contact:contact,consent:true,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"wait",warranty:false,src:["k2025"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});
