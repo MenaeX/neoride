@@ -1920,7 +1920,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 59900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "k2025",
    "koptom"
@@ -1928,7 +1928,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-v3.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-v3.jpg",
@@ -2651,7 +2651,7 @@ const CATALOG = [
   "price": 209900,
   "stock": "in",
   "src": [
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
