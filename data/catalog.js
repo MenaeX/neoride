@@ -651,8 +651,7 @@ const CATALOG = [
   "price": 57900,
   "stock": "wait",
   "src": [
-   "drop",
-   "k2025"
+   "drop"
   ],
   "pop": 1941,
   "hit": true,
@@ -681,7 +680,7 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 36.0,
    "box": "131×24.5×57 см",
-   "brakes": "дисковый",
+   "brakes": "гидравлический",
    "drive": "задний",
    "seat": true
   }
@@ -723,7 +722,7 @@ const CATALOG = [
    "charge": 8.0,
    "gross": 39.5,
    "box": "131×24.5×57 см",
-   "brakes": "дисковый",
+   "brakes": "гидравлический",
    "drive": "полный",
    "seat": true
   }
