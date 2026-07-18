@@ -316,7 +316,8 @@ const CATALOG = [
   "price": 38900,
   "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 5175,
   "hit": true,
@@ -440,9 +441,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 47900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 7618,
   "hit": true,
@@ -2650,7 +2652,7 @@ const CATALOG = [
   "price": 209900,
   "stock": "in",
   "src": [
-   "drop"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2915,7 +2917,7 @@ const CATALOG = [
   "price": 69900,
   "stock": "no",
   "src": [
-   "drop"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
