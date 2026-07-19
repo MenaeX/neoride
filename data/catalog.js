@@ -650,7 +650,7 @@ const CATALOG = [
   "name": "G2 Max",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 57900,
+  "price": 73900,
   "stock": "wait",
   "src": [
    "drop"
@@ -1965,9 +1965,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 60900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2091,7 +2092,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 68900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "koptom"
   ],
@@ -2414,7 +2415,8 @@ const CATALOG = [
   "price": 99900,
   "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,

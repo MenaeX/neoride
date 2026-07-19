@@ -1112,6 +1112,94 @@ const CATALOG = [
   }
  },
  {
+  "id": "max-v3",
+  "name": "V3 Max",
+  "brand": "Kugoo",
+  "cat": "велосипед",
+  "price": 60900,
+  "mrc": 60900,
+  "opt": 52800,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/электровелосипед-kugoo-kirin-v3-max.png",
+  "gallery": [
+   "img/электровелосипед-kugoo-kirin-v3-max.png",
+   "img/gallery/max-v3/1.jpg",
+   "img/gallery/max-v3/2.jpg",
+   "img/gallery/max-v3/3.jpg",
+   "img/gallery/max-v3/4.jpg",
+   "img/gallery/max-v3/5.jpg",
+   "img/gallery/max-v3/6.jpg"
+  ],
+  "desc": "Электровелосипед Kugoo V3 Max разгонится до 45 км/ч и проедет на одной зарядке до 65 км. Мощный мотор в 750 Вт справится с подъёмами и даст вам настоящий драйв на дороге.\n\nВесит всего 43 кг, поэтому легко переносится и паркуется. Гидравлические тормоза обеспечивают уверенную остановку в любых условиях. Готов возить вас и ваш груз — выдержит до 100 кг.",
+  "specs": {
+   "power": 750,
+   "battery_ah": 15.6,
+   "speed": 45,
+   "range": 65,
+   "load": 100,
+   "weight": 43.0,
+   "wheel": 18.0,
+   "charge": 7.0,
+   "box": "145×29×73.5 см",
+   "brakes": "гидравлический",
+   "drive": "задний",
+   "seat": true,
+   "volt": 48,
+   "cargo": true
+  }
+ },
+ {
+  "id": "286ah-plus-pro-v3",
+  "name": "V3 Pro+ 28.6Ah",
+  "brand": "Kugoo",
+  "cat": "велосипед",
+  "price": 68900,
+  "mrc": 68900,
+  "opt": 58900,
+  "stock": "opt",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
+  "gallery": [
+   "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
+   "img/gallery/286ah-plus-pro-v3/1.jpg",
+   "img/gallery/286ah-plus-pro-v3/2.jpg",
+   "img/gallery/286ah-plus-pro-v3/3.jpg",
+   "img/gallery/286ah-plus-pro-v3/4.jpg",
+   "img/gallery/286ah-plus-pro-v3/5.jpg",
+   "img/gallery/286ah-plus-pro-v3/6.jpg"
+  ],
+  "desc": "Мощный электровелосипед, который легко разгоняется до 55 км/ч и проезжает на одной зарядке до 80 км. 800 Вт мощности, 60 В и батарея 28.6 А·ч обеспечивают стабильную работу в любых условиях. Гидравлические тормоза гарантируют надёжное торможение, задний привод — лучшую управляемость.\n\nКомпактные 16-дюймовые колёса упрощают маневрирование в городе, а вес в 65 кг делает транспорт лёгким в обращении. Выдерживает нагрузку до 150 кг. Полная зарядка займёт 7 часов. На него распространяется 12-месячная гарантия.",
+  "specs": {
+   "power": 800,
+   "battery_ah": 28.6,
+   "speed": 55,
+   "range": 80,
+   "load": 150,
+   "wheel": 16.0,
+   "charge": 7.0,
+   "box": "152×30×77 см",
+   "volt": 60,
+   "brakes": "гидравлический",
+   "drive": "задний привод",
+   "seat": true,
+   "cargo": true
+  }
+ },
+ {
   "id": "286ah-max-pro-v3",
   "name": "V3 Pro Max 28.6Ah",
   "brand": "Kugoo",
@@ -1415,7 +1503,8 @@ const CATALOG = [
   "opt": 88000,
   "stock": "opt",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1803,49 +1892,6 @@ const CATALOG = [
    "load": 500.0,
    "weight": 417.0,
    "drive": "цепной"
-  }
- },
- {
-  "id": "f1-max-pro",
-  "name": "F1 Pro Max",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 69900,
-  "mrc": 69900,
-  "opt": 58300,
-  "stock": "opt",
-  "src": [
-   "koptom"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": false,
-  "warranty": false,
-  "img": "img/kugoo-f1-pro-max.jpg",
-  "gallery": [
-   "img/kugoo-f1-pro-max.jpg",
-   "img/gallery/f1-max-pro/1.jpg",
-   "img/gallery/f1-max-pro/2.jpg",
-   "img/gallery/f1-max-pro/3.jpg",
-   "img/gallery/f1-max-pro/4.jpg",
-   "img/gallery/f1-max-pro/5.jpg",
-   "img/gallery/f1-max-pro/6.jpg"
-  ],
-  "desc": "Kugoo F1 Pro Max — это мощный самокат для тех, кто не боится скорости. Два мотора (1600 Вт) дарят истинное ощущение полета, разгоняя до 55 км/ч. Крепкие дисковые тормоза держат ситуацию под контролем в любой момент.\n\nНа одной зарядке проедешь до 50 км — хватит для работы, учебы и забега по городу. Колеса диаметром 10 дюймов уверенно берут асфальт и неровности. Выдерживает до 120 кг и работает 12 месяцев на гарантии.",
-  "specs": {
-   "power": 1600,
-   "battery_ah": 22.5,
-   "volt": 48,
-   "speed": 56,
-   "range": 50,
-   "load": 120,
-   "wheel": 10,
-   "charge": 9.0,
-   "box": "127.5×23×59 см",
-   "brakes": "дисковый",
-   "drive": "полный",
-   "seat": false,
-   "weight": 33.9
   }
  }
 ];
