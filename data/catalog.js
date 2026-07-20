@@ -681,7 +681,7 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 36.0,
    "box": "131×24.5×57 см",
-   "brakes": "дисковый",
+   "brakes": "гидравлический",
    "drive": "задний",
    "seat": true
   }
@@ -725,7 +725,7 @@ const CATALOG = [
    "box": "131×24.5×57 см",
    "brakes": "гидравлический",
    "drive": "полный",
-   "seat": false
+   "seat": true
   }
  },
  {
