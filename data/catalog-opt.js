@@ -171,6 +171,50 @@ const CATALOG = [
   }
  },
  {
+  "id": "m5-pro",
+  "name": "M5 Pro",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 66900,
+  "mrc": 66900,
+  "opt": 55000,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 1386,
+  "hit": true,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-m5-pro-2025.jpg",
+  "gallery": [
+   "img/kugoo-kirin-m5-pro-2025.jpg",
+   "img/gallery/m5-pro/1.jpg",
+   "img/gallery/m5-pro/2.jpg",
+   "img/gallery/m5-pro/3.jpg",
+   "img/gallery/m5-pro/4.jpg",
+   "img/gallery/m5-pro/5.jpg",
+   "img/gallery/m5-pro/6.jpg"
+  ],
+  "desc": "Kugoo M5 Pro — мощный помощник для города. Киловаттный мотор разгонит тебя до 55 км/ч, а батарея ёмкостью 21 А·ч обеспечит запас хода до 65 км на одном заряде. Держит нагрузку до 120 кг, так что справится с грузом или пассажиром посолиднее.\n\nКолёса 11 дюймов уверенно катят по любым дорогам, а дисковые тормоза дарят надёжную остановку. За 8 часов зарядки — и ты снова в деле. Всё это в корпусе весом 37,5 кг — не тяжело переносить, когда батарея садится.",
+  "specs": {
+   "power": 1000,
+   "battery_ah": 21.0,
+   "speed": 55,
+   "range": 65,
+   "load": 120,
+   "weight": 37.5,
+   "wheel": 11.0,
+   "charge": 8.0,
+   "gross": 43.0,
+   "box": "131×29.5×52.5 см",
+   "brakes": "дисковый",
+   "seat": true,
+   "drive": "задний привод"
+  }
+ },
+ {
   "id": "g4-max",
   "name": "G4 Max",
   "brand": "Kugoo",
@@ -1157,6 +1201,52 @@ const CATALOG = [
   }
  },
  {
+  "id": "pro-v3",
+  "name": "V3 Pro (Monster)",
+  "brand": "Kugoo",
+  "cat": "велосипед",
+  "price": 66900,
+  "mrc": 66900,
+  "opt": 56100,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/электровелосипед-kugoo-kirin-v3-pro.png",
+  "gallery": [
+   "img/электровелосипед-kugoo-kirin-v3-pro.png",
+   "img/gallery/pro-v3/1.jpg",
+   "img/gallery/pro-v3/2.jpg",
+   "img/gallery/pro-v3/3.jpg",
+   "img/gallery/pro-v3/4.jpg",
+   "img/gallery/pro-v3/5.jpg",
+   "img/gallery/pro-v3/6.jpg"
+  ],
+  "desc": "Kugoo V3 Pro — это мощный электровелосипед для тех, кто не готов ждать. 500 ватт мощности и батарея на 60 В позволяют развивать скорость до 55 км/ч, а запаса хода в 60 км хватит на полноценные городские маршруты. Весит всего 40 килограммов, держит нагрузку до 150 кг.\n\nГидравлические тормоза обеспечивают уверенную остановку даже на высоких скоростях. Колёса 16\" отлично справляются с неровностями, а одной зарядки в 7 часов хватает надолго. На модель распространяется гарантия 12 месяцев.",
+  "specs": {
+   "power": 500,
+   "battery_ah": 21.0,
+   "speed": 55,
+   "range": 60,
+   "load": 150,
+   "wheel": 16.0,
+   "charge": 7.0,
+   "gross": 65.0,
+   "box": "148×31×72 см",
+   "volt": 60,
+   "brakes": "гидравлический",
+   "drive": "задний",
+   "seat": true,
+   "weight": 40.0,
+   "cargo": true
+  }
+ },
+ {
   "id": "286ah-plus-pro-v3",
   "name": "V3 Pro+ 28.6Ah",
   "brand": "Kugoo",
@@ -1503,8 +1593,7 @@ const CATALOG = [
   "opt": 88000,
   "stock": "opt",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1834,7 +1923,7 @@ const CATALOG = [
   "cat": "мотоцикл",
   "price": 129900,
   "mrc": 129900,
-  "opt": 104500,
+  "opt": 99000,
   "stock": "in",
   "src": [
    "koptom"
