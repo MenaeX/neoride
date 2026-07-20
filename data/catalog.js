@@ -441,9 +441,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 47900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 7618,
   "hit": true,
@@ -609,9 +610,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 66900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 1386,
   "hit": true,
@@ -681,7 +683,7 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 36.0,
    "box": "131×24.5×57 см",
-   "brakes": "гидравлический",
+   "brakes": "дисковый",
    "drive": "задний",
    "seat": true
   }
@@ -725,7 +727,7 @@ const CATALOG = [
    "box": "131×24.5×57 см",
    "brakes": "гидравлический",
    "drive": "полный",
-   "seat": true
+   "seat": false
   }
  },
  {
@@ -816,7 +818,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 128900,
-  "stock": "in",
+  "stock": "wait",
   "src": [
    "k2025",
    "koptom"
@@ -824,7 +826,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-lx-10-plus.jpg",
   "gallery": [
    "img/kugoo-lx-10-plus.jpg",
@@ -2136,14 +2138,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 68900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
