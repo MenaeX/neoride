@@ -170,12 +170,18 @@
   }
 
   // Связи с ботом нет (Cloudflare-бэкенд не открывается из РФ, а сайт на GitHub Pages — открывается).
-  // Уводим клиента в каналы, которые в РФ работают БЕЗ VPN: MAX и звонок.
-  // Telegram здесь НЕ предлагаем — у клиентов в РФ он тоже только через VPN (Андрей, 08.07).
+  // Даём ВСЕ рабочие каналы: Telegram (там тот же ИИ-продавец, у многих работает),
+  // MAX (РФ-родной, без VPN) и звонок. Клиент выбирает тот, что открывается у него.
   function addTgFallback() {
-    var d = addMsg('bot', 'Не могу связаться с консультантом прямо на сайте 🙏 Напишите нам в MAX или позвоните — ответим и подберём модель:');
+    var d = addMsg('bot', 'Не могу связаться с консультантом прямо на сайте 🙏 Давайте продолжим удобным способом — ответим и подберём модель:');
+    var tg = document.createElement('a');
+    tg.className = 'chat-tg-btn';
+    tg.href = 'https://t.me/neoride_shop_bot';
+    tg.target = '_blank'; tg.rel = 'noopener';
+    tg.textContent = 'Открыть чат в Telegram →';   // тот же ИИ-консультант
+    d.appendChild(tg);
     var mx = document.createElement('a');
-    mx.className = 'chat-tg-btn';
+    mx.className = 'chat-tg-btn alt';
     mx.href = '#';
     mx.setAttribute('data-max', '');   // fx.js скопирует номер в буфер (у MAX нет ссылки-на-чат)
     mx.textContent = 'Написать в MAX: +7 910 402-88-58';
