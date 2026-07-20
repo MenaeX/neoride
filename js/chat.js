@@ -169,6 +169,24 @@
     return d;
   }
 
+  // Связи с ботом нет (частый случай: Cloudflare не открывается из РФ без VPN, а сайт на GitHub — открывается).
+  // Не извиняемся текстом, а уводим клиента в РАБОЧИЙ канал одним тапом: в Telegram отвечает тот же ИИ-консультант.
+  function addTgFallback() {
+    var d = addMsg('bot', 'Не могу связаться с консультантом прямо на сайте 🙏 Давайте продолжим в Telegram — там отвечает тот же ИИ-консультант, сразу и без ожидания:');
+    var tg = document.createElement('a');
+    tg.className = 'chat-tg-btn';
+    tg.href = 'https://t.me/neoride_shop_bot';
+    tg.target = '_blank'; tg.rel = 'noopener';
+    tg.textContent = 'Открыть чат в Telegram →';
+    d.appendChild(tg);
+    var call = document.createElement('a');
+    call.className = 'chat-tg-btn alt';
+    call.href = 'tel:+79104028858';
+    call.textContent = 'Или позвонить: +7 910 402-88-58';
+    d.appendChild(call);
+    els.log.scrollTop = els.log.scrollHeight;
+  }
+
   function typing(on) {
     var t = els.log.querySelector('.chat-typing');
     if (on && !t) {
@@ -206,12 +224,12 @@
           save();
           addMsg('bot', d.reply);
         } else {
-          addMsg('bot', 'Связь с консультантом прервалась 🙏 Напишите нам — ответим: MAX +7 910 402-88-58 или Telegram @neoride_shop_bot');
+          addTgFallback();
         }
       })
       .catch(function () {
         typing(false);
-        addMsg('bot', 'Связь с консультантом сейчас недоступна. Напишите нам: MAX +7 910 402-88-58 или Telegram @neoride_shop_bot');
+        addTgFallback();
       })
       .finally(function () {
         busy = false;

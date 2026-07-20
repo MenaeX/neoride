@@ -352,6 +352,10 @@ details p{padding:0 22px 18px;color:var(--mut)}
 .chat-msg{max-width:84%;padding:10px 13px;border-radius:14px;font:400 14px/1.5 Inter;white-space:pre-wrap;word-wrap:break-word}
 .chat-msg.bot{align-self:flex-start;background:#161f29;color:var(--txt);border-bottom-left-radius:4px}
 .chat-msg.me{align-self:flex-end;background:var(--grad);color:#06130a;border-bottom-right-radius:4px;font-weight:500}
+/* Кнопки-фолбэк: если чат на сайте не достучался (Cloudflare недоступен из РФ без VPN) — уводим в Telegram/звонок */
+.chat-tg-btn{display:block;margin-top:10px;padding:10px 14px;border-radius:10px;background:var(--lime);color:#0a0a0a;font:700 14px Inter,sans-serif;text-align:center;text-decoration:none}
+.chat-tg-btn:hover{filter:brightness(1.06)}
+.chat-tg-btn.alt{background:none;border:1px solid var(--line2);color:var(--txt);font-weight:600}
 .chat-typing{align-self:flex-start;display:flex;gap:4px;padding:12px 14px;background:#161f29;border-radius:14px}
 .chat-typing i{width:7px;height:7px;border-radius:50%;background:var(--mut);animation:chatdot 1s infinite}
 .chat-typing i:nth-child(2){animation-delay:.15s}.chat-typing i:nth-child(3){animation-delay:.3s}
