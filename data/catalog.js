@@ -827,7 +827,7 @@ const CATALOG = [
   "hit": false,
   "new": false,
   "warranty": true,
-  "img": "img/электровелосипед-kugoo-kirin-v1-plus.jpg",
+  "img": "img/kugoo-lx-10-plus.jpg",
   "gallery": [],
   "desc": "",
   "specs": {
@@ -860,7 +860,7 @@ const CATALOG = [
   "hit": false,
   "new": false,
   "warranty": true,
-  "img": "img/электровелосипед-kugoo-kirin-v3-pro.png",
+  "img": "img/kugoo-lx-10-pro.jpg",
   "gallery": [],
   "desc": "Электросамокат Kugoo LX 10 Pro — мощная полноприводная модель для города и бездорожья. Оснащён двумя двигателями, ёмким аккумулятором, усиленной подвеской и гидравлическими тормозами.",
   "specs": {
