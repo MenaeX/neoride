@@ -683,7 +683,7 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 36.0,
    "box": "131×24.5×57 см",
-   "brakes": "дисковый",
+   "brakes": "гидравлический",
    "drive": "задний",
    "seat": true
   }
@@ -727,7 +727,7 @@ const CATALOG = [
    "box": "131×24.5×57 см",
    "brakes": "гидравлический",
    "drive": "полный",
-   "seat": false
+   "seat": true
   }
  },
  {
@@ -828,18 +828,7 @@ const CATALOG = [
   "new": false,
   "warranty": true,
   "img": "img/kugoo-lx-10-plus.jpg",
-  "gallery": [
-   "img/kugoo-lx-10-plus.jpg",
-   "img/gallery/lx10-plus/1.jpg",
-   "img/gallery/lx10-plus/2.jpg",
-   "img/gallery/lx10-plus/3.jpg",
-   "img/gallery/lx10-plus/4.jpg",
-   "img/gallery/lx10-plus/5.jpg",
-   "img/gallery/lx10-plus/6.jpg",
-   "img/gallery/lx10-plus/7.jpg",
-   "img/gallery/lx10-plus/8.jpg",
-   "img/gallery/lx10-plus/9.jpg"
-  ],
+  "gallery": [],
   "desc": "",
   "specs": {
    "power": 2800,
@@ -872,15 +861,7 @@ const CATALOG = [
   "new": false,
   "warranty": true,
   "img": "img/kugoo-lx-10-pro.jpg",
-  "gallery": [
-   "img/kugoo-lx-10-pro.jpg",
-   "img/gallery/lx10-pro/1.jpg",
-   "img/gallery/lx10-pro/2.jpg",
-   "img/gallery/lx10-pro/3.jpg",
-   "img/gallery/lx10-pro/4.jpg",
-   "img/gallery/lx10-pro/5.jpg",
-   "img/gallery/lx10-pro/6.jpg"
-  ],
+  "gallery": [],
   "desc": "Электросамокат Kugoo LX 10 Pro — мощная полноприводная модель для города и бездорожья. Оснащён двумя двигателями, ёмким аккумулятором, усиленной подвеской и гидравлическими тормозами.",
   "specs": {
    "power": 2800,
