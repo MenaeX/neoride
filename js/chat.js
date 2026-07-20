@@ -169,20 +169,21 @@
     return d;
   }
 
-  // Связи с ботом нет (частый случай: Cloudflare не открывается из РФ без VPN, а сайт на GitHub — открывается).
-  // Не извиняемся текстом, а уводим клиента в РАБОЧИЙ канал одним тапом: в Telegram отвечает тот же ИИ-консультант.
+  // Связи с ботом нет (Cloudflare-бэкенд не открывается из РФ, а сайт на GitHub Pages — открывается).
+  // Уводим клиента в каналы, которые в РФ работают БЕЗ VPN: MAX и звонок.
+  // Telegram здесь НЕ предлагаем — у клиентов в РФ он тоже только через VPN (Андрей, 08.07).
   function addTgFallback() {
-    var d = addMsg('bot', 'Не могу связаться с консультантом прямо на сайте 🙏 Давайте продолжим в Telegram — там отвечает тот же ИИ-консультант, сразу и без ожидания:');
-    var tg = document.createElement('a');
-    tg.className = 'chat-tg-btn';
-    tg.href = 'https://t.me/neoride_shop_bot';
-    tg.target = '_blank'; tg.rel = 'noopener';
-    tg.textContent = 'Открыть чат в Telegram →';
-    d.appendChild(tg);
+    var d = addMsg('bot', 'Не могу связаться с консультантом прямо на сайте 🙏 Напишите нам в MAX или позвоните — ответим и подберём модель:');
+    var mx = document.createElement('a');
+    mx.className = 'chat-tg-btn';
+    mx.href = '#';
+    mx.setAttribute('data-max', '');   // fx.js скопирует номер в буфер (у MAX нет ссылки-на-чат)
+    mx.textContent = 'Написать в MAX: +7 910 402-88-58';
+    d.appendChild(mx);
     var call = document.createElement('a');
     call.className = 'chat-tg-btn alt';
     call.href = 'tel:+79104028858';
-    call.textContent = 'Или позвонить: +7 910 402-88-58';
+    call.textContent = 'Позвонить: +7 910 402-88-58';
     d.appendChild(call);
     els.log.scrollTop = els.log.scrollHeight;
   }

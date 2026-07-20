@@ -263,9 +263,9 @@ const CATALOG = [
   "name": "LX 10+",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 111900,
-  "mrc": 111900,
-  "opt": 102400,
+  "price": 128900,
+  "mrc": 128900,
+  "opt": 105600,
   "stock": "in",
   "src": [
    "k2025",
