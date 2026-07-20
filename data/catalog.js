@@ -441,10 +441,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 47900,
-  "stock": "no",
+  "stock": "wait",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 7618,
   "hit": true,
@@ -610,10 +609,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 66900,
-  "stock": "no",
+  "stock": "wait",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 1386,
   "hit": true,
@@ -828,7 +826,18 @@ const CATALOG = [
   "new": false,
   "warranty": true,
   "img": "img/kugoo-lx-10-plus.jpg",
-  "gallery": [],
+  "gallery": [
+   "img/kugoo-lx-10-plus.jpg",
+   "img/gallery/lx10-plus/1.jpg",
+   "img/gallery/lx10-plus/2.jpg",
+   "img/gallery/lx10-plus/3.jpg",
+   "img/gallery/lx10-plus/4.jpg",
+   "img/gallery/lx10-plus/5.jpg",
+   "img/gallery/lx10-plus/6.jpg",
+   "img/gallery/lx10-plus/7.jpg",
+   "img/gallery/lx10-plus/8.jpg",
+   "img/gallery/lx10-plus/9.jpg"
+  ],
   "desc": "",
   "specs": {
    "power": 2800,
@@ -861,7 +870,15 @@ const CATALOG = [
   "new": false,
   "warranty": true,
   "img": "img/kugoo-lx-10-pro.jpg",
-  "gallery": [],
+  "gallery": [
+   "img/kugoo-lx-10-pro.jpg",
+   "img/gallery/lx10-pro/1.jpg",
+   "img/gallery/lx10-pro/2.jpg",
+   "img/gallery/lx10-pro/3.jpg",
+   "img/gallery/lx10-pro/4.jpg",
+   "img/gallery/lx10-pro/5.jpg",
+   "img/gallery/lx10-pro/6.jpg"
+  ],
   "desc": "Электросамокат Kugoo LX 10 Pro — мощная полноприводная модель для города и бездорожья. Оснащён двумя двигателями, ёмким аккумулятором, усиленной подвеской и гидравлическими тормозами.",
   "specs": {
    "power": 2800,
@@ -2119,14 +2136,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 68900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
