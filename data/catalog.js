@@ -441,10 +441,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 47900,
-  "stock": "no",
+  "stock": "wait",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 7618,
   "hit": true,
@@ -610,10 +609,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 66900,
-  "stock": "no",
+  "stock": "wait",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 1386,
   "hit": true,
@@ -2138,14 +2136,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 68900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",

@@ -126,95 +126,6 @@ const CATALOG = [
   }
  },
  {
-  "id": "18ah-m4-pro",
-  "name": "M4 Pro 18Ah",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 47900,
-  "mrc": 47900,
-  "opt": 38500,
-  "stock": "opt",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 7618,
-  "hit": true,
-  "new": false,
-  "warranty": false,
-  "img": "img/kugoo-kirin-m4-pro-18ah-2025.jpg",
-  "gallery": [
-   "img/kugoo-kirin-m4-pro-18ah-2025.jpg",
-   "img/gallery/18ah-m4-pro/1.jpg",
-   "img/gallery/18ah-m4-pro/2.jpg",
-   "img/gallery/18ah-m4-pro/3.jpg",
-   "img/gallery/18ah-m4-pro/4.jpg",
-   "img/gallery/18ah-m4-pro/5.jpg",
-   "img/gallery/18ah-m4-pro/6.jpg"
-  ],
-  "desc": "Kugoo M4 Pro — надёжный помощник для городских поездок. 600 ватт мощности разгонят тебя до 45 км/ч, а батарея на 18 ампер-часов обеспечит путь до 45 км на одной зарядке. Дисковые тормоза держат ситуацию под контролем, задний привод даёт стабильность и уверенность на дороге.\n\nМассивные 10-дюймовые колёса справляются с неровностями, конструкция выдерживает до 120 кг. Весит 27 кг — не тяжело таскать с собой. За 8 часов зарядки получаешь полную готовность к следующему приключению.",
-  "specs": {
-   "power": 600,
-   "battery_ah": 18.0,
-   "volt": 48,
-   "speed": 45,
-   "range": 45,
-   "load": 120,
-   "weight": 27.0,
-   "wheel": 10.0,
-   "gross": 30.0,
-   "box": "119.5×49.5×28 см",
-   "charge": 8.0,
-   "brakes": "Дисковый",
-   "drive": "задний привод",
-   "seat": true
-  }
- },
- {
-  "id": "m5-pro",
-  "name": "M5 Pro",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 66900,
-  "mrc": 66900,
-  "opt": 55000,
-  "stock": "opt",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 1386,
-  "hit": true,
-  "new": false,
-  "warranty": false,
-  "img": "img/kugoo-kirin-m5-pro-2025.jpg",
-  "gallery": [
-   "img/kugoo-kirin-m5-pro-2025.jpg",
-   "img/gallery/m5-pro/1.jpg",
-   "img/gallery/m5-pro/2.jpg",
-   "img/gallery/m5-pro/3.jpg",
-   "img/gallery/m5-pro/4.jpg",
-   "img/gallery/m5-pro/5.jpg",
-   "img/gallery/m5-pro/6.jpg"
-  ],
-  "desc": "Kugoo M5 Pro — мощный помощник для города. Киловаттный мотор разгонит тебя до 55 км/ч, а батарея ёмкостью 21 А·ч обеспечит запас хода до 65 км на одном заряде. Держит нагрузку до 120 кг, так что справится с грузом или пассажиром посолиднее.\n\nКолёса 11 дюймов уверенно катят по любым дорогам, а дисковые тормоза дарят надёжную остановку. За 8 часов зарядки — и ты снова в деле. Всё это в корпусе весом 37,5 кг — не тяжело переносить, когда батарея садится.",
-  "specs": {
-   "power": 1000,
-   "battery_ah": 21.0,
-   "speed": 55,
-   "range": 65,
-   "load": 120,
-   "weight": 37.5,
-   "wheel": 11.0,
-   "charge": 8.0,
-   "gross": 43.0,
-   "box": "131×29.5×52.5 см",
-   "brakes": "дисковый",
-   "seat": true,
-   "drive": "задний привод"
-  }
- },
- {
   "id": "g4-max",
   "name": "G4 Max",
   "brand": "Kugoo",
@@ -1254,14 +1165,14 @@ const CATALOG = [
   "price": 68900,
   "mrc": 68900,
   "opt": 58900,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
