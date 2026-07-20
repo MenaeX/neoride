@@ -273,14 +273,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 55900,
-  "stock": "wait",
+  "stock": "in",
   "src": [
    "drop"
   ],
   "pop": 300,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-m3-pro-2025-600w-48v-13ah.jpg",
   "gallery": [
    "img/kugoo-kirin-m3-pro-2025-600w-48v-13ah.jpg",
@@ -357,14 +357,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 40900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "drop"
   ],
   "pop": 3673,
   "hit": true,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-max-speed-600w-new-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-max-speed-600w-new-2025.jpg",
@@ -610,9 +610,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 66900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 1386,
   "hit": true,
@@ -650,11 +651,10 @@ const CATALOG = [
   "name": "G2 Max",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 57900,
+  "price": 73900,
   "stock": "wait",
   "src": [
-   "drop",
-   "k2025"
+   "drop"
   ],
   "pop": 1941,
   "hit": true,
@@ -1946,7 +1946,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 59900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "k2025",
    "koptom"
@@ -1954,7 +1954,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-v3.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-v3.jpg",
@@ -1989,9 +1989,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 60900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2116,7 +2117,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 68900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "koptom"
   ],
@@ -2942,7 +2943,7 @@ const CATALOG = [
   "price": 69900,
   "stock": "no",
   "src": [
-   "drop"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,

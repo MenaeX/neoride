@@ -118,7 +118,7 @@
       <div class="mp-type">Электровелосипед · Kugoo</div>
       <h1>Kugoo V3 Pro+ 28.6Ah</h1>
       <div class="mp-price">68 900 ₽</div>
-      <div class="mp-stock">Ожидается поступление · доставка по всей России</div>
+      <div class="mp-stock">Уточняйте наличие · доставка по всей России</div>
       <div class="mp-cta">
         <a class="btn btn-accent" href="https://t.me/neoride_shop_bot?start=m_286ah-plus-pro-v3" target="_blank" rel="noopener">Заказать в Telegram</a>
         <a class="btn" href="tel:+79104028858">📞 +7 910 402-88-58</a>
@@ -157,7 +157,7 @@
       </table>
     </div>
   </div>
-  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/286ah-max-pro-v3.html">Kugoo V3 Pro Max 28.6Ah<span>69 900 ₽</span></a><a href="/model/v2.html">Kugoo Kirin V2<span>63 900 ₽</span></a><a href="/model/pro-v4.html">Kugoo Kirin V4 Pro фэт<span>74 900 ₽</span></a><a href="/model/max-v4.html">Kugoo Kirin V4 Max фэт<span>74 900 ₽</span></a><a href="/model/v3.html">Kugoo V3<span>59 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-velosipedy.html">Все электровелосипеды →</a></p></div>
+  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/286ah-max-pro-v3.html">Kugoo V3 Pro Max 28.6Ah<span>69 900 ₽</span></a><a href="/model/v2.html">Kugoo Kirin V2<span>63 900 ₽</span></a><a href="/model/pro-v4.html">Kugoo Kirin V4 Pro фэт<span>74 900 ₽</span></a><a href="/model/max-v4.html">Kugoo Kirin V4 Max фэт<span>74 900 ₽</span></a><a href="/model/v5.html">Kugoo Kirin V5 фэт<span>83 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-velosipedy.html">Все электровелосипеды →</a></p></div>
   <div class="mp-desc">
     <h2>Описание Kugoo V3 Pro+ 28.6Ah</h2>
     <p>Мощный электровелосипед, который легко разгоняется до 55 км/ч и проезжает на одной зарядке до 80 км. 800 Вт мощности, 60 В и батарея 28.6 А·ч обеспечивают стабильную работу в любых условиях. Гидравлические тормоза гарантируют надёжное торможение, задний привод — лучшую управляемость.</p><p>Компактные 16-дюймовые колёса упрощают маневрирование в городе, а вес в 65 кг делает транспорт лёгким в обращении. Выдерживает нагрузку до 150 кг. Полная зарядка займёт 7 часов. На него распространяется 12-месячная гарантия.</p>
@@ -188,7 +188,7 @@
   <span>Написать</span>
 </a>
 <div class="mp-sticky">
-  <div class="sp"><b>68 900 ₽</b><small>Ожидается поступление · доставка по РФ</small></div>
+  <div class="sp"><b>68 900 ₽</b><small>Уточняйте наличие · доставка по РФ</small></div>
   <a class="s-call" href="tel:+79104028858" aria-label="Позвонить">📞</a>
   <a class="s-order" href="https://t.me/neoride_shop_bot?start=m_286ah-plus-pro-v3" target="_blank" rel="noopener">Заказать</a>
 </div>
@@ -206,7 +206,7 @@
     if(!contact) return;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,contact:contact,consent:true,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"wait",warranty:false,src:["koptom"]};
+    var payload={name:document.getElementById('cbName').value,contact:contact,consent:true,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"no",warranty:false,src:["koptom"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});

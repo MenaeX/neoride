@@ -171,6 +171,50 @@ const CATALOG = [
   }
  },
  {
+  "id": "m5-pro",
+  "name": "M5 Pro",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 66900,
+  "mrc": 66900,
+  "opt": 55000,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 1386,
+  "hit": true,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-m5-pro-2025.jpg",
+  "gallery": [
+   "img/kugoo-kirin-m5-pro-2025.jpg",
+   "img/gallery/m5-pro/1.jpg",
+   "img/gallery/m5-pro/2.jpg",
+   "img/gallery/m5-pro/3.jpg",
+   "img/gallery/m5-pro/4.jpg",
+   "img/gallery/m5-pro/5.jpg",
+   "img/gallery/m5-pro/6.jpg"
+  ],
+  "desc": "Kugoo M5 Pro — мощный помощник для города. Киловаттный мотор разгонит тебя до 55 км/ч, а батарея ёмкостью 21 А·ч обеспечит запас хода до 65 км на одном заряде. Держит нагрузку до 120 кг, так что справится с грузом или пассажиром посолиднее.\n\nКолёса 11 дюймов уверенно катят по любым дорогам, а дисковые тормоза дарят надёжную остановку. За 8 часов зарядки — и ты снова в деле. Всё это в корпусе весом 37,5 кг — не тяжело переносить, когда батарея садится.",
+  "specs": {
+   "power": 1000,
+   "battery_ah": 21.0,
+   "speed": 55,
+   "range": 65,
+   "load": 120,
+   "weight": 37.5,
+   "wheel": 11.0,
+   "charge": 8.0,
+   "gross": 43.0,
+   "box": "131×29.5×52.5 см",
+   "brakes": "дисковый",
+   "seat": true,
+   "drive": "задний привод"
+  }
+ },
+ {
   "id": "g4-max",
   "name": "G4 Max",
   "brand": "Kugoo",
@@ -1099,7 +1143,7 @@ const CATALOG = [
   "price": 59900,
   "mrc": 59900,
   "opt": 48400,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "k2025",
    "koptom"
@@ -1107,7 +1151,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-v3.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-v3.jpg",
@@ -1134,6 +1178,51 @@ const CATALOG = [
    "brakes": "дисковый",
    "drive": "задний",
    "seat": true
+  }
+ },
+ {
+  "id": "max-v3",
+  "name": "V3 Max",
+  "brand": "Kugoo",
+  "cat": "велосипед",
+  "price": 60900,
+  "mrc": 60900,
+  "opt": 52800,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/электровелосипед-kugoo-kirin-v3-max.png",
+  "gallery": [
+   "img/электровелосипед-kugoo-kirin-v3-max.png",
+   "img/gallery/max-v3/1.jpg",
+   "img/gallery/max-v3/2.jpg",
+   "img/gallery/max-v3/3.jpg",
+   "img/gallery/max-v3/4.jpg",
+   "img/gallery/max-v3/5.jpg",
+   "img/gallery/max-v3/6.jpg"
+  ],
+  "desc": "Электровелосипед Kugoo V3 Max разгонится до 45 км/ч и проедет на одной зарядке до 65 км. Мощный мотор в 750 Вт справится с подъёмами и даст вам настоящий драйв на дороге.\n\nВесит всего 43 кг, поэтому легко переносится и паркуется. Гидравлические тормоза обеспечивают уверенную остановку в любых условиях. Готов возить вас и ваш груз — выдержит до 100 кг.",
+  "specs": {
+   "power": 750,
+   "battery_ah": 15.6,
+   "speed": 45,
+   "range": 65,
+   "load": 100,
+   "weight": 43.0,
+   "wheel": 18.0,
+   "charge": 7.0,
+   "box": "145×29×73.5 см",
+   "brakes": "гидравлический",
+   "drive": "задний",
+   "seat": true,
+   "volt": 48,
+   "cargo": true
   }
  },
  {
@@ -1179,6 +1268,49 @@ const CATALOG = [
    "drive": "задний",
    "seat": true,
    "weight": 40.0,
+   "cargo": true
+  }
+ },
+ {
+  "id": "286ah-plus-pro-v3",
+  "name": "V3 Pro+ 28.6Ah",
+  "brand": "Kugoo",
+  "cat": "велосипед",
+  "price": 68900,
+  "mrc": 68900,
+  "opt": 58900,
+  "stock": "opt",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
+  "gallery": [
+   "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
+   "img/gallery/286ah-plus-pro-v3/1.jpg",
+   "img/gallery/286ah-plus-pro-v3/2.jpg",
+   "img/gallery/286ah-plus-pro-v3/3.jpg",
+   "img/gallery/286ah-plus-pro-v3/4.jpg",
+   "img/gallery/286ah-plus-pro-v3/5.jpg",
+   "img/gallery/286ah-plus-pro-v3/6.jpg"
+  ],
+  "desc": "Мощный электровелосипед, который легко разгоняется до 55 км/ч и проезжает на одной зарядке до 80 км. 800 Вт мощности, 60 В и батарея 28.6 А·ч обеспечивают стабильную работу в любых условиях. Гидравлические тормоза гарантируют надёжное торможение, задний привод — лучшую управляемость.\n\nКомпактные 16-дюймовые колёса упрощают маневрирование в городе, а вес в 65 кг делает транспорт лёгким в обращении. Выдерживает нагрузку до 150 кг. Полная зарядка займёт 7 часов. На него распространяется 12-месячная гарантия.",
+  "specs": {
+   "power": 800,
+   "battery_ah": 28.6,
+   "speed": 55,
+   "range": 80,
+   "load": 150,
+   "wheel": 16.0,
+   "charge": 7.0,
+   "box": "152×30×77 см",
+   "volt": 60,
+   "brakes": "гидравлический",
+   "drive": "задний привод",
+   "seat": true,
    "cargo": true
   }
  },
@@ -1816,7 +1948,7 @@ const CATALOG = [
   "cat": "мотоцикл",
   "price": 129900,
   "mrc": 129900,
-  "opt": 104500,
+  "opt": 99000,
   "stock": "in",
   "src": [
    "koptom"
