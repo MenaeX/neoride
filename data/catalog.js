@@ -1112,7 +1112,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 129900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "k2025",
    "koptom"
@@ -1120,7 +1120,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-f4-pro.jpg",
   "gallery": [
    "img/kugoo-f4-pro.jpg",

@@ -354,7 +354,7 @@ const CATALOG = [
   "price": 129900,
   "mrc": 129900,
   "opt": 110000,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "k2025",
    "koptom"
@@ -362,7 +362,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-f4-pro.jpg",
   "gallery": [
    "img/kugoo-f4-pro.jpg",
