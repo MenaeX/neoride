@@ -251,7 +251,7 @@ function cardHTML(c) {
              <button class="btn btn-accent card-cart" data-addcart="${c.id}">🛒 В корзину</button>
              <button class="btn card-1click" data-order="${c.id}">⚡ Купить в один клик</button>
            </div>`
-        : `<button class="btn card-notify" data-notify="${c.id}">🔔 Сообщить о наличии</button>`}
+        : `<div class="card-oos">Нет в наличии</div>`}
     </div>
   </article>`;
 }

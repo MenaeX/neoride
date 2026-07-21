@@ -722,6 +722,9 @@ details p{padding:0 22px 18px;color:var(--mut)}
   border-color:rgba(46,230,255,.4);color:var(--cyan)}
 .card-notify:hover{border-color:var(--cyan);background:rgba(46,230,255,.08);box-shadow:0 0 14px rgba(46,230,255,.2)}
 @media (max-width:600px){.card-notify{padding:9px;font-size:12.5px;margin-top:8px}}
+/* Нет в наличии — прямой честный статус вместо кнопки «сообщить», чтобы покупатель зря не звонил (Андрей 08.07) */
+.card-oos{width:100%;margin-top:12px;text-align:center;padding:12px 18px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--mut);font:700 14px Inter,sans-serif}
+@media (max-width:600px){.card-oos{padding:9px;font-size:12.5px;margin-top:8px}}
 
 /* Призыв подписаться на Telegram-канал */
 .tg-cta{padding:34px 0}
