@@ -2137,14 +2137,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 68900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",

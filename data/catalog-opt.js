@@ -1210,14 +1210,14 @@ const CATALOG = [
   "price": 68900,
   "mrc": 68900,
   "opt": 58900,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
