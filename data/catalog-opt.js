@@ -953,8 +953,7 @@ const CATALOG = [
   "opt": 30800,
   "stock": "opt",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1109,51 +1108,6 @@ const CATALOG = [
    "brakes": "дисковый",
    "drive": "задний",
    "seat": true
-  }
- },
- {
-  "id": "max-v3",
-  "name": "V3 Max",
-  "brand": "Kugoo",
-  "cat": "велосипед",
-  "price": 60900,
-  "mrc": 60900,
-  "opt": 52800,
-  "stock": "opt",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": false,
-  "warranty": false,
-  "img": "img/электровелосипед-kugoo-kirin-v3-max.png",
-  "gallery": [
-   "img/электровелосипед-kugoo-kirin-v3-max.png",
-   "img/gallery/max-v3/1.jpg",
-   "img/gallery/max-v3/2.jpg",
-   "img/gallery/max-v3/3.jpg",
-   "img/gallery/max-v3/4.jpg",
-   "img/gallery/max-v3/5.jpg",
-   "img/gallery/max-v3/6.jpg"
-  ],
-  "desc": "Электровелосипед Kugoo V3 Max разгонится до 45 км/ч и проедет на одной зарядке до 65 км. Мощный мотор в 750 Вт справится с подъёмами и даст вам настоящий драйв на дороге.\n\nВесит всего 43 кг, поэтому легко переносится и паркуется. Гидравлические тормоза обеспечивают уверенную остановку в любых условиях. Готов возить вас и ваш груз — выдержит до 100 кг.",
-  "specs": {
-   "power": 750,
-   "battery_ah": 15.6,
-   "speed": 45,
-   "range": 65,
-   "load": 100,
-   "weight": 43.0,
-   "wheel": 18.0,
-   "charge": 7.0,
-   "box": "145×29×73.5 см",
-   "brakes": "гидравлический",
-   "drive": "задний",
-   "seat": true,
-   "volt": 48,
-   "cargo": true
   }
  },
  {
