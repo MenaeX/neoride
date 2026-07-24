@@ -484,9 +484,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 64900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 1100,
   "hit": false,
@@ -1469,7 +1470,8 @@ const CATALOG = [
   "price": 49900,
   "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1810,7 +1812,8 @@ const CATALOG = [
   "price": 37900,
   "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2798,7 +2801,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": true,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-nb-300-водяное-охлаждение.jpg",
   "gallery": [
@@ -2934,7 +2937,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": true,
+  "new": false,
   "warranty": true,
   "img": "img/gallery/k6/1.jpg",
   "gallery": [
