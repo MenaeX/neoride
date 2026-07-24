@@ -171,51 +171,6 @@ const CATALOG = [
   }
  },
  {
-  "id": "18ah-m4-plus-pro",
-  "name": "M4 Pro+ 18Ah",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 64900,
-  "mrc": 49900,
-  "opt": 40700,
-  "stock": "opt",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 1100,
-  "hit": false,
-  "new": false,
-  "warranty": false,
-  "img": "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
-  "gallery": [
-   "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
-   "img/gallery/18ah-m4-plus-pro/1.jpg",
-   "img/gallery/18ah-m4-plus-pro/2.jpg",
-   "img/gallery/18ah-m4-plus-pro/3.jpg",
-   "img/gallery/18ah-m4-plus-pro/4.jpg",
-   "img/gallery/18ah-m4-plus-pro/5.jpg",
-   "img/gallery/18ah-m4-plus-pro/6.jpg"
-  ],
-  "desc": "Kugoo M4 Pro+ — мощный самокат для уверенной езды по городу. 800-ваттный мотор разгонит вас до 45 км/ч, а батареи на 18 Ач хватит на 45 км пути. Крепкие 10-дюймовые колёса справятся с любым покрытием, дисковый тормоз обеспечит безопасность.\n\nВозьмёт пассажира весом до 140 кг и прослужит долго благодаря годовой гарантии. За пять часов зарядки получишь полный запас хода. Надёжный выбор для ежедневных поездок.",
-  "specs": {
-   "power": 800,
-   "battery_ah": 18.0,
-   "speed": 45,
-   "range": 45,
-   "load": 140,
-   "wheel": 10.0,
-   "charge": 5.0,
-   "gross": 31.16,
-   "box": "120×26×48 см",
-   "weight": 27.0,
-   "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний",
-   "seat": true
-  }
- },
- {
   "id": "g4-max",
   "name": "G4 Max",
   "brand": "Kugoo",
@@ -399,7 +354,7 @@ const CATALOG = [
   "price": 129900,
   "mrc": 129900,
   "opt": 110000,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -407,7 +362,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-f4-pro.jpg",
   "gallery": [
    "img/kugoo-f4-pro.jpg",
@@ -641,8 +596,7 @@ const CATALOG = [
   "opt": 40700,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1158,6 +1112,51 @@ const CATALOG = [
   }
  },
  {
+  "id": "max-v3",
+  "name": "V3 Max",
+  "brand": "Kugoo",
+  "cat": "велосипед",
+  "price": 60900,
+  "mrc": 60900,
+  "opt": 52800,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/электровелосипед-kugoo-kirin-v3-max.png",
+  "gallery": [
+   "img/электровелосипед-kugoo-kirin-v3-max.png",
+   "img/gallery/max-v3/1.jpg",
+   "img/gallery/max-v3/2.jpg",
+   "img/gallery/max-v3/3.jpg",
+   "img/gallery/max-v3/4.jpg",
+   "img/gallery/max-v3/5.jpg",
+   "img/gallery/max-v3/6.jpg"
+  ],
+  "desc": "Электровелосипед Kugoo V3 Max разгонится до 45 км/ч и проедет на одной зарядке до 65 км. Мощный мотор в 750 Вт справится с подъёмами и даст вам настоящий драйв на дороге.\n\nВесит всего 43 кг, поэтому легко переносится и паркуется. Гидравлические тормоза обеспечивают уверенную остановку в любых условиях. Готов возить вас и ваш груз — выдержит до 100 кг.",
+  "specs": {
+   "power": 750,
+   "battery_ah": 15.6,
+   "speed": 45,
+   "range": 65,
+   "load": 100,
+   "weight": 43.0,
+   "wheel": 18.0,
+   "charge": 7.0,
+   "box": "145×29×73.5 см",
+   "brakes": "гидравлический",
+   "drive": "задний",
+   "seat": true,
+   "volt": 48,
+   "cargo": true
+  }
+ },
+ {
   "id": "pro-v3",
   "name": "V3 Pro (Monster)",
   "brand": "Kugoo",
@@ -1211,14 +1210,14 @@ const CATALOG = [
   "price": 68900,
   "mrc": 68900,
   "opt": 58900,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
@@ -1344,7 +1343,7 @@ const CATALOG = [
   "price": 74900,
   "mrc": 74900,
   "opt": 60500,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -1352,7 +1351,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-v4-max-48v-15-6-ah-750w.jpg",
   "gallery": [],
   "desc": "Kugoo Kirin V4 Max — мощный фэт-байк для уверенной езды по любым дорогам. 750-ваттный мотор разгоняет его до 50 км/ч, а на одной зарядке проедешь до 50 км. Гидравлические тормоза гарантируют безопасность даже на высокой скорости.\n\nШирокие 20-дюймовые колёса справляются с грунтом и асфальтом одинаково легко. Выдержит нагрузку до 120 кг и прослужит тебе долгие годы активного катания.",
@@ -1377,8 +1376,8 @@ const CATALOG = [
   "name": "Kirin V5 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 79900,
-  "mrc": 79900,
+  "price": 83900,
+  "mrc": 83900,
   "opt": 67100,
   "stock": "in",
   "src": [
@@ -1422,10 +1421,10 @@ const CATALOG = [
   "name": "V6 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 87900,
-  "mrc": 87900,
+  "price": 92900,
+  "mrc": 92900,
   "opt": 75900,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "drop",
    "k2025",
@@ -1434,7 +1433,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
   "gallery": [
    "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
@@ -1850,7 +1849,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": false,
+  "new": true,
   "warranty": true,
   "img": "img/kugoo-nb-300-водяное-охлаждение.jpg",
   "gallery": [
@@ -1921,7 +1920,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": false,
+  "new": true,
   "warranty": true,
   "img": "img/gallery/k6/1.jpg",
   "gallery": [
@@ -1938,6 +1937,49 @@ const CATALOG = [
    "load": 500.0,
    "weight": 417.0,
    "drive": "цепной"
+  }
+ },
+ {
+  "id": "f1-max-pro",
+  "name": "F1 Pro Max",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 69900,
+  "mrc": 69900,
+  "opt": 58300,
+  "stock": "opt",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-f1-pro-max.jpg",
+  "gallery": [
+   "img/kugoo-f1-pro-max.jpg",
+   "img/gallery/f1-max-pro/1.jpg",
+   "img/gallery/f1-max-pro/2.jpg",
+   "img/gallery/f1-max-pro/3.jpg",
+   "img/gallery/f1-max-pro/4.jpg",
+   "img/gallery/f1-max-pro/5.jpg",
+   "img/gallery/f1-max-pro/6.jpg"
+  ],
+  "desc": "Kugoo F1 Pro Max — это мощный самокат для тех, кто не боится скорости. Два мотора (1600 Вт) дарят истинное ощущение полета, разгоняя до 55 км/ч. Крепкие дисковые тормоза держат ситуацию под контролем в любой момент.\n\nНа одной зарядке проедешь до 50 км — хватит для работы, учебы и забега по городу. Колеса диаметром 10 дюймов уверенно берут асфальт и неровности. Выдерживает до 120 кг и работает 12 месяцев на гарантии.",
+  "specs": {
+   "power": 1600,
+   "battery_ah": 22.5,
+   "volt": 48,
+   "speed": 56,
+   "range": 50,
+   "load": 120,
+   "wheel": 10,
+   "charge": 9.0,
+   "box": "127.5×23×59 см",
+   "brakes": "дисковый",
+   "drive": "полный",
+   "seat": false,
+   "weight": 33.9
   }
  }
 ];
