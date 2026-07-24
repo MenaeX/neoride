@@ -2298,7 +2298,7 @@ const CATALOG = [
   "name": "Kirin V5 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 83900,
+  "price": 79900,
   "stock": "in",
   "src": [
    "drop",
@@ -2341,8 +2341,8 @@ const CATALOG = [
   "name": "V6 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 92900,
-  "stock": "in",
+  "price": 87900,
+  "stock": "no",
   "src": [
    "drop",
    "k2025",
@@ -2351,7 +2351,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
   "gallery": [
    "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
