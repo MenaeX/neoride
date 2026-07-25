@@ -121,7 +121,7 @@
       <div class="mp-type">Электросамокат · Kugoo</div>
       <h1>Kugoo M4 Pro Max 1600W</h1>
       <div class="mp-price">56 900 ₽</div>
-      <div class="mp-stock">Ожидается поступление · доставка по всей России</div>
+      <div class="mp-stock">Уточняйте наличие · доставка по всей России</div>
       <div class="mp-oos">Нет в наличии</div><div class="mp-cta"><a class="btn" href="tel:+79104028858">📞 +7 910 402-88-58</a><a class="btn" href="#" data-max>MAX</a></div><p class="mp-oos-hint">Этой модели сейчас нет в наличии. Позвоните — подскажем аналог или срок поступления. <a href="/#catalog">Смотреть модели в наличии →</a></p>
       <div class="mp-trust"><span>✓ Гарантия поставщика — уточняйте</span><span>✓ Проверка перед отправкой</span><span>✓ Доставка по РФ</span></div>
       
@@ -163,7 +163,7 @@
     <p class="fine">Kugoo® — товарный знак правообладателя; NEORIDE — независимый продавец. Цены на сайте не являются публичной офертой.</p>
     <p class="fine">Информация о характеристиках, комплектации, описании и внешнем виде товара носит справочный характер и не является публичной офертой (ст. 437 ГК РФ). Производитель вправе изменять конструкцию и комплектацию без предварительного уведомления; изображения могут отличаться от поставляемого товара. Наличие, актуальную цену и характеристики уточняйте у менеджеров.</p>
     <p class="fine"><a href="/oferta.html" style="color:var(--cyan)">Оферта</a> · <a href="/delivery.html" style="color:var(--cyan)">Доставка</a> · <a href="/payment.html" style="color:var(--cyan)">Оплата</a> · <a href="/returns.html" style="color:var(--cyan)">Обмен и возврат</a> · <a href="/warranty.html" style="color:var(--cyan)">Гарантия</a></p>
-    <p class="fine"><a href="/privacy.html" style="color:var(--cyan)">Политика обработки ПДн</a> · <a href="/consent.html" style="color:var(--cyan)">Согласие на обработку ПДн</a> · ИП Меньшиков А.Е., ОГРНИП 321774600050781</p>
+    <p class="fine"><a href="/privacy.html" style="color:var(--cyan)">Политика обработки ПДн</a> · <a href="/consent.html" style="color:var(--cyan)">Согласие на обработку ПДн</a> · ИП Меньшикова И.С., ОГРНИП 322774600545261</p>
   </div>
 </footer>
 <a class="channel-fab" href="https://t.me/neoride_shop" target="_blank" rel="noopener" aria-label="Telegram-канал новинок">
@@ -179,7 +179,7 @@
   <span>Написать</span>
 </a>
 <div class="mp-sticky">
-  <div class="sp"><b>56 900 ₽</b><small>Ожидается поступление · доставка по РФ</small></div>
+  <div class="sp"><b>56 900 ₽</b><small>Уточняйте наличие · доставка по РФ</small></div>
   <a class="s-call" href="tel:+79104028858" aria-label="Позвонить">📞</a>
   <a class="s-order" href="https://t.me/neoride_shop_bot?start=m_1600w-m4-max-pro" target="_blank" rel="noopener">Заказать</a>
 </div>
@@ -197,7 +197,7 @@
     if(!contact) return;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,contact:contact,consent:true,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"wait",warranty:false,src:["k2025"]};
+    var payload={name:document.getElementById('cbName').value,contact:contact,consent:true,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"no",warranty:false,src:["k2025", "koptom"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});

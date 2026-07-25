@@ -316,8 +316,7 @@ const CATALOG = [
   "price": 38900,
   "stock": "no",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 5175,
   "hit": true,
@@ -484,9 +483,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 64900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 1100,
   "hit": false,
@@ -526,9 +526,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 56900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 1279,
   "hit": true,
@@ -737,7 +738,8 @@ const CATALOG = [
   "price": 116900,
   "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 2355,
   "hit": true,
@@ -988,7 +990,8 @@ const CATALOG = [
   "price": 72900,
   "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1112,7 +1115,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 129900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "k2025",
    "koptom"
@@ -1120,7 +1123,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-f4-pro.jpg",
   "gallery": [
    "img/kugoo-f4-pro.jpg",
@@ -1469,7 +1472,8 @@ const CATALOG = [
   "price": 49900,
   "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2009,10 +2013,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 60900,
-  "stock": "no",
+  "stock": "wait",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -2137,14 +2140,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 68900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
@@ -2264,7 +2267,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 74900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "k2025",
    "koptom"
@@ -2272,7 +2275,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-v4-max-48v-15-6-ah-750w.jpg",
   "gallery": [],
   "desc": "Kugoo Kirin V4 Max — мощный фэт-байк для уверенной езды по любым дорогам. 750-ваттный мотор разгоняет его до 50 км/ч, а на одной зарядке проедешь до 50 км. Гидравлические тормоза гарантируют безопасность даже на высокой скорости.\n\nШирокие 20-дюймовые колёса справляются с грунтом и асфальтом одинаково легко. Выдержит нагрузку до 120 кг и прослужит тебе долгие годы активного катания.",
@@ -2297,7 +2300,7 @@ const CATALOG = [
   "name": "Kirin V5 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 83900,
+  "price": 79900,
   "stock": "in",
   "src": [
    "drop",
@@ -2340,8 +2343,8 @@ const CATALOG = [
   "name": "V6 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 92900,
-  "stock": "in",
+  "price": 87900,
+  "stock": "no",
   "src": [
    "drop",
    "k2025",
@@ -2350,7 +2353,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
   "gallery": [
    "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
@@ -2800,7 +2803,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": true,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-nb-300-водяное-охлаждение.jpg",
   "gallery": [
@@ -2936,7 +2939,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": true,
+  "new": false,
   "warranty": true,
   "img": "img/gallery/k6/1.jpg",
   "gallery": [
