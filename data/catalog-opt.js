@@ -446,8 +446,7 @@ const CATALOG = [
   "opt": 110000,
   "stock": "opt",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -686,8 +685,7 @@ const CATALOG = [
   "opt": 40700,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
