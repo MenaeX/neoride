@@ -274,14 +274,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 55900,
-  "stock": "in",
+  "stock": "wait",
   "src": [
    "drop"
   ],
   "pop": 300,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-m3-pro-2025-600w-48v-13ah.jpg",
   "gallery": [
    "img/kugoo-kirin-m3-pro-2025-600w-48v-13ah.jpg",
@@ -484,7 +484,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 64900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -492,7 +492,7 @@ const CATALOG = [
   "pop": 1100,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
@@ -612,9 +612,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 66900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 1386,
   "hit": true,
@@ -1295,14 +1296,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 40900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-c1-с-корзинкой.jpg",
   "gallery": [
    "img/kugoo-kirin-c1-с-корзинкой.jpg",
@@ -1684,7 +1685,6 @@ const CATALOG = [
   "price": 134900,
   "stock": "no",
   "src": [
-   "drop",
    "k2025"
   ],
   "pop": 0,
@@ -2181,8 +2181,7 @@ const CATALOG = [
   "price": 69900,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -2344,7 +2343,6 @@ const CATALOG = [
   "price": 87900,
   "stock": "no",
   "src": [
-   "drop",
    "k2025",
    "koptom"
   ],

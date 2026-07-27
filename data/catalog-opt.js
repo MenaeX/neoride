@@ -214,7 +214,7 @@ const CATALOG = [
   "price": 64900,
   "mrc": 49900,
   "opt": 40700,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -222,7 +222,7 @@ const CATALOG = [
   "pop": 1100,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
@@ -294,6 +294,50 @@ const CATALOG = [
    "drive": "полный",
    "seat": true,
    "volt": 48
+  }
+ },
+ {
+  "id": "m5-pro",
+  "name": "M5 Pro",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 66900,
+  "mrc": 66900,
+  "opt": 55000,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 1386,
+  "hit": true,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-m5-pro-2025.jpg",
+  "gallery": [
+   "img/kugoo-kirin-m5-pro-2025.jpg",
+   "img/gallery/m5-pro/1.jpg",
+   "img/gallery/m5-pro/2.jpg",
+   "img/gallery/m5-pro/3.jpg",
+   "img/gallery/m5-pro/4.jpg",
+   "img/gallery/m5-pro/5.jpg",
+   "img/gallery/m5-pro/6.jpg"
+  ],
+  "desc": "Kugoo M5 Pro — мощный помощник для города. Киловаттный мотор разгонит тебя до 55 км/ч, а батарея ёмкостью 21 А·ч обеспечит запас хода до 65 км на одном заряде. Держит нагрузку до 120 кг, так что справится с грузом или пассажиром посолиднее.\n\nКолёса 11 дюймов уверенно катят по любым дорогам, а дисковые тормоза дарят надёжную остановку. За 8 часов зарядки — и ты снова в деле. Всё это в корпусе весом 37,5 кг — не тяжело переносить, когда батарея садится.",
+  "specs": {
+   "power": 1000,
+   "battery_ah": 21.0,
+   "speed": 55,
+   "range": 65,
+   "load": 120,
+   "weight": 37.5,
+   "wheel": 11.0,
+   "charge": 8.0,
+   "gross": 43.0,
+   "box": "131×29.5×52.5 см",
+   "brakes": "дисковый",
+   "seat": true,
+   "drive": "задний привод"
   }
  },
  {
@@ -560,14 +604,14 @@ const CATALOG = [
   "price": 40900,
   "mrc": 40900,
   "opt": 33600,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-c1-с-корзинкой.jpg",
   "gallery": [
    "img/kugoo-kirin-c1-с-корзинкой.jpg",
@@ -945,7 +989,6 @@ const CATALOG = [
   "opt": 110000,
   "stock": "opt",
   "src": [
-   "drop",
    "k2025"
   ],
   "pop": 0,
@@ -1336,8 +1379,7 @@ const CATALOG = [
   "opt": 64300,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -1507,7 +1549,6 @@ const CATALOG = [
   "opt": 75900,
   "stock": "opt",
   "src": [
-   "drop",
    "k2025",
    "koptom"
   ],
