@@ -148,7 +148,7 @@
       </table>
     </div>
   </div>
-  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/c2.html">Kugoo Kirin C2<span>75 900 ₽</span></a><a href="/model/c2-pro.html">Kugoo C2 Pro<span>64 900 ₽</span></a><a href="/model/ec02.html">Kugoo EC02<span>49 900 ₽</span></a><a href="/model/c1-plus.html">Kugoo C1+ (корзина)<span>40 900 ₽</span></a><a href="/model/note.html">Kugoo Kirin Note<span>87 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-skutery.html">Все электроскутеры →</a></p></div>
+  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/c2.html">Kugoo Kirin C2<span>75 900 ₽</span></a><a href="/model/ec02.html">Kugoo EC02<span>49 900 ₽</span></a><a href="/model/c1-plus.html">Kugoo C1+ (корзина)<span>40 900 ₽</span></a><a href="/model/note.html">Kugoo Kirin Note<span>87 900 ₽</span></a><a href="/model/c2-pro.html">Kugoo C2 Pro<span>64 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-skutery.html">Все электроскутеры →</a></p></div>
   <div class="mp-desc">
     <h2>Описание Kugoo R2 мопед</h2>
     <p>Kugoo R2 — мощный электромопед для тех, кто ценит скорость и свободу. С двигателем на 1800 Вт и запасом хода до 80 км вы легко справитесь с городскими маршрутами. Полный привод обеспечивает уверенность на любой дороге, а гидравлические тормоза гарантируют безопасность.</p><p>Компактный, но вместительный — весит всего 71 кг и выдерживает нагрузку до 150 кг. На одной зарядке за 9 часов развивает скорость до 80 км/ч. Покупаете с 12-месячной гарантией, так что ездите без забот.</p>
@@ -197,7 +197,7 @@
     if(!contact) return;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,contact:contact,consent:true,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["drop", "k2025", "koptom"]};
+    var payload={name:document.getElementById('cbName').value,contact:contact,consent:true,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["drop", "k2025"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});

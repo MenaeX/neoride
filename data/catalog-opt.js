@@ -721,15 +721,14 @@ const CATALOG = [
   "price": 64900,
   "mrc": 64900,
   "opt": 60500,
-  "stock": "in",
+  "stock": "opt",
   "src": [
-   "drop",
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-c2-pro-1000w-18-2ah.png",
   "gallery": [
    "img/kugoo-kirin-c2-pro-1000w-18-2ah.png",
@@ -899,8 +898,7 @@ const CATALOG = [
   "stock": "in",
   "src": [
    "drop",
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
