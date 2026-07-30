@@ -90,7 +90,8 @@ const CATALOG = [
   "opt": 33000,
   "stock": "opt",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 5175,
   "hit": true,
@@ -432,6 +433,51 @@ const CATALOG = [
    "volt": 48,
    "brakes": "дисковый",
    "drive": "задний",
+   "seat": false
+  }
+ },
+ {
+  "id": "f3-max-pro",
+  "name": "F3 Pro Max",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 93900,
+  "mrc": 93900,
+  "opt": 77000,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 1353,
+  "hit": true,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-f3-pro-max.jpg",
+  "gallery": [
+   "img/kugoo-f3-pro-max.jpg",
+   "img/gallery/f3-max-pro/1.jpg",
+   "img/gallery/f3-max-pro/2.jpg",
+   "img/gallery/f3-max-pro/3.jpg",
+   "img/gallery/f3-max-pro/4.jpg",
+   "img/gallery/f3-max-pro/5.jpg",
+   "img/gallery/f3-max-pro/6.jpg"
+  ],
+  "desc": "Kugoo F3 Pro Max — мощный самокат для тех, кто не готов экономить на скорости и дальности. С двумя моторами по 1100 Вт каждый он разгоняется до 68 км/ч и преодолевает до 70 км на одном заряде. Гидравлические тормоза гарантируют уверенную остановку даже на высокой скорости.\n\nОгромный аккумулятор 52В 23.4 А·ч держит заряд долго, а массивные 10-дюймовые колёса уверенно едят километры. Весит 32.5 кг, выдерживает до 120 кг — подойдёт для большинства райдеров. Идеален для дальних поездок и активного катания.",
+  "specs": {
+   "power": 2200,
+   "battery_ah": 23.4,
+   "volt": 52,
+   "speed": 68,
+   "range": 70,
+   "load": 120,
+   "weight": 32.5,
+   "gross": 41.0,
+   "box": "134×28×63.5 см",
+   "charge": 12.0,
+   "wheel": 10.0,
+   "brakes": "гидравлический",
+   "drive": "полный",
    "seat": false
   }
  },
