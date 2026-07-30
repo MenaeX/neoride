@@ -1243,52 +1243,6 @@ const CATALOG = [
   }
  },
  {
-  "id": "pro-v3",
-  "name": "V3 Pro (Monster)",
-  "brand": "Kugoo",
-  "cat": "велосипед",
-  "price": 66900,
-  "mrc": 66900,
-  "opt": 56100,
-  "stock": "opt",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": false,
-  "warranty": false,
-  "img": "img/электровелосипед-kugoo-kirin-v3-pro.png",
-  "gallery": [
-   "img/электровелосипед-kugoo-kirin-v3-pro.png",
-   "img/gallery/pro-v3/1.jpg",
-   "img/gallery/pro-v3/2.jpg",
-   "img/gallery/pro-v3/3.jpg",
-   "img/gallery/pro-v3/4.jpg",
-   "img/gallery/pro-v3/5.jpg",
-   "img/gallery/pro-v3/6.jpg"
-  ],
-  "desc": "Kugoo V3 Pro — это мощный электровелосипед для тех, кто не готов ждать. 500 ватт мощности и батарея на 60 В позволяют развивать скорость до 55 км/ч, а запаса хода в 60 км хватит на полноценные городские маршруты. Весит всего 40 килограммов, держит нагрузку до 150 кг.\n\nГидравлические тормоза обеспечивают уверенную остановку даже на высоких скоростях. Колёса 16\" отлично справляются с неровностями, а одной зарядки в 7 часов хватает надолго. На модель распространяется гарантия 12 месяцев.",
-  "specs": {
-   "power": 500,
-   "battery_ah": 21.0,
-   "speed": 55,
-   "range": 60,
-   "load": 150,
-   "wheel": 16.0,
-   "charge": 7.0,
-   "gross": 65.0,
-   "box": "148×31×72 см",
-   "volt": 60,
-   "brakes": "гидравлический",
-   "drive": "задний",
-   "seat": true,
-   "weight": 40.0,
-   "cargo": true
-  }
- },
- {
   "id": "286ah-plus-pro-v3",
   "name": "V3 Pro+ 28.6Ah",
   "brand": "Kugoo",
