@@ -559,8 +559,19 @@ if (leadModal) {
     e.preventDefault();
     const btn = document.getElementById('leadSubmit');
     const st = document.getElementById('leadStatus');
-    const contact = document.getElementById('leadContact').value.trim();
-    if (!contact) return;
+    const phone = document.getElementById('leadPhone').value.trim();
+    const tg = document.getElementById('leadTgUser').value.trim();
+    if (!phone || !tg) {
+      st.textContent = 'Оставьте, пожалуйста, и телефон, и Telegram — так менеджер точно с вами свяжется.';
+      st.className = 'lead-status err'; st.hidden = false;
+      return;
+    }
+    if (phone.replace(/\D/g, '').length < 10) {
+      st.textContent = 'Проверьте номер телефона — кажется, он неполный.';
+      st.className = 'lead-status err'; st.hidden = false;
+      return;
+    }
+    const contact = 'тел ' + phone + ' · TG ' + tg;
     const consentEl = document.getElementById('leadConsent');
     if (consentEl && !consentEl.checked) {
       st.textContent = 'Отметьте согласие на обработку персональных данных, чтобы отправить заявку.';
@@ -570,7 +581,7 @@ if (leadModal) {
     btn.disabled = true; btn.textContent = 'Отправляем…';
     const base = {
       name: document.getElementById('leadName').value,
-      contact,
+      phone, tg, contact,
       consent: true,
       promo: (document.getElementById('leadPromo') || { value: '' }).value,
       page: location.pathname,
