@@ -445,7 +445,7 @@ const CATALOG = [
   "price": 93900,
   "mrc": 93900,
   "opt": 77000,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -453,7 +453,7 @@ const CATALOG = [
   "pop": 1353,
   "hit": true,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-f3-pro-max.jpg",
   "gallery": [
    "img/kugoo-f3-pro-max.jpg",
@@ -906,7 +906,6 @@ const CATALOG = [
   "opt": 77600,
   "stock": "opt",
   "src": [
-   "drop",
    "k2025",
    "koptom"
   ],
@@ -1981,6 +1980,47 @@ const CATALOG = [
    "load": 500.0,
    "weight": 417.0,
    "drive": "цепной"
+  }
+ },
+ {
+  "id": "wish03",
+  "name": "Wish 03",
+  "brand": "Kugoo",
+  "cat": "питбайк",
+  "price": 127900,
+  "mrc": 127900,
+  "opt": 104500,
+  "stock": "opt",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/wish03.jpg",
+  "gallery": [
+   "img/wish03.jpg",
+   "img/gallery/wish03/1.jpg",
+   "img/gallery/wish03/2.jpg",
+   "img/gallery/wish03/3.jpg",
+   "img/gallery/wish03/4.jpg",
+   "img/gallery/wish03/5.jpg",
+   "img/gallery/wish03/6.jpg"
+  ],
+  "desc": "Мощный питбайк для тех, кто любит скорость и адреналин. Разгоняется до 80 км/ч, проходит на одной зарядке до 80 км, держит вес до 200 кг. Гидравлические тормоза обеспечивают надёжное торможение в любых ситуациях.\n\nС батареей 60 В и ёмкостью 27 А·ч получается настоящий внедорожник на электричестве. Полная зарядка за 6 часов, 19-дюймовые колёса, весит всего 69 кг. Идеален для прогулок по городу и за его пределами.",
+  "specs": {
+   "speed": 80,
+   "power": 3500,
+   "load": 200.0,
+   "range": 80,
+   "charge": 6.0,
+   "wheel": 19.0,
+   "battery_ah": 27.0,
+   "volt": 60,
+   "brakes": "гидравлический",
+   "weight": 69.0,
+   "drive": "задний"
   }
  }
 ];
