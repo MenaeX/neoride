@@ -250,6 +250,8 @@ select:focus,input:focus{border-color:var(--cyan);box-shadow:0 0 0 1px rgba(46,2
 .badge.hit{background:linear-gradient(92deg,#ff9d2e,#ff4e2e);color:#fff;box-shadow:0 4px 16px rgba(255,110,46,.45)}
 .badge.new{background:linear-gradient(92deg,#2ee6ff,#7b5cff);color:#04121a;box-shadow:0 4px 16px rgba(46,230,255,.45)}
 .warr{font:600 12px Inter;color:#8de08a}
+.card-law{font:600 11.5px Inter;color:#8a8ba0;margin:2px 0}
+.card-law.sim{color:#2ee6ff}
 .badge.in{background:var(--lime);color:#06130a;box-shadow:0 4px 14px rgba(184,255,46,.35)}
 .badge.opt{background:var(--violet);color:#fff}
 .badge.wait{background:rgba(255,176,32,.95);color:#1a1205}

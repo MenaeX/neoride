@@ -273,14 +273,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 55900,
-  "stock": "wait",
+  "stock": "in",
   "src": [
    "drop"
   ],
   "pop": 300,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-m3-pro-2025-600w-48v-13ah.jpg",
   "gallery": [
    "img/kugoo-kirin-m3-pro-2025-600w-48v-13ah.jpg",
@@ -484,15 +484,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 64900,
-  "stock": "in",
+  "stock": "wait",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 1100,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
   "gallery": [
    "img/kugoo-kirin-m4-pro-plus-18ah-2025.jpg",
@@ -527,10 +526,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 56900,
-  "stock": "no",
+  "stock": "wait",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 1279,
   "hit": true,
@@ -990,8 +988,7 @@ const CATALOG = [
   "price": 72900,
   "stock": "no",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1073,15 +1070,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 93900,
-  "stock": "in",
+  "stock": "wait",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 1353,
   "hit": true,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-f3-pro-max.jpg",
   "gallery": [
    "img/kugoo-f3-pro-max.jpg",
@@ -1116,14 +1112,15 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 129900,
-  "stock": "no",
+  "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-f4-pro.jpg",
   "gallery": [
    "img/kugoo-f4-pro.jpg",
@@ -1296,14 +1293,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 40900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-c1-с-корзинкой.jpg",
   "gallery": [
    "img/kugoo-kirin-c1-с-корзинкой.jpg",
@@ -1407,14 +1404,15 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 64900,
-  "stock": "no",
+  "stock": "in",
   "src": [
+   "drop",
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-c2-pro-1000w-18-2ah.png",
   "gallery": [
    "img/kugoo-kirin-c2-pro-1000w-18-2ah.png",
@@ -1598,7 +1596,8 @@ const CATALOG = [
   "stock": "in",
   "src": [
    "drop",
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1639,6 +1638,7 @@ const CATALOG = [
   "price": 94900,
   "stock": "no",
   "src": [
+   "drop",
    "k2025",
    "koptom"
   ],
@@ -1682,6 +1682,7 @@ const CATALOG = [
   "price": 134900,
   "stock": "no",
   "src": [
+   "drop",
    "k2025"
   ],
   "pop": 0,
@@ -2008,9 +2009,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 60900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2135,14 +2137,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 68900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-kirin-v3-pro-plus-28-6-ah.jpg",
@@ -2178,7 +2180,8 @@ const CATALOG = [
   "price": 69900,
   "stock": "in",
   "src": [
-   "drop"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2261,7 +2264,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 74900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -2269,7 +2272,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-v4-max-48v-15-6-ah-750w.jpg",
   "gallery": [],
   "desc": "Kugoo Kirin V4 Max — мощный фэт-байк для уверенной езды по любым дорогам. 750-ваттный мотор разгоняет его до 50 км/ч, а на одной зарядке проедешь до 50 км. Гидравлические тормоза гарантируют безопасность даже на высокой скорости.\n\nШирокие 20-дюймовые колёса справляются с грунтом и асфальтом одинаково легко. Выдержит нагрузку до 120 кг и прослужит тебе долгие годы активного катания.",
@@ -2294,7 +2297,7 @@ const CATALOG = [
   "name": "Kirin V5 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 79900,
+  "price": 83900,
   "stock": "in",
   "src": [
    "drop",
@@ -2337,16 +2340,17 @@ const CATALOG = [
   "name": "V6 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 87900,
-  "stock": "no",
+  "price": 92900,
+  "stock": "in",
   "src": [
+   "drop",
    "k2025",
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
   "gallery": [
    "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
@@ -2456,8 +2460,7 @@ const CATALOG = [
   "price": 99900,
   "stock": "no",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -2655,7 +2658,8 @@ const CATALOG = [
   "price": 194900,
   "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2796,7 +2800,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": false,
+  "new": true,
   "warranty": true,
   "img": "img/kugoo-nb-300-водяное-охлаждение.jpg",
   "gallery": [
@@ -2932,7 +2936,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": false,
+  "new": true,
   "warranty": true,
   "img": "img/gallery/k6/1.jpg",
   "gallery": [
@@ -2998,9 +3002,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "питбайк",
   "price": 127900,
-  "stock": "no",
+  "stock": "wait",
   "src": [
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
