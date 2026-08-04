@@ -230,12 +230,6 @@ function cardHTML(c) {
     ? `<button class="cg-arr cg-prev" data-cg="prev" aria-label="Предыдущее фото">‹</button><button class="cg-arr cg-next" data-cg="next" aria-label="Следующее фото">›</button><span class="cg-count">1/${gal.length}</span>`
     : '';
   const on = compare.has(c.id) ? ' on' : '';
-  // Правовой статус — только для самокатов: СИМ (без прав) = ≤250 Вт И ≤25 км/ч; иначе мопед (права кат. M).
-  const lawNote = c.cat === 'самокат'
-    ? ((s.power || 999) <= 250 && (s.speed || 99) <= 25
-        ? '<div class="card-law sim" title="Средство индивидуальной мобильности: до 250 Вт и до 25 км/ч — права не нужны">🪪 Можно без прав (СИМ)</div>'
-        : '<div class="card-law" title="Мощнее 250 Вт / быстрее 25 км/ч — по закону мопед: для дорог общего пользования нужны права категории M. На закрытой территории — без прав">Для дорог — права кат. M</div>')
-    : '';
   const optNote = c.stock === 'opt' ? '<div class="opt-note">Оптовая позиция (от 10 шт) — наличие уточняйте; без гарантии производителя</div>' : '';
   const warr = c.warranty ? '<div class="warr">✓ Гарантия 12 мес · документы</div>' : '<div class="warr" style="color:#9a9ab0">Гарантия поставщика — уточняйте у менеджера</div>';
   const hasSale = c.old && c.old > c.price;
@@ -247,7 +241,7 @@ function cardHTML(c) {
       <div class="utp utp-${u[2]}">${u[0]} ${u[1]}</div>
       <div class="card-name" data-open="${c.id}">${c.brand || 'Kugoo'} ${c.name}</div>
       <div class="card-specs">${chips}</div>
-      ${lawNote}${warr}${optNote}
+      ${warr}${optNote}
       <div class="card-foot">
         <div class="price">${rub(c.price)}${hasSale ? `<s class="price-old">${rub(c.old)}</s>` : ''}<small>розница</small></div>
         <button class="cmp-toggle${on}" data-cmp="${c.id}" title="Добавить к сравнению">⚖ Сравнить</button>
@@ -565,19 +559,8 @@ if (leadModal) {
     e.preventDefault();
     const btn = document.getElementById('leadSubmit');
     const st = document.getElementById('leadStatus');
-    const phone = document.getElementById('leadPhone').value.trim();
-    const tg = document.getElementById('leadTgUser').value.trim();
-    if (!phone || !tg) {
-      st.textContent = 'Оставьте, пожалуйста, и телефон, и Telegram — так менеджер точно с вами свяжется.';
-      st.className = 'lead-status err'; st.hidden = false;
-      return;
-    }
-    if (phone.replace(/\D/g, '').length < 10) {
-      st.textContent = 'Проверьте номер телефона — кажется, он неполный.';
-      st.className = 'lead-status err'; st.hidden = false;
-      return;
-    }
-    const contact = 'тел ' + phone + ' · TG ' + tg;
+    const contact = document.getElementById('leadContact').value.trim();
+    if (!contact) return;
     const consentEl = document.getElementById('leadConsent');
     if (consentEl && !consentEl.checked) {
       st.textContent = 'Отметьте согласие на обработку персональных данных, чтобы отправить заявку.';
@@ -587,7 +570,7 @@ if (leadModal) {
     btn.disabled = true; btn.textContent = 'Отправляем…';
     const base = {
       name: document.getElementById('leadName').value,
-      phone, tg, contact,
+      contact,
       consent: true,
       promo: (document.getElementById('leadPromo') || { value: '' }).value,
       page: location.pathname,
