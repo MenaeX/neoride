@@ -223,7 +223,7 @@ const CATALOG = [
   "price": 56900,
   "mrc": 56900,
   "opt": 46200,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -231,7 +231,7 @@ const CATALOG = [
   "pop": 1279,
   "hit": true,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-m4-pro-max-48v-18ah-600w-2-2025.png",
   "gallery": [
    "img/kugoo-kirin-m4-pro-max-48v-18ah-600w-2-2025.png",
@@ -904,7 +904,7 @@ const CATALOG = [
   "price": 94900,
   "mrc": 94900,
   "opt": 77600,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -912,7 +912,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электроскутер-kugoo-t1.jpg",
   "gallery": [
    "img/электроскутер-kugoo-t1.jpg",
@@ -1152,6 +1152,49 @@ const CATALOG = [
    "weight": 19.0,
    "volt": 48,
    "brakes": "дисковый",
+   "drive": "задний",
+   "seat": true
+  }
+ },
+ {
+  "id": "max-v1",
+  "name": "V1 Max",
+  "brand": "Kugoo",
+  "cat": "велосипед",
+  "price": 59900,
+  "mrc": 59900,
+  "opt": 49500,
+  "stock": "opt",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/электровелосипед-kugoo-kirin-v1-max-20-13ah-350w.png",
+  "gallery": [
+   "img/электровелосипед-kugoo-kirin-v1-max-20-13ah-350w.png",
+   "img/gallery/max-v1/1.jpg",
+   "img/gallery/max-v1/2.jpg",
+   "img/gallery/max-v1/3.jpg",
+   "img/gallery/max-v1/4.jpg",
+   "img/gallery/max-v1/5.jpg",
+   "img/gallery/max-v1/6.jpg"
+  ],
+  "desc": "Kugoo V1 Max — настоящий помощник для городских поездок. Компактный электробайк с мотором 350 Вт разгонится до 40 км/ч и проедет на одной зарядке до 40 км. Весит всего 32 кг, поэтому легко носится в руках и не займёт много места.\n\nПрочные 20-дюймовые колёса уверенно держат дорогу, а надёжные механические тормоза срабатывают мгновенно. Аккумулятор на 13 А·ч заряжается за 7 часов. Выдерживает вес до 120 кг — отличный выбор для активного человека.",
+  "specs": {
+   "power": 350,
+   "battery_ah": 13.0,
+   "speed": 40,
+   "range": 40,
+   "load": 120,
+   "wheel": 20.0,
+   "charge": 7.0,
+   "gross": 31.9,
+   "weight": 31.9,
+   "volt": 48,
+   "brakes": "механический",
    "drive": "задний",
    "seat": true
   }

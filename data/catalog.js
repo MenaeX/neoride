@@ -527,7 +527,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 56900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -535,7 +535,7 @@ const CATALOG = [
   "pop": 1279,
   "hit": true,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-m4-pro-max-48v-18ah-600w-2-2025.png",
   "gallery": [
    "img/kugoo-kirin-m4-pro-max-48v-18ah-600w-2-2025.png",
@@ -1637,7 +1637,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "трицикл",
   "price": 94900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -1645,7 +1645,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электроскутер-kugoo-t1.jpg",
   "gallery": [
    "img/электроскутер-kugoo-t1.jpg",
@@ -1885,9 +1885,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 59900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
