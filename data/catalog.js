@@ -159,14 +159,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 48900,
-  "stock": "in",
+  "stock": "wait",
   "src": [
    "drop"
   ],
   "pop": 350,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-s4-500w-48v-10-4-ah-2025.png",
   "gallery": [
    "img/kugoo-kirin-s4-500w-48v-10-4-ah-2025.png",
