@@ -3,7 +3,8 @@
    Корзину рисует cart.js; здесь — чекаут (neorideOpenLeadCart) + «купить в один клик» (data-order). */
 'use strict';
 (function () {
-  var LEAD_API = 'https://neoride-bot.amenshikov007.workers.dev/api/lead';
+  var LEAD_API = 'https://api.neoride.ru/api/lead';
+  var LEAD_API_FB = 'https://neoride-bot.amenshikov007.workers.dev/api/lead';
   var TG_BOT = 'https://t.me/neoride_shop_bot';
   var leadModal = document.getElementById('leadModal');
   if (!leadModal) return;
@@ -69,20 +70,30 @@
     e.preventDefault();
     var btn = document.getElementById('leadSubmit');
     var st = document.getElementById('leadStatus');
-    var contact = document.getElementById('leadContact').value.trim();
-    if (!contact) return;
+    var phone = document.getElementById('leadPhone').value.trim();
+    var tg = document.getElementById('leadTgUser').value.trim();
+    if (!phone || !tg) {
+      st.textContent = 'Оставьте, пожалуйста, и телефон, и Telegram — так менеджер точно с вами свяжется.';
+      st.className = 'lead-status err'; st.hidden = false; return;
+    }
+    if (phone.replace(/\D/g, '').length < 10) {
+      st.textContent = 'Проверьте номер телефона — кажется, он неполный.';
+      st.className = 'lead-status err'; st.hidden = false; return;
+    }
+    var contact = 'тел ' + phone + ' · TG ' + tg;
     var consent = document.getElementById('leadConsent');
     if (consent && !consent.checked) {
       st.textContent = 'Отметьте согласие на обработку персональных данных, чтобы отправить заявку.';
       st.className = 'lead-status err'; st.hidden = false; return;
     }
     btn.disabled = true; btn.textContent = 'Отправляем…';
-    var base = { name: document.getElementById('leadName').value, contact: contact, consent: true, page: location.pathname, website: form.website.value };
+    var base = { name: document.getElementById('leadName').value, phone: phone, tg: tg, contact: contact, consent: true, page: location.pathname, website: form.website.value };
     var payload = orderCtx.cart && orderCtx.items && orderCtx.items.length
       ? Object.assign({}, base, { items: orderCtx.items.map(function (i) { return { id: i.id, name: i.name, qty: i.qty, price: i.price, stock: i.stock, warranty: i.warranty, src: i.src }; }) })
       : Object.assign({}, base, { model: orderCtx.model || document.getElementById('leadModel').value, modelId: orderCtx.modelId, stock: orderCtx.stock, warranty: orderCtx.warranty, src: [] });
     try {
-      var r = await fetch(LEAD_API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) });
+      var _opts = { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) };
+      var r = await fetch(LEAD_API, _opts).catch(function () { return fetch(LEAD_API_FB, _opts); });
       var j = await r.json().catch(function () { return {}; });
       if (r.ok && j.ok) {
         if (window.ymGoal) try { window.ymGoal(orderCtx.cart ? 'cart_order' : 'lead'); } catch (_) {}
