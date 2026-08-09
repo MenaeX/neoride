@@ -1339,7 +1339,7 @@ const CATALOG = [
   "price": 54900,
   "stock": "in",
   "src": [
-   "k2025"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2052,8 +2052,7 @@ const CATALOG = [
   "price": 66900,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
