@@ -58,6 +58,12 @@
 .mp-warr{font:14px Inter,sans-serif;color:#cfd0e0;margin:10px 0 0}
 .mp-trust{display:flex;flex-wrap:wrap;gap:8px 16px;margin:12px 0 2px;font:13px Inter,sans-serif;color:#aeb4c4}
 .mp-trust span{white-space:nowrap}
+.mp-dost{margin:10px 0 2px}
+.mp-dost-row{display:flex;gap:8px;flex-wrap:wrap;max-width:380px}
+.mp-dost-row input{flex:1 1 140px;padding:10px 13px;border-radius:10px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:#fff;font:15px Inter,sans-serif}
+.mp-dost-row input::placeholder{color:#7a7a90}
+.mp-dost-res{margin:8px 0 0;font:13px/1.5 Inter,sans-serif;color:#cfd0e0}
+.mp-dost-res.err{color:#e0a05b}
 .mp-sticky{display:none}
 @media(max-width:760px){.mp-grid{grid-template-columns:1fr;gap:20px}.mp h1{font-size:24px}
   body{padding-bottom:72px}
@@ -127,6 +133,14 @@
       <div class="mp-law">⚖ Мощнее 250 Вт / быстрее 25 км/ч — по закону это мопед: для езды по дорогам общего пользования нужны права категории M (с 16 лет). На закрытой территории права не нужны.</div>
       <div class="mp-oos">Нет в наличии</div><div class="mp-cta"><a class="btn" href="tel:+79104028858">📞 +7 910 402-88-58</a><a class="btn" href="#" data-max>MAX</a></div><p class="mp-oos-hint">Этой модели сейчас нет в наличии. Позвоните — подскажем аналог или срок поступления. <a href="/#catalog">Смотреть модели в наличии →</a></p>
       <div class="mp-trust"><span>✓ Гарантия поставщика — уточняйте</span><span>✓ Проверка перед отправкой</span><span>✓ Доставка по РФ</span></div>
+      <!-- Калькулятор доставки ПЭК (пакет 1.2b, 09.08): «город до цены» прямо на странице -->
+      <div class="mp-dost">
+        <div class="mp-dost-row">
+          <input type="text" id="dostTown" placeholder="Ваш город" autocomplete="address-level2">
+          <button type="button" class="btn" id="dostBtn">🚚 Посчитать доставку</button>
+        </div>
+        <p class="mp-dost-res" id="dostRes" hidden></p>
+      </div>
       
       <p class="mp-warr">🛡 Без гарантии производителя.</p>
       <div class="mp-howto" style="margin:14px 0 0;padding:12px 14px;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.03);font:13px/1.5 Inter,sans-serif;color:#cfd0e0">
@@ -185,6 +199,44 @@
   <a class="s-order" href="https://t.me/neoride_shop_bot?start=m_f3-pro" target="_blank" rel="noopener">Заказать</a>
 </div>
 <script data-cfasync="false">
+(function(){
+  // Калькулятор доставки ПЭК (пакет 1.2b): считает воркер, тарифы публичные.
+  var DOST_MODEL="f3-pro";
+  var inp=document.getElementById('dostTown'), btn=document.getElementById('dostBtn'), res=document.getElementById('dostRes');
+  if(inp&&btn&&res){
+    var busy=false;
+    var go=async function(){
+      var town=inp.value.trim();
+      if(!town||busy) return;
+      busy=true; btn.disabled=true; btn.textContent='Считаю…';
+      try{
+        var base=(window.neorideApi||'https://api.neoride.ru');
+        var r=await fetch(base+'/api/dostavka?town='+encodeURIComponent(town)+'&model='+encodeURIComponent(DOST_MODEL));
+        var j=await r.json();
+        if(j.ok){
+          var pre=j.approx?'≈ ':'';
+          res.textContent='🚚 ПЭК до терминала: '+pre+j.terminal.toLocaleString('ru-RU')+' ₽'
+            +(j.do_adresa?(' · до адреса ещё '+j.do_adresa.toLocaleString('ru-RU')+' ₽'):'')
+            +(j.sroki?(' · '+j.sroki+' дн.'):'')+'. Без обрешётки — итог подтвердит менеджер.';
+          res.className='mp-dost-res';
+          if(window.ymGoal) window.ymGoal('dostavka_calc');
+        } else if(j.ambiguous){
+          res.textContent='Городов-тёзок несколько: '+j.ambiguous.slice(0,4).map(function(a){return a.region;}).join(' / ')+'. Уточните область у менеджера — посчитаем точно.';
+          res.className='mp-dost-res err';
+        } else {
+          res.textContent='Не получилось посчитать ('+(j.error||'ошибка')+'). Напишите менеджеру — посчитает вручную.';
+          res.className='mp-dost-res err';
+        }
+      }catch(_){
+        res.textContent='Расчёт временно недоступен — менеджер посчитает вручную.';
+        res.className='mp-dost-res err';
+      }
+      res.hidden=false; busy=false; btn.disabled=false; btn.textContent='🚚 Посчитать доставку';
+    };
+    btn.addEventListener('click',go);
+    inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();go();}});
+  }
+})();
 (function(){
   var LEAD_API='https://neoride-bot.amenshikov007.workers.dev/api/lead';
   var MODEL="Kugoo F3 Pro", MODEL_ID="f3-pro";
