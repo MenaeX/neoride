@@ -184,12 +184,12 @@
     mx.className = 'chat-tg-btn alt';
     mx.href = '#';
     mx.setAttribute('data-max', '');   // fx.js скопирует номер в буфер (у MAX нет ссылки-на-чат)
-    mx.textContent = 'Написать в MAX: +7 910 402-88-58';
+    mx.textContent = 'Написать в MAX: +7 910 424-88-58';
     d.appendChild(mx);
     var call = document.createElement('a');
     call.className = 'chat-tg-btn alt';
-    call.href = 'tel:+79104028858';
-    call.textContent = 'Позвонить: +7 910 402-88-58';
+    call.href = 'tel:+79104248858';
+    call.textContent = 'Позвонить: +7 910 424-88-58';
     d.appendChild(call);
     els.log.scrollTop = els.log.scrollHeight;
   }

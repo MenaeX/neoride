@@ -112,7 +112,7 @@
 /* Кнопка MAX: у MAX нет ссылки-на-чат по номеру, поэтому по клику копируем номер
    и подсказываем найти нас в приложении. Делегирование — работает и для модалки. */
 (function () {
-  var MAX_PHONE = '+7 910 402-88-58';
+  var MAX_PHONE = '+7 910 424-88-58';
   function toast(msg) {
     var t = document.createElement('div');
     t.className = 'max-toast';

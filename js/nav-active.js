@@ -70,7 +70,7 @@
       LINKS.map(function (l) { return '<a href="' + l[1] + '">' + l[0] + '</a>'; }).join('') +
       '</nav>' +
       '<div class="bm-foot">' +
-      '<a class="bm-call" href="tel:+79104028858">📞 +7 910 402-88-58</a>' +
+      '<a class="bm-call" href="tel:+79104248858">📞 +7 910 424-88-58</a>' +
       '<a class="bm-tg" href="https://t.me/neoride_shop_bot" target="_blank" rel="noopener">Написать в Telegram</a>' +
       '</div>';
     document.body.appendChild(menu);
