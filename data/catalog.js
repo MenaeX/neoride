@@ -274,14 +274,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 55900,
-  "stock": "in",
+  "stock": "wait",
   "src": [
    "drop"
   ],
   "pop": 300,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-m3-pro-2025-600w-48v-13ah.jpg",
   "gallery": [
    "img/kugoo-kirin-m3-pro-2025-600w-48v-13ah.jpg",
