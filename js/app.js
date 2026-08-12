@@ -589,6 +589,7 @@ if (leadModal) {
       name: document.getElementById('leadName').value,
       phone, tg, contact,
       consent: true,
+      marketing: !!((document.getElementById('leadMarketing') || {}).checked),
       promo: (document.getElementById('leadPromo') || { value: '' }).value,
       page: location.pathname,
       website: form.website.value,

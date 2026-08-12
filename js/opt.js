@@ -109,6 +109,7 @@ leadForm.addEventListener('submit', async e => {
     name: document.getElementById('leadName').value,
     contact,
     consent: true,
+    marketing: !!((document.getElementById('leadMarketing') || {}).checked),
     model: document.getElementById('leadModel').value,
     page: 'opt',
     website: leadForm.website.value,

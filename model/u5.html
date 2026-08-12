@@ -19,11 +19,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css?v=250705t">
+<link rel="stylesheet" href="../css/style.css?v=250812a">
 <script type="application/ld+json">{"@context": "https://schema.org/", "@type": "Product", "name": "Kugoo U5", "alternateName": ["велосипед Kugoo U5", "велосипед U5", "Кугу U5", "велосипед Кугу U5", "Куго U5", "велосипед Куго U5"], "image": ["https://neoride.ru/img/kugoo-kirin-u5.png"], "description": "На одной зарядке проедешь 95 км — хватит на недельные поездки по городу и за его пределы. Мотор в 800 Вт разгоняет до 55 км/ч, аккумулятор 60 В держит 45 А·ч, заряжается за 6,5 часов. Гидравлические тормоза ловко останавливают даже при полной загрузке. Выдерживает до 200 кг веса райдера и багажа, сам весит 77,8 кг. На него распространяется гарантия 12 месяцев.", "brand": {"@type": "Brand", "name": "Kugoo"}, "category": "Электровелосипеды", "offers": {"@type": "Offer", "url": "https://neoride.ru/model/u5.html", "priceCurrency": "RUB", "price": "97900", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "NEORIDE"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://neoride.ru/"}, {"@type": "ListItem", "position": 2, "name": "Электровелосипеды", "item": "https://neoride.ru/katalog-velosipedy.html"}, {"@type": "ListItem", "position": 3, "name": "Kugoo U5", "item": "https://neoride.ru/model/u5.html"}]}</script>
 <script data-cfasync="false">document.documentElement.classList.add('js')</script>
-<script data-cfasync="false" src="../js/metrika.js?v=250705t"></script>
+<script data-cfasync="false" src="../js/metrika.js?v=250812a"></script>
 <style>
 .mp{max-width:1100px;margin:0 auto;padding:24px 18px 80px}
 .mp-crumb{font:13px/1.4 'Space Mono',monospace;color:#8a8aa0;margin:8px 0 18px}
@@ -141,7 +141,7 @@
         </div>
         <p class="mp-dost-res" id="dostRes" hidden></p>
       </div>
-      <div class="mp-callback"><button type="button" class="btn mp-cb-toggle" id="cbToggle">📲 Перезвоните мне</button><form class="mp-cb-form" id="cbForm" hidden><input type="text" name="website" class="mp-cb-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="text" id="cbName" placeholder="Имя (необязательно)" autocomplete="name"><input type="tel" id="cbPhone" placeholder="Телефон *" autocomplete="tel" inputmode="tel" required><input type="text" id="cbTg" placeholder="Telegram (@username) *" autocomplete="off" required><label class="mp-cb-consent"><input type="checkbox" id="cbConsent" required><span>Согласен с <a href="/privacy.html" target="_blank" rel="noopener">Политикой</a> и <a href="/consent.html" target="_blank" rel="noopener">Согласием на обработку ПДн</a></span></label><button type="submit" class="btn btn-accent" id="cbSubmit">Жду звонка</button><p class="mp-cb-status" id="cbStatus" hidden></p></form></div>
+      <div class="mp-callback"><button type="button" class="btn mp-cb-toggle" id="cbToggle">📲 Перезвоните мне</button><form class="mp-cb-form" id="cbForm" hidden><input type="text" name="website" class="mp-cb-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="text" id="cbName" placeholder="Имя (необязательно)" autocomplete="name"><input type="tel" id="cbPhone" placeholder="Телефон *" autocomplete="tel" inputmode="tel" required><input type="text" id="cbTg" placeholder="Telegram (@username) *" autocomplete="off" required><label class="mp-cb-consent"><input type="checkbox" id="cbConsent" required><span>Согласен с <a href="/privacy.html" target="_blank" rel="noopener">Политикой</a> и <a href="/consent.html" target="_blank" rel="noopener">Согласием на обработку ПДн</a></span></label><label class="mp-cb-consent"><input type="checkbox" id="cbMarketing"><span>Хочу получать сообщения о наличии и акциях NEORIDE — необязательно, <a href="/consent.html#reklama" target="_blank" rel="noopener">условия</a></span></label><button type="submit" class="btn btn-accent" id="cbSubmit">Жду звонка</button><p class="mp-cb-status" id="cbStatus" hidden></p></form></div>
       <p class="mp-warr">🛡 12 месяцев официальной гарантии.</p>
       <div class="mp-howto" style="margin:14px 0 0;padding:12px 14px;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.03);font:13px/1.5 Inter,sans-serif;color:#cfd0e0">
         <b style="color:#fff">Как купить — 3 шага:</b>
@@ -254,7 +254,7 @@
     var contact='тел '+phone+' · TG '+tg;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["k2025", "koptom"]};
+    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["k2025", "koptom"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});
@@ -290,9 +290,9 @@
   }
 })();
 </script>
-<script data-cfasync="false" src="../js/fx.js?v=250705t"></script>
-<script data-cfasync="false" src="../js/chat.js?v=250705t"></script>
-<script data-cfasync="false" src="../js/nav-active.js?v=250705t"></script>
+<script data-cfasync="false" src="../js/fx.js?v=250812a"></script>
+<script data-cfasync="false" src="../js/chat.js?v=250812a"></script>
+<script data-cfasync="false" src="../js/nav-active.js?v=250812a"></script>
 <script data-cfasync="false">(function(){var G=["../img/kugoo-kirin-u5.png", "../img/gallery/u5/1.jpg", "../img/gallery/u5/2.jpg", "../img/gallery/u5/3.jpg", "../img/gallery/u5/4.jpg", "../img/gallery/u5/5.jpg", "../img/gallery/u5/6.jpg"];var i=0,img=document.getElementById("mpGalImg"),c=document.getElementById("mpCount"),b=document.getElementById("mpGal");if(!img||!b)return;function s(n){i=(n+G.length)%G.length;img.src=G[i];c.textContent=(i+1)+" / "+G.length;}b.querySelector(".mp-prev").onclick=function(){s(i-1);};b.querySelector(".mp-next").onclick=function(){s(i+1);};var x=null;b.addEventListener("touchstart",function(e){x=e.touches[0].clientX;},{passive:true});b.addEventListener("touchend",function(e){if(x==null)return;var d=e.changedTouches[0].clientX-x;if(Math.abs(d)>40)s(d<0?i+1:i-1);x=null;},{passive:true});})();</script>
 </body>
 </html>
