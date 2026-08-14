@@ -946,14 +946,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 59900,
-  "stock": "wait",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 635,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/new-kugoo-kirin-f1-pro.jpg",
   "gallery": [
    "img/new-kugoo-kirin-f1-pro.jpg",

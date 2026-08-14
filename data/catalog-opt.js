@@ -480,6 +480,49 @@ const CATALOG = [
   }
  },
  {
+  "id": "f1-pro",
+  "name": "F1 Pro",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 59900,
+  "mrc": 59900,
+  "opt": 44000,
+  "stock": "in",
+  "src": [
+   "koptom"
+  ],
+  "pop": 635,
+  "hit": false,
+  "new": false,
+  "warranty": true,
+  "img": "img/new-kugoo-kirin-f1-pro.jpg",
+  "gallery": [
+   "img/new-kugoo-kirin-f1-pro.jpg",
+   "img/gallery/f1-pro/1.jpg",
+   "img/gallery/f1-pro/2.jpg",
+   "img/gallery/f1-pro/3.jpg",
+   "img/gallery/f1-pro/4.jpg",
+   "img/gallery/f1-pro/5.jpg",
+   "img/gallery/f1-pro/6.jpg"
+  ],
+  "desc": "Доедешь до работы и обратно домой без подзарядки — запас хода 48 км на одной батарее 48 В. Мотор 800 Вт разгонит до 50 км/ч, а дисковые тормоза надёжно остановят. Выдержит до 120 кг веса (ты плюс рюкзак), десятидюймовые колёса справляются с неровностями дороги.\n\nЗарядишь за ночь — полных 9 часов. Весит 29,4 кг, поднимешь в метро и автобус. Комфортный выбор для ежедневных поездок по городу.",
+  "specs": {
+   "power": 800,
+   "battery_ah": 18.0,
+   "volt": 48,
+   "speed": 50,
+   "range": 48,
+   "load": 120,
+   "wheel": 10.0,
+   "charge": 9.0,
+   "box": "127.5×23×59 см",
+   "brakes": "дисковый",
+   "drive": "задний",
+   "seat": false,
+   "weight": 29.4
+  }
+ },
+ {
   "id": "f3-plus",
   "name": "F3 Plus",
   "brand": "Kugoo",
