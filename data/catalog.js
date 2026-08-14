@@ -2999,9 +2999,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "питбайк",
   "price": 127900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "drop"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
