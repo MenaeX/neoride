@@ -946,14 +946,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 59900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "koptom"
   ],
   "pop": 635,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/new-kugoo-kirin-f1-pro.jpg",
   "gallery": [
    "img/new-kugoo-kirin-f1-pro.jpg",
@@ -1964,7 +1964,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 59900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -1972,7 +1972,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-v3.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-v3.jpg",

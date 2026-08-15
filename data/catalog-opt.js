@@ -487,14 +487,14 @@ const CATALOG = [
   "price": 59900,
   "mrc": 59900,
   "opt": 44000,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "koptom"
   ],
   "pop": 635,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/new-kugoo-kirin-f1-pro.jpg",
   "gallery": [
    "img/new-kugoo-kirin-f1-pro.jpg",
@@ -1378,7 +1378,7 @@ const CATALOG = [
   "price": 59900,
   "mrc": 59900,
   "opt": 48400,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -1386,7 +1386,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-v3.jpg",
   "gallery": [
    "img/электровелосипед-kugoo-v3.jpg",
