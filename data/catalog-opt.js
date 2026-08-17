@@ -860,8 +860,7 @@ const CATALOG = [
   "opt": 40700,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -2191,47 +2190,6 @@ const CATALOG = [
    "drive": "полный",
    "seat": false,
    "weight": 33.9
-  }
- },
- {
-  "id": "wish03",
-  "name": "Wish 03",
-  "brand": "Kugoo",
-  "cat": "питбайк",
-  "price": 127900,
-  "mrc": 127900,
-  "opt": 104500,
-  "stock": "opt",
-  "src": [
-   "koptom"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": false,
-  "warranty": false,
-  "img": "img/wish03.jpg",
-  "gallery": [
-   "img/wish03.jpg",
-   "img/gallery/wish03/1.jpg",
-   "img/gallery/wish03/2.jpg",
-   "img/gallery/wish03/3.jpg",
-   "img/gallery/wish03/4.jpg",
-   "img/gallery/wish03/5.jpg",
-   "img/gallery/wish03/6.jpg"
-  ],
-  "desc": "На одном заряде проедешь до 80 км — хватит на неделю поездок по городу и за его границы. Питбайк Kugoo Wish 03 разгоняется до 80 км/ч благодаря мотору в 3500 Вт, держит вес райдера и рюкзака до 200 кг, а на колёсах 19 дюймов уверенно идёт по разным поверхностям.\n\nГидравлические тормоза останавливают точно и быстро даже на высокой скорости. Аккумулятор 27 А·ч заряжается за 6 часов, вес самого питбайка всего 69 кг — легко поднять в руки или спустить по ступеням.",
-  "specs": {
-   "speed": 80,
-   "power": 3500,
-   "load": 200.0,
-   "range": 80,
-   "charge": 6.0,
-   "wheel": 19.0,
-   "battery_ah": 27.0,
-   "volt": 60,
-   "brakes": "гидравлический",
-   "weight": 69.0,
-   "drive": "задний"
   }
  },
  {
