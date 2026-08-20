@@ -255,7 +255,7 @@
     var contact='тел '+phone+' · TG '+tg;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"no",warranty:false,src:["k2025"]};
+    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"no",warranty:false,src:["k2025", "koptom"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});
