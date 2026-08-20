@@ -991,7 +991,7 @@ const CATALOG = [
   "price": 119900,
   "mrc": 119900,
   "opt": 97400,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "drop",
    "k2025"
@@ -999,7 +999,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электрокутер-kugoo-r2.jpg",
   "gallery": [
    "img/электрокутер-kugoo-r2.jpg",
