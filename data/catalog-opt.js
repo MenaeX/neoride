@@ -861,8 +861,7 @@ const CATALOG = [
   "opt": 40700,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1415,52 +1414,6 @@ const CATALOG = [
    "brakes": "дисковый",
    "drive": "задний",
    "seat": true
-  }
- },
- {
-  "id": "pro-v3",
-  "name": "V3 Pro (Monster)",
-  "brand": "Kugoo",
-  "cat": "велосипед",
-  "price": 66900,
-  "mrc": 66900,
-  "opt": 56100,
-  "stock": "opt",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 0,
-  "hit": false,
-  "new": false,
-  "warranty": false,
-  "img": "img/электровелосипед-kugoo-kirin-v3-pro.png",
-  "gallery": [
-   "img/электровелосипед-kugoo-kirin-v3-pro.png",
-   "img/gallery/pro-v3/1.jpg",
-   "img/gallery/pro-v3/2.jpg",
-   "img/gallery/pro-v3/3.jpg",
-   "img/gallery/pro-v3/4.jpg",
-   "img/gallery/pro-v3/5.jpg",
-   "img/gallery/pro-v3/6.jpg"
-  ],
-  "desc": "На одном заряде аккумулятора 21.0 А·ч проедешь до 60 км — хватит на всю неделю городских поездок. Мотор 500 Вт разгонит до 55 км/ч, гидравлические тормоза остановят резко и уверенно. Байк выдерживает вес райдера и багажа до 150 кг.\n\nПолная зарядка за 7 часов, колёса 16 дюймов маневрируют в пробках, вес 40 кг легко носить в руках по лестницам. Год гарантии защитит твою покупку.",
-  "specs": {
-   "power": 500,
-   "battery_ah": 21.0,
-   "speed": 55,
-   "range": 60,
-   "load": 150,
-   "wheel": 16.0,
-   "charge": 7.0,
-   "gross": 65.0,
-   "box": "148×31×72 см",
-   "volt": 60,
-   "brakes": "гидравлический",
-   "drive": "задний",
-   "seat": true,
-   "weight": 40.0,
-   "cargo": true
   }
  },
  {
