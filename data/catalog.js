@@ -2050,9 +2050,10 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 66900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
