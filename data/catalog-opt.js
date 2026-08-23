@@ -348,50 +348,6 @@ const CATALOG = [
   }
  },
  {
-  "id": "m5-pro",
-  "name": "M5 Pro",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 66900,
-  "mrc": 66900,
-  "opt": 55000,
-  "stock": "opt",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 1386,
-  "hit": true,
-  "new": false,
-  "warranty": false,
-  "img": "img/kugoo-kirin-m5-pro-2025.jpg",
-  "gallery": [
-   "img/kugoo-kirin-m5-pro-2025.jpg",
-   "img/gallery/m5-pro/1.jpg",
-   "img/gallery/m5-pro/2.jpg",
-   "img/gallery/m5-pro/3.jpg",
-   "img/gallery/m5-pro/4.jpg",
-   "img/gallery/m5-pro/5.jpg",
-   "img/gallery/m5-pro/6.jpg"
-  ],
-  "desc": "На одном заряде аккумулятора 21.0 А·ч проедешь до 65 км — это маршрут через весь город и обратно без остановок на розетку. Развивает 55 км/ч благодаря мотору в 1000 Вт, колеса 11.0\" уверенно едят неровности дороги.\n\nДисковый тормоз останавливает резко и надёжно. Весит 37.5 кг, но держит райдера с вещами до 120 кг. Подзаряжается за 8 часов, и ты снова готов к следующему дню.",
-  "specs": {
-   "power": 1000,
-   "battery_ah": 21.0,
-   "speed": 55,
-   "range": 65,
-   "load": 120,
-   "weight": 37.5,
-   "wheel": 11.0,
-   "charge": 8.0,
-   "gross": 43.0,
-   "box": "131×29.5×52.5 см",
-   "brakes": "дисковый",
-   "seat": true,
-   "drive": "задний привод"
-  }
- },
- {
   "id": "g4-max",
   "name": "G4 Max",
   "brand": "Kugoo",
@@ -401,7 +357,8 @@ const CATALOG = [
   "opt": 99000,
   "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 2355,
   "hit": true,
@@ -904,7 +861,8 @@ const CATALOG = [
   "opt": 40700,
   "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1037,8 +995,7 @@ const CATALOG = [
   "stock": "opt",
   "src": [
    "drop",
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -2409,6 +2366,49 @@ const CATALOG = [
    "volt": 60,
    "brakes": "дисковый",
    "drive": "полный",
+   "seat": false
+  }
+ },
+ {
+  "id": "f2-max",
+  "name": "F2 Max",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 57900,
+  "mrc": 57900,
+  "opt": 46200,
+  "stock": "opt",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-f2-max.jpg",
+  "gallery": [
+   "img/kugoo-f2-max.jpg",
+   "img/gallery/f2-max/1.jpg",
+   "img/gallery/f2-max/2.jpg",
+   "img/gallery/f2-max/3.jpg",
+   "img/gallery/f2-max/4.jpg",
+   "img/gallery/f2-max/5.jpg",
+   "img/gallery/f2-max/6.jpg"
+  ],
+  "desc": "На Kugoo F2 Max доедешь на работу и обратно домой без подзарядки — запас хода 55 км с батареей 22.5 А·ч на одной зарядке. Самокат разгоняется до 45 км/ч, держит вес до 120 кг и весит сам 35 кг, так что легко носишь в метро или офис.\n\nДисковые тормоза останавливают быстро, 10-дюймовые колёса катят по неровностям спокойно. Мотор в 800 Вт крутит задний привод, ускорения злые. Зарядишь 11 часов — и готов ехать весь день.",
+  "specs": {
+   "power": 800,
+   "battery_ah": 22.5,
+   "speed": 45,
+   "range": 55,
+   "load": 120,
+   "weight": 35,
+   "wheel": 10,
+   "charge": 11,
+   "box": "",
+   "volt": 48,
+   "brakes": "дисковый",
+   "drive": "задний",
    "seat": false
   }
  },
