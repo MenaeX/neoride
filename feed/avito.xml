@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Ads formatVersion="3" target="Avito.ru">
   <Ad>
+    <Id>priemshik-ai-manager</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Предложение услуг</Category>
+    <ServiceType>Деловые услуги</ServiceType>
+    <ServiceSubtype>IT, дизайн, тексты</ServiceSubtype>
+    <ServiceSubspecies>ИИ-решения, нейросети</ServiceSubspecies>
+    <Title>ИИ-менеджер переписки — ответ клиенту за секунды</Title>
+    <Description><![CDATA[Клиент написал вам в 23:40. Утром он уже договорился с теми, кто ответил ночью.
+
+Я ставлю в вашу переписку ИИ-приёмщика. Он отвечает за секунды, ночью и в выходные тоже, разбирается, что человеку нужно, и собирает заявку. Утром вам приходит сводка в пять строк: кто написал и с чем.
+
+Границы жёсткие. Цену и гарантии приёмщик не обсуждает, такие вопросы передаёт вам. Чего не знает, того не выдумывает: клиент получает честное «уточню у Андрея». Выключается одной кнопкой в любой момент.
+
+Такой же ИИ-продавец с июня отвечает покупателям моего магазина электротранспорта — за секунды, ночью и в выходные. Ночные сообщения перестали ждать утра.
+
+Дальше по шагам. Приёмщик спросит, чем вы занимаетесь, куда пишут ваши клиенты и когда запускать пилот. Первые две недели — бесплатно, с отчётом по каждой заявке. Стоимость назову в переписке, когда пойму объём.
+
+Проверить проще, чем читать: напишите в этот чат прямо сейчас — вам ответит сам приёмщик, засеките секунды.]]></Description>
+    <Price>5000</Price>
+    <AIDirection>Разработка и внедрение ИИ-решений в бизнес</AIDirection>
+    <DevelopmentType>
+      <Option>ИИ-ассистент</Option>
+      <Option>ИИ-агент</Option>
+    </DevelopmentType>
+    <Functionality>
+      <Option>Консультация клиентов</Option>
+      <Option>Приём и обработка заявок</Option>
+      <Option>Формирование отчётов и аналитики</Option>
+    </Functionality>
+    <Integration>
+      <Option>API</Option>
+      <Option>Мессенджеры</Option>
+    </Integration>
+    <PlacementPlatform>
+      <Option>Telegram</Option>
+    </PlacementPlatform>
+    <PostInstallationSupport>Возможна</PostInstallationSupport>
+    <Consultations>Есть</Consultations>
+    <WorkWithContract>Да</WorkWithContract>
+    <Prepayment>Нет</Prepayment>
+    <Place>
+      <Option>Удалённо</Option>
+    </Place>
+    <WorkingWithAI>Да</WorkingWithAI>
+    <WorkWith>
+      <Option>Физические лица</Option>
+      <Option>ИП</Option>
+      <Option>ООО</Option>
+    </WorkWith>
+    <PriceList>
+      <Service>
+        <ServiceName>Разработка ИИ-ассистента</ServiceName>
+        <ServicePrice>5000</ServicePrice>
+        <ServicePriceType>за месяц</ServicePriceType>
+        <ServiceStartingPrice>Да</ServiceStartingPrice>
+      </Service>
+    </PriceList>
+    <Images>
+      <Image url="https://neoride.ru/img/avito/usluga/1_glavnaya.jpg"/>
+      <Image url="https://neoride.ru/img/avito/usluga/2_dialog.jpg"/>
+      <Image url="https://neoride.ru/img/avito/usluga/3_kak_rabotaet.jpg"/>
+      <Image url="https://neoride.ru/img/avito/usluga/4_granicy.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
     <Id>neoride-lx11-plus</Id>
     <ContactPhone>+79104028858</ContactPhone>
     <ManagerName>Андрей</ManagerName>
@@ -206,6 +274,108 @@
     </Images>
   </Ad>
   <Ad>
+    <Id>neoride-u6</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo U6 800W</Title>
+    <Description><![CDATA[Выдерживает до 200 кг вместе с поклажей, запас хода — 95 км.
+
+Характеристики
+Мощность: 800 Вт
+Максимальная скорость: до 55 км/ч
+Запас хода: до 95 км
+Аккумулятор: 45 Ач
+Напряжение: 60 В
+Максимальная нагрузка: 200 кг
+Вес: 76 кг
+Колёса: 16"
+Тормоза: гидравлический
+Привод: задний
+Время зарядки: 6.5 ч
+Габариты коробки: 174×32×78.5 см
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>99900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <EnginePower>800</EnginePower>
+    <WheelDiameter>16''</WheelDiameter>
+    <Images>
+      <Image url="https://neoride.ru/img/kugoo-kirin-u6.png"/>
+      <Image url="https://neoride.ru/img/gallery/u6/1.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/u6/2.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/u6/3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/u6/4.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/u6/5.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/u6/6.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
+    <Id>neoride-u5</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo U5 800W</Title>
+    <Description><![CDATA[Выдерживает до 200 кг вместе с поклажей, запас хода — 95 км.
+
+Характеристики
+Мощность: 800 Вт
+Максимальная скорость: до 55 км/ч
+Запас хода: до 95 км
+Аккумулятор: 45 Ач
+Напряжение: 60 В
+Максимальная нагрузка: 200 кг
+Вес: 77.8 кг
+Тормоза: гидравлические
+Привод: задний
+Время зарядки: 6.5 ч
+Габариты коробки: 165×33×80 см
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>97900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <EnginePower>800</EnginePower>
+    <Images>
+      <Image url="https://neoride.ru/img/kugoo-kirin-u5.png"/>
+      <Image url="https://neoride.ru/img/gallery/u5/1.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/u5/2.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/u5/3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/u5/4.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/u5/5.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/u5/6.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
     <Id>neoride-f3-max-pro</Id>
     <ContactPhone>+79104028858</ContactPhone>
     <ManagerName>Андрей</ManagerName>
@@ -310,6 +480,110 @@
     </Images>
   </Ad>
   <Ad>
+    <Id>neoride-v5</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo Kirin V5 фэт 750W</Title>
+    <Description><![CDATA[Запас хода 50 км, скорость до 50 км/ч.
+
+Характеристики
+Мощность: 750 Вт
+Максимальная скорость: до 50 км/ч
+Запас хода: до 50 км
+Аккумулятор: 20 Ач
+Напряжение: 48 В
+Максимальная нагрузка: 120 кг
+Колёса: 20"
+Тормоза: гидравлический
+Привод: задний
+Время зарядки: 7 ч
+Сиденье: есть
+Габариты коробки: 142×33×90 см
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>79900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <EnginePower>750</EnginePower>
+    <WheelDiameter>20''</WheelDiameter>
+    <Images>
+      <Image url="https://neoride.ru/img/kugoo-kirin-v5-750w-48v-20ah.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v5/1.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v5/2.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v5/3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v5/4.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v5/5.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v5/6.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
+    <Id>neoride-pro-v4</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo Kirin V4 Pro фэт 750W</Title>
+    <Description><![CDATA[Запас хода 50 км, скорость до 50 км/ч.
+
+Характеристики
+Мощность: 750 Вт
+Максимальная скорость: до 50 км/ч
+Запас хода: до 50 км
+Аккумулятор: 15.6 Ач
+Напряжение: 48 В
+Максимальная нагрузка: 120 кг
+Вес: 39.3 кг
+Колёса: 20"
+Тормоза: гидравлический
+Привод: задний
+Время зарядки: 7 ч
+Сиденье: есть
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>74900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <EnginePower>750</EnginePower>
+    <WheelDiameter>20''</WheelDiameter>
+    <Images>
+      <Image url="https://neoride.ru/img/kugoo-kirin-v4-pro-48v-15-6-ah-750w.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v4/1.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v4/2.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v4/3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v4/4.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v4/5.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v4/6.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
     <Id>neoride-f3-plus</Id>
     <ContactPhone>+79104028858</ContactPhone>
     <ManagerName>Андрей</ManagerName>
@@ -359,6 +633,111 @@
       <Image url="https://neoride.ru/img/gallery/f3-plus/4.jpg"/>
       <Image url="https://neoride.ru/img/gallery/f3-plus/5.jpg"/>
       <Image url="https://neoride.ru/img/gallery/f3-plus/6.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
+    <Id>neoride-286ah-max-pro-v3</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo V3 Pro Max 28.6Ah 800W</Title>
+    <Description><![CDATA[Выдерживает до 150 кг вместе с поклажей, запас хода — 75 км.
+
+Характеристики
+Мощность: 800 Вт
+Максимальная скорость: до 55 км/ч
+Запас хода: до 75 км
+Аккумулятор: 28.6 Ач
+Напряжение: 60 В
+Максимальная нагрузка: 150 кг
+Вес: 65 кг
+Колёса: 16"
+Тормоза: гидравлический
+Привод: задний
+Время зарядки: 7 ч
+Сиденье: есть
+Габариты коробки: 152×30.5×79 см
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>69900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <EnginePower>800</EnginePower>
+    <WheelDiameter>16''</WheelDiameter>
+    <Images>
+      <Image url="https://neoride.ru/img/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B2%D0%B5%D0%BB%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4-kugoo-kirin-v3-pro-max-60v-28-6ah.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-max-pro-v3/1.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-max-pro-v3/2.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-max-pro-v3/3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-max-pro-v3/4.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-max-pro-v3/5.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-max-pro-v3/6.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
+    <Id>neoride-286ah-plus-pro-v3</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo V3 Pro+ 28.6Ah 800W</Title>
+    <Description><![CDATA[Выдерживает до 150 кг вместе с поклажей, запас хода — 80 км.
+
+Характеристики
+Мощность: 800 Вт
+Максимальная скорость: до 55 км/ч
+Запас хода: до 80 км
+Аккумулятор: 28.6 Ач
+Напряжение: 60 В
+Максимальная нагрузка: 150 кг
+Колёса: 16"
+Тормоза: гидравлический
+Привод: задний
+Время зарядки: 7 ч
+Сиденье: есть
+Габариты коробки: 152×30×77 см
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>68900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <EnginePower>800</EnginePower>
+    <WheelDiameter>16''</WheelDiameter>
+    <Images>
+      <Image url="https://neoride.ru/img/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B2%D0%B5%D0%BB%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4-kugoo-kirin-v3-pro-plus-28-6-ah.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-plus-pro-v3/1.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-plus-pro-v3/2.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-plus-pro-v3/3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-plus-pro-v3/4.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-plus-pro-v3/5.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/286ah-plus-pro-v3/6.jpg"/>
     </Images>
   </Ad>
   <Ad>
@@ -412,6 +791,161 @@
       <Image url="https://neoride.ru/img/gallery/18ah-m4-plus-pro/4.jpg"/>
       <Image url="https://neoride.ru/img/gallery/18ah-m4-plus-pro/5.jpg"/>
       <Image url="https://neoride.ru/img/gallery/18ah-m4-plus-pro/6.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
+    <Id>neoride-v2</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo Kirin V2 1000W</Title>
+    <Description><![CDATA[Выдерживает до 160 кг вместе с поклажей, запас хода — 35 км.
+
+Характеристики
+Мощность: 1000 Вт
+Максимальная скорость: до 45 км/ч
+Запас хода: до 35 км
+Аккумулятор: 13 Ач
+Напряжение: 48 В
+Максимальная нагрузка: 160 кг
+Вес: 33.5 кг
+Колёса: 11"
+Тормоза: дисковый
+Привод: задний
+Время зарядки: 7 ч
+Сиденье: есть
+Габариты коробки: 139.5×27×101.5 см
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>63900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <EnginePower>1000</EnginePower>
+    <Images>
+      <Image url="https://neoride.ru/img/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B2%D0%B5%D0%BB%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4-kugoo-kirin-v2.png"/>
+      <Image url="https://neoride.ru/img/gallery/v2/1.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v2/2.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v2/3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v2/4.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
+    <Id>neoride-max-v1</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo V1 Max 350W</Title>
+    <Description><![CDATA[Запас хода 40 км, скорость до 40 км/ч.
+
+Характеристики
+Мощность: 350 Вт
+Максимальная скорость: до 40 км/ч
+Запас хода: до 40 км
+Аккумулятор: 13 Ач
+Напряжение: 48 В
+Максимальная нагрузка: 120 кг
+Вес: 31.9 кг
+Колёса: 20"
+Тормоза: механический
+Привод: задний
+Время зарядки: 7 ч
+Сиденье: есть
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>59900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <EnginePower>350</EnginePower>
+    <WheelDiameter>20''</WheelDiameter>
+    <Images>
+      <Image url="https://neoride.ru/img/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B2%D0%B5%D0%BB%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4-kugoo-kirin-v1-max-20-13ah-350w.png"/>
+      <Image url="https://neoride.ru/img/gallery/max-v1/1.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/max-v1/2.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/max-v1/3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/max-v1/4.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/max-v1/5.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/max-v1/6.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
+    <Id>neoride-v3</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo V3 350W</Title>
+    <Description><![CDATA[Запас хода 45 км, скорость до 45 км/ч.
+
+Характеристики
+Мощность: 350 Вт
+Максимальная скорость: до 45 км/ч
+Запас хода: до 45 км
+Аккумулятор: 13 Ач
+Напряжение: 48 В
+Максимальная нагрузка: 120 кг
+Вес: 22.8 кг
+Колёса: 27.5"
+Тормоза: дисковый
+Привод: задний
+Время зарядки: 6.5 ч
+Сиденье: есть
+Габариты коробки: 145×21×75 см
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>59900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <EnginePower>350</EnginePower>
+    <WheelDiameter>27.5''</WheelDiameter>
+    <Images>
+      <Image url="https://neoride.ru/img/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B2%D0%B5%D0%BB%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4-kugoo-v3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v3/1.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v3/2.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v3/3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v3/4.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v3/5.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/v3/6.jpg"/>
     </Images>
   </Ad>
   <Ad>
@@ -518,6 +1052,59 @@
       <Image url="https://neoride.ru/img/gallery/18ah-m4-pro/4.jpg"/>
       <Image url="https://neoride.ru/img/gallery/18ah-m4-pro/5.jpg"/>
       <Image url="https://neoride.ru/img/gallery/18ah-m4-pro/6.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
+    <Id>neoride-pro-v1</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo V1 Pro 350W</Title>
+    <Description><![CDATA[Весит 19 кг при запасе хода 35 км.
+
+Характеристики
+Мощность: 350 Вт
+Максимальная скорость: до 45 км/ч
+Запас хода: до 35 км
+Аккумулятор: 7.5 Ач
+Напряжение: 48 В
+Максимальная нагрузка: 120 кг
+Вес: 19 кг
+Колёса: 20"
+Тормоза: дисковый
+Привод: задний
+Время зарядки: 6 ч
+Сиденье: есть
+Габариты коробки: 123.2×25.5×56 см
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>46900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <EnginePower>350</EnginePower>
+    <WheelDiameter>20''</WheelDiameter>
+    <Images>
+      <Image url="https://neoride.ru/img/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B2%D0%B5%D0%BB%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4-kugoo-kirin-v1-pro.png"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v1/1.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v1/2.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v1/3.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v1/4.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v1/5.jpg"/>
+      <Image url="https://neoride.ru/img/gallery/pro-v1/6.jpg"/>
     </Images>
   </Ad>
   <Ad>
@@ -675,6 +1262,52 @@
       <Image url="https://neoride.ru/img/gallery/v1/4.jpg"/>
       <Image url="https://neoride.ru/img/gallery/v1/5.jpg"/>
       <Image url="https://neoride.ru/img/gallery/v1/6.jpg"/>
+    </Images>
+  </Ad>
+  <Ad>
+    <Id>neoride-plus-v1</Id>
+    <ContactPhone>+79104028858</ContactPhone>
+    <ManagerName>Андрей</ManagerName>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <Address>Москва, улица Рябиновая, 3</Address>
+    <Category>Велосипеды</Category>
+    <VehicleType>Электровелосипеды</VehicleType>
+    <AdType>Товар приобретен на продажу</AdType>
+    <Condition>Новое</Condition>
+    <Title>Электровелосипед Kugoo V1+ 400W</Title>
+    <Description><![CDATA[Весит 17 кг при запасе хода 30 км.
+
+Характеристики
+Мощность: 400 Вт
+Максимальная скорость: до 40 км/ч
+Запас хода: до 30 км
+Аккумулятор: 7.8 Ач
+Напряжение: 48 В
+Максимальная нагрузка: 120 кг
+Вес: 17 кг
+Колёса: 14"
+Тормоза: дисковый
+Привод: задний
+Время зарядки: 5 ч
+Сиденье: есть
+Габариты коробки: 107×25×59 см
+
+Условия
+Новый, в заводской упаковке.
+Гарантия 12 месяцев на технику, 6 месяцев на аккумулятор и контроллер.
+Цена в объявлении окончательная. При подтверждении заказа не поднимаем и ничего не добавляем сверху.
+Доставку считаем отдельно и называем цифрой до оплаты.
+Проверяем перед отправкой.
+Со склада в Москве — в ваш город, отправка с трек-номером.
+Самовывоз со склада по согласованию.
+
+Напишите в сообщениях, в каком вы городе, — посчитаем доставку и назовём срок.]]></Description>
+    <Price>37900</Price>
+    <Brand>Kugoo</Brand>
+    <ElectroBikeType>Городской</ElectroBikeType>
+    <WheelDiameter>14''</WheelDiameter>
+    <Images>
+      <Image url="https://neoride.ru/img/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B2%D0%B5%D0%BB%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4-kugoo-kirin-v1-plus.jpg"/>
     </Images>
   </Ad>
   <Ad>
