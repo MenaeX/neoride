@@ -523,14 +523,14 @@ const CATALOG = [
   "price": 59900,
   "mrc": 59900,
   "opt": 44000,
-  "stock": "opt",
+  "stock": "in",
   "src": [
-   "koptom"
+   "drop"
   ],
   "pop": 635,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/new-kugoo-kirin-f1-pro.jpg",
   "gallery": [
    "img/new-kugoo-kirin-f1-pro.jpg",
@@ -737,7 +737,7 @@ const CATALOG = [
   "opt": 33600,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
