@@ -215,8 +215,7 @@ const CATALOG = [
   "opt": 34100,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 3673,
   "hit": true,
@@ -382,50 +381,6 @@ const CATALOG = [
    "drive": "полный",
    "seat": true,
    "volt": 48
-  }
- },
- {
-  "id": "m5-pro",
-  "name": "M5 Pro",
-  "brand": "Kugoo",
-  "cat": "самокат",
-  "price": 66900,
-  "mrc": 66900,
-  "opt": 55000,
-  "stock": "opt",
-  "src": [
-   "k2025",
-   "koptom"
-  ],
-  "pop": 1386,
-  "hit": true,
-  "new": false,
-  "warranty": false,
-  "img": "img/kugoo-kirin-m5-pro-2025.jpg",
-  "gallery": [
-   "img/kugoo-kirin-m5-pro-2025.jpg",
-   "img/gallery/m5-pro/1.jpg",
-   "img/gallery/m5-pro/2.jpg",
-   "img/gallery/m5-pro/3.jpg",
-   "img/gallery/m5-pro/4.jpg",
-   "img/gallery/m5-pro/5.jpg",
-   "img/gallery/m5-pro/6.jpg"
-  ],
-  "desc": "На одном заряде аккумулятора 21.0 А·ч проедешь до 65 км — это маршрут через весь город и обратно без остановок на розетку. Развивает 55 км/ч благодаря мотору в 1000 Вт, колеса 11.0\" уверенно едят неровности дороги.\n\nДисковый тормоз останавливает резко и надёжно. Весит 37.5 кг, но держит райдера с вещами до 120 кг. Подзаряжается за 8 часов, и ты снова готов к следующему дню.",
-  "specs": {
-   "power": 1000,
-   "battery_ah": 21.0,
-   "speed": 55,
-   "range": 65,
-   "load": 120,
-   "weight": 37.5,
-   "wheel": 11.0,
-   "charge": 8.0,
-   "gross": 43.0,
-   "box": "131×29.5×52.5 см",
-   "brakes": "дисковый",
-   "seat": true,
-   "drive": "задний привод"
   }
  },
  {
