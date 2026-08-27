@@ -1598,8 +1598,7 @@ const CATALOG = [
   "stock": "no",
   "src": [
    "drop",
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -2095,14 +2094,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 66900,
-  "stock": "wait",
+  "stock": "in",
   "src": [
    "drop"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-v3-pro-plus-21ah-v-2025.png",
   "gallery": [
    "img/kugoo-kirin-v3-pro-plus-21ah-v-2025.png",
