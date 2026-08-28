@@ -2960,14 +2960,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 69900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-f1-pro-max.jpg",
   "gallery": [
    "img/kugoo-f1-pro-max.jpg",
@@ -3124,14 +3124,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 57900,
-  "stock": "wait",
+  "stock": "in",
   "src": [
-   "k2025"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-f2-max.jpg",
   "gallery": [
    "img/kugoo-f2-max.jpg",

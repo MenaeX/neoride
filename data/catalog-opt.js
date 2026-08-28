@@ -2240,14 +2240,14 @@ const CATALOG = [
   "price": 69900,
   "mrc": 69900,
   "opt": 58300,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-f1-pro-max.jpg",
   "gallery": [
    "img/kugoo-f1-pro-max.jpg",
@@ -2401,6 +2401,49 @@ const CATALOG = [
    "volt": 60,
    "brakes": "дисковый",
    "drive": "полный",
+   "seat": false
+  }
+ },
+ {
+  "id": "f2-max",
+  "name": "F2 Max",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 57900,
+  "mrc": 57900,
+  "opt": 46200,
+  "stock": "in",
+  "src": [
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": true,
+  "img": "img/kugoo-f2-max.jpg",
+  "gallery": [
+   "img/kugoo-f2-max.jpg",
+   "img/gallery/f2-max/1.jpg",
+   "img/gallery/f2-max/2.jpg",
+   "img/gallery/f2-max/3.jpg",
+   "img/gallery/f2-max/4.jpg",
+   "img/gallery/f2-max/5.jpg",
+   "img/gallery/f2-max/6.jpg"
+  ],
+  "desc": "На Kugoo F2 Max доедешь на работу и обратно домой без подзарядки — запас хода 55 км с батареей 22.5 А·ч на одной зарядке. Самокат разгоняется до 45 км/ч, держит вес до 120 кг и весит сам 35 кг, так что легко носишь в метро или офис.\n\nДисковые тормоза останавливают быстро, 10-дюймовые колёса катят по неровностям спокойно. Мотор в 800 Вт крутит задний привод, ускорения злые. Зарядишь 11 часов — и готов ехать весь день.",
+  "specs": {
+   "power": 800,
+   "battery_ah": 22.5,
+   "speed": 45,
+   "range": 55,
+   "load": 120,
+   "weight": 35,
+   "wheel": 10,
+   "charge": 11,
+   "box": "",
+   "volt": 48,
+   "brakes": "дисковый",
+   "drive": "задний",
    "seat": false
   }
  },
