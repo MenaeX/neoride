@@ -163,7 +163,7 @@
       </table>
     </div>
   </div>
-  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/18ah-m4-pro.html">Kugoo M4 Pro 18Ah<span>47 900 ₽</span></a><a href="/model/600w-max-speed.html">Kugoo Max Speed 600W<span>41 900 ₽</span></a><a href="/model/1600w-m4-max-pro.html">Kugoo M4 Pro Max 1600W<span>56 900 ₽</span></a><a href="/model/aovo-promax.html">AOVO Pro Max<span>40 200 ₽</span></a><a href="/model/f2-max.html">Kugoo F2 Max<span>57 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-samokaty.html">Все электросамокаты →</a></p></div>
+  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/18ah-m4-pro.html">Kugoo M4 Pro 18Ah<span>47 900 ₽</span></a><a href="/model/600w-max-speed.html">Kugoo Max Speed 600W<span>41 900 ₽</span></a><a href="/model/1600w-m4-max-pro.html">Kugoo M4 Pro Max 1600W<span>56 900 ₽</span></a><a href="/model/aovo-promax.html">AOVO Pro Max<span>40 200 ₽</span></a><a href="/model/11ah-m4.html">Kugoo M4 11Ah<span>38 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-samokaty.html">Все электросамокаты →</a></p></div>
   <div class="mp-desc">
     <h2>Описание Kugoo Kirin S4</h2>
     <p>На Kugoo Kirin S4 доедешь на работу и обратно с запасом — 35 км хода хватит для рабочих маршрутов по городу. Мотор на 500 Вт разгонит до 40 км/ч, а 9.5-дюймовые колёса держат дорогу на асфальте и грунте.</p><p>Самокат вытягивает райдеров до 120 кг — значит, можно брать с собой рюкзак или сумку. Зарядка за 7 часов, вес 21.5 кг удобен для переноски, задний привод дарит стабильность на разгоне.</p>
@@ -248,9 +248,9 @@
     var st=document.getElementById('cbStatus'), btn=document.getElementById('cbSubmit');
     var phone=document.getElementById('cbPhone').value.trim();
     var tg=document.getElementById('cbTg').value.trim();
-    if(!phone||!tg){st.textContent='Оставьте, пожалуйста, и телефон, и Telegram — так менеджер точно с вами свяжется.';st.className='mp-cb-status err';st.hidden=false;return;}
+    if(!phone){st.textContent='Оставьте, пожалуйста, номер телефона — по нему менеджер и свяжется.';st.className='mp-cb-status err';st.hidden=false;return;}
     if(phone.replace(/\D/g,'').length<10){st.textContent='Проверьте номер телефона — кажется, он неполный.';st.className='mp-cb-status err';st.hidden=false;return;}
-    var contact='тел '+phone+' · TG '+tg;
+    var contact='тел '+phone+(tg?' · TG '+tg:'');
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
     var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"wait",warranty:false,src:["drop"]};

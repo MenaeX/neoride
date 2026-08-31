@@ -72,15 +72,15 @@
     var st = document.getElementById('leadStatus');
     var phone = document.getElementById('leadPhone').value.trim();
     var tg = document.getElementById('leadTgUser').value.trim();
-    if (!phone || !tg) {
-      st.textContent = 'Оставьте, пожалуйста, и телефон, и Telegram — так менеджер точно с вами свяжется.';
+    if (!phone) {
+      st.textContent = 'Оставьте, пожалуйста, номер телефона — по нему менеджер и свяжется.';
       st.className = 'lead-status err'; st.hidden = false; return;
     }
     if (phone.replace(/\D/g, '').length < 10) {
       st.textContent = 'Проверьте номер телефона — кажется, он неполный.';
       st.className = 'lead-status err'; st.hidden = false; return;
     }
-    var contact = 'тел ' + phone + ' · TG ' + tg;
+    var contact = 'тел ' + phone + (tg ? ' · TG ' + tg : '');
     var consent = document.getElementById('leadConsent');
     if (consent && !consent.checked) {
       st.textContent = 'Отметьте согласие на обработку персональных данных, чтобы отправить заявку.';

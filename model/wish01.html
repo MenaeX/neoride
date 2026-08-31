@@ -249,9 +249,9 @@
     var st=document.getElementById('cbStatus'), btn=document.getElementById('cbSubmit');
     var phone=document.getElementById('cbPhone').value.trim();
     var tg=document.getElementById('cbTg').value.trim();
-    if(!phone||!tg){st.textContent='Оставьте, пожалуйста, и телефон, и Telegram — так менеджер точно с вами свяжется.';st.className='mp-cb-status err';st.hidden=false;return;}
+    if(!phone){st.textContent='Оставьте, пожалуйста, номер телефона — по нему менеджер и свяжется.';st.className='mp-cb-status err';st.hidden=false;return;}
     if(phone.replace(/\D/g,'').length<10){st.textContent='Проверьте номер телефона — кажется, он неполный.';st.className='mp-cb-status err';st.hidden=false;return;}
-    var contact='тел '+phone+' · TG '+tg;
+    var contact='тел '+phone+(tg?' · TG '+tg:'');
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
     var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"no",warranty:false,src:["koptom"]};

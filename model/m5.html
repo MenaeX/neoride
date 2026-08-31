@@ -165,7 +165,7 @@
       </table>
     </div>
   </div>
-  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/18ah-m4-plus-pro.html">Kugoo M4 Pro+ 18Ah<span>64 900 ₽</span></a><a href="/model/f1-pro.html">Kugoo F1 Pro<span>59 900 ₽</span></a><a href="/model/f1-max-pro.html">Kugoo F1 Pro Max<span>69 900 ₽</span></a><a href="/model/f2-max.html">Kugoo F2 Max<span>57 900 ₽</span></a><a href="/model/1600w-m4-max-pro.html">Kugoo M4 Pro Max 1600W<span>56 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-samokaty.html">Все электросамокаты →</a></p></div>
+  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/18ah-m4-plus-pro.html">Kugoo M4 Pro+ 18Ah<span>64 900 ₽</span></a><a href="/model/1600w-m4-max-pro.html">Kugoo M4 Pro Max 1600W<span>56 900 ₽</span></a><a href="/model/f3-plus.html">Kugoo F3 Plus<span>72 900 ₽</span></a><a href="/model/18ah-m4-pro.html">Kugoo M4 Pro 18Ah<span>47 900 ₽</span></a><a href="/model/f2-max-pro.html">Kugoo F2 Pro Max<span>83 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-samokaty.html">Все электросамокаты →</a></p></div>
   <div class="mp-desc">
     <h2>Описание Kugoo M5</h2>
     <p>На одной зарядке проедешь 60 км — хватит на всю неделю суетящихся по городу дел. Мотор в 1000 Вт разгонит тебя до 55 км/ч, колёса 11 дюймов справляются и с асфальтом, и с лёгкой грунтовкой. Самокат держит вес до 120 кг, так что райдер с рюкзаком едет без проблем.</p><p>Дисковые тормоза останавливают надёжно, задний привод даёт уверенность на скорости. При весе 35 кг удобно поднять на несколько этажей или закинуть в багажник. Батарея 48 В, 21 А·ч — честная ёмкость для реальных расстояний.</p>
@@ -250,9 +250,9 @@
     var st=document.getElementById('cbStatus'), btn=document.getElementById('cbSubmit');
     var phone=document.getElementById('cbPhone').value.trim();
     var tg=document.getElementById('cbTg').value.trim();
-    if(!phone||!tg){st.textContent='Оставьте, пожалуйста, и телефон, и Telegram — так менеджер точно с вами свяжется.';st.className='mp-cb-status err';st.hidden=false;return;}
+    if(!phone){st.textContent='Оставьте, пожалуйста, номер телефона — по нему менеджер и свяжется.';st.className='mp-cb-status err';st.hidden=false;return;}
     if(phone.replace(/\D/g,'').length<10){st.textContent='Проверьте номер телефона — кажется, он неполный.';st.className='mp-cb-status err';st.hidden=false;return;}
-    var contact='тел '+phone+' · TG '+tg;
+    var contact='тел '+phone+(tg?' · TG '+tg:'');
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
     var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"wait",warranty:false,src:["k2025"]};

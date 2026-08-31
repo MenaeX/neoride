@@ -567,8 +567,8 @@ if (leadModal) {
     const st = document.getElementById('leadStatus');
     const phone = document.getElementById('leadPhone').value.trim();
     const tg = document.getElementById('leadTgUser').value.trim();
-    if (!phone || !tg) {
-      st.textContent = 'Оставьте, пожалуйста, и телефон, и Telegram — так менеджер точно с вами свяжется.';
+    if (!phone) {
+      st.textContent = 'Оставьте, пожалуйста, номер телефона — по нему менеджер и свяжется.';
       st.className = 'lead-status err'; st.hidden = false;
       return;
     }
@@ -577,7 +577,7 @@ if (leadModal) {
       st.className = 'lead-status err'; st.hidden = false;
       return;
     }
-    const contact = 'тел ' + phone + ' · TG ' + tg;
+    const contact = 'тел ' + phone + (tg ? ' · TG ' + tg : '');
     const consentEl = document.getElementById('leadConsent');
     if (consentEl && !consentEl.checked) {
       st.textContent = 'Отметьте согласие на обработку персональных данных, чтобы отправить заявку.';

@@ -141,7 +141,7 @@
         </div>
         <p class="mp-dost-res" id="dostRes" hidden></p>
       </div>
-      <div class="mp-callback"><button type="button" class="btn mp-cb-toggle" id="cbToggle">📲 Перезвоните мне</button><form class="mp-cb-form" id="cbForm" hidden><input type="text" name="website" class="mp-cb-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="text" id="cbName" placeholder="Имя (необязательно)" autocomplete="name"><input type="tel" id="cbPhone" placeholder="Телефон *" autocomplete="tel" inputmode="tel" required><input type="text" id="cbTg" placeholder="Telegram (@username) *" autocomplete="off" required><label class="mp-cb-consent"><input type="checkbox" id="cbConsent" required><span>Согласен с <a href="/privacy.html" target="_blank" rel="noopener">Политикой</a> и <a href="/consent.html" target="_blank" rel="noopener">Согласием на обработку ПДн</a></span></label><label class="mp-cb-consent"><input type="checkbox" id="cbMarketing"><span>Хочу получать сообщения о наличии и акциях NEORIDE — необязательно, <a href="/consent.html#reklama" target="_blank" rel="noopener">условия</a></span></label><button type="submit" class="btn btn-accent" id="cbSubmit">Жду звонка</button><p class="mp-cb-status" id="cbStatus" hidden></p></form></div>
+      <div class="mp-callback"><button type="button" class="btn mp-cb-toggle" id="cbToggle">📲 Перезвоните мне</button><form class="mp-cb-form" id="cbForm" hidden><input type="text" name="website" class="mp-cb-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="text" id="cbName" placeholder="Имя (необязательно)" autocomplete="name"><input type="tel" id="cbPhone" placeholder="Телефон *" autocomplete="tel" inputmode="tel" required><input type="text" id="cbTg" placeholder="Telegram (@username) — по желанию" autocomplete="off"><label class="mp-cb-consent"><input type="checkbox" id="cbConsent" required><span>Согласен с <a href="/privacy.html" target="_blank" rel="noopener">Политикой</a> и <a href="/consent.html" target="_blank" rel="noopener">Согласием на обработку ПДн</a></span></label><label class="mp-cb-consent"><input type="checkbox" id="cbMarketing"><span>Хочу получать сообщения о наличии и акциях NEORIDE — необязательно, <a href="/consent.html#reklama" target="_blank" rel="noopener">условия</a></span></label><button type="submit" class="btn btn-accent" id="cbSubmit">Жду звонка</button><p class="mp-cb-status" id="cbStatus" hidden></p></form></div>
       <p class="mp-warr">🛡 12 месяцев официальной гарантии.</p>
       <div class="mp-howto" style="margin:14px 0 0;padding:12px 14px;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.03);font:13px/1.5 Inter,sans-serif;color:#cfd0e0">
         <b style="color:#fff">Как купить — 3 шага:</b>
@@ -165,7 +165,7 @@
       </table>
     </div>
   </div>
-  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/f3-max-pro.html">Kugoo F3 Pro Max<span>93 900 ₽</span></a><a href="/model/f3-plus.html">Kugoo F3 Plus<span>72 900 ₽</span></a><a href="/model/f1-max-pro.html">Kugoo F1 Pro Max<span>69 900 ₽</span></a><a href="/model/18ah-m4-plus-pro.html">Kugoo M4 Pro+ 18Ah<span>64 900 ₽</span></a><a href="/model/f1-pro.html">Kugoo F1 Pro<span>59 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-samokaty.html">Все электросамокаты →</a></p></div>
+  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/f3-max-pro.html">Kugoo F3 Pro Max<span>93 900 ₽</span></a><a href="/model/f3-plus.html">Kugoo F3 Plus<span>72 900 ₽</span></a><a href="/model/18ah-m4-plus-pro.html">Kugoo M4 Pro+ 18Ah<span>64 900 ₽</span></a><a href="/model/1600w-m4-max-pro.html">Kugoo M4 Pro Max 1600W<span>56 900 ₽</span></a><a href="/model/g4-max.html">Kugoo G4 Max<span>116 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-samokaty.html">Все электросамокаты →</a></p></div>
   <div class="mp-desc">
     <h2>Описание Kugoo F2 Pro Max</h2>
     <p>На Kugoo F2 Pro Max с двумя моторами по 1000 Вт каждый вы доедете на работу и обратно без зарядки — запас хода 45 км хватает на день в городе. Аккумулятор 52 В, 22.5 А·ч держит заряд долго, а разгон до 55 км/ч делает поездки быстрыми.</p><p>Самокат выдерживает вес до 120 кг, поэтому подойдёт большинству райдеров с рюкзаком или сумкой. Механический дисковый тормоз работает надёжно в любую погоду, колёса 10 дюймов ловко прыгают через препятствия. На гарантию 12 месяцев можно рассчитывать.</p>
@@ -250,9 +250,9 @@
     var st=document.getElementById('cbStatus'), btn=document.getElementById('cbSubmit');
     var phone=document.getElementById('cbPhone').value.trim();
     var tg=document.getElementById('cbTg').value.trim();
-    if(!phone||!tg){st.textContent='Оставьте, пожалуйста, и телефон, и Telegram — так менеджер точно с вами свяжется.';st.className='mp-cb-status err';st.hidden=false;return;}
+    if(!phone){st.textContent='Оставьте, пожалуйста, номер телефона — по нему менеджер и свяжется.';st.className='mp-cb-status err';st.hidden=false;return;}
     if(phone.replace(/\D/g,'').length<10){st.textContent='Проверьте номер телефона — кажется, он неполный.';st.className='mp-cb-status err';st.hidden=false;return;}
-    var contact='тел '+phone+' · TG '+tg;
+    var contact='тел '+phone+(tg?' · TG '+tg:'');
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
     var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["k2025", "koptom"]};

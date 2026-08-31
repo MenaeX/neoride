@@ -90,10 +90,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 23900,
-  "stock": "no",
+  "stock": "wait",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 220,
   "hit": false,
@@ -359,7 +358,8 @@ const CATALOG = [
   "price": 41900,
   "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 3673,
   "hit": true,
@@ -738,7 +738,8 @@ const CATALOG = [
   "price": 116900,
   "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 2355,
   "hit": true,
@@ -946,14 +947,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 59900,
-  "stock": "in",
+  "stock": "no",
   "src": [
-   "drop"
+   "koptom"
   ],
   "pop": 635,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/new-kugoo-kirin-f1-pro.jpg",
   "gallery": [
    "img/new-kugoo-kirin-f1-pro.jpg",
@@ -1297,7 +1298,7 @@ const CATALOG = [
   "price": 40900,
   "stock": "in",
   "src": [
-   "drop"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -1598,8 +1599,7 @@ const CATALOG = [
   "stock": "no",
   "src": [
    "drop",
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -2095,14 +2095,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 66900,
-  "stock": "in",
+  "stock": "wait",
   "src": [
    "drop"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-kirin-v3-pro-plus-21ah-v-2025.png",
   "gallery": [
    "img/kugoo-kirin-v3-pro-plus-21ah-v-2025.png",
@@ -2961,14 +2961,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 69900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-f1-pro-max.jpg",
   "gallery": [
    "img/kugoo-f1-pro-max.jpg",
@@ -3125,14 +3125,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 57900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/kugoo-f2-max.jpg",
   "gallery": [
    "img/kugoo-f2-max.jpg",
