@@ -45,6 +45,43 @@ const CATALOG = [
   }
  },
  {
+  "id": "l2-plus-pro",
+  "name": "L2 Pro+",
+  "brand": "Kugoo",
+  "cat": "самокат",
+  "price": 23900,
+  "mrc": 23900,
+  "opt": 19300,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 220,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/kugoo-kirin-l2-pro-plus-2025.jpg",
+  "gallery": [],
+  "desc": "На одном заряде аккумулятора 7.8 А·ч проедешь до 30 км — хватит на дневные поездки по городу и за его пределы. Самокат держит вес до 120 кг, разгоняется до 30 км/ч благодаря мотору на 350 Вт и весит всего 12 кг, что удобно для транспортировки в метро или офис.\n\nДисковый тормоз обеспечивает уверенную остановку на 8.5-дюймовых колёсах. Полная зарядка занимает 4 часа, так что готовишь самокат с вечера и едешь с утра.",
+  "specs": {
+   "power": 350,
+   "battery_ah": 7.8,
+   "speed": 30,
+   "range": 30,
+   "load": 120,
+   "weight": 12.0,
+   "wheel": 8.5,
+   "charge": 4.0,
+   "gross": 15.2,
+   "box": "111×16.5×53.5 см",
+   "volt": 36,
+   "brakes": "дисковый",
+   "drive": "передний",
+   "seat": false
+  }
+ },
+ {
   "id": "m2-plus",
   "name": "M2+",
   "brand": "Kugoo",
@@ -178,8 +215,7 @@ const CATALOG = [
   "opt": 34100,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 3673,
   "hit": true,
@@ -357,8 +393,7 @@ const CATALOG = [
   "opt": 99000,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 2355,
   "hit": true,
@@ -488,14 +523,14 @@ const CATALOG = [
   "price": 59900,
   "mrc": 59900,
   "opt": 44000,
-  "stock": "opt",
+  "stock": "in",
   "src": [
-   "koptom"
+   "drop"
   ],
   "pop": 635,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/new-kugoo-kirin-f1-pro.jpg",
   "gallery": [
    "img/new-kugoo-kirin-f1-pro.jpg",
@@ -702,7 +737,7 @@ const CATALOG = [
   "opt": 33600,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -995,7 +1030,8 @@ const CATALOG = [
   "stock": "opt",
   "src": [
    "drop",
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -2205,14 +2241,14 @@ const CATALOG = [
   "price": 69900,
   "mrc": 69900,
   "opt": 58300,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-f1-pro-max.jpg",
   "gallery": [
    "img/kugoo-f1-pro-max.jpg",
@@ -2377,14 +2413,14 @@ const CATALOG = [
   "price": 57900,
   "mrc": 57900,
   "opt": 46200,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-f2-max.jpg",
   "gallery": [
    "img/kugoo-f2-max.jpg",
