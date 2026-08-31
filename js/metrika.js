@@ -28,25 +28,36 @@
 
   if (!COUNTERS.length) return;
 
-  // Стандартный инициализатор Яндекс.Метрики (tag.js грузим один раз, гвардом от повтора)
-  (function (m, e, t, r, i, k, a) {
+  // 🚨 31.08.2026: загрузчик tag.js обслуживает ТОЛЬКО тот счётчик, чей id стоит в его
+  // адресе. Прежняя схема «один тег с id нашего счётчика + init обоих» регистрировала
+  // счётчик агентства, но он не отправлял НИ ОДНОГО хита — проверено в браузере
+  // (перехват запросов к mc.yandex.ru). Поэтому тег грузим на КАЖДЫЙ счётчик отдельно.
+  (function (m, e, t, i) {
     m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
     m[i].l = 1 * new Date();
-    for (var j = 0; j < e.scripts.length; j++) { if (e.scripts[j].src === r) { return; } }
-    k = e.createElement(t); a = e.getElementsByTagName(t)[0];
-    k.async = 1; k.src = r; a.parentNode.insertBefore(k, a);
-  })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=' + PRIMARY, 'ym');
-
-  // Инициализируем каждый счётчик отдельным вызовом.
-  COUNTERS.forEach(function (c) {
-    window.ym(c, 'init', {
-      ssr: true,
-      webvisor: true,
-      clickmap: true,
-      ecommerce: 'dataLayer',
-      accurateTrackBounce: true,
-      trackLinks: true,
+    COUNTERS.forEach(function (c) {
+      var src = 'https://mc.yandex.ru/metrika/tag.js?id=' + c;
+      for (var j = 0; j < e.scripts.length; j++) { if (e.scripts[j].src === src) { return; } }
+      var k = e.createElement(t), a = e.getElementsByTagName(t)[0];
+      k.async = 1; k.src = src; a.parentNode.insertBefore(k, a);
     });
+  })(window, document, 'script', 'ym');
+
+  // Наш счётчик — с вебвизором и электронной торговлей.
+  // 🚨 ssr здесь НЕ ставить: с этим флагом счётчик перестаёт слать просмотр автоматически,
+  // когда на странице он не единственный (проверено 31.08.2026). Сайт статический,
+  // серверного рендеринга нет — флаг не нужен.
+  window.ym(PRIMARY, 'init', {
+    webvisor: true,
+    clickmap: true,
+    ecommerce: 'dataLayer',
+    accurateTrackBounce: true,
+    trackLinks: true,
+  });
+  // Счётчики партнёров (агентство) — БЕЗ ssr: с этим флагом второй счётчик на странице
+  // молчит, хиты не уходят (проверено 31.08.2026). Вебвизор и ecommerce партнёру не нужны.
+  COUNTERS.slice(1).forEach(function (c) {
+    window.ym(c, 'init', { clickmap: true, accurateTrackBounce: true, trackLinks: true });
   });
 
   // Делегированные цели: клик по телефону (звонок), Telegram и MAX (мессенджер-конверсии)
