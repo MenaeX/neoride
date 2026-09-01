@@ -129,7 +129,7 @@
       <div class="mp-type">Электросамокат · Kugoo</div>
       <h1>Kugoo G2 Pro Max</h1>
       <div class="mp-price">80 900 ₽</div>
-      <div class="mp-stock">Ожидается поступление · доставка по всей России</div>
+      <div class="mp-stock">Уточняйте наличие · доставка по всей России</div>
       <div class="mp-law">⚖ Мощнее 250 Вт / быстрее 25 км/ч — по закону это мопед: для езды по дорогам общего пользования нужны права категории M (с 16 лет). На закрытой территории права не нужны.</div>
       <div class="mp-oos">Нет в наличии</div><div class="mp-cta"><a class="btn" href="tel:+79104248858">📞 +7 910 424-88-58</a><a class="btn" href="#" data-max>MAX</a></div><p class="mp-oos-hint">Этой модели сейчас нет в наличии. Позвоните — подскажем аналог или срок поступления. <a href="/#catalog">Смотреть модели в наличии →</a></p>
       <div class="mp-trust"><span>✓ Гарантия поставщика — уточняйте</span><span>✓ Проверка перед отправкой</span><span>✓ Доставка по РФ</span></div>
@@ -165,7 +165,7 @@
       </table>
     </div>
   </div>
-  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/f2-max-pro.html">Kugoo F2 Pro Max<span>83 900 ₽</span></a><a href="/model/f3-plus.html">Kugoo F3 Plus<span>72 900 ₽</span></a><a href="/model/f1-max-pro.html">Kugoo F1 Pro Max<span>69 900 ₽</span></a><a href="/model/f3-max-pro.html">Kugoo F3 Pro Max<span>93 900 ₽</span></a><a href="/model/18ah-m4-plus-pro.html">Kugoo M4 Pro+ 18Ah<span>64 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-samokaty.html">Все электросамокаты →</a></p></div>
+  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/f2-max-pro.html">Kugoo F2 Pro Max<span>83 900 ₽</span></a><a href="/model/f3-plus.html">Kugoo F3 Plus<span>72 900 ₽</span></a><a href="/model/f1-max-pro.html">Kugoo F1 Pro Max<span>69 900 ₽</span></a><a href="/model/f3-max-pro.html">Kugoo F3 Pro Max<span>94 900 ₽</span></a><a href="/model/18ah-m4-plus-pro.html">Kugoo M4 Pro+ 18Ah<span>64 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-samokaty.html">Все электросамокаты →</a></p></div>
   <div class="mp-desc">
     <h2>Описание Kugoo G2 Pro Max</h2>
     <p>Доедешь на работу и обратно домой без подзарядки — запас хода до 60 км на одном аккумуляторе 20.8 А·ч. Разгоняется до 55 км/ч благодаря двухмоторной системе мощностью 2000 Вт, а гидравлические тормоза держат уверенно даже на скорости.</p><p>Самокат выдерживает вес до 120 кг, поэтому подходит для взрослых людей с грузом. Колёса 10.0&quot; справляются с неровностями дорог, полный привод добавляет проходимости. Весит 34.5 кг, заряжается за 8 часов — оставишь на ночь, утром в дорогу.</p>
@@ -196,7 +196,7 @@
   <span>Написать</span>
 </a>
 <div class="mp-sticky">
-  <div class="sp"><b>80 900 ₽</b><small>Ожидается поступление · доставка по РФ</small></div>
+  <div class="sp"><b>80 900 ₽</b><small>Уточняйте наличие · доставка по РФ</small></div>
   <a class="s-call" href="tel:+79104248858" aria-label="Позвонить">📞</a>
   <a class="s-order" href="https://t.me/neoride_shop_bot?start=m_g2-max-pro" target="_blank" rel="noopener">Заказать</a>
 </div>
@@ -255,7 +255,7 @@
     var contact='тел '+phone+(tg?' · TG '+tg:'');
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"wait",warranty:false,src:["k2025"]};
+    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"no",warranty:false,src:["k2025"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});

@@ -166,8 +166,8 @@ const CATALOG = [
   "name": "M4 11Ah",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 38900,
-  "mrc": 38900,
+  "price": 40900,
+  "mrc": 40900,
   "opt": 33000,
   "stock": "in",
   "src": [
@@ -476,9 +476,9 @@ const CATALOG = [
   "name": "LX 11+",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 159900,
-  "mrc": 159900,
-  "opt": 148000,
+  "price": 189900,
+  "mrc": 189900,
+  "opt": 154000,
   "stock": "in",
   "src": [
    "drop"
@@ -608,8 +608,8 @@ const CATALOG = [
   "name": "F3 Pro Max",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 93900,
-  "mrc": 93900,
+  "price": 94900,
+  "mrc": 94900,
   "opt": 77000,
   "stock": "in",
   "src": [
@@ -653,8 +653,8 @@ const CATALOG = [
   "name": "F4 Pro",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 129900,
-  "mrc": 129900,
+  "price": 134900,
+  "mrc": 134900,
   "opt": 110000,
   "stock": "opt",
   "src": [
@@ -818,8 +818,8 @@ const CATALOG = [
   "name": "Kirin C2",
   "brand": "Kugoo",
   "cat": "скутер",
-  "price": 75900,
-  "mrc": 75900,
+  "price": 76900,
+  "mrc": 76900,
   "opt": 62200,
   "stock": "in",
   "src": [
@@ -849,9 +849,9 @@ const CATALOG = [
   "name": "C2 Pro",
   "brand": "Kugoo",
   "cat": "скутер",
-  "price": 64900,
-  "mrc": 64900,
-  "opt": 60500,
+  "price": 77900,
+  "mrc": 77900,
+  "opt": 63300,
   "stock": "opt",
   "src": [
    "k2025"
@@ -1547,9 +1547,9 @@ const CATALOG = [
   "name": "V3 Pro Max 28.6Ah",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 69900,
-  "mrc": 69900,
-  "opt": 64300,
+  "price": 79900,
+  "mrc": 79900,
+  "opt": 66600,
   "stock": "in",
   "src": [
    "drop"
@@ -1672,8 +1672,8 @@ const CATALOG = [
   "name": "Kirin V5 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 79900,
-  "mrc": 79900,
+  "price": 83900,
+  "mrc": 83900,
   "opt": 67100,
   "stock": "in",
   "src": [
@@ -1717,8 +1717,8 @@ const CATALOG = [
   "name": "V6 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 87900,
-  "mrc": 87900,
+  "price": 92900,
+  "mrc": 92900,
   "opt": 75900,
   "stock": "opt",
   "src": [
@@ -2367,8 +2367,8 @@ const CATALOG = [
   "name": "F4 Max",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 129900,
-  "mrc": 129900,
+  "price": 134900,
+  "mrc": 134900,
   "opt": 110000,
   "stock": "in",
   "src": [

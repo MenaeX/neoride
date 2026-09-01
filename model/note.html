@@ -129,7 +129,7 @@
       <div class="mp-type">Электроскутер · Kugoo</div>
       <h1>Kugoo Kirin Note</h1>
       <div class="mp-price">87 900 ₽</div>
-      <div class="mp-stock">Ожидается поступление · доставка по всей России</div>
+      <div class="mp-stock">Уточняйте наличие · доставка по всей России</div>
       
       <div class="mp-oos">Нет в наличии</div><div class="mp-cta"><a class="btn" href="tel:+79104248858">📞 +7 910 424-88-58</a><a class="btn" href="#" data-max>MAX</a></div><p class="mp-oos-hint">Этой модели сейчас нет в наличии. Позвоните — подскажем аналог или срок поступления. <a href="/#catalog">Смотреть модели в наличии →</a></p>
       <div class="mp-trust"><span>✓ Гарантия поставщика — уточняйте</span><span>✓ Проверка перед отправкой</span><span>✓ Доставка по РФ</span></div>
@@ -154,7 +154,7 @@
       </table>
     </div>
   </div>
-  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/c2.html">Kugoo Kirin C2<span>75 900 ₽</span></a><a href="/model/c1-plus-pro.html">Kugoo C1 Pro+<span>54 900 ₽</span></a><a href="/model/ec02.html">Kugoo EC02<span>49 900 ₽</span></a><a href="/model/c1-plus.html">Kugoo C1+ (корзина)<span>40 900 ₽</span></a><a href="/model/c2-pro.html">Kugoo C2 Pro<span>64 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-skutery.html">Все электроскутеры →</a></p></div>
+  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/c2.html">Kugoo Kirin C2<span>76 900 ₽</span></a><a href="/model/c1-plus-pro.html">Kugoo C1 Pro+<span>54 900 ₽</span></a><a href="/model/ec02.html">Kugoo EC02<span>49 900 ₽</span></a><a href="/model/c1-plus.html">Kugoo C1+ (корзина)<span>40 900 ₽</span></a><a href="/model/c2-pro.html">Kugoo C2 Pro<span>77 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-skutery.html">Все электроскутеры →</a></p></div>
   <div class="mp-desc">
     <h2>Описание Kugoo Kirin Note</h2>
     <p>Задний привод 800 Вт разгонит вас на оживленных улицах и справится с городскими маршрутами. Kugoo Kirin Note — надежный скутер для ежедневных поездок на работу и встреч через весь город.</p><p>Экономный помощник, который ездит дольше, чем кажется, и не потребует больших вложений. Практичный выбор для тех, кто устал от пробок.</p>
@@ -185,7 +185,7 @@
   <span>Написать</span>
 </a>
 <div class="mp-sticky">
-  <div class="sp"><b>87 900 ₽</b><small>Ожидается поступление · доставка по РФ</small></div>
+  <div class="sp"><b>87 900 ₽</b><small>Уточняйте наличие · доставка по РФ</small></div>
   <a class="s-call" href="tel:+79104248858" aria-label="Позвонить">📞</a>
   <a class="s-order" href="https://t.me/neoride_shop_bot?start=m_note" target="_blank" rel="noopener">Заказать</a>
 </div>
@@ -244,7 +244,7 @@
     var contact='тел '+phone+(tg?' · TG '+tg:'');
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"wait",warranty:false,src:["k2025"]};
+    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"no",warranty:false,src:["k2025"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});

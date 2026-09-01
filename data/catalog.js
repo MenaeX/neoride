@@ -159,7 +159,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 48900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "drop"
   ],
@@ -274,7 +274,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 55900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "drop"
   ],
@@ -314,7 +314,7 @@ const CATALOG = [
   "name": "M4 11Ah",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 38900,
+  "price": 40900,
   "stock": "in",
   "src": [
    "k2025",
@@ -568,7 +568,7 @@ const CATALOG = [
   "name": "M5",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 63900,
+  "price": 64900,
   "stock": "wait",
   "src": [
    "k2025"
@@ -610,7 +610,7 @@ const CATALOG = [
   "name": "M5 Pro",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 66900,
+  "price": 67900,
   "stock": "wait",
   "src": [
    "k2025"
@@ -652,7 +652,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 73900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "drop"
   ],
@@ -694,7 +694,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 80900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "k2025"
   ],
@@ -778,7 +778,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 79900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "k2025"
   ],
@@ -903,7 +903,7 @@ const CATALOG = [
   "name": "LX 11+",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 159900,
+  "price": 189900,
   "stock": "in",
   "src": [
    "drop"
@@ -1029,7 +1029,7 @@ const CATALOG = [
   "name": "F3 Pro",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 59900,
+  "price": 66900,
   "stock": "wait",
   "src": [
    "k2025"
@@ -1071,7 +1071,7 @@ const CATALOG = [
   "name": "F3 Pro Max",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 93900,
+  "price": 94900,
   "stock": "in",
   "src": [
    "k2025",
@@ -1114,7 +1114,7 @@ const CATALOG = [
   "name": "F4 Pro",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 129900,
+  "price": 134900,
   "stock": "no",
   "src": [
    "k2025"
@@ -1264,7 +1264,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 47900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "drop"
   ],
@@ -1376,7 +1376,7 @@ const CATALOG = [
   "name": "Kirin C2",
   "brand": "Kugoo",
   "cat": "скутер",
-  "price": 75900,
+  "price": 76900,
   "stock": "in",
   "src": [
    "drop",
@@ -1405,7 +1405,7 @@ const CATALOG = [
   "name": "C2 Pro",
   "brand": "Kugoo",
   "cat": "скутер",
-  "price": 64900,
+  "price": 77900,
   "stock": "no",
   "src": [
    "k2025"
@@ -2008,7 +2008,7 @@ const CATALOG = [
   "name": "V3 Max",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 60900,
+  "price": 64900,
   "stock": "wait",
   "src": [
    "k2025"
@@ -2176,7 +2176,7 @@ const CATALOG = [
   "name": "V3 Pro Max 28.6Ah",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 69900,
+  "price": 79900,
   "stock": "in",
   "src": [
    "drop"
@@ -2295,7 +2295,7 @@ const CATALOG = [
   "name": "Kirin V5 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 79900,
+  "price": 83900,
   "stock": "in",
   "src": [
    "drop",
@@ -2338,7 +2338,7 @@ const CATALOG = [
   "name": "V6 фэт",
   "brand": "Kugoo",
   "cat": "велосипед",
-  "price": 87900,
+  "price": 92900,
   "stock": "no",
   "src": [
    "k2025",
@@ -2736,7 +2736,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 87900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "k2025"
   ],
@@ -3083,7 +3083,7 @@ const CATALOG = [
   "name": "F4 Max",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 129900,
+  "price": 134900,
   "stock": "in",
   "src": [
    "koptom"
