@@ -3047,7 +3047,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": true,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-f2-pro-max.png",
   "gallery": [
@@ -3089,7 +3089,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": true,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-f4-max.jpg",
   "gallery": [
