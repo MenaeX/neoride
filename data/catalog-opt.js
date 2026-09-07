@@ -1453,6 +1453,51 @@ const CATALOG = [
   }
  },
  {
+  "id": "max-v3",
+  "name": "V3 Max",
+  "brand": "Kugoo",
+  "cat": "велосипед",
+  "price": 64900,
+  "mrc": 64900,
+  "opt": 52800,
+  "stock": "opt",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": false,
+  "img": "img/электровелосипед-kugoo-kirin-v3-max.png",
+  "gallery": [
+   "img/электровелосипед-kugoo-kirin-v3-max.png",
+   "img/gallery/max-v3/1.jpg",
+   "img/gallery/max-v3/2.jpg",
+   "img/gallery/max-v3/3.jpg",
+   "img/gallery/max-v3/4.jpg",
+   "img/gallery/max-v3/5.jpg",
+   "img/gallery/max-v3/6.jpg"
+  ],
+  "desc": "На одной зарядке проедешь 65 км — хватит на маршруты по городу и за его границы. Мотор на 750 Вт разгонит до 45 км/ч, гидравлические тормоза держат надёжно, колёса 18 дюймов справляются с любыми дорогами. Весишь с вещами до 100 кг — сидение выдержит.\n\nАккумулятор 15.6 А·ч заряжается за 7 часов. При 43 кг собственного веса модель не заставляет тебя таскать тонну, задний привод стабилен в пути.",
+  "specs": {
+   "power": 750,
+   "battery_ah": 15.6,
+   "speed": 45,
+   "range": 65,
+   "load": 100,
+   "weight": 43.0,
+   "wheel": 18.0,
+   "charge": 7.0,
+   "box": "145×29×73.5 см",
+   "brakes": "гидравлический",
+   "drive": "задний",
+   "seat": true,
+   "volt": 48,
+   "cargo": true
+  }
+ },
+ {
   "id": "pro-v3",
   "name": "V3 Pro (Monster)",
   "brand": "Kugoo",
