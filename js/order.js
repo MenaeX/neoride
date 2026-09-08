@@ -87,7 +87,9 @@
       st.className = 'lead-status err'; st.hidden = false; return;
     }
     btn.disabled = true; btn.textContent = 'Отправляем…';
-    var base = { name: document.getElementById('leadName').value, phone: phone, tg: tg, contact: contact, consent: true, page: location.pathname, website: form.website.value };
+    var base = { name: document.getElementById('leadName').value, phone: phone, tg: tg, contact: contact, consent: true,
+                 comment: (document.getElementById('leadComment') || { value: '' }).value,
+                 page: location.pathname, website: form.website.value };
     var payload = orderCtx.cart && orderCtx.items && orderCtx.items.length
       ? Object.assign({}, base, { items: orderCtx.items.map(function (i) { return { id: i.id, name: i.name, qty: i.qty, price: i.price, stock: i.stock, warranty: i.warranty, src: i.src }; }) })
       : Object.assign({}, base, { model: orderCtx.model || document.getElementById('leadModel').value, modelId: orderCtx.modelId, stock: orderCtx.stock, warranty: orderCtx.warranty, src: [] });
@@ -99,8 +101,10 @@
         if (window.ymGoal) try { window.ymGoal(orderCtx.cart ? 'cart_order' : 'lead'); } catch (_) {}
         if (orderCtx.cart && window.neorideCart) window.neorideCart.clear();
         form.hidden = true;
-        st.textContent = '✅ Заявка отправлена! Менеджер подтвердит наличие и итоговую цену и пришлёт ссылку на оплату — в течение 15 минут в рабочее время (09:00–21:00 МСК).';
+        var soobshenie = 'Менеджер подтвердит наличие и итоговую цену и пришлёт ссылку на оплату — в течение 15 минут в рабочее время (09:00–21:00 МСК).';
+        st.textContent = '✅ ' + soobshenie;
         st.className = 'lead-status ok'; st.hidden = false;
+        if (window.neorideThanks) window.neorideThanks(soobshenie);
       } else throw new Error();
     } catch (_) {
       btn.disabled = false; btn.textContent = 'Отправить заявку';

@@ -8,9 +8,7 @@
 <title>Купить электросамокат Aovo Pro с влагозащитой в магазине</title>
 <meta name="description" content="Электросамокат Aovo версии Pro и Lux с влагозащитой – купить в магазине. Аов Про Люкс: мощный, стильный, надёжный. Отличный выбор для города. Оригинальные модели, гарантия, доставка по РФ.">
 <meta name="keywords" content="электросамокат, купить, aovo, аов, pro, про, магазин, люкс, влагозащита, lux">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="css/style.css?v=250831a">
 <script data-cfasync="false">document.documentElement.classList.add('js')</script>
 <script data-cfasync="false" src="js/metrika.js?v=250831a"></script>
@@ -513,6 +511,7 @@
         <label>Имя<input type="text" name="name" id="leadName" placeholder="Как к вам обращаться" autocomplete="name"></label>
         <label>Телефон<input type="tel" name="phone" id="leadPhone" placeholder="+7 999 123-45-67" autocomplete="tel" inputmode="tel" required></label>
         <label>Telegram — по желанию<input type="text" name="tg" id="leadTgUser" placeholder="@username" autocomplete="off"></label>
+        <label>Комментарий — по желанию<textarea name="comment" id="leadComment" rows="3" maxlength="600" placeholder="Вопрос, пожелания по доставке или комплектации"></textarea></label>
         <label class="lead-consent"><input type="checkbox" id="leadConsent" required><span>Я ознакомлен(а) с <a href="/privacy.html" target="_blank" rel="noopener">Политикой</a> и даю <a href="/consent.html" target="_blank" rel="noopener">Согласие на обработку ПДн</a></span></label>
         <button type="submit" class="btn btn-accent" id="leadSubmit">Отправить заявку</button>
         <p class="lead-status" id="leadStatus" hidden></p>
@@ -530,6 +529,7 @@
 </script>
 <script data-cfasync="false" src="data/catalog.js?v=250831a"></script>
 <script data-cfasync="false" src="js/cart.js?v=250831a"></script>
+<script data-cfasync="false" src="js/thanks.js?v=250831a"></script>
 <script data-cfasync="false" src="js/order.js?v=250831a"></script>
 <script data-cfasync="false">
 /* Галерея фото на статичных карточках AOVO: берём gallery из CATALOG по id, листаем сменой src */

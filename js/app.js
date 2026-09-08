@@ -591,6 +591,7 @@ if (leadModal) {
       consent: true,
       marketing: !!((document.getElementById('leadMarketing') || {}).checked),
       promo: (document.getElementById('leadPromo') || { value: '' }).value,
+      comment: (document.getElementById('leadComment') || { value: '' }).value,
       page: location.pathname,
       website: form.website.value,
     };
@@ -624,10 +625,13 @@ if (leadModal) {
         if (window.ymGoal) window.ymGoal(orderCtx.notify ? 'restock_sub' : orderCtx.cart ? 'cart_order' : 'lead');
         if (orderCtx.cart && window.neorideCart) window.neorideCart.clear();
         form.hidden = true;
-        st.textContent = orderCtx.notify
-          ? '✅ Готово! Сообщим, как только модель появится в наличии. Для мгновенного уведомления подпишитесь в Telegram кнопкой ниже.'
-          : '✅ Заявка отправлена! Менеджер подтвердит наличие и итоговую цену и согласует оплату и доставку — в течение 15 минут в рабочее время (09:00–21:00 МСК).';
+        const soobshenie = orderCtx.notify
+          ? 'Сообщим, как только модель появится в наличии. Для мгновенного уведомления подпишитесь в Telegram кнопкой ниже.'
+          : 'Менеджер подтвердит наличие и итоговую цену, согласует оплату и доставку — в течение 15 минут в рабочее время (09:00–21:00 МСК).';
+        st.textContent = '✅ ' + soobshenie;
         st.className = 'lead-status ok'; st.hidden = false;
+        // отдельное окно-подтверждение: клиент видит, что заявка ушла, Метрика считает цель
+        if (window.neorideThanks) window.neorideThanks(soobshenie);
       } else throw new Error();
     } catch (_) {
       btn.disabled = false; btn.textContent = 'Отправить заявку';
