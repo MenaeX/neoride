@@ -84,21 +84,58 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) close(); });
   })();
 
-  // 5) cookie/аналитика — лёгкая плашка согласия (показываем один раз, запоминаем выбор).
+  // 5) Согласие на аналитику. 🚨 05.09.2026: раньше плашка лишь УВЕДОМЛЯЛА («продолжая
+  // пользоваться сайтом, вы соглашаетесь»), а Метрика с вебвизором грузилась сразу при
+  // открытии страницы — это загрузка трекеров до согласия (152-ФЗ ст. 9), штраф от 30 тыс.
+  // Теперь счётчики стартуют ТОЛЬКО по кнопке «Принять»; отказ уважается и запоминается.
   (function () {
-    try { if (localStorage.getItem('neoride_cookie_ok')) return; } catch (e) {}
+    var vybor = null;
+    try { vybor = localStorage.getItem('neoride_cookie_ok'); } catch (e) {}
+    if (vybor === '1' || vybor === '0') return;   // выбор уже сделан — плашку не показываем
     if (document.getElementById('cookieBar')) return;
+
     var bar = document.createElement('div');
     bar.id = 'cookieBar'; bar.className = 'cookie-bar';
     bar.innerHTML =
-      '<span>Мы используем cookies и Яндекс.Метрику для аналитики и оптимизации рекламы. Продолжая пользоваться сайтом, вы соглашаетесь с ' +
-      '<a href="/privacy.html" target="_blank" rel="noopener">Политикой</a> и ' +
-      '<a href="/consent.html" target="_blank" rel="noopener">Согласием</a> на обработку персональных данных.</span>' +
-      '<button type="button" class="cookie-ok">Хорошо</button>';
+      '<span>Мы хотим включить Яндекс.Метрику, чтобы понимать, как вы пользуетесь сайтом, ' +
+      'и не показывать лишнюю рекламу. Она ставит cookies и передаёт обезличенные данные о ' +
+      'посещении. Подробности — в <a href="/privacy.html" target="_blank" rel="noopener">Политике</a> и ' +
+      '<a href="/consent.html" target="_blank" rel="noopener">Согласии</a>. Без неё сайт работает полностью.</span>' +
+      '<button type="button" class="cookie-ok">Принять</button>' +
+      '<button type="button" class="cookie-no">Только необходимые</button>';
     document.body.appendChild(bar);
-    bar.querySelector('.cookie-ok').addEventListener('click', function () {
-      try { localStorage.setItem('neoride_cookie_ok', '1'); } catch (e) {}
+
+    var zapomnit = function (znachenie) {
+      try { localStorage.setItem('neoride_cookie_ok', znachenie); } catch (e) {}
       bar.remove();
+    };
+    bar.querySelector('.cookie-ok').addEventListener('click', function () {
+      zapomnit('1');
+      if (typeof window.neorideZagruzitMetriku === 'function') window.neorideZagruzitMetriku();
+    });
+    bar.querySelector('.cookie-no').addEventListener('click', function () { zapomnit('0'); });
+  })();
+
+  // 5б) Видео по клику. 🚨 05.09.2026: раньше плеер youtube-nocookie стоял в разметке
+  // и грузился при открытии страницы — это передача IP посетителя на серверы Google в США
+  // без его согласия (152-ФЗ ст. 12). Теперь до клика показывается наша картинка.
+  (function () {
+    var vstavit = function (box) {
+      var id = box.getAttribute('data-yt');
+      if (!id || box.querySelector('iframe')) return;
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&modestbranding=1&autoplay=1';
+      f.title = box.getAttribute('aria-label') || 'Видео';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.setAttribute('allowfullscreen', '');
+      box.innerHTML = '';
+      box.appendChild(f);
+    };
+    document.querySelectorAll('.video-lazy').forEach(function (box) {
+      box.addEventListener('click', function () { vstavit(box); });
+      box.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); vstavit(box); }
+      });
     });
   })();
 
