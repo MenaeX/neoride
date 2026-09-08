@@ -28,20 +28,10 @@
 
   if (!COUNTERS.length) return;
 
-  // 🚨 05.09.2026: счётчики грузятся ТОЛЬКО после согласия посетителя (152-ФЗ ст. 9).
-  // Раньше tag.js уезжал сразу при открытии страницы, а плашка лишь уведомляла об этом
-  // постфактум — проверка vlip.site справедливо назвала это загрузкой трекеров до
-  // согласия. Загрузку выполняет neorideZagruzitMetriku(), её зовёт плашка согласия
-  // (nav-active.js) — сразу, если человек соглашался раньше, или по кнопке «Принять».
-  var zagruzheno = false;
-
   // 🚨 31.08.2026: загрузчик tag.js обслуживает ТОЛЬКО тот счётчик, чей id стоит в его
   // адресе. Прежняя схема «один тег с id нашего счётчика + init обоих» регистрировала
   // счётчик агентства, но он не отправлял НИ ОДНОГО хита — проверено в браузере
   // (перехват запросов к mc.yandex.ru). Поэтому тег грузим на КАЖДЫЙ счётчик отдельно.
-  window.neorideZagruzitMetriku = function () {
-    if (zagruzheno) return;
-    zagruzheno = true;
   (function (m, e, t, i) {
     m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
     m[i].l = 1 * new Date();
@@ -69,12 +59,6 @@
   COUNTERS.slice(1).forEach(function (c) {
     window.ym(c, 'init', { clickmap: true, accurateTrackBounce: true, trackLinks: true });
   });
-  };
-
-  // Согласие уже давалось раньше — грузим сразу, плашку показывать не нужно.
-  try {
-    if (localStorage.getItem('neoride_cookie_ok') === '1') window.neorideZagruzitMetriku();
-  } catch (e) {}
 
   // Делегированные цели: клик по телефону (звонок), Telegram и MAX (мессенджер-конверсии)
   document.addEventListener('click', function (e) {
