@@ -1638,14 +1638,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "трицикл",
   "price": 94900,
-  "stock": "in",
+  "stock": "no",
   "src": [
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электроскутер-kugoo-t1.jpg",
   "gallery": [
    "img/электроскутер-kugoo-t1.jpg",
@@ -1722,14 +1722,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "трицикл",
   "price": 135900,
-  "stock": "in",
+  "stock": "no",
   "src": [
-   "drop"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электроскутер-kugoo-t3.jpg",
   "gallery": [
    "img/электроскутер-kugoo-t3.jpg",

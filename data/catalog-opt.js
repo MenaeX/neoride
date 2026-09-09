@@ -1072,14 +1072,14 @@ const CATALOG = [
   "price": 94900,
   "mrc": 94900,
   "opt": 77600,
-  "stock": "in",
+  "stock": "opt",
   "src": [
    "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электроскутер-kugoo-t1.jpg",
   "gallery": [
    "img/электроскутер-kugoo-t1.jpg",
@@ -1160,14 +1160,14 @@ const CATALOG = [
   "price": 135900,
   "mrc": 135900,
   "opt": 110600,
-  "stock": "in",
+  "stock": "opt",
   "src": [
-   "drop"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": true,
+  "warranty": false,
   "img": "img/электроскутер-kugoo-t3.jpg",
   "gallery": [
    "img/электроскутер-kugoo-t3.jpg",
