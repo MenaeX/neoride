@@ -3171,7 +3171,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": true,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-k4-pro.jpg",
   "gallery": [],
@@ -3198,7 +3198,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": true,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-k5-max.jpg",
   "gallery": [
@@ -3233,7 +3233,7 @@ const CATALOG = [
   ],
   "pop": 0,
   "hit": false,
-  "new": true,
+  "new": false,
   "warranty": true,
   "img": "img/kugoo-xb-140.jpg",
   "gallery": [
