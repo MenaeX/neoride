@@ -2056,6 +2056,48 @@ const CATALOG = [
   }
  },
  {
+  "id": "wish04",
+  "name": "Wish 04",
+  "brand": "Kugoo",
+  "cat": "питбайк",
+  "price": 194900,
+  "mrc": 194900,
+  "opt": 165000,
+  "stock": "in",
+  "src": [
+   "k2025",
+   "koptom"
+  ],
+  "pop": 0,
+  "hit": false,
+  "new": false,
+  "warranty": true,
+  "img": "img/электропитбайк-kugoo-wish-04-60v-36ah-3700w.png",
+  "gallery": [
+   "img/электропитбайк-kugoo-wish-04-60v-36ah-3700w.png",
+   "img/gallery/wish04/1.jpg",
+   "img/gallery/wish04/2.jpg",
+   "img/gallery/wish04/3.jpg",
+   "img/gallery/wish04/4.jpg",
+   "img/gallery/wish04/5.jpg",
+   "img/gallery/wish04/6.jpg"
+  ],
+  "desc": "На одном заряде проедешь до 80 км — хватит на весь день в городе и за его пределами. Питбайк разгоняется до 80 км/ч на мощности 3700 Вт, держит райдера с вещами до 150 кг, весит всего 85 кг. Колёса 19\" уверенно берут препятствия.\n\nГидравлические тормоза ловко останавливают машину в любых условиях. Батарея 36 А·ч заряжается за 4 часа. На покупку распространяется гарантия 12 месяцев.",
+  "specs": {
+   "speed": 80,
+   "power": 3700,
+   "load": 150.0,
+   "range": 80,
+   "charge": 4.0,
+   "wheel": 19.0,
+   "weight": 85.0,
+   "battery_ah": 36.0,
+   "volt": 60,
+   "brakes": "гидравлический",
+   "drive": "задний"
+  }
+ },
+ {
   "id": "pro-wish04",
   "name": "Wish 04 Pro",
   "brand": "Kugoo",
