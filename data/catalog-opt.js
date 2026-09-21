@@ -2497,9 +2497,10 @@ const CATALOG = [
   "cat": "самокат",
   "price": 57900,
   "mrc": 57900,
-  "opt": 46200,
+  "opt": 47300,
   "stock": "in",
   "src": [
+   "k2025",
    "koptom"
   ],
   "pop": 0,
