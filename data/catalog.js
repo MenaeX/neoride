@@ -90,7 +90,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 23900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -98,7 +98,7 @@ const CATALOG = [
   "pop": 220,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-l2-pro-plus-2025.jpg",
   "gallery": [],
   "desc": "На одном заряде аккумулятора 7.8 А·ч проедешь до 30 км — хватит на дневные поездки по городу и за его пределы. Самокат держит вес до 120 кг, разгоняется до 30 км/ч благодаря мотору на 350 Вт и весит всего 12 кг, что удобно для транспортировки в метро или офис.\n\nДисковый тормоз обеспечивает уверенную остановку на 8.5-дюймовых колёсах. Полная зарядка занимает 4 часа, так что готовишь самокат с вечера и едешь с утра.",
@@ -3002,14 +3002,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "питбайк",
   "price": 127900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "koptom"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/wish03.jpg",
   "gallery": [
    "img/wish03.jpg",
