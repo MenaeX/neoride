@@ -984,10 +984,10 @@ const CATALOG = [
   "cat": "скутер",
   "price": 55900,
   "mrc": 55900,
-  "opt": 45700,
+  "opt": 41300,
   "stock": "opt",
   "src": [
-   "k2025"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
