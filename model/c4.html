@@ -121,7 +121,7 @@
   <div class="mp-crumb"><a href="/">Главная</a> → <a href="https://neoride.ru/katalog-tricikly.html">Электротрициклы</a> → Kugoo C4 трёхколёсный</div>
   <div class="mp-grid">
     <div class="mp-photo">
-      <img src="../img/kugoo-c4-1200w-48v-20-8ah-трехколесный.jpg" alt="Электротрицикл Kugoo C4 трёхколёсный — фото" loading="eager">
+      <div class="mp-gal" id="mpGal"><img id="mpGalImg" src="../img/kugoo-c4-1200w-48v-20-8ah-трехколесный.jpg" alt="Электротрицикл Kugoo C4 трёхколёсный — фото" loading="eager"><button class="mp-arr mp-prev" type="button" aria-label="Предыдущее фото">‹</button><button class="mp-arr mp-next" type="button" aria-label="Следующее фото">›</button><span class="mp-count" id="mpCount">1 / 6</span></div>
     </div>
     <div class="mp-info">
       <div class="mp-type">Электротрицикл · Kugoo</div>
@@ -148,7 +148,15 @@
       <table class="mp-specs">
         <caption style="text-align:left;color:#8a8aa0;font:13px 'Space Mono',monospace;padding:0 0 8px">ХАРАКТЕРИСТИКИ</caption>
         <tr><td>Мощность</td><td>1 200 Вт</td></tr>
-<tr><td>Привод</td><td>задний привод</td></tr>
+<tr><td>Напряжение</td><td>48 В</td></tr>
+<tr><td>Батарея</td><td>20.8 А·ч</td></tr>
+<tr><td>Макс. скорость</td><td>40 км/ч</td></tr>
+<tr><td>Запас хода</td><td>50 км</td></tr>
+<tr><td>Макс. нагрузка</td><td>150 кг</td></tr>
+<tr><td>Вес</td><td>67 кг</td></tr>
+<tr><td>Колёса</td><td>13 &quot;</td></tr>
+<tr><td>Зарядка</td><td>8 ч</td></tr>
+<tr><td>Привод</td><td>задний</td></tr>
       </table>
     </div>
   </div>
@@ -284,6 +292,6 @@
 <script data-cfasync="false" src="../js/chat.js?v=250831a"></script>
 <script data-cfasync="false" src="../js/thanks.js?v=250831a"></script>
 <script data-cfasync="false" src="../js/nav-active.js?v=250831a"></script>
-
+<script data-cfasync="false">(function(){var G=["../img/kugoo-c4-1200w-48v-20-8ah-трехколесный.jpg", "../img/gallery/c4/1.jpg", "../img/gallery/c4/2.jpg", "../img/gallery/c4/3.jpg", "../img/gallery/c4/4.jpg", "../img/gallery/c4/5.jpg"];var i=0,img=document.getElementById("mpGalImg"),c=document.getElementById("mpCount"),b=document.getElementById("mpGal");if(!img||!b)return;function s(n){i=(n+G.length)%G.length;img.src=G[i];c.textContent=(i+1)+" / "+G.length;}b.querySelector(".mp-prev").onclick=function(){s(i-1);};b.querySelector(".mp-next").onclick=function(){s(i+1);};var x=null;b.addEventListener("touchstart",function(e){x=e.touches[0].clientX;},{passive:true});b.addEventListener("touchend",function(e){if(x==null)return;var d=e.changedTouches[0].clientX-x;if(Math.abs(d)>40)s(d<0?i+1:i-1);x=null;},{passive:true});})();</script>
 </body>
 </html>

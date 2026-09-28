@@ -90,10 +90,9 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 23900,
-  "stock": "no",
+  "stock": "wait",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 220,
   "hit": false,
@@ -738,8 +737,7 @@ const CATALOG = [
   "price": 116900,
   "stock": "in",
   "src": [
-   "k2025",
-   "koptom"
+   "k2025"
   ],
   "pop": 2355,
   "hit": true,
@@ -1456,11 +1454,27 @@ const CATALOG = [
   "new": false,
   "warranty": true,
   "img": "img/kugoo-c4-1200w-48v-20-8ah-трехколесный.jpg",
-  "gallery": [],
+  "gallery": [
+   "img/kugoo-c4-1200w-48v-20-8ah-трехколесный.jpg",
+   "img/gallery/c4/1.jpg",
+   "img/gallery/c4/2.jpg",
+   "img/gallery/c4/3.jpg",
+   "img/gallery/c4/4.jpg",
+   "img/gallery/c4/5.jpg"
+  ],
   "desc": "Триколёсный Kugoo C4 проедет вас по асфальту и грунту за счёт мощного мотора 1200 Вт с задним приводом — стабильно и без пробуксовок. Трёхколёсная конструкция держит баланс лучше, чем двухколёсные самокаты, особенно при разгоне и торможении. Год гарантии защищает от заводских дефектов.",
   "specs": {
    "power": 1200,
-   "drive": "задний привод"
+   "battery_ah": 20.8,
+   "volt": 48,
+   "speed": 40,
+   "range": 50,
+   "weight": 67,
+   "drive": "задний",
+   "wheel": 13,
+   "load": 150,
+   "charge": 8,
+   "seat": true
   }
  },
  {
@@ -1557,7 +1571,7 @@ const CATALOG = [
   "price": 55900,
   "stock": "no",
   "src": [
-   "koptom"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
@@ -2391,8 +2405,12 @@ const CATALOG = [
   "hit": false,
   "new": false,
   "warranty": true,
-  "img": "https://static.tildacdn.com/tild3661-3664-4866-b339-613931383635/1_22.jpg",
-  "gallery": [],
+  "img": "img/kugoo-trike.jpg",
+  "gallery": [
+   "img/kugoo-trike.jpg",
+   "img/gallery/trike/1.jpg",
+   "img/gallery/trike/2.jpg"
+  ],
   "desc": "Доедешь на работу и обратно без подзарядки — запас хода до 40 км хватает на весь день в городе. Трицикл держит скорость до 35 км/ч и везёт до 150 кг веса райдера с вещами, а 750-ваттный мотор справляется с любыми подъёмами.\n\nТри колеса 20 дюймов — это устойчивость и комфорт, задний привод работает без сбоев. Весит 40 килограммов, заряда аккумулятора 15.6 А·ч хватает надолго. На год — официальная гарантия от производителя.",
   "specs": {
    "power": 750,
