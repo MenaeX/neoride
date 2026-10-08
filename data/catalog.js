@@ -737,12 +737,13 @@ const CATALOG = [
   "price": 116900,
   "stock": "in",
   "src": [
-   "k2025"
+   "k2025",
+   "koptom"
   ],
   "pop": 2355,
   "hit": true,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-g4-max-60v-26аh-2000w-2.jpg",
   "gallery": [
    "img/kugoo-kirin-g4-max-60v-26аh-2000w-2.jpg",
