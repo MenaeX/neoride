@@ -2279,7 +2279,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 74900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -2287,7 +2287,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-v4-max-48v-15-6-ah-750w.jpg",
   "gallery": [],
   "desc": "Проедешь до 50 км на одной зарядке — хватит на длинный маршрут по городу или за его границы. Мощность 750 Вт разгоняет до 50 км/ч, а гидравлические тормоза уверенно держат скорость.\n\nМассивные 20-дюймовые колёса справляются с неровностями, конструкция выдерживает до 120 кг вместе с тобой и рюкзаком. Полная зарядка занимает 7 часов, при весе 39,3 кг с ним можно управиться и в подъезде.",
@@ -2355,7 +2355,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "велосипед",
   "price": 92900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -2363,7 +2363,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
   "gallery": [
    "img/электровелосипед-kugoo-v6-750w-48v-28-6-ah.png",
