@@ -666,7 +666,7 @@ const CATALOG = [
   "opt": 33600,
   "stock": "in",
   "src": [
-   "drop"
+   "k2025"
   ],
   "pop": 0,
   "hit": false,
