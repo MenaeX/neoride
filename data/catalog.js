@@ -1528,7 +1528,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "скутер",
   "price": 50900,
-  "stock": "no",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -1536,7 +1536,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-ec-02-pro-48v-21ah-600w.jpg",
   "gallery": [
    "img/kugoo-kirin-ec-02-pro-48v-21ah-600w.jpg",

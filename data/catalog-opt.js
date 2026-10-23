@@ -905,7 +905,7 @@ const CATALOG = [
   "price": 50900,
   "mrc": 50900,
   "opt": 41300,
-  "stock": "opt",
+  "stock": "in",
   "src": [
    "k2025",
    "koptom"
@@ -913,7 +913,7 @@ const CATALOG = [
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/kugoo-kirin-ec-02-pro-48v-21ah-600w.jpg",
   "gallery": [
    "img/kugoo-kirin-ec-02-pro-48v-21ah-600w.jpg",
