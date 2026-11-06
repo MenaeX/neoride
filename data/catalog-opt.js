@@ -907,6 +907,7 @@ const CATALOG = [
   "opt": 41300,
   "stock": "in",
   "src": [
+   "drop",
    "k2025",
    "koptom"
   ],
