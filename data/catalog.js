@@ -3028,7 +3028,7 @@ const CATALOG = [
   "price": 127900,
   "stock": "in",
   "src": [
-   "drop"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
