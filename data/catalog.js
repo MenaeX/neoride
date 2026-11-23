@@ -125,7 +125,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 28900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "k2025"
   ],
@@ -147,10 +147,9 @@ const CATALOG = [
    "wheel": 8.0,
    "gross": 15.4,
    "box": "103×22×39 см",
-   "charge": 3.0,
-   "brakes": "Электромагнитный",
-   "drive": "передний",
-   "seat": false
+   "charge": 6.0,
+   "brakes": "гидравличкский",
+   "drive": "передний"
   }
  },
  {
