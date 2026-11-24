@@ -148,15 +148,12 @@
       <table class="mp-specs">
         <caption style="text-align:left;color:#8a8aa0;font:13px 'Space Mono',monospace;padding:0 0 8px">ХАРАКТЕРИСТИКИ</caption>
         <tr><td>Мощность</td><td>400 Вт</td></tr>
-<tr><td>Напряжение</td><td>48 В</td></tr>
 <tr><td>Батарея</td><td>7.8 А·ч</td></tr>
 <tr><td>Макс. скорость</td><td>40 км/ч</td></tr>
 <tr><td>Запас хода</td><td>30 км</td></tr>
 <tr><td>Макс. нагрузка</td><td>120 кг</td></tr>
 <tr><td>Вес</td><td>17 кг</td></tr>
 <tr><td>Колёса</td><td>14 &quot;</td></tr>
-<tr><td>Зарядка</td><td>5 ч</td></tr>
-<tr><td>Тормоза</td><td>дисковый</td></tr>
 <tr><td>Привод</td><td>задний привод</td></tr>
 <tr><td>Размер коробки</td><td>107×25×59 см</td></tr>
 <tr><td>Вес с упаковкой</td><td>24.5 кг</td></tr>
@@ -254,7 +251,7 @@
     var comment=(document.getElementById('cbComment')||{value:''}).value;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,comment:comment,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["k2025", "koptom"]};
+    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,comment:comment,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["koptom"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});

@@ -148,7 +148,6 @@
       <table class="mp-specs">
         <caption style="text-align:left;color:#8a8aa0;font:13px 'Space Mono',monospace;padding:0 0 8px">ХАРАКТЕРИСТИКИ</caption>
         <tr><td>Вес</td><td>134 кг</td></tr>
-<tr><td>Тормоза</td><td>гидравлические- 2х поршнивые</td></tr>
 <tr><td>Привод</td><td>цепной</td></tr>
 <tr><td>Размер коробки</td><td>181×44.5×86 см</td></tr>
 <tr><td>Вес с упаковкой</td><td>134 кг</td></tr>
@@ -246,7 +245,7 @@
     var comment=(document.getElementById('cbComment')||{value:''}).value;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,comment:comment,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["k2025", "koptom"]};
+    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,comment:comment,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["koptom"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});

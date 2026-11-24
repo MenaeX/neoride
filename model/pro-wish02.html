@@ -156,14 +156,13 @@
 <tr><td>Вес</td><td>85 кг</td></tr>
 <tr><td>Колёса</td><td>19 &quot;</td></tr>
 <tr><td>Зарядка</td><td>6 ч</td></tr>
-<tr><td>Тормоза</td><td>гидравличкский</td></tr>
 <tr><td>Привод</td><td>задний</td></tr>
 <tr><td>Размер коробки</td><td>152.5×42×84 см</td></tr>
 <tr><td>Вес с упаковкой</td><td>85 кг</td></tr>
       </table>
     </div>
   </div>
-  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/wish03.html">Kugoo Wish 03<span>127 900 ₽</span></a><a href="/model/se-wish01.html">Kugoo Wish 01 SE<span>99 900 ₽</span></a><a href="/model/pro-wish01.html">Kugoo Wish 01 Pro<span>94 900 ₽</span></a><a href="/model/wish04.html">Kugoo Wish 04<span>194 900 ₽</span></a><a href="/model/pro-wish04.html">Kugoo Wish 04 Pro<span>209 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-pitbayki.html">Все питбайки →</a></p></div>
+  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/wish03.html">Kugoo Wish 03<span>127 900 ₽</span></a><a href="/model/wish01.html">Kugoo Wish 01<span>99 900 ₽</span></a><a href="/model/se-wish01.html">Kugoo Wish 01 SE<span>99 900 ₽</span></a><a href="/model/pro-wish01.html">Kugoo Wish 01 Pro<span>94 900 ₽</span></a><a href="/model/wish04.html">Kugoo Wish 04<span>194 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-pitbayki.html">Все питбайки →</a></p></div>
   <div class="mp-desc">
     <h2>Описание Kugoo Wish 02 Pro</h2>
     <p>На одной зарядке этот питбайк везёт тебя на 60 км — хватит для поездок по городу и за его пределы. Мотор 2500 Вт разгонит до 70 км/ч, колёса 19&quot; уверенно держат дорогу, гидравлические тормоза — верный расчёт на безопасность. Аккумулятор 27.0 А·ч заряжается за 6 часов.</p><p>Под собой выдерживает до 150 кг веса райдера с вещами. Сам весит 85 кг, так что транспортировка реальна. Гарантия 12 месяцев подстраховывает твоё вложение.</p>
@@ -254,7 +253,7 @@
     var comment=(document.getElementById('cbComment')||{value:''}).value;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,comment:comment,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["k2025", "koptom"]};
+    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,comment:comment,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["koptom"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});

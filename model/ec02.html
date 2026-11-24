@@ -148,22 +148,18 @@
       <table class="mp-specs">
         <caption style="text-align:left;color:#8a8aa0;font:13px 'Space Mono',monospace;padding:0 0 8px">ХАРАКТЕРИСТИКИ</caption>
         <tr><td>Мощность</td><td>500 Вт</td></tr>
-<tr><td>Напряжение</td><td>48 В</td></tr>
 <tr><td>Батарея</td><td>21 А·ч</td></tr>
 <tr><td>Макс. скорость</td><td>40 км/ч</td></tr>
-<tr><td>Запас хода</td><td>55 км</td></tr>
 <tr><td>Макс. нагрузка</td><td>150 кг</td></tr>
 <tr><td>Вес</td><td>40 кг</td></tr>
 <tr><td>Колёса</td><td>12 &quot;</td></tr>
-<tr><td>Зарядка</td><td>10 ч</td></tr>
-<tr><td>Тормоза</td><td>Барабаный</td></tr>
 <tr><td>Привод</td><td>задний привод</td></tr>
 <tr><td>Размер коробки</td><td>126×30×65 см</td></tr>
 <tr><td>Вес с упаковкой</td><td>47.5 кг</td></tr>
       </table>
     </div>
   </div>
-  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/ec02-pro.html">Kugoo EC02 Pro<span>50 900 ₽</span></a><a href="/model/c1-plus-pro.html">Kugoo C1 Pro+<span>54 900 ₽</span></a><a href="/model/c1-plus.html">Kugoo C1+ (корзина)<span>40 900 ₽</span></a><a href="/model/c2.html">Kugoo Kirin C2<span>76 900 ₽</span></a><a href="/model/ec03.html">Kugoo EC03<span>55 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-skutery.html">Все электроскутеры →</a></p></div>
+  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/ec02-pro.html">Kugoo EC02 Pro<span>50 900 ₽</span></a><a href="/model/c1-plus-pro.html">Kugoo C1 Pro+<span>54 990 ₽</span></a><a href="/model/c1-plus.html">Kugoo C1+ (корзина)<span>40 900 ₽</span></a><a href="/model/c2.html">Kugoo Kirin C2<span>76 900 ₽</span></a><a href="/model/ec03.html">Kugoo EC03<span>55 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-skutery.html">Все электроскутеры →</a></p></div>
   <div class="mp-desc">
     <h2>Описание Kugoo EC02</h2>
     <p>На одной зарядке (21.0 А·ч, 48 В) проедешь до 55 км — хватит на неделю городских поездок туда-сюда. Разгоняется до 40 км/ч с мотором 500 Вт, поэтому не застрянешь в пробке и успеешь на встречу.</p><p>Выдерживает вес до 150 кг, так что катаешься со своими вещами без ограничений. Барабанные тормоза стабильно работают в любую погоду, колёса 12 дюймов сглаживают неровности асфальта. Весит 40 кг и заряжается 10 часов. На скутер — 12 месяцев гарантии.</p>
@@ -254,7 +250,7 @@
     var comment=(document.getElementById('cbComment')||{value:''}).value;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,comment:comment,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["k2025", "koptom"]};
+    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,comment:comment,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"in",warranty:true,src:["koptom"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});

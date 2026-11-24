@@ -156,14 +156,13 @@
 <tr><td>Вес</td><td>71 кг</td></tr>
 <tr><td>Колёса</td><td>14 &quot;</td></tr>
 <tr><td>Зарядка</td><td>9 ч</td></tr>
-<tr><td>Тормоза</td><td>гидравлический</td></tr>
-<tr><td>Привод</td><td>полный привод</td></tr>
+<tr><td>Привод</td><td>задний привод</td></tr>
 <tr><td>Размер коробки</td><td>155×26×86.5 см</td></tr>
 <tr><td>Вес с упаковкой</td><td>71.5 кг</td></tr>
       </table>
     </div>
   </div>
-  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/c2.html">Kugoo Kirin C2<span>76 900 ₽</span></a><a href="/model/c1-plus-pro.html">Kugoo C1 Pro+<span>54 900 ₽</span></a><a href="/model/ec02-pro.html">Kugoo EC02 Pro<span>50 900 ₽</span></a><a href="/model/ec02.html">Kugoo EC02<span>49 900 ₽</span></a><a href="/model/c1-plus.html">Kugoo C1+ (корзина)<span>40 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-skutery.html">Все электроскутеры →</a></p></div>
+  <div class="mp-related"><h2>Похожие модели</h2><div class="mp-rel-row"><a href="/model/c2.html">Kugoo Kirin C2<span>76 900 ₽</span></a><a href="/model/c1-plus-pro.html">Kugoo C1 Pro+<span>54 990 ₽</span></a><a href="/model/ec02-pro.html">Kugoo EC02 Pro<span>50 900 ₽</span></a><a href="/model/ec02.html">Kugoo EC02<span>49 900 ₽</span></a><a href="/model/c1-plus.html">Kugoo C1+ (корзина)<span>40 900 ₽</span></a></div><p class="mp-rel-all"><a href="/katalog-skutery.html">Все электроскутеры →</a></p></div>
   <div class="mp-desc">
     <h2>Описание Kugoo R2 мопед</h2>
     <p>На Kugoo R2 проедешь до 80 км без подзарядки — достаточно для ежедневных поездок по городу и за его пределы. Мопед разгоняется до 80 км/ч, весит 71 кг, держит до 150 кг (ты плюс вещи), поэтому маневренный и лёгкий в управлении.</p><p>Полный привод и гидравлические тормоза дают уверенность на дороге в любую погоду. 1800 Вт мощности хватает для подъёмов, колёса 14 дюймов комфортно ездят по неровностям. Аккумулятор заряжается за 9 часов. На покупку — гарантия 12 месяцев.</p>
@@ -254,7 +253,7 @@
     var comment=(document.getElementById('cbComment')||{value:''}).value;
     if(!document.getElementById('cbConsent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';st.className='mp-cb-status err';st.hidden=false;return;}
     btn.disabled=true;btn.textContent='Отправляем…';
-    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,comment:comment,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"no",warranty:false,src:["drop", "k2025", "koptom"]};
+    var payload={name:document.getElementById('cbName').value,phone:phone,tg:tg,contact:contact,consent:true,comment:comment,marketing:!!document.getElementById('cbMarketing').checked,page:location.pathname,website:f.website.value,model:MODEL,modelId:MODEL_ID,callback:true,stock:"no",warranty:false,src:["drop", "koptom"]};
     try{
       var r=await (window.neoridePost?window.neoridePost('/api/lead',payload):fetch(LEAD_API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)}));
       var j=await r.json().catch(function(){return {};});

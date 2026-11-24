@@ -8,7 +8,6 @@ const CATALOG = [
   "price": 14900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 200,
@@ -34,12 +33,7 @@ const CATALOG = [
    "charge": 2.0,
    "gross": 7.5,
    "box": "81.5×15.5×34 см",
-   "range": 8.0,
-   "wheel": 6.0,
-   "weight": 7.5,
-   "brakes": "электрический",
-   "drive": "задний",
-   "seat": false
+   "drive": "задний привод"
   }
  },
  {
@@ -48,7 +42,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 22900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "k2025"
   ],
@@ -79,9 +73,7 @@ const CATALOG = [
    "gross": 15.2,
    "box": "111×16.5×53.5 см",
    "volt": 36,
-   "brakes": "дисковый",
-   "drive": "передний",
-   "seat": false
+   "drive": "передний"
   }
  },
  {
@@ -92,7 +84,6 @@ const CATALOG = [
   "price": 23900,
   "stock": "no",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 220,
@@ -114,9 +105,7 @@ const CATALOG = [
    "gross": 15.2,
    "box": "111×16.5×53.5 см",
    "volt": 36,
-   "brakes": "дисковый",
-   "drive": "передний",
-   "seat": false
+   "drive": "передний"
   }
  },
  {
@@ -147,8 +136,6 @@ const CATALOG = [
    "wheel": 8.0,
    "gross": 15.4,
    "box": "103×22×39 см",
-   "charge": 6.0,
-   "brakes": "гидравличкский",
    "drive": "передний"
   }
  },
@@ -227,10 +214,7 @@ const CATALOG = [
    "wheel": 8.0,
    "gross": 22.8,
    "box": "107×25×43 см",
-   "charge": 3.0,
-   "brakes": "барабанный",
-   "drive": "задний",
-   "seat": true
+   "drive": "задний"
   }
  },
  {
@@ -238,7 +222,7 @@ const CATALOG = [
   "name": "M2 Pro",
   "brand": "Kugoo",
   "cat": "самокат",
-  "price": 32900,
+  "price": 35900,
   "stock": "no",
   "src": [
    "drop"
@@ -259,12 +243,9 @@ const CATALOG = [
    "charge": 5.0,
    "gross": 18.0,
    "box": "111×20.5×42.5 см",
-   "load": 120.0,
-   "battery_ah": 7.8,
    "volt": 36,
-   "brakes": "Дисковый",
-   "drive": "передний",
-   "seat": false
+   "battery_ah": 7.8,
+   "drive": "передний"
   }
  },
  {
@@ -302,10 +283,9 @@ const CATALOG = [
    "charge": 5.0,
    "gross": 29.0,
    "box": "137×32×60 см",
-   "wheel": 10.0,
-   "brakes": "гидравличкский",
    "weight": 25.5,
-   "drive": "задний"
+   "drive": "задний",
+   "wheel": 10.0
   }
  },
  {
@@ -316,7 +296,6 @@ const CATALOG = [
   "price": 40900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 5175,
@@ -344,10 +323,7 @@ const CATALOG = [
    "weight": 25.0,
    "wheel": 10.0,
    "gross": 22.8,
-   "charge": 5.0,
-   "brakes": "Дисковый",
-   "drive": "задний",
-   "seat": true
+   "drive": "задний"
   }
  },
  {
@@ -358,7 +334,7 @@ const CATALOG = [
   "price": 41900,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 3673,
   "hit": true,
@@ -385,10 +361,7 @@ const CATALOG = [
    "weight": 25.0,
    "wheel": 10.0,
    "gross": 29.0,
-   "charge": 9.5,
-   "brakes": "гидравлический",
-   "drive": "задний",
-   "seat": true
+   "drive": "задний"
   }
  },
  {
@@ -399,7 +372,7 @@ const CATALOG = [
   "price": 49900,
   "stock": "wait",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 7618,
   "hit": true,
@@ -427,10 +400,7 @@ const CATALOG = [
    "wheel": 10.0,
    "gross": 30.0,
    "box": "119.5×49.5×28 см",
-   "charge": 8.0,
-   "brakes": "Дисковый",
-   "drive": "задний привод",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -441,7 +411,6 @@ const CATALOG = [
   "price": 47900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 7618,
@@ -470,10 +439,7 @@ const CATALOG = [
    "wheel": 10.0,
    "gross": 30.0,
    "box": "119.5×49.5×28 см",
-   "charge": 8.0,
-   "brakes": "Дисковый",
-   "drive": "задний привод",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -484,7 +450,6 @@ const CATALOG = [
   "price": 64900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 1100,
@@ -512,11 +477,9 @@ const CATALOG = [
    "charge": 5.0,
    "gross": 31.16,
    "box": "120×26×48 см",
-   "weight": 27.0,
    "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний",
-   "seat": true
+   "weight": 27.0,
+   "drive": "задний"
   }
  },
  {
@@ -527,7 +490,6 @@ const CATALOG = [
   "price": 56900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 1279,
@@ -554,12 +516,9 @@ const CATALOG = [
    "wheel": 10.0,
    "gross": 35.5,
    "box": "129.5×25.5×46.5 см",
-   "charge": 6.0,
+   "volt": 48,
    "weight": 36.0,
-   "brakes": "дисковый",
-   "drive": "полный",
-   "seat": true,
-   "volt": 48
+   "drive": "полный"
   }
  },
  {
@@ -568,7 +527,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 64900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "k2025"
   ],
@@ -596,12 +555,10 @@ const CATALOG = [
    "charge": 70.0,
    "gross": 35.0,
    "box": "121×27×47.5 см",
-   "range": 60,
-   "battery_ah": 21.0,
    "volt": 48,
-   "brakes": "Дисковый",
-   "drive": "задний",
-   "seat": true
+   "battery_ah": 21.0,
+   "range": 60,
+   "drive": "задний"
   }
  },
  {
@@ -610,7 +567,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 67900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "k2025"
   ],
@@ -640,8 +597,6 @@ const CATALOG = [
    "charge": 8.0,
    "gross": 43.0,
    "box": "131×29.5×52.5 см",
-   "brakes": "дисковый",
-   "seat": true,
    "drive": "задний привод"
   }
  },
@@ -682,9 +637,7 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 36.0,
    "box": "131×24.5×57 см",
-   "brakes": "гидравлический",
-   "drive": "задний",
-   "seat": true
+   "drive": "задний"
   }
  },
  {
@@ -724,9 +677,7 @@ const CATALOG = [
    "charge": 8.0,
    "gross": 39.5,
    "box": "131×24.5×57 см",
-   "brakes": "гидравлический",
-   "drive": "полный",
-   "seat": true
+   "drive": "полный"
   }
  },
  {
@@ -737,7 +688,6 @@ const CATALOG = [
   "price": 116900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 2355,
@@ -764,12 +714,8 @@ const CATALOG = [
    "wheel": 11.0,
    "gross": 55.0,
    "box": "143×33×65.5 см",
-   "load": 150.0,
-   "charge": 8.0,
-   "brakes": "гидравлический",
-   "drive": "полный",
-   "seat": false,
-   "weight": 50.0
+   "weight": 50.0,
+   "drive": "полный"
   }
  },
  {
@@ -804,12 +750,10 @@ const CATALOG = [
    "load": 120,
    "weight": 27.0,
    "charge": 8.0,
-   "power": 1300,
-   "wheel": 8.5,
    "volt": 48,
-   "brakes": "дисковый",
+   "power": 1300,
    "drive": "полный",
-   "seat": true
+   "wheel": 8.5
   }
  },
  {
@@ -820,7 +764,6 @@ const CATALOG = [
   "price": 128900,
   "stock": "wait",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -850,10 +793,9 @@ const CATALOG = [
    "wheel": 11,
    "charge": 10.0,
    "volt": 60,
-   "brakes": "дисковые гидравлические",
+   "weight": 50,
    "drive": "полный привод",
-   "seat": false,
-   "weight": 50
+   "brakes": "дисковые гидравлические"
   }
  },
  {
@@ -864,7 +806,6 @@ const CATALOG = [
   "price": 128900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -893,9 +834,9 @@ const CATALOG = [
    "gross": 47.5,
    "box": "132×30×59 см",
    "volt": 60,
-   "brakes": "дисковые гидравлические",
    "weight": 36.5,
-   "drive": "полный привод"
+   "drive": "полный привод",
+   "brakes": "дисковые гидравлические"
   }
  },
  {
@@ -930,14 +871,11 @@ const CATALOG = [
    "load": 160,
    "gross": 68.0,
    "box": "138×39×71.5 см",
-   "charge": 10.0,
-   "wheel": 11.0,
-   "battery_ah": 31.2,
    "volt": 60,
-   "brakes": "дисковый",
+   "battery_ah": 31.2,
+   "weight": 47.0,
    "drive": "полный",
-   "seat": false,
-   "weight": 47.0
+   "wheel": 11.0
   }
  },
  {
@@ -975,10 +913,8 @@ const CATALOG = [
    "wheel": 10.0,
    "charge": 9.0,
    "box": "127.5×23×59 см",
-   "brakes": "дисковый",
-   "drive": "задний",
-   "seat": false,
-   "weight": 29.4
+   "weight": 29.4,
+   "drive": "задний"
   }
  },
  {
@@ -989,7 +925,6 @@ const CATALOG = [
   "price": 72900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1017,11 +952,9 @@ const CATALOG = [
    "charge": 8.0,
    "gross": 38.5,
    "box": "131.5×27.5×66.5 см",
-   "battery_ah": 20.8,
    "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний",
-   "seat": false
+   "battery_ah": 20.8,
+   "drive": "задний"
   }
  },
  {
@@ -1030,7 +963,7 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "самокат",
   "price": 66900,
-  "stock": "wait",
+  "stock": "no",
   "src": [
    "k2025"
   ],
@@ -1059,11 +992,9 @@ const CATALOG = [
    "charge": 8,
    "gross": "",
    "box": "",
-   "weight": 27,
    "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний",
-   "seat": false
+   "weight": 27,
+   "drive": "задний"
   }
  },
  {
@@ -1074,7 +1005,6 @@ const CATALOG = [
   "price": 94900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 1353,
@@ -1102,11 +1032,8 @@ const CATALOG = [
    "weight": 32.5,
    "gross": 41.0,
    "box": "134×28×63.5 см",
-   "charge": 12.0,
-   "wheel": 10.0,
-   "brakes": "гидравлический",
    "drive": "полный",
-   "seat": false
+   "wheel": 10.0
   }
  },
  {
@@ -1144,11 +1071,9 @@ const CATALOG = [
    "charge": 10.0,
    "gross": 46.0,
    "box": "135×29×63.5 см",
-   "wheel": 10.0,
-   "brakes": "гидравлический",
+   "weight": 37.0,
    "drive": "полный",
-   "seat": false,
-   "weight": 37.0
+   "wheel": 10.0
   }
  },
  {
@@ -1159,7 +1084,7 @@ const CATALOG = [
   "price": 29900,
   "stock": "wait",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -1177,18 +1102,14 @@ const CATALOG = [
   ],
   "desc": "На одном заряде доедешь до 30 км — хватит на поездки по городу и за его пределы. Мотор 350 Вт разгонит до 25 км/ч, дисковый тормоз стопит надёжно. Самокат выдерживает вес до 120 кг, поэтому подойдёт большинству взрослых с рюкзаком или сумкой.\n\nВесит всего 13 кг, легко носить в руке. Восьмидюймовые колёса хорошо держат дорогу в городе. Полная зарядка занимает 5 часов.",
   "specs": {
-   "speed": 25,
-   "power": 350,
-   "load": 120.0,
-   "range": 30,
-   "charge": 5.0,
-   "wheel": 8.5,
-   "weight": 13.0,
-   "battery_ah": 6.4,
    "volt": 36,
-   "brakes": "дисковый",
+   "battery_ah": 6.4,
+   "power": 350,
+   "speed": 25,
+   "range": 30,
+   "weight": 13.0,
    "drive": "передний",
-   "seat": false
+   "wheel": 8.5
   }
  },
  {
@@ -1220,7 +1141,6 @@ const CATALOG = [
    "gross": 18.0,
    "box": "114×17×49 см",
    "volt": 36,
-   "brakes": "гидравличкский",
    "drive": "передний"
   }
  },
@@ -1251,10 +1171,10 @@ const CATALOG = [
    "wheel": 9,
    "gross": "",
    "box": "",
-   "charge": 12,
    "volt": 36,
-   "brakes": "дисковый",
    "drive": "передний",
+   "charge": 12,
+   "brakes": "дисковый",
    "seat": false
   }
  },
@@ -1297,7 +1217,7 @@ const CATALOG = [
   "price": 40900,
   "stock": "in",
   "src": [
-   "k2025"
+   "koptom"
   ],
   "pop": 0,
   "hit": false,
@@ -1325,9 +1245,7 @@ const CATALOG = [
    "gross": 26.8,
    "box": "117×25×62 см",
    "range": 35,
-   "brakes": "Дисковый",
-   "drive": "задний",
-   "seat": true
+   "drive": "задний"
   }
  },
  {
@@ -1335,7 +1253,7 @@ const CATALOG = [
   "name": "C1 Pro+",
   "brand": "Kugoo",
   "cat": "скутер",
-  "price": 54900,
+  "price": 54990,
   "stock": "in",
   "src": [
    "koptom"
@@ -1363,12 +1281,9 @@ const CATALOG = [
    "wheel": 14.0,
    "gross": 38.6,
    "box": "121.5×26.5×62.5 см",
-   "speed": 50,
-   "charge": 9.0,
    "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний",
-   "seat": true
+   "speed": 50,
+   "drive": "задний"
   }
  },
  {
@@ -1433,11 +1348,7 @@ const CATALOG = [
    "load": 150,
    "weight": 50.0,
    "wheel": 12.0,
-   "charge": 7.0,
-   "volt": 48,
-   "brakes": "гидравлический",
-   "drive": "задний привод",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -1486,7 +1397,6 @@ const CATALOG = [
   "price": 49900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1513,12 +1423,7 @@ const CATALOG = [
    "wheel": 12.0,
    "gross": 47.5,
    "box": "126×30×65 см",
-   "range": 55.0,
-   "charge": 10.0,
-   "volt": 48,
-   "brakes": "Барабаный",
-   "drive": "задний привод",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -1530,7 +1435,6 @@ const CATALOG = [
   "stock": "in",
   "src": [
    "drop",
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1555,14 +1459,7 @@ const CATALOG = [
    "load": 150,
    "gross": 45.0,
    "box": "129×31.5×65 см",
-   "range": 50.0,
-   "charge": 7.0,
-   "wheel": 14.0,
-   "weight": 50.0,
-   "volt": 48,
-   "brakes": "Барабаный",
-   "drive": "задний",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -1573,7 +1470,6 @@ const CATALOG = [
   "price": 55900,
   "stock": "no",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1599,13 +1495,7 @@ const CATALOG = [
    "weight": 51.0,
    "gross": 49.0,
    "box": "129×31.5×65 см",
-   "range": 60.0,
-   "charge": 8.0,
-   "wheel": 14.0,
-   "volt": 48,
-   "brakes": "Барабаный",
-   "drive": "задний",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -1617,7 +1507,6 @@ const CATALOG = [
   "stock": "no",
   "src": [
    "drop",
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1647,8 +1536,7 @@ const CATALOG = [
    "charge": 9.0,
    "gross": 71.5,
    "box": "155×26×86.5 см",
-   "brakes": "гидравлический",
-   "drive": "полный привод"
+   "drive": "задний привод"
   }
  },
  {
@@ -1659,7 +1547,6 @@ const CATALOG = [
   "price": 94900,
   "stock": "no",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1689,8 +1576,7 @@ const CATALOG = [
    "charge": 4.0,
    "gross": 111.0,
    "box": "135×82×68 см",
-   "brakes": "Барабаный",
-   "drive": "задний",
+   "drive": "задний привод",
    "cargo": true
   }
  },
@@ -1730,9 +1616,7 @@ const CATALOG = [
    "charge": 8.0,
    "gross": 133.0,
    "box": "172×91×76 см",
-   "weight": 133.0,
-   "brakes": "Барабаный",
-   "drive": "задний",
+   "drive": "задний привод",
    "cargo": true
   }
  },
@@ -1773,8 +1657,7 @@ const CATALOG = [
    "charge": 8.0,
    "gross": 128.0,
    "box": "195×84×71 см",
-   "brakes": "Барабаный",
-   "drive": "задний",
+   "drive": "задний привод",
    "cargo": true
   }
  },
@@ -1786,7 +1669,6 @@ const CATALOG = [
   "price": 37900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1814,11 +1696,8 @@ const CATALOG = [
    "wheel": 14.0,
    "gross": 25.0,
    "box": "119×22.5×62.5 см",
-   "charge": 3.0,
    "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний",
-   "seat": false
+   "drive": "задний"
   }
  },
  {
@@ -1829,7 +1708,6 @@ const CATALOG = [
   "price": 37900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1849,11 +1727,7 @@ const CATALOG = [
    "wheel": 14.0,
    "gross": 24.5,
    "box": "107×25×59 см",
-   "charge": 5.0,
-   "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний привод",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -1864,7 +1738,6 @@ const CATALOG = [
   "price": 46900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -1891,12 +1764,9 @@ const CATALOG = [
    "wheel": 20.0,
    "gross": 26.63,
    "box": "123.2×25.5×56 см",
-   "charge": 6.0,
-   "weight": 19.0,
    "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний",
-   "seat": true
+   "weight": 19.0,
+   "drive": "задний"
   }
  },
  {
@@ -1933,11 +1803,9 @@ const CATALOG = [
    "wheel": 20.0,
    "charge": 7.0,
    "gross": 31.9,
-   "weight": 31.9,
    "volt": 48,
-   "brakes": "механический",
-   "drive": "задний",
-   "seat": true
+   "weight": 31.9,
+   "drive": "задний"
   }
  },
  {
@@ -1973,10 +1841,7 @@ const CATALOG = [
    "wheel": 11.0,
    "charge": 7.0,
    "box": "139.5×27×101.5 см",
-   "volt": 48,
-   "brakes": "дисковый",
-   "drive": "задний привод",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -1987,7 +1852,6 @@ const CATALOG = [
   "price": 59900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2014,12 +1878,9 @@ const CATALOG = [
    "charge": 6.5,
    "gross": 30.5,
    "box": "145×21×75 см",
-   "load": 120.0,
-   "weight": 22.8,
    "battery_ah": 13.0,
-   "brakes": "дисковый",
-   "drive": "задний",
-   "seat": true
+   "weight": 22.8,
+   "drive": "задний"
   }
  },
  {
@@ -2057,10 +1918,8 @@ const CATALOG = [
    "wheel": 18.0,
    "charge": 7.0,
    "box": "145×29×73.5 см",
-   "brakes": "гидравлический",
-   "drive": "задний",
-   "seat": true,
    "volt": 48,
+   "drive": "задний",
    "cargo": true
   }
  },
@@ -2072,7 +1931,6 @@ const CATALOG = [
   "price": 66900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2101,10 +1959,8 @@ const CATALOG = [
    "gross": 65.0,
    "box": "148×31×72 см",
    "volt": 60,
-   "brakes": "гидравлический",
-   "drive": "задний",
-   "seat": true,
    "weight": 40.0,
+   "drive": "задний",
    "cargo": true
   }
  },
@@ -2142,10 +1998,8 @@ const CATALOG = [
    "wheel": 16.0,
    "charge": 7.0,
    "volt": 60,
-   "brakes": "гидравлический",
-   "drive": "задний",
-   "seat": true,
    "weight": 66.0,
+   "drive": "задний",
    "cargo": true
   }
  },
@@ -2183,10 +2037,7 @@ const CATALOG = [
    "wheel": 16.0,
    "charge": 7.0,
    "box": "152×30×77 см",
-   "volt": 60,
-   "brakes": "гидравлический",
    "drive": "задний привод",
-   "seat": true,
    "cargo": true
   }
  },
@@ -2224,12 +2075,10 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 74.0,
    "box": "152×30.5×79 см",
-   "battery_ah": 28.6,
    "volt": 60,
-   "brakes": "гидравлический",
-   "drive": "задний",
-   "seat": true,
+   "battery_ah": 28.6,
    "weight": 65.0,
+   "drive": "задний",
    "cargo": true
   }
  },
@@ -2241,7 +2090,6 @@ const CATALOG = [
   "price": 74900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2269,10 +2117,7 @@ const CATALOG = [
    "wheel": 20.0,
    "charge": 7.0,
    "gross": 39.3,
-   "volt": 48,
-   "brakes": "гидравлический",
-   "drive": "задний привод",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -2283,7 +2128,6 @@ const CATALOG = [
   "price": 74900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2303,10 +2147,7 @@ const CATALOG = [
    "wheel": 20.0,
    "charge": 7.0,
    "gross": 38.9,
-   "volt": 48,
-   "brakes": "гидравлический",
-   "drive": "задний привод",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -2317,7 +2158,6 @@ const CATALOG = [
   "price": 83900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2346,9 +2186,7 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 49.0,
    "box": "142×33×90 см",
-   "brakes": "гидравлический",
-   "drive": "задний привод",
-   "seat": true
+   "drive": "задний привод"
   }
  },
  {
@@ -2359,7 +2197,6 @@ const CATALOG = [
   "price": 92900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2385,12 +2222,10 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 59.0,
    "box": "156×97×30.2 см",
-   "wheel": 20.0,
    "volt": 48,
-   "brakes": "гидравлический",
-   "drive": "задний",
-   "seat": true,
    "weight": 60.0,
+   "drive": "задний",
+   "wheel": 20.0,
    "cargo": true
   }
  },
@@ -2437,7 +2272,6 @@ const CATALOG = [
   "price": 97900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2463,12 +2297,9 @@ const CATALOG = [
    "charge": 6.5,
    "gross": 88.2,
    "box": "165×33×80 см",
-   "range": 95.0,
    "wheel": "",
-   "battery_ah": 45.0,
-   "brakes": "гидравлические",
-   "drive": "задний",
    "weight": 77.8,
+   "drive": "задний привод",
    "cargo": true
   }
  },
@@ -2480,7 +2311,6 @@ const CATALOG = [
   "price": 99900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2507,11 +2337,8 @@ const CATALOG = [
    "charge": 6.5,
    "gross": 90.0,
    "box": "174×32×78.5 см",
-   "range": 95.0,
-   "battery_ah": 45.0,
-   "brakes": "гидравлический",
-   "drive": "задний привод",
    "weight": 76.0,
+   "drive": "задний привод",
    "cargo": true
   }
  },
@@ -2521,14 +2348,14 @@ const CATALOG = [
   "brand": "Kugoo",
   "cat": "питбайк",
   "price": 99900,
-  "stock": "no",
+  "stock": "in",
   "src": [
-   "koptom"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
   "new": false,
-  "warranty": false,
+  "warranty": true,
   "img": "img/электропитбайк-kugoo-wish-01-48v-21ah-1500w.jpg",
   "gallery": [],
   "desc": "Доедешь до работы и обратно на одной зарядке: питбайк развивает 50 км/ч и проходит до 50 км между подзарядками. Мощности 1200 Вт хватает для уверенной езды по городу, а компактные 16-дюймовые колёса маневрируют в пробках лучше, чем полноразмерные.\n\nВесит 55 кг и держит вес райдера с рюкзаком до 120 кг — удобно носить и легко загружать в машину. Батарея 48 В, 21 Ач заряжается за 7 часов, задний привод дарует стабильность на любых дорогах.",
@@ -2555,7 +2382,7 @@ const CATALOG = [
   "price": 99900,
   "stock": "in",
   "src": [
-   "k2025"
+   "drop"
   ],
   "pop": 0,
   "hit": false,
@@ -2584,7 +2411,6 @@ const CATALOG = [
    "charge": 7.0,
    "gross": 55.0,
    "box": "127.6×27.6×74.5 см",
-   "brakes": "гидравлический",
    "drive": "задний"
   }
  },
@@ -2596,7 +2422,6 @@ const CATALOG = [
   "price": 94900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2624,9 +2449,8 @@ const CATALOG = [
    "charge": 8.0,
    "gross": 61.0,
    "box": "139×35×79.5 см",
-   "weight": 42.0,
    "volt": 60,
-   "brakes": "гидравлический",
+   "weight": 42.0,
    "drive": "задний"
   }
  },
@@ -2638,7 +2462,6 @@ const CATALOG = [
   "price": 121900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2668,7 +2491,6 @@ const CATALOG = [
    "gross": 85.0,
    "box": "152.5×42×84 см",
    "volt": 60,
-   "brakes": "гидравличкский",
    "drive": "задний"
   }
  },
@@ -2680,7 +2502,6 @@ const CATALOG = [
   "price": 194900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2699,17 +2520,14 @@ const CATALOG = [
   ],
   "desc": "На одном заряде проедешь до 80 км — хватит на весь день в городе и за его пределами. Питбайк разгоняется до 80 км/ч на мощности 3700 Вт, держит райдера с вещами до 150 кг, весит всего 85 кг. Колёса 19\" уверенно берут препятствия.\n\nГидравлические тормоза ловко останавливают машину в любых условиях. Батарея 36 А·ч заряжается за 4 часа. На покупку распространяется гарантия 12 месяцев.",
   "specs": {
-   "speed": 80,
-   "power": 3700,
-   "load": 150.0,
-   "range": 80,
-   "charge": 4.0,
-   "wheel": 19.0,
-   "weight": 85.0,
-   "battery_ah": 36.0,
    "volt": 60,
-   "brakes": "гидравлический",
-   "drive": "задний"
+   "battery_ah": 36.0,
+   "power": 3700,
+   "speed": 80,
+   "range": 80,
+   "weight": 85.0,
+   "drive": "задний",
+   "wheel": 19.0
   }
  },
  {
@@ -2747,10 +2565,10 @@ const CATALOG = [
    "charge": 8,
    "gross": "",
    "box": "",
-   "weight": 77,
    "volt": 72,
-   "brakes": "гидравлический",
-   "drive": "задний"
+   "weight": 77,
+   "drive": "задний",
+   "brakes": "гидравлический"
   }
  },
  {
@@ -2783,7 +2601,6 @@ const CATALOG = [
   "price": 144900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2805,7 +2622,6 @@ const CATALOG = [
    "weight": 134.0,
    "gross": 134.0,
    "box": "181×44.5×86 см",
-   "brakes": "гидравлические- 2х поршнивые",
    "drive": "цепной"
   }
  },
@@ -2840,8 +2656,6 @@ const CATALOG = [
    "load": 160,
    "gross": 147.0,
    "box": "186.5×46×93.5 см",
-   "weight": 134.0,
-   "brakes": "гидравлические- 2х поршнивые",
    "drive": "цепной"
   }
  },
@@ -2906,8 +2720,6 @@ const CATALOG = [
    "load": 120,
    "gross": 87.0,
    "box": "160×42.5×78 см",
-   "weight": 86.4,
-   "brakes": "гидравлические- 2х поршнивые",
    "drive": "цепной"
   }
  },
@@ -2919,7 +2731,6 @@ const CATALOG = [
   "price": 399900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -2942,9 +2753,7 @@ const CATALOG = [
    "load": 180,
    "gross": 290.0,
    "box": "197×114×82 см",
-   "weight": 290.0,
-   "brakes": "гидравлическая",
-   "drive": "цепь"
+   "drive": "цепной"
   }
  },
  {
@@ -2972,9 +2781,6 @@ const CATALOG = [
   ],
   "desc": "Проедешь на одном заряде куда угодно в городе со скоростью до 90 км/ч — квадроцикл K6 держит темп даже в спешке. Вес 417 кг, грузоподъёмность до 500 кг, цепной привод, работает надёжно. Год гарантии идёт в комплекте.",
   "specs": {
-   "speed": 90.0,
-   "load": 500.0,
-   "weight": 417.0,
    "drive": "цепной"
   }
  },
@@ -3013,9 +2819,7 @@ const CATALOG = [
    "wheel": 10,
    "charge": 9.0,
    "box": "127.5×23×59 см",
-   "brakes": "дисковый",
    "drive": "полный",
-   "seat": false,
    "weight": 33.9
   }
  },
@@ -3045,17 +2849,14 @@ const CATALOG = [
   ],
   "desc": "На одном заряде проедешь до 80 км — хватит на неделю поездок по городу и за его границы. Питбайк Kugoo Wish 03 разгоняется до 80 км/ч благодаря мотору в 3500 Вт, держит вес райдера и рюкзака до 200 кг, а на колёсах 19 дюймов уверенно идёт по разным поверхностям.\n\nГидравлические тормоза останавливают точно и быстро даже на высокой скорости. Аккумулятор 27 А·ч заряжается за 6 часов, вес самого питбайка всего 69 кг — легко поднять в руки или спустить по ступеням.",
   "specs": {
-   "speed": 80,
-   "power": 3500,
-   "load": 200.0,
-   "range": 80,
-   "charge": 6.0,
-   "wheel": 19.0,
-   "battery_ah": 27.0,
    "volt": 60,
-   "brakes": "гидравлический",
+   "battery_ah": 27.0,
+   "power": 3500,
+   "speed": 80,
+   "range": 80,
    "weight": 69.0,
-   "drive": "задний"
+   "drive": "задний",
+   "wheel": 19.0
   }
  },
  {
@@ -3066,7 +2867,6 @@ const CATALOG = [
   "price": 83900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -3096,8 +2896,8 @@ const CATALOG = [
    "charge": 12,
    "gross": 39.5,
    "box": "131×24.5×57 см",
-   "brakes": "дисковый механический",
    "drive": "полный",
+   "brakes": "дисковый механический",
    "seat": false
   }
  },
@@ -3137,8 +2937,8 @@ const CATALOG = [
    "charge": 10,
    "box": "135×29×63 см",
    "volt": 60,
-   "brakes": "дисковый",
    "drive": "полный",
+   "brakes": "дисковый",
    "seat": false
   }
  },
@@ -3150,7 +2950,6 @@ const CATALOG = [
   "price": 57900,
   "stock": "in",
   "src": [
-   "k2025",
    "koptom"
   ],
   "pop": 0,
@@ -3179,8 +2978,8 @@ const CATALOG = [
    "charge": 11,
    "box": "",
    "volt": 48,
-   "brakes": "дисковый",
    "drive": "задний",
+   "brakes": "дисковый",
    "seat": false
   }
  },
@@ -3207,7 +3006,6 @@ const CATALOG = [
    "weight": 185,
    "gross": 218,
    "box": "",
-   "brakes": "гидравлическая",
    "drive": "цепной"
   }
  },
@@ -3241,9 +3039,8 @@ const CATALOG = [
    "load": 400,
    "weight": 335,
    "box": "197×114×88 см",
-   "brakes": "гидравлическая",
-   "drive": "полный",
-   "gross": 390
+   "gross": 390,
+   "drive": "полный"
   }
  },
  {
@@ -3275,9 +3072,9 @@ const CATALOG = [
    "load": 130,
    "gross": 94,
    "box": "160×42.5×78 см",
+   "speed": 83,
    "weight": 84.5,
    "brakes": "гидравлический",
-   "speed": 83,
    "drive": "цепной"
   }
  },
